@@ -8,7 +8,7 @@ import { CMSLink } from '../../_types/CMSLink';
 import styles from './Footer.module.scss';
 
 interface Props {
-  personalInformation: CMSPersonalInformation<JSX.Element>;
+  personalInformation: CMSPersonalInformation<unknown>;
   links: CMSLink[];
 }
 
