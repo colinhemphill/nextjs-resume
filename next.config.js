@@ -23,15 +23,6 @@ const workboxOpts = {
 
 const nextConfig = {
   generateInDevMode: false,
-  async redirects() {
-    return [
-      {
-        source: '/meet',
-        destination: 'https://meet.google.com/zkf-hhnq-xhn',
-        permanent: false,
-      },
-    ];
-  },
   target: 'serverless',
   transformManifest: (manifest) => ['/'].concat(manifest),
   workboxOpts,
