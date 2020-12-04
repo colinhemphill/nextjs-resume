@@ -1,0 +1,36 @@
+body {
+  background-color: white;
+  color: $dark;
+}
+
+$print-margins: 0.25in;
+
+@page {
+  margin: 0;
+  size: 8.5in 11.0in;
+}
+
+h1 {
+  page-break-before: always;
+}
+
+@media print {
+  .container {
+    margin: 0 $print-margins !important;
+  }
+  .row {
+    margin-right: -$print-margins;
+    margin-left: -$print-margins;
+  }
+}
+
+@for $i from 1 through 12 {
+  @media print {
+    .col-print-#{$i} {
+      width: #{percentage(round($i * 8.33) / 100)};
+      padding-right: $print-margins;
+      padding-left: $print-margins;
+      float: left;
+    }
+  }
+}

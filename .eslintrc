@@ -1,0 +1,47 @@
+{
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
+  ],
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "ignorePatterns": [
+    ".next/*",
+    ".vercel/*",
+    "node_modules/*",
+    "next.config.js",
+    "postcss.config.js",
+    "stylelint.config.js"
+  ],
+  "rules": {
+    "react/prop-types": 0,
+    "sort-imports": "off",
+    "sort-keys": "warn",
+    "sort-vars": "warn",
+    "no-console": [
+      2,
+      {
+        "allow": [
+          "warn",
+          "error"
+        ]
+      }
+    ]
+  }
+}

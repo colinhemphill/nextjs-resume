@@ -1,0 +1,16 @@
+@use '../../styles/variables.scss';
+
+.footer {
+  padding: variables.$spacer-xs 0;
+  background-color: variables.$dark;
+  color: white;
+  text-align: center;
+}
+.footerLink {
+  color: white;
+  text-decoration: underline;
+
+  &:hover {
+    color: white;
+  }
+}
