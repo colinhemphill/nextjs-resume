@@ -1,0 +1,19 @@
+export default {
+  compilerOptions: {
+    allowJs: true,
+    esModuleInterop: true,
+    forceConsistentCasingInFileNames: true,
+    isolatedModules: true,
+    jsx: 'preserve',
+    lib: ['dom', 'dom.iterable', 'esnext'],
+    module: 'esnext',
+    moduleResolution: 'node',
+    noEmit: true,
+    resolveJsonModule: true,
+    skipLibCheck: true,
+    strict: false,
+    target: 'es5',
+  },
+  exclude: ['node_modules'],
+  include: ['next-env.d.ts', '**/*.ts', '**/*.tsx'],
+};

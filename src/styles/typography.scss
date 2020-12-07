@@ -26,6 +26,11 @@ h1, h2, .h1 .h2 {
 p {
   margin-bottom: $spacer-xxs;
 }
-article p:last-child {
-  margin-bottom: 0;
+article {
+  a {
+    color: $primary-medium
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
 }

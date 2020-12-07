@@ -59,7 +59,8 @@ export const prismicGetEducationalExperiences = async (): Promise<
   const document = await cmsClient().query(
     prismic.Predicates.at('document.type', 'educational_experience'),
     {
-      orderings: '[my.educational_experience.order]',
+      orderings:
+        '[my.educational_experience.year desc, my.educational_experiencce.achievement_title]',
     },
   );
   const experiences = document.results.map((document) => ({

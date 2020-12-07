@@ -3,12 +3,18 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import puppeteer from 'puppeteer';
 
 const isDev = process.env.NODE_ENV === 'development';
-const url = isDev ? 'http://localhost:3000' : process.env.PDF_URL;
+const url =
+  process.env.VERCEL === '1'
+    ? process.env.VERCEL_URL
+    : isDev
+    ? 'http://localhost:3000'
+    : 'my-pdf-url';
 
 const handler = async (
   req: NextApiRequest,
   res: NextApiResponse,
 ): Promise<void> => {
+  const protocol = req.headers['x-forwarded-proto'];
   const browser = await puppeteer.launch(
     !isDev
       ? {
@@ -19,7 +25,7 @@ const handler = async (
       : {},
   );
   const page = await browser.newPage();
-  await page.goto(url);
+  await page.goto(`${protocol}://${url}`);
   const pdf = await page.pdf({
     format: 'Letter',
     printBackground: true,

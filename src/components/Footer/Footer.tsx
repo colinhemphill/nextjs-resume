@@ -44,38 +44,50 @@ const Footer = (props: Props): JSX.Element => {
             </div>
           ))}
         </div>
+
         <div className="mt-xxs">
-          This résumé was generated with{' '}
-          <a
-            className={styles.footerLink}
-            href="https://nextjs.org/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Next.js
-          </a>{' '}
-          and{' '}
-          <a
-            className={styles.footerLink}
-            href={cmsLink}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            {cmsName}
-          </a>
-          , and deployed on{' '}
-          <a
-            className={styles.footerLink}
-            href="https://vercel.com/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Vercel
-          </a>
-          .
-        </div>
-        <div>
           Copyright ©{new Date().getFullYear()} {fullName}
+        </div>
+        <div className="mt-xxxs">
+          <small>
+            This résumé was generated with{' '}
+            <a
+              className={styles.footerLink}
+              href="https://nextjs.org/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Next.js
+            </a>{' '}
+            and{' '}
+            <a
+              className={styles.footerLink}
+              href={cmsLink}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              {cmsName}
+            </a>
+            , and deployed on{' '}
+            <a
+              className={styles.footerLink}
+              href="https://vercel.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Vercel
+            </a>
+            . Learn how to deploy your own resume with the{' '}
+            <a
+              className={styles.footerLink}
+              href="https://github.com/colinhemphill/nextjs-resume-generator"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              nextjs-resume-generator
+            </a>
+            !
+          </small>
         </div>
       </div>
     </footer>

@@ -22,7 +22,7 @@ const Header = (props: Props): JSX.Element => {
           <div className="col-md-auto mt-md-0 mt-xxs d-print-none">
             <a className="btn btn-dark btn-lg" href="/api/pdf" target="_blank">
               <FontAwesomeIcon className="mr-xxxs" icon={faFilePdf} />
-              View as PDF
+              Download as PDF
             </a>
           </div>
         </div>
