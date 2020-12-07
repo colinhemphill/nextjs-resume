@@ -22,7 +22,7 @@
     "lint:js": "eslint ./src --ext js --ext ts --ext tsx --fix",
     "lint:styles": "stylelint 'src/styles/**/*.scss' --fix",
     "start": "next start",
-    "types": "tsc --pretty --noEmit"
+    "types": "tsc tsconfig.ts --pretty --noEmit"
   },
   "husky": {
     "hooks": {
