@@ -7,14 +7,14 @@ const url =
   process.env.VERCEL === '1'
     ? process.env.VERCEL_URL
     : isDev
-    ? 'http://localhost:3000'
+    ? 'localhost:3000'
     : 'my-pdf-url';
 
 const handler = async (
   req: NextApiRequest,
   res: NextApiResponse,
 ): Promise<void> => {
-  const protocol = req.headers['x-forwarded-proto'];
+  const protocol = req.headers['x-forwarded-proto'] || 'http';
   const browser = await puppeteer.launch(
     !isDev
       ? {
@@ -25,9 +25,12 @@ const handler = async (
       : {},
   );
   const page = await browser.newPage();
-  await page.goto(`${protocol}://${url}`);
+  await page.goto(`${protocol}://${url}/pdf`);
   const pdf = await page.pdf({
+    displayHeaderFooter: false,
     format: 'Letter',
+    landscape: false,
+    preferCSSPageSize: false,
     printBackground: true,
     scale: 1,
   });

@@ -4,10 +4,11 @@ import classnames from 'classnames';
 interface Props {
   children?: ReactNode;
   color?: 'light' | 'primary' | 'white';
+  fluid?: boolean;
 }
 
 const Section = (props: Props): JSX.Element => {
-  const { children, color } = props;
+  const { children, color, fluid = false } = props;
 
   return (
     <section
@@ -18,7 +19,7 @@ const Section = (props: Props): JSX.Element => {
         'text-white': color === 'primary',
       })}
     >
-      <div className="container">{children}</div>
+      <div className={fluid ? 'container-fluid' : 'container'}>{children}</div>
     </section>
   );
 };

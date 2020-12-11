@@ -16,6 +16,8 @@ A bootstrapped Next.js application designed to connect your preferred headless C
 
 It also features a simple, effective, and not overbearing dev workflow using ESLint, Prettier, and stylelint.
 
+![Screenshot of the application's Lighthouse score showing a 99 in "Performance", a 100 in "Accessibility", a 100 in "Best Practices", a 100 in "SEO", and that "Progressive Web App" is active.](lighthouse.png)
+
 ## Supported Headless CMS Services
 
 The generator currently supports the following headless CMS services:

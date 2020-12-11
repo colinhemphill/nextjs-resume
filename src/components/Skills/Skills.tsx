@@ -17,7 +17,7 @@ const Skills = (props: Props): JSX.Element => {
       <div className="row mt-xxs">
         {skills.map((skill, index) => (
           <div
-            className={classnames('col-lg col-print-4', {
+            className={classnames('col-lg col-print-12', {
               'mt-lg-0 mt-xxs': index > 0,
             })}
             key={skill.id}

@@ -22,22 +22,12 @@
     "lint:js": "eslint ./src --ext js --ext ts --ext tsx --fix",
     "lint:styles": "stylelint 'src/styles/**/*.scss' --fix",
     "start": "next start",
-    "types": "tsc tsconfig.ts --pretty --noEmit"
+    "types": "tsc --pretty --noEmit"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  },
-  "lint-staged": {
-    "*.@(js|ts|tsx)": [
-      "npm run types",
-      "npm run lint:js",
-      "npm run format"
-    ],
-    "*.@*(scss)": [
-      "npm run lint:styles"
-    ]
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.32",
@@ -60,8 +50,8 @@
   },
   "devDependencies": {
     "@next/bundle-analyzer": "10.0.3",
-    "@types/node": "14.14.10",
-    "@types/puppeteer": "5.4.1",
+    "@types/node": "14.14.12",
+    "@types/puppeteer": "5.4.2",
     "@types/react": "17.0.0",
     "@typescript-eslint/eslint-plugin": "4.9.1",
     "@typescript-eslint/parser": "4.9.1",
