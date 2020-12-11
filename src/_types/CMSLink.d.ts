@@ -1,6 +1,6 @@
 import { IconName } from '@fortawesome/free-solid-svg-icons';
 
-interface CMSLink {
+export interface CMSLink {
   href: string;
   icon_name: IconName;
   title: string;

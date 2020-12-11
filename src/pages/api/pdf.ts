@@ -25,7 +25,7 @@ const handler = async (
       : {},
   );
   const page = await browser.newPage();
-  await page.goto(`${protocol}://${url}/pdf`);
+  await page.goto(`${protocol}://${url}`);
   const pdf = await page.pdf({
     displayHeaderFooter: false,
     format: 'Letter',

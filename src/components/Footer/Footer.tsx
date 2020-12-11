@@ -1,5 +1,6 @@
 import { faCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import classnames from 'classnames';
 import React from 'react';
 import { cmsLink, cmsName } from '../../lib/cms';
 import { getFullName } from '../../lib/helpers';
@@ -16,7 +17,7 @@ const Footer = (props: Props): JSX.Element => {
   const fullName = getFullName(personalInformation);
 
   return (
-    <footer className={styles.footer}>
+    <footer className={classnames(styles.footer, 'd-print-none d-block')}>
       <div className="container">
         <div className="row no-gutters justify-content-center">
           {links.map((link) => (

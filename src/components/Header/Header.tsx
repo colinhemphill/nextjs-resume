@@ -21,7 +21,7 @@ const Header = (props: Props): JSX.Element => {
             <h2 className="text-white">{subtitle}</h2>
           </div>
           {!pdf && (
-            <div className="col-md-auto mt-md-0 mt-xxs">
+            <div className="col-md-auto mt-md-0 mt-xxs d-print-none d-block">
               <a
                 className="btn btn-dark btn-lg"
                 href="/api/pdf"
