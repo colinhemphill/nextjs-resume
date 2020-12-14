@@ -3,11 +3,12 @@ body {
   color: $dark;
 }
 
-$print-margins: 0.25in;
+$print-margins: 25px;
 
 @page {
-  margin: 0;
-  size: 8.5in 11.0in;
+  padding: 0;
+  margin-right: -$print-margins * 2;
+  margin-left: -$print-margins * 2;
 }
 
 h1 {
@@ -15,12 +16,16 @@ h1 {
 }
 
 @media print {
-  .container {
-    margin: 0 $print-margins !important;
+  body, html {
+    font-size: 110%;
+  }
+  .container, .container-fluid {
+    padding-right: $print-margins !important;
+    padding-left: $print-margins !important;
   }
   .row {
-    margin-right: -$print-margins;
-    margin-left: -$print-margins;
+    margin-right: -$print-margins !important;
+    margin-left: -$print-margins !important;
   }
 }
 

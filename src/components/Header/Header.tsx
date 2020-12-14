@@ -1,5 +1,6 @@
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import classnames from 'classnames';
 import React from 'react';
 import styles from './Header.module.scss';
 
@@ -15,7 +16,12 @@ const Header = (props: Props): JSX.Element => {
   return (
     <header className={styles.header}>
       <div className={pdf ? 'container-fluid' : 'container'}>
-        <div className="row align-items-center text-md-left text-center">
+        <div
+          className={classnames('row align-items-center', {
+            'text-center': pdf,
+            'text-md-left text-center': !pdf,
+          })}
+        >
           <div className="col-md">
             <h1 className="text-white">{title}</h1>
             <h2 className="text-white">{subtitle}</h2>

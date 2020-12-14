@@ -2,18 +2,21 @@
 
 .pdfLayout {
   display: grid;
-  overflow: hidden;
-  width: 8.5in;
-  height: 11in;
-  grid-template-areas: 'grid-sidebar grid-main';
-  grid-template-columns: 3.5in 1fr;
-  grid-template-rows: 1fr;
+  width: 100vw;
+  height: 100vh;
+  grid-template-areas:
+    'sidebar main'
+    'footer footer';
+  grid-template-columns: 33% 1fr;
+  grid-template-rows: 1fr 0;
 }
 .pdfSidebar {
-  height: 100%;
   background-color: variables.$light;
-  grid-area: grid-sidebar;
+  grid-area: sidebar;
 }
 .pdfMain {
-  grid-area: grid-main;
+  grid-area: main;
+}
+.pdfFooter {
+  grid-area: footer;
 }

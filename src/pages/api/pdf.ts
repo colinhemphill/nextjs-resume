@@ -25,11 +25,17 @@ const handler = async (
       : {},
   );
   const page = await browser.newPage();
-  await page.goto(`${protocol}://${url}`);
+  await page.goto(`${protocol}://${url}/pdf`);
   const pdf = await page.pdf({
     displayHeaderFooter: false,
     format: 'Letter',
     landscape: false,
+    margin: {
+      bottom: 0,
+      left: 0,
+      right: 0,
+      top: 0,
+    },
     preferCSSPageSize: false,
     printBackground: true,
     scale: 1,
