@@ -13,6 +13,7 @@ Create a schema type with a key of `personal_information`.
 | `job_title`             | text      | e.g. "Full Stack Developer"                                            |
 | `about_me_description`  | rich text | A short paragraph or two to describe who you are and what you're about |
 | `location`              | text      | e.g. "Austin, TX or Remote"                                            |
+| `twitter_username`      | text      | Your twitter handle without the "@" symbol                             |
 | `hobbies_and_interests` | rich text | A short paragraph or two about what you do outside of work             |
 
 ### Skills

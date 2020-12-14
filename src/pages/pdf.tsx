@@ -57,6 +57,7 @@ const ResumePage = (props: Props): JSX.Element => {
     <>
       <PageHead
         description={`Professional résumé for ${fullName}, a front end developer living in ${personalInformation.location}.`}
+        personalInformation={personalInformation}
         title={`Résumé | ${fullName} | ${personalInformation.location}`}
       />
 

@@ -4,6 +4,7 @@ interface CMSPersonalInformation<RichTextType> {
   given_name: string;
   hobbies_and_interests: RichTextType;
   id: string;
-  location: string;
   job_title: string;
+  location: string;
+  twitter_username?: string;
 }

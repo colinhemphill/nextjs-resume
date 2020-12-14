@@ -57,11 +57,11 @@ If you are using Vercel, simply go to your project, then go to Settings > Git > 
 
 ## Customize Your Résumé
 
-The project ships with a clean and fully WCAG compliant design, but obviously you should feel free to customize it to your personal taste.
+The project ships with a clean and fully WCAG compliant design, but obviously you should feel free to customize it to your personal taste. There are also a couple of places where we are not able to pull information from the CMS, so to optimize your résumé you should consider writing over these.
 
 To modify the project locally, you will need to create a `.env.local` file at the project root with the following, using the same env variables that were required for deployment:
 
-```
+```shell
 CMS_ENDPOINT=https://your-cms-endpoint.com/
 CMS_KEY=your-secret-key
 ```
@@ -77,6 +77,6 @@ Global stylesheets are located at `/src/styles`, and basic color variables can b
 
 The page structure and PDF generating API are located at `/src/pages`, and most React components are located at `/src/components`. Each component uses SASS modules when custom styles are required, and these styles are located right next to the component.
 
-To modify the document `<head>`, such as adding Open Graph data or modifying icons, you can edit `/components/PageHead.tsx`.
+To modify the document `<head>`, such as modifying Open Graph data or icons, you can edit `/components/PageHead.tsx`.
 
 You should definitely consider updating _everyting_ in the `/public` folder to match your personal brand, including favicon renders in `/public/img/icons/` and `public/favicon.ico`. You should also update `/public/manifest.json` to match your site, as these cannot be updated from the integrated CMS.
