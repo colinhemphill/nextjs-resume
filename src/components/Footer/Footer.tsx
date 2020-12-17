@@ -19,7 +19,7 @@ const Footer = (props: Props): JSX.Element => {
   return (
     <footer className={styles.footer}>
       <div className={pdf ? 'container-fluid' : 'container'}>
-        {pdf && links && (
+        {!pdf && links && (
           <div className="row no-gutters justify-content-center">
             {links.map((link) => (
               <div className="col-auto" key={link.href}>
@@ -47,7 +47,7 @@ const Footer = (props: Props): JSX.Element => {
           </div>
         )}
 
-        <div className={links ? 'mt-xxs' : ''}>
+        <div className={!pdf && links ? 'mt-xxs' : ''}>
           Copyright ©{new Date().getFullYear()} {fullName}
         </div>
         <div className="mt-xxxs">
