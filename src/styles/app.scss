@@ -17,7 +17,7 @@ h1 {
 
 @media print {
   body, html {
-    font-size: 110%;
+    font-size: 100%;
   }
   .container, .container-fluid {
     padding-right: $print-margins !important;

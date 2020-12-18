@@ -6,6 +6,7 @@ import { InferGetStaticPropsType } from 'next';
 import React from 'react';
 import AboutMe from '../components/Articles/AboutMe';
 import ContactInformation from '../components/Articles/ContactInformation';
+import HobbiesAndInterests from '../components/Articles/HobbiesAndInterests';
 import EducationItem from '../components/EducationItem/EducationItem';
 import Header from '../components/Header/Header';
 import PageHead from '../components/PageHead';
@@ -119,6 +120,8 @@ const ResumePage = (props: Props): JSX.Element => {
             ))}
 
             <div className="mt-xs" />
+
+            <HobbiesAndInterests personalInformation={personalInformation} />
           </Section>
         </div>
       </div>
