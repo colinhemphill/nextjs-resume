@@ -2,6 +2,7 @@ import {
   faBriefcase,
   faGraduationCap,
 } from '@fortawesome/free-solid-svg-icons';
+import indefinite from 'indefinite';
 import { InferGetStaticPropsType } from 'next';
 import React from 'react';
 import AboutMe from '../components/Articles/AboutMe';
@@ -57,13 +58,12 @@ const ResumePage = (props: Props): JSX.Element => {
     skills,
   } = props;
   const fullName = getFullName(personalInformation);
+  const jobTitle = indefinite(personalInformation.job_title);
 
   return (
     <>
       <PageHead
-        description={`Professional résumé for ${fullName}, a ${personalInformation.job_title.toLowerCase()} living in ${
-          personalInformation.location
-        }.`}
+        description={`Professional résumé for ${fullName}, ${jobTitle} living in ${personalInformation.location}.`}
         personalInformation={personalInformation}
         title={`Résumé | ${fullName} | ${personalInformation.location}`}
       />

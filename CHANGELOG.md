@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.2] - 2020-12-18
+
+### Added
+
+- Correct configuration for bundle analyzer
+
+### Fixed
+
+- Use correct article adjective for job title
+
 ## [0.4.1] - 2020-12-18
 
 ### Fixed
@@ -57,6 +67,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Supports Prismic
 
 [unreleased]: https://github.com/colinhemphill/nextjs-resume-generator/compare/1.0.0...HEAD
+[0.4.2]: https://github.com/colinhemphill/nextjs-resume-generator/tags/0.4.2
 [0.4.1]: https://github.com/colinhemphill/nextjs-resume-generator/tags/0.4.1
 [0.4.0]: https://github.com/colinhemphill/nextjs-resume-generator/tags/0.4.0
 [0.3.1]: https://github.com/colinhemphill/nextjs-resume-generator/tags/0.3.1

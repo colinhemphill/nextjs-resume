@@ -1,6 +1,6 @@
 {
   "name": "next-resume-generator",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "author": {
     "name": "Colin Hemphill",
     "email": "colin@colinhemphill.com",
@@ -41,6 +41,7 @@
     "chrome-aws-lambda": "5.5.0",
     "classnames": "2.2.6",
     "contentful": "8.1.4",
+    "indefinite": "2.4.1",
     "next": "10.0.3",
     "next-offline": "5.0.3",
     "prismic-javascript": "3.0.2",
