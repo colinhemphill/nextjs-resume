@@ -47,7 +47,7 @@ const Footer = (props: Props): JSX.Element => {
           </div>
         )}
 
-        <div className={!pdf && links ? 'mt-xxs' : ''}>
+        <div className={!pdf && links?.length ? 'mt-xxs' : ''}>
           Copyright ©{new Date().getFullYear()} {fullName}
         </div>
         <div className="mt-xxxs">

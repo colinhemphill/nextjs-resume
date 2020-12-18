@@ -23,6 +23,7 @@ It also features a simple, effective, and not overbearing dev workflow using ESL
 The generator currently supports the following headless CMS services:
 
 - [Prismic](https://prismic.io/)
+- [Contentful](https://www.contentful.com)
 
 If you'd like support for a different service, please feel free to open a pull request! New services can be integrated by simply creating a new file in the `/lib` folder to wrap the expected API requests.
 
@@ -46,7 +47,7 @@ The project is designed to be deployed with [Vercel](https://vercel.com), and yo
 
 Regardless of where the app is deployed, it will need access to the following environment variables:
 
-- `CMS_ENDPOINT`: the API endpoint for your CMS repo
+- `CMS_ENDPOINT`: the API endpoint, "space" name, etc for your CMS repo
 - `CMS_KEY`: a secret key that grants the app at least read access to your CMS
 
 #### Webhooks

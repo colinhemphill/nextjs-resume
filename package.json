@@ -1,6 +1,6 @@
 {
   "name": "next-resume-generator",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "author": {
     "name": "Colin Hemphill",
     "email": "colin@colinhemphill.com",
@@ -30,6 +30,8 @@
     }
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "14.1.2",
+    "@contentful/rich-text-types": "14.1.2",
     "@fortawesome/fontawesome-svg-core": "1.2.32",
     "@fortawesome/free-brands-svg-icons": "5.15.1",
     "@fortawesome/free-regular-svg-icons": "5.15.1",
@@ -38,6 +40,7 @@
     "bootstrap": "4.5.3",
     "chrome-aws-lambda": "5.5.0",
     "classnames": "2.2.6",
+    "contentful": "8.1.4",
     "next": "10.0.3",
     "next-offline": "5.0.3",
     "prismic-javascript": "3.0.2",
