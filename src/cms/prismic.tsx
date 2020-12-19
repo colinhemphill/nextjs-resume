@@ -6,8 +6,8 @@ import {
   RichTextBlock,
 } from 'prismic-reactjs';
 import React from 'react';
+import { accessToken, apiEndpoint } from '.';
 import { CMSLink } from '../_types/CMSLink';
-import { accessToken, apiEndpoint } from './cms';
 
 export type PrismicRichText = RichTextBlock[];
 type PersonalInformation = CMSPersonalInformation<PrismicRichText>;

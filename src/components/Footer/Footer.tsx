@@ -1,8 +1,8 @@
 import { faCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { cmsLink, cmsName } from '../../lib/cms';
-import { getFullName } from '../../lib/helpers';
+import { getCMSIntegration } from '../../cms/';
+import { getFullName } from '../../helpers';
 import { CMSLink } from '../../_types/CMSLink';
 import styles from './Footer.module.scss';
 
@@ -15,6 +15,7 @@ interface Props {
 const Footer = (props: Props): JSX.Element => {
   const { personalInformation, links, pdf = false } = props;
   const fullName = getFullName(personalInformation);
+  const CMS = getCMSIntegration();
 
   return (
     <footer className={styles.footer}>
@@ -64,11 +65,11 @@ const Footer = (props: Props): JSX.Element => {
             and{' '}
             <a
               className={styles.footerLink}
-              href={cmsLink}
+              href={CMS.link}
               rel="noopener noreferrer"
               target="_blank"
             >
-              {cmsName}
+              {CMS.name}
             </a>
             , and deployed on{' '}
             <a

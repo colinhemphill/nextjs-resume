@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0] - 2020-12-19
+
+### Added
+
+- Test configuration using Jest and Testing Library
+- Snapshot tests for the index page using each CMS integration
+
+### Changed
+
+- Uses a new `NEXT_PUBLIC_CMS_INTEGRATION` env variable to determine selected integration
+- Change the way that cms functions are exported to support a global integration setting
+
 ## [0.4.2] - 2020-12-18
 
 ### Added
@@ -67,6 +79,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Supports Prismic
 
 [unreleased]: https://github.com/colinhemphill/nextjs-resume-generator/compare/1.0.0...HEAD
+[0.4.3]: https://github.com/colinhemphill/nextjs-resume-generator/tags/0.4.3
 [0.4.2]: https://github.com/colinhemphill/nextjs-resume-generator/tags/0.4.2
 [0.4.1]: https://github.com/colinhemphill/nextjs-resume-generator/tags/0.4.1
 [0.4.0]: https://github.com/colinhemphill/nextjs-resume-generator/tags/0.4.0

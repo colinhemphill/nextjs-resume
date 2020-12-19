@@ -1,19 +1,22 @@
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
-import { RichText, RichTextComponent } from '../../lib/cms';
+import { getCMSIntegration } from '../../cms';
 import SectionHeader from '../SectionHeader/SectionHeader';
 
 interface Props {
-  personalInformation: CMSPersonalInformation<RichText>;
+  personalInformation: CMSPersonalInformation<unknown>;
 }
 
 const AboutMe = (props: Props): JSX.Element => {
   const { personalInformation } = props;
+  const CMS = getCMSIntegration();
 
   return (
     <article>
       <SectionHeader icon={faUser} text="About Me" />
-      <RichTextComponent richText={personalInformation.about_me_description} />
+      <CMS.RichTextComponent
+        richText={personalInformation.about_me_description}
+      />
     </article>
   );
 };

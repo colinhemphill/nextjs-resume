@@ -5,6 +5,7 @@ import {
 import indefinite from 'indefinite';
 import { InferGetStaticPropsType } from 'next';
 import React from 'react';
+import { getCMSIntegration } from '../cms';
 import AboutMe from '../components/Articles/AboutMe';
 import ContactInformation from '../components/Articles/ContactInformation';
 import HobbiesAndInterests from '../components/Articles/HobbiesAndInterests';
@@ -15,23 +16,16 @@ import ProfessionalItem from '../components/ProfessionalItem/ProfessionalItem';
 import Section from '../components/Section/Section';
 import SectionHeader from '../components/SectionHeader/SectionHeader';
 import Skills from '../components/Skills/Skills';
-import {
-  getEducationalExperiences,
-  getPersonalInformation,
-  getProfessionalExperiences,
-  getSkills,
-  parseDate,
-  RichTextComponent,
-} from '../lib/cms';
-import { formatDate, getFullName } from '../lib/helpers';
+import { formatDate, getFullName } from '../helpers';
 import styles from '../styles/pdf.module.scss';
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const getStaticProps = async () => {
-  const personalInformation = await getPersonalInformation();
-  const professionalExperiences = await getProfessionalExperiences();
-  const educationalExperiences = await getEducationalExperiences();
-  const skills = await getSkills();
+  const CMS = getCMSIntegration();
+  const personalInformation = await CMS.getPersonalInformation();
+  const professionalExperiences = await CMS.getProfessionalExperiences();
+  const educationalExperiences = await CMS.getEducationalExperiences();
+  const skills = await CMS.getSkills();
 
   return {
     props: {
@@ -55,6 +49,7 @@ const ResumePage = (props: Props): JSX.Element => {
   } = props;
   const fullName = getFullName(personalInformation);
   const jobTitle = indefinite(personalInformation.job_title);
+  const CMS = getCMSIntegration();
 
   return (
     <>
@@ -86,7 +81,7 @@ const ResumePage = (props: Props): JSX.Element => {
               <ProfessionalItem
                 end_date={
                   experience.end_date
-                    ? formatDate(parseDate(experience.end_date))
+                    ? formatDate(CMS.parseDate(experience.end_date))
                     : null
                 }
                 id={experience.id}
@@ -94,12 +89,12 @@ const ResumePage = (props: Props): JSX.Element => {
                 key={experience.id}
                 organization_name={experience.organization_name}
                 position_description={
-                  <RichTextComponent
+                  <CMS.RichTextComponent
                     richText={experience.position_description}
                   />
                 }
                 position_title={experience.position_title}
-                start_date={formatDate(parseDate(experience.start_date))}
+                start_date={formatDate(CMS.parseDate(experience.start_date))}
               />
             ))}
 
@@ -109,15 +104,15 @@ const ResumePage = (props: Props): JSX.Element => {
             {educationalExperiences.map((experience) => (
               <EducationItem
                 achievement_description={
-                  <RichTextComponent
+                  <CMS.RichTextComponent
                     richText={experience.achievement_description}
                   />
                 }
                 achievement_title={experience.achievement_title}
                 id={experience.id}
                 key={experience.id}
-                order={experience.order}
                 organization_name={experience.organization_name}
+                year={experience.year}
               />
             ))}
 

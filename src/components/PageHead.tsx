@@ -1,13 +1,12 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
-import { RichText } from '../lib/cms';
-import { getFullName } from '../lib/helpers';
+import { getFullName } from '../helpers';
 
 interface Props {
   baseURL?: string;
   description: string;
-  personalInformation: CMSPersonalInformation<RichText>;
+  personalInformation: CMSPersonalInformation<unknown>;
   title: string;
 }
 

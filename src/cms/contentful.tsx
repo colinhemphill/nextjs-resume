@@ -2,8 +2,8 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { Document } from '@contentful/rich-text-types';
 import * as contentful from 'contentful';
 import React from 'react';
+import { accessToken, apiEndpoint } from '.';
 import { CMSLink } from '../_types/CMSLink';
-import { accessToken, apiEndpoint } from './cms';
 
 export type ContentfulRichText = Document;
 type PersonalInformation = CMSPersonalInformation<ContentfulRichText>;

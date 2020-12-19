@@ -8,10 +8,12 @@ A bootstrapped Next.js application designed to connect your preferred headless C
 
 - [Next.js](https://nextjs.org)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Vercel](https://vercel.com/)
 - [Bootstrap](https://getbootstrap.com/)
 - [SASS](https://sass-lang.com/)
 - [Font Awesome](https://fontawesome.com/)
+- [Jest](https://jestjs.io/)
+- [Testing Library](https://testing-library.com/)
+- [Vercel](https://vercel.com/)
 - [Puppeteer](https://developers.google.com/web/tools/puppeteer)
 
 It also features a simple, effective, and not overbearing dev workflow using ESLint, Prettier, and stylelint.
@@ -25,7 +27,7 @@ The generator currently supports the following headless CMS services:
 - [Prismic](https://prismic.io/)
 - [Contentful](https://www.contentful.com)
 
-If you'd like support for a different service, please feel free to open a pull request! New services can be integrated by simply creating a new file in the `/lib` folder to wrap the expected API requests.
+If you'd like support for a different service, please feel free to open a pull request!
 
 ## How To Use This Project
 
@@ -41,12 +43,13 @@ View our [CMS setup document](README-CMS.md) to see the schemas that you will ne
 
 The project is designed to be deployed with [Vercel](https://vercel.com), and you can easily clone the project, set up required environment variables, and deploy instantly with just a couple of clicks! Shipping this project on Vercel enables continuous deployment, their high-performance edge network, and an HTTPS domain for free. A deployment on a different service may require some adjustments to the project.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fcolinhemphill%2Fnextjs-resume-generator&env=CMS_ENDPOINT,CMS_KEY&envDescription=This%20application%20requires%20the%20API%20endpoint%20for%20your%20CMS%20integration%20as%20well%20as%20the%20access%20key%20for%20that%20CMS.&project-name=nextjs-static-resume-generator&repository-name=nextjs-static-resume-generator&demo-title=Colin%20Hemphill's%20R%C3%A9sum%C3%A9&demo-description=A%20statically%20generated%20r%C3%A9sum%C3%A9%20built%20in%20Next.js%20and%20integrated%20with%20the%20Prismic%20headless%20CMS.&demo-url=https%3A%2F%2Fresume.colinhemphill.com)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fcolinhemphill%2Fnextjs-resume&env=NEXT_PUBLIC_CMS_INTEGRATION,CMS_ENDPOINT,CMS_KEY&envDescription=The%20CMS%20integration%20details%20required%20to%20connect%20your%20r%C3%A9sum%C3%A9%20to%20a%20supported%20headless%20CMS.&project-name=nextjs-resume&repo-name=nextjs-resume&demo-title=Colin%20Hemphill's%20R%C3%A9sum%C3%A9&demo-description=A%20statically%20generated%20professional%20r%C3%A9sum%C3%A9.&demo-url=https%3A%2F%2Fresume.colinhemphill.com&demo-image=http%3A%2F%2Fresume.colinhemphill.com%2Fimg%2FColinHemphill-Logo-SocialShare.png)
 
 #### Environment Variables
 
 Regardless of where the app is deployed, it will need access to the following environment variables:
 
+- `NEXT_PUBLIC_CMS_INTEGRATION`: 'prismic' | 'contentful'
 - `CMS_ENDPOINT`: the API endpoint, "space" name, etc for your CMS repo
 - `CMS_KEY`: a secret key that grants the app at least read access to your CMS
 
@@ -63,6 +66,7 @@ The project ships with a clean and fully WCAG compliant design, but obviously yo
 To modify the project locally, you will need to create a `.env.local` file at the project root with the following, using the same env variables that were required for deployment:
 
 ```shell
+NEXT_PUBLIC_CMS_INTEGRATION=prismic
 CMS_ENDPOINT=https://your-cms-endpoint.com/
 CMS_KEY=your-secret-key
 ```

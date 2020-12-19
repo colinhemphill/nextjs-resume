@@ -6,7 +6,9 @@
   },
   "parser": "@typescript-eslint/parser",
   "plugins": [
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "testing-library",
+    "jest-dom"
   ],
   "extends": [
     "eslint:recommended",
@@ -15,7 +17,9 @@
     "plugin:@typescript-eslint/recommended",
     "prettier",
     "prettier/@typescript-eslint",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:testing-library/react",
+    "plugin:jest-dom/recommended"
   ],
   "env": {
     "es6": true,
