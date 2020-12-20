@@ -49,7 +49,7 @@ The project is designed to be deployed with [Vercel](https://vercel.com), and yo
 
 Regardless of where the app is deployed, it will need access to the following environment variables:
 
-- `NEXT_PUBLIC_CMS_INTEGRATION`: 'prismic' | 'contentful'
+- `NEXT_PUBLIC_CMS_INTEGRATION`: "prismic", "contentful"
 - `CMS_ENDPOINT`: the API endpoint, "space" name, etc for your CMS repo
 - `CMS_KEY`: a secret key that grants the app at least read access to your CMS
 
