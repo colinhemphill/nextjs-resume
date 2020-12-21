@@ -30,6 +30,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   if (secret !== privateKey) {
     res.writeHead(401);
     res.end('Not authorized');
+    return { props: {} };
   }
 
   const CMS = getCMSIntegration();

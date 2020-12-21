@@ -4,6 +4,8 @@ A bootstrapped Next.js application designed to connect your preferred headless C
 
 [See an example](https://resume.colinhemphill.com)
 
+Your résumé can also generate a secure URL that will display information not accessible on the public URL. The secure version can include private information such as email, phone number, and mailing address. You can send the private link to a potential employer or use it to generate a more complete PDF for yourself.
+
 ## Technology
 
 - [Next.js](https://nextjs.org)
@@ -49,15 +51,22 @@ The project is designed to be deployed with [Vercel](https://vercel.com), and yo
 
 Regardless of where the app is deployed, it will need access to the following environment variables:
 
-- `NEXT_PUBLIC_CMS_INTEGRATION`: "prismic", "contentful"
+- `NEXT_PUBLIC_CMS_INTEGRATION`: "prismic" or "contentful"
 - `CMS_ENDPOINT`: the API endpoint, "space" name, etc for your CMS repo
-- `CMS_KEY`: a secret key that grants the app at least read access to your CMS
+- `CMS_KEY`: a secret key that grants the app read access to your CMS
+- `PRIVATE_KEY` (optional): this is a code, determined by the author, which will provide URL access to a version of the résumé that includes private information. We recommend generating this code (e.g. a UUID or using a password generator)
 
 #### Webhooks
 
 To maximize the workflow of your generator, an update to the CMS should trigger a fresh build of the static deployment.
 
 If you are using Vercel, simply go to your project, then go to Settings > Git > Deploy Hooks, create a new hook, and copy the URL. Then go to your CMS webhook settings and add the URL to trigger a build when the CMS is updated.
+
+## Private Link
+
+If you include a `PRIVATE_KEY` environment variable in your project, you have access to a secret URL that will display more information than the public URL. Just visit `https://your-url.com/private/your-private-key` to see the private résumé! The private version will include any `private_information` items that you added to the CMS. This is helpful if you want to send a complete résumé to a potential employer or if you want to generate a PDF for your own use. In this version, you can include personal information such as email, phone number, and address that you don't want visible to the general public.
+
+This private URL is _only as secure as the people you send it to_. To invalidate an old private URL, you simply need to change the `PRIVATE_KEY` environment variable.
 
 ## Customize Your Résumé
 
@@ -67,8 +76,9 @@ To modify the project locally, you will need to create a `.env.local` file at th
 
 ```shell
 NEXT_PUBLIC_CMS_INTEGRATION=prismic
-CMS_ENDPOINT=https://your-cms-endpoint.com/
-CMS_KEY=your-secret-key
+CMS_ENDPOINT=https://cms-endpoint.com/
+CMS_KEY=cms-secret-key
+PRIVATE_KEY=your-private-url-key
 ```
 
 Then to run the project:
