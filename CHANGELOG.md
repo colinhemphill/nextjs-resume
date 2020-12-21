@@ -24,8 +24,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update `robots.txt` to disallow PDF layout and all private pages
 - Reduced opacity delta on star ratings
 
-### Fixed
-
 ## [1.0.0] - 2020-12-19
 
 ### Added
