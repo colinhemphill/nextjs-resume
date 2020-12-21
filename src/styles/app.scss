@@ -3,39 +3,16 @@ body {
   color: $dark;
 }
 
-$print-margins: 25px;
-
-@page {
-  padding: 0;
-  margin-right: -$print-margins * 2;
-  margin-left: -$print-margins * 2;
+.no-paragraph-margins {
+  p {
+    margin-bottom: 0;
+  }
 }
 
-h1 {
-  page-break-before: always;
-}
+/* PRINT STYLES */
 
 @media print {
   body, html {
-    font-size: 100%;
-  }
-  .container, .container-fluid {
-    padding-right: $print-margins !important;
-    padding-left: $print-margins !important;
-  }
-  .row {
-    margin-right: -$print-margins !important;
-    margin-left: -$print-margins !important;
-  }
-}
-
-@for $i from 1 through 12 {
-  @media print {
-    .col-print-#{$i} {
-      width: #{percentage(round($i * 8.33) / 100)};
-      padding-right: $print-margins;
-      padding-left: $print-margins;
-      float: left;
-    }
+    font-size: 82%;
   }
 }

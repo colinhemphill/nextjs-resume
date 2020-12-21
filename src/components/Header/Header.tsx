@@ -6,12 +6,18 @@ import styles from './Header.module.scss';
 
 interface Props {
   pdf?: boolean;
+  secret?: string;
   subtitle: string;
   title: string;
 }
 
 const Header = (props: Props): JSX.Element => {
-  const { pdf = false, subtitle, title } = props;
+  const { pdf = false, secret, subtitle, title } = props;
+
+  let pdfAPI = '/api/pdf';
+  if (secret) {
+    pdfAPI += `?secret=${secret}`;
+  }
 
   return (
     <header className={styles.header}>
@@ -19,21 +25,22 @@ const Header = (props: Props): JSX.Element => {
         <div
           className={classnames('row align-items-center', {
             'text-center': pdf,
-            'text-md-left text-center': !pdf,
+            'text-md-start text-center': !pdf,
           })}
         >
           <div className="col-md">
             <h1 className="text-white">{title}</h1>
-            <h2 className="text-white">{subtitle}</h2>
+            <h2 className="text-white mb-0">{subtitle}</h2>
           </div>
           {!pdf && (
             <div className="col-md-auto mt-md-0 mt-xxs d-print-none d-block">
               <a
                 className="btn btn-dark btn-lg"
-                href="/api/pdf"
+                href={pdfAPI}
+                rel="noopener noreferrer"
                 target="_blank"
               >
-                <FontAwesomeIcon className="mr-xxxs" icon={faFilePdf} />
+                <FontAwesomeIcon className="me-xxxs" icon={faFilePdf} />
                 Download as PDF
               </a>
             </div>
