@@ -1,4 +1,4 @@
 interface CMSPrivateInformation<RichTextType> {
-  field_name: string;
-  field_value: RichTextType;
+  label: string;
+  content: RichTextType;
 }

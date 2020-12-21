@@ -34,7 +34,7 @@ export const contentfulGetPrivateInformation = async (): Promise<
 > => {
   const entries = await cmsClient().getEntries({
     content_type: 'private_information',
-    order: 'fields.field_name',
+    order: 'fields.label',
   });
   const experiences = entries.items.map((entry) => ({
     id: entry.sys.id,

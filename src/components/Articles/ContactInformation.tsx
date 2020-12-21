@@ -26,13 +26,13 @@ const ContactInformation = (props: Props): JSX.Element => {
         </li>
         {privateInformation &&
           privateInformation.map((privateField) => (
-            <li key={privateField.field_name}>
+            <li key={privateField.label}>
               <div className="row mt-md-0 mt-xxxs no-paragraph-margins">
                 <div className="col-lg-2 col-sm-3">
-                  <strong>{privateField.field_name}:</strong>
+                  <strong>{privateField.label}:</strong>
                 </div>
                 <div className="col">
-                  <CMS.RichTextComponent richText={privateField.field_value} />
+                  <CMS.RichTextComponent richText={privateField.content} />
                 </div>
               </div>
             </li>

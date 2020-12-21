@@ -43,7 +43,7 @@ export const prismicGetPrivateInformation = async (): Promise<
   const document = await cmsClient().query(
     prismic.Predicates.at('document.type', 'private_information'),
     {
-      orderings: '[my.private_information.field_name]',
+      orderings: '[my.private_information.label]',
     },
   );
   const experiences = document.results.map((document) => ({
