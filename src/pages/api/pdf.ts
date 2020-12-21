@@ -20,7 +20,7 @@ const handler = async (
 
   if (secret && secret !== privateKey) {
     res.writeHead(401);
-    res.end('Not authorized');
+    return res.end('Not authorized');
   }
 
   const path = secret ? `private/${secret}/pdf` : 'pdf';
@@ -53,7 +53,7 @@ const handler = async (
   await browser.close();
 
   res.setHeader('Content-Type', 'application/pdf');
-  res.end(pdf);
+  return res.end(pdf);
 };
 
 export default handler;
