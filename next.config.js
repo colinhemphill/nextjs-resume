@@ -1,4 +1,6 @@
-const withOffline = require('next-offline');
+const bundleAnalyzer = require('@next/bundle-analyzer');
+const offline = require('next-offline');
+const withPlugins = require('next-compose-plugins');
 
 const workboxOpts = {
   swDest: 'static/service-worker.js',
@@ -28,8 +30,14 @@ const nextConfig = {
   workboxOpts,
 };
 
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-});
+const plugins = [
+  [
+    bundleAnalyzer,
+    {
+      enabled: process.env.ANALYZE === 'true',
+    },
+  ],
+  [offline],
+];
 
-module.exports = withOffline(withBundleAnalyzer(nextConfig));
+module.exports = withPlugins(plugins, nextConfig);

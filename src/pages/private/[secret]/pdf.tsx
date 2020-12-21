@@ -3,27 +3,38 @@ import {
   faGraduationCap,
 } from '@fortawesome/free-solid-svg-icons';
 import indefinite from 'indefinite';
-import { InferGetStaticPropsType } from 'next';
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import React from 'react';
-import { getCMSIntegration } from '../cms';
-import AboutMe from '../components/Articles/AboutMe';
-import ContactInformation from '../components/Articles/ContactInformation';
-import HobbiesAndInterests from '../components/Articles/HobbiesAndInterests';
-import EducationItem from '../components/EducationItem/EducationItem';
-import Header from '../components/Header/Header';
-import PageHead from '../components/PageHead';
-import ProfessionalItem from '../components/ProfessionalItem/ProfessionalItem';
-import Section from '../components/Section/Section';
-import SectionHeader from '../components/SectionHeader/SectionHeader';
-import Skills from '../components/Skills/Skills';
-import { formatDate, getFullName } from '../helpers';
-import styles from '../styles/pdf.module.scss';
+import { getCMSIntegration } from '../../../cms';
+import AboutMe from '../../../components/Articles/AboutMe';
+import ContactInformation from '../../../components/Articles/ContactInformation';
+import HobbiesAndInterests from '../../../components/Articles/HobbiesAndInterests';
+import EducationItem from '../../../components/EducationItem/EducationItem';
+import Header from '../../../components/Header/Header';
+import PageHead from '../../../components/PageHead';
+import ProfessionalItem from '../../../components/ProfessionalItem/ProfessionalItem';
+import Section from '../../../components/Section/Section';
+import SectionHeader from '../../../components/SectionHeader/SectionHeader';
+import Skills from '../../../components/Skills/Skills';
+import { formatDate, getFullName } from '../../../helpers';
+import styles from '../../../styles/pdf.module.scss';
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export const getStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const {
+    params: { secret },
+    res,
+  } = ctx;
+  const privateKey = process.env.PRIVATE_KEY;
+  if (secret !== privateKey) {
+    res.writeHead(401);
+    res.end('Not authorized');
+  }
+
   const CMS = getCMSIntegration();
   const personalInformation = await CMS.getPersonalInformation();
   const professionalExperiences = await CMS.getProfessionalExperiences();
+  const privateInformation = await CMS.getPrivateInformation();
   const educationalExperiences = await CMS.getEducationalExperiences();
   const skills = await CMS.getSkills();
 
@@ -31,19 +42,20 @@ export const getStaticProps = async () => {
     props: {
       educationalExperiences,
       personalInformation,
+      privateInformation,
       professionalExperiences,
       skills,
     },
-    revalidate: 60,
   };
 };
 
-type Props = InferGetStaticPropsType<typeof getStaticProps>;
+type Props = InferGetServerSidePropsType<typeof getServerSideProps>;
 
 const ResumePage = (props: Props): JSX.Element => {
   const {
     educationalExperiences,
     personalInformation,
+    privateInformation,
     professionalExperiences,
     skills,
   } = props;
@@ -69,7 +81,10 @@ const ResumePage = (props: Props): JSX.Element => {
           <Section color="light" pdf>
             <AboutMe personalInformation={personalInformation} />
             <div className="mt-xs" />
-            <ContactInformation personalInformation={personalInformation} />
+            <ContactInformation
+              personalInformation={personalInformation}
+              privateInformation={privateInformation}
+            />
             <Skills skills={skills} />
           </Section>
         </div>

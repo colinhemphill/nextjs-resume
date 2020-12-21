@@ -5,6 +5,7 @@ import {
   contentfulGetEducationalExperiences,
   contentfulGetLinks,
   contentfulGetPersonalInformation,
+  contentfulGetPrivateInformation,
   contentfulGetProfessionalExperiences,
   contentfulGetSkills,
   contentfulParseDate,
@@ -17,6 +18,7 @@ import {
   prismicGetEducationalExperiences,
   prismicGetLinks,
   prismicGetPersonalInformation,
+  prismicGetPrivateInformation,
   prismicGetProfessionalExperiences,
   prismicGetSkills,
   prismicParseDate,
@@ -39,6 +41,7 @@ export interface CMSIntegration {
   >;
   getLinks: () => Promise<CMSLink[]>;
   getPersonalInformation: () => Promise<CMSPersonalInformation<RichText>>;
+  getPrivateInformation: () => Promise<CMSPrivateInformation<RichText>[]>;
   getProfessionalExperiences: () => Promise<
     CMSPRofessionalExperience<RichText>[]
   >;
@@ -57,6 +60,7 @@ export const getCMSIntegration = (
       getEducationalExperiences: prismicGetEducationalExperiences,
       getLinks: prismicGetLinks,
       getPersonalInformation: prismicGetPersonalInformation,
+      getPrivateInformation: prismicGetPrivateInformation,
       getProfessionalExperiences: prismicGetProfessionalExperiences,
       getSkills: prismicGetSkills,
       link: prismicCMSLink,
@@ -69,6 +73,7 @@ export const getCMSIntegration = (
       getEducationalExperiences: contentfulGetEducationalExperiences,
       getLinks: contentfulGetLinks,
       getPersonalInformation: contentfulGetPersonalInformation,
+      getPrivateInformation: contentfulGetPrivateInformation,
       getProfessionalExperiences: contentfulGetProfessionalExperiences,
       getSkills: contentfulGetSkills,
       link: contentfulCMSLink,

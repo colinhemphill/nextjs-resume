@@ -21,7 +21,7 @@ const Footer = (props: Props): JSX.Element => {
     <footer className={styles.footer}>
       <div className={pdf ? 'container-fluid' : 'container'}>
         {!pdf && links && (
-          <div className="row no-gutters justify-content-center">
+          <div className="row gx-0 justify-content-center">
             {links.map((link) => (
               <div className="col-auto" key={link.href}>
                 <a

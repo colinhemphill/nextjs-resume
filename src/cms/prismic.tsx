@@ -11,6 +11,7 @@ import { CMSLink } from '../_types/CMSLink';
 
 export type PrismicRichText = RichTextBlock[];
 type PersonalInformation = CMSPersonalInformation<PrismicRichText>;
+type PrivateInformation = CMSPrivateInformation<PrismicRichText>;
 type ProfessionalExperience = CMSPRofessionalExperience<PrismicRichText>;
 type EducationalExperience = CMSEducationalExperience<PrismicRichText>;
 
@@ -34,6 +35,22 @@ const cmsClient = (req = null): DefaultClient =>
 export const prismicGetPersonalInformation = async (): Promise<PersonalInformation> => {
   const document = await cmsClient().getSingle('personal_information', {});
   return { id: document.id, ...document.data };
+};
+
+export const prismicGetPrivateInformation = async (): Promise<
+  PrivateInformation[]
+> => {
+  const document = await cmsClient().query(
+    prismic.Predicates.at('document.type', 'private_information'),
+    {
+      orderings: '[my.private_information.field_name]',
+    },
+  );
+  const experiences = document.results.map((document) => ({
+    id: document.id,
+    ...document.data,
+  }));
+  return experiences;
 };
 
 export const prismicGetProfessionalExperiences = async (): Promise<
