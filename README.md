@@ -95,3 +95,7 @@ The page structure and PDF generating API are located at `/src/pages`, and most 
 To modify the document `<head>`, such as modifying Open Graph data or icons, you can edit `/components/PageHead.tsx`.
 
 You should definitely consider updating _everyting_ in the `/public` folder to match your personal brand, including favicon renders in `/public/img/icons/` and `public/favicon.ico`. You should also update `/public/manifest.json` to match your site, as these cannot be updated from the integrated CMS.
+
+### Reducing Bundle Sizes
+
+The best option for reducing bundle sizes and improving performance is to modify the Font Awesome config to meet your needs. In `src/pages/_app.tsx`, we are currently importing the entire Font Awesome Brands (FAB) library in order to support all potential brand icons. Once you have determined which icons you intend to use, you should change `library.add(fab)` to only import specific icons that you need. See the [Font Awesome React documentation](https://fontawesome.com/how-to-use/on-the-web/using-with/react#using) for more details.
