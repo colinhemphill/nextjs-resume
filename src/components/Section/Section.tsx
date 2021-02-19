@@ -1,25 +1,27 @@
-import React, { ReactNode } from 'react';
 import classnames from 'classnames';
+import React, { ReactNode } from 'react';
 
 interface Props {
   children?: ReactNode;
   color?: 'light' | 'primary' | 'white';
-  fluid?: boolean;
+  pdf?: boolean;
 }
 
 const Section = (props: Props): JSX.Element => {
-  const { children, color, fluid = false } = props;
+  const { children, color, pdf = false } = props;
 
   return (
     <section
-      className={classnames('py-sm', {
+      className={classnames({
         'bg-light': color === 'light',
         'bg-primary': color === 'primary',
         'bg-white': color === 'white',
+        'py-sm': !pdf,
+        'py-xs': pdf,
         'text-white': color === 'primary',
       })}
     >
-      <div className={fluid ? 'container-fluid' : 'container'}>{children}</div>
+      <div className={pdf ? 'container-fluid' : 'container'}>{children}</div>
     </section>
   );
 };

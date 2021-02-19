@@ -16,6 +16,15 @@ Create a schema type with a key of `personal_information`.
 | `twitter_username`      | text      | Your twitter handle without the "@" symbol                             |
 | `hobbies_and_interests` | rich text | A short paragraph or two about what you do outside of work             |
 
+### Private Information (optional)
+
+Create a schema type with a key of `private_information`. This information will _only_ be accessible via a private link that you provide, and will not be visible to the general public.
+
+| Field Name | Type      | Description                                                                                              |
+| ---------- | --------- | -------------------------------------------------------------------------------------------------------- |
+| `label`    | text      | The text label of the private field, e.g. "Email" or "Address"                                           |
+| `content`  | rich text | Rich content of the private field. Be sure to add links if desired, including `tel:` and `mailto:` links |
+
 ### Skills
 
 Create a schema type with a key of `skills`. These skills will be listed in three separate groups organized by your proficiency with the skill. You can add more or less than three, but you will probably need to modify the design if you plan to change this.

@@ -7,6 +7,7 @@ import { CMSLink } from '../_types/CMSLink';
 
 export type ContentfulRichText = Document;
 type PersonalInformation = CMSPersonalInformation<ContentfulRichText>;
+type PrivateInformation = CMSPrivateInformation<ContentfulRichText>;
 type ProfessionalExperience = CMSPRofessionalExperience<ContentfulRichText>;
 type EducationalExperience = CMSEducationalExperience<ContentfulRichText>;
 
@@ -26,6 +27,20 @@ export const contentfulGetPersonalInformation = async (): Promise<PersonalInform
   });
   const entry = entries.items[0];
   return { id: entry.sys.id, ...(entry.fields as PersonalInformation) };
+};
+
+export const contentfulGetPrivateInformation = async (): Promise<
+  PrivateInformation[]
+> => {
+  const entries = await cmsClient().getEntries({
+    content_type: 'private_information',
+    order: 'fields.label',
+  });
+  const experiences = entries.items.map((entry) => ({
+    id: entry.sys.id,
+    ...(entry.fields as PrivateInformation),
+  }));
+  return experiences;
 };
 
 export const contentfulGetProfessionalExperiences = async (): Promise<

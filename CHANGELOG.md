@@ -5,6 +5,36 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.1] - 2021-02-19
+
+### Changed
+
+- Dependency updates
+- Switched from `next-offline` to `next-pwa`
+
+### Fixed
+
+- Incorrect bundle analyzer config
+
+## [1.1.0] - 2020-12-21
+
+### Added
+
+- Supports new optional `private_information` schema type
+- Supports new optional environment variable `PRIVATE_KEY`
+- New pages at `/pages/private/[secret]` and `/pages/private/[secret]/pdf`
+  - New pages require a `secret` slug that is compared to the `PRIVATE_KEY` value and returns a 401 on mismatch
+  - New pages display `private_information` values from the CMS under "Contact Information" section
+  - Clicking "Download PDF" button from this page also sends the secret via query to the API to validate access
+
+### Changed
+
+- Upgraded to Bootstrap 5.x beta
+  - Reworked many styles after the upgrade, particularly with the PDF layout
+- List contact information in columns to maintain equal spacing
+- Update `robots.txt` to disallow PDF layout and all private pages
+- Reduced opacity delta on star ratings
+
 ## [1.0.0] - 2020-12-19
 
 ### Added
@@ -79,6 +109,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Supports Prismic
 
 [unreleased]: https://github.com/colinhemphill/nextjs-resume-generator/compare/1.0.0...HEAD
+[1.1.0]: https://github.com/colinhemphill/nextjs-resume-generator/tags/1.1.0
+[1.0.0]: https://github.com/colinhemphill/nextjs-resume-generator/tags/1.0.0
 [0.4.3]: https://github.com/colinhemphill/nextjs-resume-generator/tags/0.4.3
 [0.4.2]: https://github.com/colinhemphill/nextjs-resume-generator/tags/0.4.2
 [0.4.1]: https://github.com/colinhemphill/nextjs-resume-generator/tags/0.4.1
