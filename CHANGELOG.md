@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.2] - 2021-02-22
+
+### Changed
+
+- Dependency updates
+  - Updated ESLint config to work with `eslint-config-prettier@8.0.0`
+- Opt in to `webpack5` option in `next.config.js`
+  - Installed `webpack` as a dev dependency due to [Next.js issue #21679](https://github.com/vercel/next.js/issues/21679)
+
 ## [1.1.1] - 2021-02-19
 
 ### Changed
