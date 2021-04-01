@@ -1,6 +1,5 @@
 import chrome from 'chrome-aws-lambda';
 import { NextApiRequest, NextApiResponse } from 'next';
-import puppeteer from 'puppeteer';
 
 const privateKey = process.env.PRIVATE_KEY;
 const isDev = process.env.NODE_ENV === 'development';
@@ -25,15 +24,12 @@ const handler = async (
 
   const path = secret ? `private/${secret}/pdf` : 'pdf';
 
-  const browser = await puppeteer.launch(
-    !isDev
-      ? {
-          args: chrome.args,
-          executablePath: await chrome.executablePath,
-          headless: true,
-        }
-      : {},
-  );
+  const browser = await chrome.puppeteer.launch({
+    args: chrome.args,
+    executablePath: await chrome.executablePath,
+    headless: true,
+  });
+
   const page = await browser.newPage();
   await page.goto(`${protocol}://${url}/${path}`);
   const pdf = await page.pdf({
@@ -50,10 +46,11 @@ const handler = async (
     printBackground: true,
     scale: 1,
   });
+
   await browser.close();
 
   res.setHeader('Content-Type', 'application/pdf');
-  return res.end(pdf);
+  res.end(pdf);
 };
 
 export default handler;
