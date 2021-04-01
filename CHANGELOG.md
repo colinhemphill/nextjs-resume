@@ -12,7 +12,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Dependency updates
   - Updated ESLint config to work with `eslint-config-prettier@8.0.0`
 - Opt in to `webpack5` option in `next.config.js`
-  - Installed `webpack` as a dev dependency due to [Next.js issue #21679](https://github.com/vercel/next.js/issues/21679)
 
 ## [1.1.1] - 2021-02-19
 
@@ -118,6 +117,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Supports Prismic
 
 [unreleased]: https://github.com/colinhemphill/nextjs-resume-generator/compare/1.0.0...HEAD
+[1.1.2]: https://github.com/colinhemphill/nextjs-resume-generator/tags/1.1.2
+[1.1.1]: https://github.com/colinhemphill/nextjs-resume-generator/tags/1.1.1
 [1.1.0]: https://github.com/colinhemphill/nextjs-resume-generator/tags/1.1.0
 [1.0.0]: https://github.com/colinhemphill/nextjs-resume-generator/tags/1.0.0
 [0.4.3]: https://github.com/colinhemphill/nextjs-resume-generator/tags/0.4.3

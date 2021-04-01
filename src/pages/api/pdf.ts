@@ -38,7 +38,7 @@ const handler = async (
   await page.goto(`${protocol}://${url}/${path}`);
   const pdf = await page.pdf({
     displayHeaderFooter: false,
-    format: 'Letter',
+    format: 'letter',
     landscape: false,
     margin: {
       bottom: 0,
