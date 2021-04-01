@@ -57,7 +57,7 @@
   "devDependencies": {
     "@next/bundle-analyzer": "10.0.5",
     "@testing-library/jest-dom": "5.11.9",
-    "@testing-library/react": "11.2.5",
+    "@testing-library/react": "11.2.6",
     "@types/jest": "26.0.20",
     "@types/node": "14.14.31",
     "@types/puppeteer": "5.4.3",
