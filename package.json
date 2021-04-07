@@ -82,6 +82,6 @@
     "stylelint-order": "4.1.0",
     "stylelint-scss": "3.19.0",
     "ts-jest": "26.5.1",
-    "typescript": "4.1.5"
+    "typescript": "4.2.4"
   }
 }
