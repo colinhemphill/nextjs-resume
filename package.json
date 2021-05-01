@@ -76,7 +76,7 @@
     "lint-staged": "10.5.4",
     "prettier": "2.2.1",
     "puppeteer": "8.0.0",
-    "stylelint": "13.12.0",
+    "stylelint": "13.13.1",
     "stylelint-config-idiomatic-order": "8.1.0",
     "stylelint-order": "4.1.0",
     "stylelint-scss": "3.19.0",
