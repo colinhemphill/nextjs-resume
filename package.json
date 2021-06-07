@@ -37,7 +37,7 @@
     "@fortawesome/react-fontawesome": "0.1.14",
     "@next/bundle-analyzer": "10.2.0",
     "bootstrap": "5.0.1",
-    "chrome-aws-lambda": "9.1.0",
+    "chrome-aws-lambda": "10.0.0",
     "classnames": "2.3.1",
     "contentful": "8.3.5",
     "indefinite": "2.4.1",
