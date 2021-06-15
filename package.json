@@ -28,7 +28,7 @@
     "types": "tsc --pretty --noEmit"
   },
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "14.1.3",
+    "@contentful/rich-text-react-renderer": "15.0.0",
     "@contentful/rich-text-types": "14.1.2",
     "@fortawesome/fontawesome-svg-core": "1.2.35",
     "@fortawesome/free-brands-svg-icons": "5.15.3",
