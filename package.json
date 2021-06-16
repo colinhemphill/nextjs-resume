@@ -39,7 +39,7 @@
     "bootstrap": "5.0.1",
     "chrome-aws-lambda": "9.1.0",
     "classnames": "2.3.1",
-    "contentful": "8.3.5",
+    "contentful": "8.4.2",
     "indefinite": "2.4.1",
     "next": "10.2.0",
     "next-compose-plugins": "2.2.1",
