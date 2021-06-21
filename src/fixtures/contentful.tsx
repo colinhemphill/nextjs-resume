@@ -2,32 +2,33 @@ import { BLOCKS } from '@contentful/rich-text-types';
 import { ContentfulRichText } from '../cms/contentful';
 import { CMSLink } from '../_types/CMSLink';
 
-export const educationalExperiences: CMSEducationalExperience<ContentfulRichText>[] = [
-  {
-    achievement_description: {
-      content: [
-        {
-          content: [
-            {
-              data: {},
-              marks: [],
-              nodeType: 'text',
-              value: 'Test',
-            },
-          ],
-          data: {},
-          nodeType: BLOCKS.PARAGRAPH,
-        },
-      ],
-      data: {},
-      nodeType: BLOCKS.DOCUMENT,
+export const educationalExperiences: CMSEducationalExperience<ContentfulRichText>[] =
+  [
+    {
+      achievement_description: {
+        content: [
+          {
+            content: [
+              {
+                data: {},
+                marks: [],
+                nodeType: 'text',
+                value: 'Test',
+              },
+            ],
+            data: {},
+            nodeType: BLOCKS.PARAGRAPH,
+          },
+        ],
+        data: {},
+        nodeType: BLOCKS.DOCUMENT,
+      },
+      achievement_title: 'B.S. in Cool Person',
+      id: '1',
+      organization_name: 'Cool U',
+      year: 2010,
     },
-    achievement_title: 'B.S. in Cool Person',
-    id: '1',
-    organization_name: 'Cool U',
-    year: 2010,
-  },
-];
+  ];
 
 export const links: CMSLink[] = [
   {
@@ -82,34 +83,35 @@ export const personalInformation: CMSPersonalInformation<ContentfulRichText> = {
   location: 'Somewhere Only We Know',
 };
 
-export const professionalExperiences: CMSPRofessionalExperience<ContentfulRichText>[] = [
-  {
-    end_date: null,
-    id: '1',
-    is_current: true,
-    organization_name: 'The Zebra',
-    position_description: {
-      content: [
-        {
-          content: [
-            {
-              data: {},
-              marks: [],
-              nodeType: 'text',
-              value: 'Test',
-            },
-          ],
-          data: {},
-          nodeType: BLOCKS.PARAGRAPH,
-        },
-      ],
-      data: {},
-      nodeType: BLOCKS.DOCUMENT,
+export const professionalExperiences: CMSPRofessionalExperience<ContentfulRichText>[] =
+  [
+    {
+      end_date: null,
+      id: '1',
+      is_current: true,
+      organization_name: 'The Zebra',
+      position_description: {
+        content: [
+          {
+            content: [
+              {
+                data: {},
+                marks: [],
+                nodeType: 'text',
+                value: 'Test',
+              },
+            ],
+            data: {},
+            nodeType: BLOCKS.PARAGRAPH,
+          },
+        ],
+        data: {},
+        nodeType: BLOCKS.DOCUMENT,
+      },
+      position_title: 'My Title',
+      start_date: '2018-02-15',
     },
-    position_title: 'My Title',
-    start_date: '2018-02-15',
-  },
-];
+  ];
 
 export const skills: CMSSkills[] = [
   {

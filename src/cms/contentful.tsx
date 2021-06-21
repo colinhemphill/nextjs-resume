@@ -20,14 +20,15 @@ const cmsClient = () =>
     space: apiEndpoint,
   });
 
-export const contentfulGetPersonalInformation = async (): Promise<PersonalInformation> => {
-  const entries = await cmsClient().getEntries({
-    content_type: 'personal_information',
-    limit: 1,
-  });
-  const entry = entries.items[0];
-  return { id: entry.sys.id, ...(entry.fields as PersonalInformation) };
-};
+export const contentfulGetPersonalInformation =
+  async (): Promise<PersonalInformation> => {
+    const entries = await cmsClient().getEntries({
+      content_type: 'personal_information',
+      limit: 1,
+    });
+    const entry = entries.items[0];
+    return { id: entry.sys.id, ...(entry.fields as PersonalInformation) };
+  };
 
 export const contentfulGetPrivateInformation = async (): Promise<
   PrivateInformation[]
