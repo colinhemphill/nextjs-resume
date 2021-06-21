@@ -139,6 +139,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Supports Prismic
 
 [unreleased]: https://github.com/colinhemphill/nextjs-resume-generator/compare/1.0.0...HEAD
+[1.1.5]: https://github.com/colinhemphill/nextjs-resume-generator/tags/1.1.5
+[1.1.4]: https://github.com/colinhemphill/nextjs-resume-generator/tags/1.1.4
 [1.1.3]: https://github.com/colinhemphill/nextjs-resume-generator/tags/1.1.3
 [1.1.2]: https://github.com/colinhemphill/nextjs-resume-generator/tags/1.1.2
 [1.1.1]: https://github.com/colinhemphill/nextjs-resume-generator/tags/1.1.1
