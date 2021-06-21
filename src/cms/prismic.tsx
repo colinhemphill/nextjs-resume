@@ -32,10 +32,11 @@ const createClientOptions = (req = null, prismicAccessToken = null) => {
 const cmsClient = (req = null): DefaultClient =>
   prismic.client(apiEndpoint, createClientOptions(req, accessToken));
 
-export const prismicGetPersonalInformation = async (): Promise<PersonalInformation> => {
-  const document = await cmsClient().getSingle('personal_information', {});
-  return { id: document.id, ...document.data };
-};
+export const prismicGetPersonalInformation =
+  async (): Promise<PersonalInformation> => {
+    const document = await cmsClient().getSingle('personal_information', {});
+    return { id: document.id, ...document.data };
+  };
 
 export const prismicGetPrivateInformation = async (): Promise<
   PrivateInformation[]

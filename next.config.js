@@ -14,7 +14,6 @@ const pwa = {
 };
 
 const nextConfig = {
-  future: { webpack5: true },
   pwa,
   reactStrictMode: true,
 };
