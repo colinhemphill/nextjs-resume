@@ -1,10 +1,17 @@
+/* eslint-disable no-undef */
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const nextJest = require('next/jest');
+
+const createJestConfig = nextJest({
+  dir: './',
+});
+
 /*
  * For a detailed explanation regarding each configuration property and type check, visit:
  * https://jestjs.io/docs/en/configuration.html
  */
 
-/* eslint-disable no-undef */
-module.exports = {
+const customConfig = {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -22,7 +29,8 @@ module.exports = {
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
   collectCoverageFrom: [
-    '**/*.{js,jsx,ts,tsx}',
+    'src/**/*.{js,jsx,ts,tsx}',
+    '!src/pages/**/*',
     '!**/*.d.ts',
     '!**/node_modules/**',
   ],
@@ -201,3 +209,5 @@ module.exports = {
   // Whether to use watchman for file crawling
   // watchman: true,
 };
+
+module.exports = createJestConfig(customConfig);

@@ -1,6 +1,6 @@
 import { config, library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { AppPropsType } from 'next/dist/next-server/lib/utils';
+import { AppProps } from 'next/app';
 import Head from 'next/head';
 import React from 'react';
 import '../styles/globals.scss';
@@ -8,7 +8,7 @@ import '../styles/globals.scss';
 config.autoAddCss = false;
 library.add(fab);
 
-const MyApp = ({ Component, pageProps }: AppPropsType): JSX.Element => {
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }): JSX.Element => {
   return (
     <>
       <Head>

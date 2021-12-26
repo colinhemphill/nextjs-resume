@@ -17,6 +17,7 @@
     "skipLibCheck": true,
     "strict": false,
     "target": "es5",
+    "incremental": true
   },
   "exclude": [
     "node_modules"
@@ -26,5 +27,5 @@
     "**/*.d.ts",
     "** /*.ts",
     "**/*.tsx"
-  ],
+  ]
 }
