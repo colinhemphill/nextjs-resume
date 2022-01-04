@@ -28,8 +28,8 @@
     "types": "tsc --pretty --noEmit"
   },
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "15.10.1",
-    "@contentful/rich-text-types": "15.10.1",
+    "@contentful/rich-text-react-renderer": "15.11.1",
+    "@contentful/rich-text-types": "15.11.1",
     "@fortawesome/fontawesome-svg-core": "1.2.36",
     "@fortawesome/free-brands-svg-icons": "5.15.4",
     "@fortawesome/free-regular-svg-icons": "5.15.4",
