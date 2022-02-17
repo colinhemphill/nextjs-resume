@@ -1,8 +1,11 @@
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import classnames from 'classnames';
 import React from 'react';
+import { buttonStyle } from '../../strum-design-system/components/Button/Button.css';
 import Container from '../../strum-design-system/components/Container/Container';
+import Heading from '../../strum-design-system/components/Heading/Heading';
+import Column from '../../strum-design-system/components/Layout/Column';
+import Row from '../../strum-design-system/components/Layout/Row';
 import { headerStyle } from './Header.css';
 
 interface HeaderProps {
@@ -23,30 +26,25 @@ const Header: React.FC<HeaderProps> = (props) => {
   return (
     <header className={headerStyle}>
       <Container>
-        <div
-          className={classnames('row align-items-center', {
-            'text-center': pdf,
-            'text-md-start text-center': !pdf,
-          })}
-        >
-          <div className="col-md">
-            <h1 className="text-white">{title}</h1>
-            <h2 className="text-white mb-0">{subtitle}</h2>
-          </div>
+        <Row verticalAlign="center">
+          <Column>
+            <Heading atoms={{ color: 'white' }} level={1} text={title} />
+            <Heading atoms={{ color: 'white' }} level={2} text={subtitle} />
+          </Column>
           {!pdf && (
-            <div className="col-md-auto mt-md-0 mt-xxs d-print-none d-block">
+            <Column width={{ xs: 12, sm: 12, md: 'auto' }}>
               <a
-                className="btn btn-dark btn-lg"
+                className={buttonStyle({ color: 'dark', size: 'lg' })}
                 href={pdfAPI}
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <FontAwesomeIcon className="me-xxxs" icon={faFilePdf} />
+                <FontAwesomeIcon icon={faFilePdf} />
                 Download as PDF
               </a>
-            </div>
+            </Column>
           )}
-        </div>
+        </Row>
       </Container>
     </header>
   );

@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.0.0] - 2022-02-17
 
+### Added
+
+- Uses [Vanilla Extract](https://vanilla-extract.style/) for styles
+- Uses custom Vanilla Extract styles and components based on an early version of the Strum Design System
+- Non-PDF styles now support dark mode
+
+### Removed
+
+- No longer uses Sass or Sass modules
+- No longer uses Bootstrap
+
 ### Changed
 
 - Upgraded to Next.js 12.1

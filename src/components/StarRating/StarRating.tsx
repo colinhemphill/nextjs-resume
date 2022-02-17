@@ -10,7 +10,7 @@ const StarRating: React.FC<StarRatingProps> = (props) => {
   const { stars } = props;
 
   return (
-    <span className="text-primary">
+    <span>
       {stars >= 3 && <FontAwesomeIcon icon={faStar} />}
       {stars >= 2 && <FontAwesomeIcon icon={faStar} />}
       {stars >= 1 && <FontAwesomeIcon icon={faStar} />}

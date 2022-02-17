@@ -6,7 +6,7 @@ import { getFullName } from '../../helpers/utils';
 import AutoGrid from '../../strum-design-system/components/AutoGrid/AutoGrid';
 import AutoGridCell from '../../strum-design-system/components/AutoGrid/AutoGridCell';
 import Container from '../../strum-design-system/components/Container/Container';
-import Row from '../../strum-design-system/components/Layout/Row';
+import { visuallyHidden } from '../../strum-design-system/styles/accessibility.css';
 import { CMSLink } from '../../_types/CMSLink';
 import { footerLinkStyle, footerStyle } from './Footer.css';
 
@@ -29,12 +29,12 @@ const Footer: React.FC<FooterProps> = (props) => {
             {links.map((link) => (
               <AutoGridCell key={link.href}>
                 <a
-                  className="d-block fa-3x"
+                  className="fa-3x"
                   href={link.href}
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <span className="sr-only">
+                  <span className={visuallyHidden}>
                     {personalInformation.given_name} on {link.title}
                   </span>
                   <span className="fa-layers fa-fw">
@@ -52,10 +52,11 @@ const Footer: React.FC<FooterProps> = (props) => {
           </AutoGrid>
         )}
 
-        <div className={!pdf && links?.length ? 'mt-xxs' : ''}>
+        <div>
           Copyright ©{new Date().getFullYear()} {fullName}
         </div>
-        <div className="mt-xxxs">
+
+        <div>
           <small>
             This résumé was generated with{' '}
             <a

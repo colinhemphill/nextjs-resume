@@ -3,6 +3,7 @@ import React from 'react';
 import { getCMSIntegration } from '../../cms';
 import Column from '../../strum-design-system/components/Layout/Column';
 import Row from '../../strum-design-system/components/Layout/Row';
+import UnorderedList from '../../strum-design-system/components/Nav/UnorderedList';
 import SectionHeader from '../SectionHeader/SectionHeader';
 
 interface ContactInformationProps {
@@ -17,10 +18,10 @@ const ContactInformation: React.FC<ContactInformationProps> = (props) => {
   return (
     <article>
       <SectionHeader icon={faIdCard} text="Contact Information" />
-      <ul className="list-unstyled">
+      <UnorderedList>
         <li>
           <Row>
-            <Column width={{ sm: 3, lg: 2 }}>
+            <Column width={{ xs: 'auto' }}>
               <strong>Location:</strong>
             </Column>
             <Column>{personalInformation.location}</Column>
@@ -30,7 +31,7 @@ const ContactInformation: React.FC<ContactInformationProps> = (props) => {
           privateInformation.map((privateField) => (
             <li key={privateField.label}>
               <Row>
-                <Column width={{ sm: 3, lg: 2 }}>
+                <Column width={{ xs: 'auto' }}>
                   <strong>{privateField.label}:</strong>
                 </Column>
                 <Column>
@@ -39,7 +40,7 @@ const ContactInformation: React.FC<ContactInformationProps> = (props) => {
               </Row>
             </li>
           ))}
-      </ul>
+      </UnorderedList>
     </article>
   );
 };

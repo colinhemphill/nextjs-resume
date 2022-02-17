@@ -19,7 +19,8 @@ const handler = async (
 
   if (secret && secret !== privateKey) {
     res.writeHead(401);
-    return res.end('Not authorized');
+    res.end('Not authorized');
+    return;
   }
 
   const path = secret ? `private/${secret}/pdf` : 'pdf';

@@ -71,7 +71,6 @@ const ResumePage: NextPage<Props> = (props) => {
           />
           <Section color="alternate">
             <AboutMe personalInformation={personalInformation} />
-            <div className="mt-xs" />
             <ContactInformation personalInformation={personalInformation} />
             <Skills skills={skills} />
           </Section>
@@ -102,8 +101,6 @@ const ResumePage: NextPage<Props> = (props) => {
               />
             ))}
 
-            <div className="mt-xs" />
-
             <SectionHeader icon={faGraduationCap} text="Education" />
             {educationalExperiences.map((experience) => (
               <EducationItem
@@ -120,8 +117,6 @@ const ResumePage: NextPage<Props> = (props) => {
                 year={experience.year}
               />
             ))}
-
-            <div className="mt-xs" />
 
             <HobbiesAndInterests personalInformation={personalInformation} />
           </Section>

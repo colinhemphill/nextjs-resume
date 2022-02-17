@@ -1,6 +1,7 @@
 import { faCalendar } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import Heading from '../../strum-design-system/components/Heading/Heading';
 
 interface ProfessionalItemProps extends CMSPRofessionalExperience<JSX.Element> {
   pdf?: boolean;
@@ -18,18 +19,15 @@ const ProfessionalItem: React.FC<ProfessionalItemProps> = (props) => {
   } = props;
 
   return (
-    <article className={pdf ? 'mt-xxs' : 'mt-xs'}>
-      <h4 className="d-inline-block">
-        <span className="bg-dark px-xxxs text-white rounded">
-          {position_title}
-        </span>{' '}
-        at {organization_name}
-      </h4>
+    <article>
+      <Heading level={4}>
+        <span>{position_title}</span> at {organization_name}
+      </Heading>
       <div>
-        <FontAwesomeIcon className="me-xxxs" icon={faCalendar} />
+        <FontAwesomeIcon icon={faCalendar} />
         {start_date}–{is_current ? 'Current' : end_date}
       </div>
-      <div className={pdf ? 'mt-xxxs' : 'mt-xxs'}>{position_description}</div>
+      <div>{position_description}</div>
     </article>
   );
 };

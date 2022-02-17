@@ -84,7 +84,6 @@ const ResumePage = (props: Props): JSX.Element => {
           />
           <Section color="alternate">
             <AboutMe personalInformation={personalInformation} />
-            <div className="mt-xs" />
             <ContactInformation
               personalInformation={personalInformation}
               privateInformation={privateInformation}
@@ -118,8 +117,6 @@ const ResumePage = (props: Props): JSX.Element => {
               />
             ))}
 
-            <div className="mt-xs" />
-
             <SectionHeader icon={faGraduationCap} text="Education" />
             {educationalExperiences.map((experience) => (
               <EducationItem
@@ -136,8 +133,6 @@ const ResumePage = (props: Props): JSX.Element => {
                 year={experience.year}
               />
             ))}
-
-            <div className="mt-xs" />
 
             <HobbiesAndInterests personalInformation={personalInformation} />
           </Section>

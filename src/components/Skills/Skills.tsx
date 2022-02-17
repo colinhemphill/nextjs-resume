@@ -1,5 +1,6 @@
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
+import Heading from '../../strum-design-system/components/Heading/Heading';
 import Column from '../../strum-design-system/components/Layout/Column';
 import Row from '../../strum-design-system/components/Layout/Row';
 import SectionHeader from '../SectionHeader/SectionHeader';
@@ -13,14 +14,14 @@ const Skills: React.FC<SkillsProps> = (props) => {
   const { skills } = props;
 
   return (
-    <article className="mt-xs">
+    <article>
       <SectionHeader icon={faCheck} text="Skills & Expertise" />
       <Row>
         {skills.map((skill, index) => (
           <Column key={skill.id}>
-            <h4 className="h5 text-uppercase">
+            <Heading level={4}>
               <StarRating stars={skill.level} /> {skill.level_name}
-            </h4>
+            </Heading>
             <p>{skill.skills_list}</p>
           </Column>
         ))}

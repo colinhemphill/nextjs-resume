@@ -1,6 +1,7 @@
 import { faUniversity } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import Heading from '../../strum-design-system/components/Heading/Heading';
 
 interface EducationItemsProps extends CMSEducationalExperience<JSX.Element> {
   pdf?: boolean;
@@ -15,15 +16,13 @@ const EducationItem: React.FC<EducationItemsProps> = (props) => {
   } = props;
 
   return (
-    <article className={pdf ? 'mt-xxs' : 'mt-xs'}>
-      <h4 className="d-inline-block">{achievement_title}</h4>
+    <article>
+      <Heading level={4} text={achievement_title} />
       <div>
-        <FontAwesomeIcon className="me-xxxs" icon={faUniversity} />
+        <FontAwesomeIcon icon={faUniversity} />
         {organization_name}
       </div>
-      <div className={pdf ? 'mt-xxxs' : 'mt-xxs'}>
-        {achievement_description}
-      </div>
+      <div>{achievement_description}</div>
     </article>
   );
 };
