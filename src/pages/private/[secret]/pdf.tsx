@@ -19,7 +19,6 @@ import Skills from '../../../components/Skills/Skills';
 import { formatDate, getFullName } from '../../../helpers';
 import styles from '../../../styles/pdf.module.scss';
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const {
     params: { secret },

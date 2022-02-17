@@ -19,7 +19,6 @@ import SectionHeader from '../components/SectionHeader/SectionHeader';
 import Skills from '../components/Skills/Skills';
 import { formatDate, getFullName } from '../helpers';
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const getStaticProps = async () => {
   const CMS = getCMSIntegration();
   const personalInformation = await CMS.getPersonalInformation();

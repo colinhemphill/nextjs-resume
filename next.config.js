@@ -1,9 +1,9 @@
+const withPWA = require('next-pwa');
+const runtimeCaching = require('next-pwa/cache');
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
 const withPlugins = require('next-compose-plugins');
-const withPWA = require('next-pwa');
-const runtimeCaching = require('next-pwa/cache');
 
 const isDev = process.env.NODE_ENV === 'development';
 
@@ -16,6 +16,7 @@ const pwa = {
 const nextConfig = {
   pwa,
   reactStrictMode: true,
+  swcMinify: true,
 };
 
 const plugins = [[withBundleAnalyzer], [withPWA]];
