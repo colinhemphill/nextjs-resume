@@ -17,7 +17,9 @@ import ProfessionalItem from '../components/ProfessionalItem/ProfessionalItem';
 import Section from '../components/Section/Section';
 import SectionHeader from '../components/SectionHeader/SectionHeader';
 import Skills from '../components/Skills/Skills';
-import { formatDate, getFullName } from '../helpers';
+import { formatDate, getFullName } from '../helpers/utils';
+import Column from '../strum-design-system/components/Layout/Column';
+import Row from '../strum-design-system/components/Layout/Row';
 
 export const getStaticProps = async () => {
   const CMS = getCMSIntegration();
@@ -63,20 +65,20 @@ const ResumePage: NextPage<Props> = (props) => {
 
       <Header subtitle={personalInformation.job_title} title={fullName} />
 
-      <Section color="white">
-        <div className="row">
-          <div className="col-md">
+      <Section color="standard">
+        <Row>
+          <Column>
             <AboutMe personalInformation={personalInformation} />
-          </div>
-          <div className="col-md mt-md-0 mt-xs">
+          </Column>
+          <Column>
             <ContactInformation personalInformation={personalInformation} />
-          </div>
-        </div>
+          </Column>
+        </Row>
 
         <Skills skills={skills} />
       </Section>
 
-      <Section color="light">
+      <Section color="alternate">
         <SectionHeader icon={faBriefcase} text="Professional Experience" />
         {professionalExperiences.map((experience) => (
           <ProfessionalItem
@@ -100,7 +102,7 @@ const ResumePage: NextPage<Props> = (props) => {
         ))}
       </Section>
 
-      <Section color="white">
+      <Section color="standard">
         <SectionHeader icon={faGraduationCap} text="Education" />
         {educationalExperiences.map((experience) => (
           <EducationItem
@@ -118,7 +120,7 @@ const ResumePage: NextPage<Props> = (props) => {
         ))}
       </Section>
 
-      <Section color="light">
+      <Section color="alternate">
         <HobbiesAndInterests personalInformation={personalInformation} />
       </Section>
 

@@ -1,6 +1,8 @@
 import { faIdCard } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { getCMSIntegration } from '../../cms';
+import Column from '../../strum-design-system/components/Layout/Column';
+import Row from '../../strum-design-system/components/Layout/Row';
 import SectionHeader from '../SectionHeader/SectionHeader';
 
 interface ContactInformationProps {
@@ -17,24 +19,24 @@ const ContactInformation: React.FC<ContactInformationProps> = (props) => {
       <SectionHeader icon={faIdCard} text="Contact Information" />
       <ul className="list-unstyled">
         <li>
-          <div className="row mt-md-0 mt-xxxs">
-            <div className="col-lg-2 col-sm-3">
+          <Row>
+            <Column width={{ sm: 3, lg: 2 }}>
               <strong>Location:</strong>
-            </div>
-            <div className="col">{personalInformation.location}</div>
-          </div>
+            </Column>
+            <Column>{personalInformation.location}</Column>
+          </Row>
         </li>
         {privateInformation &&
           privateInformation.map((privateField) => (
             <li key={privateField.label}>
-              <div className="row mt-md-0 mt-xxxs no-paragraph-margins">
-                <div className="col-lg-2 col-sm-3">
+              <Row>
+                <Column width={{ sm: 3, lg: 2 }}>
                   <strong>{privateField.label}:</strong>
-                </div>
-                <div className="col">
+                </Column>
+                <Column>
                   <CMS.RichTextComponent richText={privateField.content} />
-                </div>
-              </div>
+                </Column>
+              </Row>
             </li>
           ))}
       </ul>

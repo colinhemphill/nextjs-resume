@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
-import { getFullName } from '../helpers';
+import { getFullName } from '../helpers/utils';
 
 interface PageHeadProps {
   baseURL?: string;

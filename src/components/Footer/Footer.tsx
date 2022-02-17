@@ -2,9 +2,13 @@ import { faCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { getCMSIntegration } from '../../cms/';
-import { getFullName } from '../../helpers';
+import { getFullName } from '../../helpers/utils';
+import AutoGrid from '../../strum-design-system/components/AutoGrid/AutoGrid';
+import AutoGridCell from '../../strum-design-system/components/AutoGrid/AutoGridCell';
+import Container from '../../strum-design-system/components/Container/Container';
+import Row from '../../strum-design-system/components/Layout/Row';
 import { CMSLink } from '../../_types/CMSLink';
-import styles from './Footer.module.scss';
+import { footerLinkStyle, footerStyle } from './Footer.css';
 
 interface FooterProps {
   personalInformation: CMSPersonalInformation<unknown>;
@@ -18,12 +22,12 @@ const Footer: React.FC<FooterProps> = (props) => {
   const CMS = getCMSIntegration();
 
   return (
-    <footer className={styles.footer}>
-      <div className={pdf ? 'container-fluid' : 'container'}>
+    <footer className={footerStyle}>
+      <Container>
         {!pdf && links && (
-          <div className="row gx-0 justify-content-center">
+          <AutoGrid>
             {links.map((link) => (
-              <div className="col-auto" key={link.href}>
+              <AutoGridCell key={link.href}>
                 <a
                   className="d-block fa-3x"
                   href={link.href}
@@ -43,9 +47,9 @@ const Footer: React.FC<FooterProps> = (props) => {
                     />
                   </span>
                 </a>
-              </div>
+              </AutoGridCell>
             ))}
-          </div>
+          </AutoGrid>
         )}
 
         <div className={!pdf && links?.length ? 'mt-xxs' : ''}>
@@ -55,7 +59,7 @@ const Footer: React.FC<FooterProps> = (props) => {
           <small>
             This résumé was generated with{' '}
             <a
-              className={styles.footerLink}
+              className={footerLinkStyle}
               href="https://nextjs.org/"
               rel="noopener noreferrer"
               target="_blank"
@@ -64,7 +68,7 @@ const Footer: React.FC<FooterProps> = (props) => {
             </a>{' '}
             and{' '}
             <a
-              className={styles.footerLink}
+              className={footerLinkStyle}
               href={CMS.link}
               rel="noopener noreferrer"
               target="_blank"
@@ -73,7 +77,7 @@ const Footer: React.FC<FooterProps> = (props) => {
             </a>
             , and deployed on{' '}
             <a
-              className={styles.footerLink}
+              className={footerLinkStyle}
               href="https://vercel.com/"
               rel="noopener noreferrer"
               target="_blank"
@@ -82,7 +86,7 @@ const Footer: React.FC<FooterProps> = (props) => {
             </a>
             . Learn how to deploy your own resume with the{' '}
             <a
-              className={styles.footerLink}
+              className={footerLinkStyle}
               href="https://github.com/colinhemphill/nextjs-resume-generator"
               rel="noopener noreferrer"
               target="_blank"
@@ -92,7 +96,7 @@ const Footer: React.FC<FooterProps> = (props) => {
             !
           </small>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 };

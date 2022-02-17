@@ -7,9 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.0.0] - 2022-02-17
 
+### Changed
+
 - Upgraded to Next.js 12.1
   - Use built-in ESLint config
   - Use built-in Jest config
+- Switched to "Inter" as the default font
 
 ## [1.1.6] - 2021-12-26
 

@@ -1,12 +1,11 @@
-import { config, library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import React from 'react';
-import '../styles/globals.scss';
-
-config.autoAddCss = false;
-library.add(fab);
+import '../helpers/fontawesome-config';
+import '../strum-design-system';
+import StrumProvider from '../strum-design-system/components/StrumProvider/StrumProvider';
+import '../styles/app.css';
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
@@ -15,7 +14,9 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <Component {...pageProps} />
+      <StrumProvider>
+        <Component {...pageProps} />
+      </StrumProvider>
     </>
   );
 };

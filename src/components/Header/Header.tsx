@@ -2,7 +2,8 @@ import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classnames from 'classnames';
 import React from 'react';
-import styles from './Header.module.scss';
+import Container from '../../strum-design-system/components/Container/Container';
+import { headerStyle } from './Header.css';
 
 interface HeaderProps {
   pdf?: boolean;
@@ -20,8 +21,8 @@ const Header: React.FC<HeaderProps> = (props) => {
   }
 
   return (
-    <header className={styles.header}>
-      <div className={pdf ? 'container-fluid' : 'container'}>
+    <header className={headerStyle}>
+      <Container>
         <div
           className={classnames('row align-items-center', {
             'text-center': pdf,
@@ -46,7 +47,7 @@ const Header: React.FC<HeaderProps> = (props) => {
             </div>
           )}
         </div>
-      </div>
+      </Container>
     </header>
   );
 };

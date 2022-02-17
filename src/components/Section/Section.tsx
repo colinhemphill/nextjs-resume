@@ -1,27 +1,18 @@
-import classnames from 'classnames';
-import React, { ReactNode } from 'react';
+import React from 'react';
+import Container from '../../strum-design-system/components/Container/Container';
+import { sectionStyle } from './Section.css';
 
-interface SectionProps {
-  children?: ReactNode;
-  color?: 'light' | 'primary' | 'white';
+interface Section {
+  color?: keyof typeof sectionStyle;
   pdf?: boolean;
 }
 
-const Section: React.FC<SectionProps> = (props) => {
-  const { children, color, pdf = false } = props;
+const Section: React.FC<Section> = (props) => {
+  const { children, color } = props;
 
   return (
-    <section
-      className={classnames({
-        'bg-light': color === 'light',
-        'bg-primary': color === 'primary',
-        'bg-white': color === 'white',
-        'py-sm': !pdf,
-        'py-xs': pdf,
-        'text-white': color === 'primary',
-      })}
-    >
-      <div className={pdf ? 'container-fluid' : 'container'}>{children}</div>
+    <section className={sectionStyle[color]}>
+      <Container>{children}</Container>
     </section>
   );
 };

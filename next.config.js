@@ -3,6 +3,8 @@ const runtimeCaching = require('next-pwa/cache');
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
+const { createVanillaExtractPlugin } = require('@vanilla-extract/next-plugin');
+const withVanillaExtract = createVanillaExtractPlugin();
 const withPlugins = require('next-compose-plugins');
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -19,6 +21,6 @@ const nextConfig = {
   swcMinify: true,
 };
 
-const plugins = [[withBundleAnalyzer], [withPWA]];
+const plugins = [[withVanillaExtract], [withBundleAnalyzer], [withPWA]];
 
 module.exports = withPlugins(plugins, nextConfig);

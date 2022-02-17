@@ -16,8 +16,12 @@ import ProfessionalItem from '../components/ProfessionalItem/ProfessionalItem';
 import Section from '../components/Section/Section';
 import SectionHeader from '../components/SectionHeader/SectionHeader';
 import Skills from '../components/Skills/Skills';
-import { formatDate, getFullName } from '../helpers';
-import styles from '../styles/pdf.module.scss';
+import { formatDate, getFullName } from '../helpers/utils';
+import {
+  pdfLayoutStyle,
+  pdfMainStyle,
+  pdfSidebarStyle,
+} from '../styles/pdf.css';
 
 export const getStaticProps = async () => {
   const CMS = getCMSIntegration();
@@ -58,14 +62,14 @@ const ResumePage: NextPage<Props> = (props) => {
         title={`Résumé | ${fullName} | ${personalInformation.location}`}
       />
 
-      <div className={styles.pdfLayout}>
-        <div className={styles.pdfSidebar}>
+      <div className={pdfLayoutStyle}>
+        <div className={pdfSidebarStyle}>
           <Header
             pdf
             subtitle={personalInformation.job_title}
             title={fullName}
           />
-          <Section color="light" pdf>
+          <Section color="alternate">
             <AboutMe personalInformation={personalInformation} />
             <div className="mt-xs" />
             <ContactInformation personalInformation={personalInformation} />
@@ -73,8 +77,8 @@ const ResumePage: NextPage<Props> = (props) => {
           </Section>
         </div>
 
-        <div className={styles.pdfMain}>
-          <Section color="white" pdf>
+        <div className={pdfMainStyle}>
+          <Section color="standard">
             <SectionHeader icon={faBriefcase} text="Professional Experience" />
             {professionalExperiences.map((experience) => (
               <ProfessionalItem
