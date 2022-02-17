@@ -1,18 +1,5 @@
 import { CMSLink } from '../_types/CMSLink';
 import {
-  contentfulCMSLink,
-  contentfulCMSName,
-  contentfulGetEducationalExperiences,
-  contentfulGetLinks,
-  contentfulGetPersonalInformation,
-  contentfulGetPrivateInformation,
-  contentfulGetProfessionalExperiences,
-  contentfulGetSkills,
-  contentfulParseDate,
-  ContentfulRichText,
-  ContentfulRichTextComponent,
-} from './contentful';
-import {
   prismicCMSLink,
   prismicCMSName,
   prismicGetEducationalExperiences,
@@ -26,8 +13,8 @@ import {
   PrismicRichTextComponent,
 } from './prismic';
 
-export type SupportedCMS = 'prismic' | 'contentful';
-type RichText = PrismicRichText | ContentfulRichText;
+export type SupportedCMS = 'prismic';
+type RichText = PrismicRichText;
 
 export const apiEndpoint = process.env.CMS_ENDPOINT;
 export const accessToken = process.env.CMS_KEY;
@@ -66,19 +53,6 @@ export const getCMSIntegration = (
       link: prismicCMSLink,
       name: prismicCMSName,
       parseDate: prismicParseDate,
-    };
-  } else if (cms === 'contentful') {
-    return {
-      RichTextComponent: ContentfulRichTextComponent,
-      getEducationalExperiences: contentfulGetEducationalExperiences,
-      getLinks: contentfulGetLinks,
-      getPersonalInformation: contentfulGetPersonalInformation,
-      getPrivateInformation: contentfulGetPrivateInformation,
-      getProfessionalExperiences: contentfulGetProfessionalExperiences,
-      getSkills: contentfulGetSkills,
-      link: contentfulCMSLink,
-      name: contentfulCMSName,
-      parseDate: contentfulParseDate,
     };
   }
 };
