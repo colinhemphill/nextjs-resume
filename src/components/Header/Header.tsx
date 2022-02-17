@@ -4,14 +4,14 @@ import classnames from 'classnames';
 import React from 'react';
 import styles from './Header.module.scss';
 
-interface Props {
+interface HeaderProps {
   pdf?: boolean;
   secret?: string;
   subtitle: string;
   title: string;
 }
 
-const Header = (props: Props): JSX.Element => {
+const Header: React.FC<HeaderProps> = (props) => {
   const { pdf = false, secret, subtitle, title } = props;
 
   let pdfAPI = '/api/pdf';

@@ -8,7 +8,7 @@ import '../styles/globals.scss';
 config.autoAddCss = false;
 library.add(fab);
 
-const MyApp: React.FC<AppProps> = ({ Component, pageProps }): JSX.Element => {
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
       <Head>

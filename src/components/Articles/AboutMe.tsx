@@ -3,11 +3,11 @@ import React from 'react';
 import { getCMSIntegration } from '../../cms';
 import SectionHeader from '../SectionHeader/SectionHeader';
 
-interface Props {
+interface AboutMeProps {
   personalInformation: CMSPersonalInformation<unknown>;
 }
 
-const AboutMe = (props: Props): JSX.Element => {
+const AboutMe: React.FC<AboutMeProps> = (props) => {
   const { personalInformation } = props;
   const CMS = getCMSIntegration();
 

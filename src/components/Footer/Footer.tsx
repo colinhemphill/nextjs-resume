@@ -6,13 +6,13 @@ import { getFullName } from '../../helpers';
 import { CMSLink } from '../../_types/CMSLink';
 import styles from './Footer.module.scss';
 
-interface Props {
+interface FooterProps {
   personalInformation: CMSPersonalInformation<unknown>;
   links?: CMSLink[];
   pdf?: boolean;
 }
 
-const Footer = (props: Props): JSX.Element => {
+const Footer: React.FC<FooterProps> = (props) => {
   const { personalInformation, links, pdf = false } = props;
   const fullName = getFullName(personalInformation);
   const CMS = getCMSIntegration();

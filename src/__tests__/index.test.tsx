@@ -7,7 +7,9 @@ import {
   skills as prismicSkills,
 } from '../fixtures/prismic';
 import Index from '../pages/index';
-import { render } from '../testing/render';
+import { render } from '../testUtils';
+
+jest.mock('next/router', () => require('next-router-mock'));
 
 const DEFAULT_ENV = process.env;
 

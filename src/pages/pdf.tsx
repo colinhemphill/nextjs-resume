@@ -3,7 +3,7 @@ import {
   faGraduationCap,
 } from '@fortawesome/free-solid-svg-icons';
 import indefinite from 'indefinite';
-import { InferGetStaticPropsType } from 'next';
+import { InferGetStaticPropsType, NextPage } from 'next';
 import React from 'react';
 import { getCMSIntegration } from '../cms';
 import AboutMe from '../components/Articles/AboutMe';
@@ -39,7 +39,7 @@ export const getStaticProps = async () => {
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
-const ResumePage = (props: Props): JSX.Element => {
+const ResumePage: NextPage<Props> = (props) => {
   const {
     educationalExperiences,
     personalInformation,

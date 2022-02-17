@@ -2,11 +2,11 @@ import { faUniversity } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
-interface Props extends CMSEducationalExperience<JSX.Element> {
+interface EducationItemsProps extends CMSEducationalExperience<JSX.Element> {
   pdf?: boolean;
 }
 
-const EducationItem = (props: Props): JSX.Element => {
+const EducationItem: React.FC<EducationItemsProps> = (props) => {
   const {
     achievement_description,
     achievement_title,

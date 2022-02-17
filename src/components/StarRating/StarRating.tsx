@@ -3,11 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import styles from './StarRating.module.scss';
 
-interface Props {
+interface StarRatingProps {
   stars: 1 | 2 | 3;
 }
 
-const StarRating = (props: Props): JSX.Element => {
+const StarRating: React.FC<StarRatingProps> = (props) => {
   const { stars } = props;
 
   return (

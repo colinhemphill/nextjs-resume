@@ -2,11 +2,11 @@ import { faCalendar } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
-interface Props extends CMSPRofessionalExperience<JSX.Element> {
+interface ProfessionalItemProps extends CMSPRofessionalExperience<JSX.Element> {
   pdf?: boolean;
 }
 
-const ProfessionalItem = (props: Props): JSX.Element => {
+const ProfessionalItem: React.FC<ProfessionalItemProps> = (props) => {
   const {
     end_date,
     is_current,

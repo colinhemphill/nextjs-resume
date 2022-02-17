@@ -4,11 +4,11 @@ import React from 'react';
 import SectionHeader from '../SectionHeader/SectionHeader';
 import StarRating from '../StarRating/StarRating';
 
-interface Props {
+interface SkillsProps {
   skills: CMSSkills[];
 }
 
-const Skills = (props: Props): JSX.Element => {
+const Skills: React.FC<SkillsProps> = (props) => {
   const { skills } = props;
 
   return (

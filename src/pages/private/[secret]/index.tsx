@@ -52,9 +52,9 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   };
 };
 
-type Props = InferGetServerSidePropsType<typeof getServerSideProps>;
+type ResumePageProps = InferGetServerSidePropsType<typeof getServerSideProps>;
 
-const ResumePage = (props: Props): JSX.Element => {
+const ResumePage: React.FC<ResumePageProps> = (props) => {
   const {
     educationalExperiences,
     links,

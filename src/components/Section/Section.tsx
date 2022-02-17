@@ -1,13 +1,13 @@
 import classnames from 'classnames';
 import React, { ReactNode } from 'react';
 
-interface Props {
+interface SectionProps {
   children?: ReactNode;
   color?: 'light' | 'primary' | 'white';
   pdf?: boolean;
 }
 
-const Section = (props: Props): JSX.Element => {
+const Section: React.FC<SectionProps> = (props) => {
   const { children, color, pdf = false } = props;
 
   return (

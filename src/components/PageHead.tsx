@@ -3,14 +3,14 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import { getFullName } from '../helpers';
 
-interface Props {
+interface PageHeadProps {
   baseURL?: string;
   description: string;
   personalInformation: CMSPersonalInformation<unknown>;
   title: string;
 }
 
-const PageHead = (props: Props): JSX.Element => {
+const PageHead: React.FC<PageHeadProps> = (props) => {
   const {
     baseURL = typeof window !== 'undefined' ? window.location.origin : '',
     description,
