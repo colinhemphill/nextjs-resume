@@ -19,7 +19,7 @@ export const monospaceFonts = `
 
 globalStyle('html, body, p', {
   fontFamily: `Inter, ${systemFonts}`,
-  lineHeight: 1.3,
+  lineHeight: 1.5,
 });
 
 globalStyle('a', {

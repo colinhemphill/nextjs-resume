@@ -15,7 +15,7 @@ const Skills: React.FC<SkillsProps> = (props) => {
 
   return (
     <article>
-      <SectionHeader icon={faCheck} text="Skills & Expertise" />
+      <SectionHeader icon={faCheck} text="Skills &amp; Expertise" />
       <Row>
         {skills.map((skill, index) => (
           <Column key={skill.id}>

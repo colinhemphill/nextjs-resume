@@ -6,6 +6,7 @@ import Container from '../../strum-design-system/components/Container/Container'
 import Heading from '../../strum-design-system/components/Heading/Heading';
 import Column from '../../strum-design-system/components/Layout/Column';
 import Row from '../../strum-design-system/components/Layout/Row';
+import { atoms } from '../../strum-design-system/sprinkles.css';
 import { headerStyle } from './Header.css';
 
 interface HeaderProps {
@@ -39,7 +40,10 @@ const Header: React.FC<HeaderProps> = (props) => {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <FontAwesomeIcon icon={faFilePdf} />
+                <FontAwesomeIcon
+                  className={atoms({ marginRight: 2 })}
+                  icon={faFilePdf}
+                />
                 Download as PDF
               </a>
             </Column>

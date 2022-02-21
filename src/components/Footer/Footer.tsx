@@ -6,7 +6,9 @@ import { getFullName } from '../../helpers/utils';
 import AutoGrid from '../../strum-design-system/components/AutoGrid/AutoGrid';
 import AutoGridCell from '../../strum-design-system/components/AutoGrid/AutoGridCell';
 import Container from '../../strum-design-system/components/Container/Container';
+import { atoms } from '../../strum-design-system/sprinkles.css';
 import { visuallyHidden } from '../../strum-design-system/styles/accessibility.css';
+import colors from '../../strum-design-system/themes/timbre/colors';
 import { CMSLink } from '../../_types/CMSLink';
 import { footerLinkStyle, footerStyle } from './Footer.css';
 
@@ -25,7 +27,7 @@ const Footer: React.FC<FooterProps> = (props) => {
     <footer className={footerStyle}>
       <Container>
         {!pdf && links && (
-          <AutoGrid>
+          <AutoGrid horizontalAlign="center">
             {links.map((link) => (
               <AutoGridCell key={link.href}>
                 <a
@@ -38,10 +40,10 @@ const Footer: React.FC<FooterProps> = (props) => {
                     {personalInformation.given_name} on {link.title}
                   </span>
                   <span className="fa-layers fa-fw">
-                    <FontAwesomeIcon icon={faCircle} />
+                    <FontAwesomeIcon color={colors.primary} icon={faCircle} />
                     <FontAwesomeIcon
                       aria-hidden
-                      color="white"
+                      color={colors.white}
                       icon={['fab', link.icon_name]}
                       transform="shrink-8"
                     />
@@ -52,7 +54,7 @@ const Footer: React.FC<FooterProps> = (props) => {
           </AutoGrid>
         )}
 
-        <div>
+        <div className={atoms({ marginTop: 4 })}>
           Copyright ©{new Date().getFullYear()} {fullName}
         </div>
 

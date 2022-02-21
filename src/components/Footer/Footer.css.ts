@@ -5,7 +5,7 @@ import { vars } from '../../strum-design-system/themes/contract.css';
 export const footerStyle = atoms({
   backgroundColor: 'dark',
   color: 'white',
-  paddingY: 2,
+  paddingY: 8,
   textAlign: 'center',
 });
 
