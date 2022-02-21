@@ -1,6 +1,7 @@
 import { faIdCard } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { getCMSIntegration } from '../../cms';
+import Box from '../../strum-design-system/components/Box/Box';
 import Column from '../../strum-design-system/components/Layout/Column';
 import Row from '../../strum-design-system/components/Layout/Row';
 import UnorderedList from '../../strum-design-system/components/Nav/UnorderedList';
@@ -16,7 +17,7 @@ const ContactInformation: React.FC<ContactInformationProps> = (props) => {
   const CMS = getCMSIntegration();
 
   return (
-    <article>
+    <Box as="article" marginBottom={{ xs: 6, lg: 0 }}>
       <SectionHeader icon={faIdCard} text="Contact Information" />
       <UnorderedList>
         <li>
@@ -41,7 +42,7 @@ const ContactInformation: React.FC<ContactInformationProps> = (props) => {
             </li>
           ))}
       </UnorderedList>
-    </article>
+    </Box>
   );
 };
 

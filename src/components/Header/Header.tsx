@@ -1,6 +1,7 @@
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import usePrefersDarkMode from '../../helpers/useDarkMode';
 import { buttonStyle } from '../../strum-design-system/components/Button/Button.css';
 import Container from '../../strum-design-system/components/Container/Container';
 import Heading from '../../strum-design-system/components/Heading/Heading';
@@ -18,6 +19,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = (props) => {
   const { pdf = false, secret, subtitle, title } = props;
+  const darkMode = usePrefersDarkMode();
 
   let pdfAPI = '/api/pdf';
   if (secret) {
@@ -26,16 +28,22 @@ const Header: React.FC<HeaderProps> = (props) => {
 
   return (
     <header className={headerStyle}>
-      <Container>
+      <Container atoms={{ textAlign: { xs: 'center', md: 'left' } }}>
         <Row verticalAlign="center">
           <Column>
             <Heading atoms={{ color: 'white' }} level={1} text={title} />
             <Heading atoms={{ color: 'white' }} level={2} text={subtitle} />
           </Column>
           {!pdf && (
-            <Column width={{ xs: 12, sm: 12, md: 'auto' }}>
+            <Column
+              atoms={{ paddingTop: { xs: 4, md: 0 } }}
+              width={{ xs: 12, sm: 12, md: 'auto' }}
+            >
               <a
-                className={buttonStyle({ color: 'dark', size: 'lg' })}
+                className={buttonStyle({
+                  color: darkMode ? 'primary' : 'dark',
+                  size: 'lg',
+                })}
                 href={pdfAPI}
                 rel="noopener noreferrer"
                 target="_blank"

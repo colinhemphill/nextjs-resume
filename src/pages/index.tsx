@@ -18,6 +18,7 @@ import Section from '../components/Section/Section';
 import SectionHeader from '../components/SectionHeader/SectionHeader';
 import Skills from '../components/Skills/Skills';
 import { formatDate, getFullName } from '../helpers/utils';
+import Box from '../strum-design-system/components/Box/Box';
 import Column from '../strum-design-system/components/Layout/Column';
 import Row from '../strum-design-system/components/Layout/Row';
 
@@ -67,10 +68,10 @@ const ResumePage: NextPage<Props> = (props) => {
 
       <Section color="standard">
         <Row>
-          <Column>
+          <Column width={{ xs: 12, lg: 6 }}>
             <AboutMe personalInformation={personalInformation} />
           </Column>
-          <Column>
+          <Column width={{ xs: 12, lg: 6 }}>
             <ContactInformation personalInformation={personalInformation} />
           </Column>
         </Row>
@@ -79,7 +80,10 @@ const ResumePage: NextPage<Props> = (props) => {
       </Section>
 
       <Section color="alternate">
-        <SectionHeader icon={faBriefcase} text="Professional Experience" />
+        <Box marginBottom={6}>
+          <SectionHeader icon={faBriefcase} text="Professional Experience" />
+        </Box>
+
         {professionalExperiences.map((experience) => (
           <ProfessionalItem
             end_date={
@@ -103,7 +107,10 @@ const ResumePage: NextPage<Props> = (props) => {
       </Section>
 
       <Section color="standard">
-        <SectionHeader icon={faGraduationCap} text="Education" />
+        <Box marginBottom={6}>
+          <SectionHeader icon={faGraduationCap} text="Education" />
+        </Box>
+
         {educationalExperiences.map((experience) => (
           <EducationItem
             achievement_description={

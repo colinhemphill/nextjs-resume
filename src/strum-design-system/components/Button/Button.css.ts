@@ -65,8 +65,8 @@ export const buttonStyle = recipe({
         color: vars.contrastColors.light,
         selectors: {
           '&:hover:not(:disabled), &:focus:not(:disabled)': {
-            // backgroundColor: vars.colors.lightDarkened,
-            // borderColor: vars.colors.lightDarkened,
+            backgroundColor: vars.darkenedColors.light,
+            borderColor: vars.darkenedColors.light,
           },
         },
       },

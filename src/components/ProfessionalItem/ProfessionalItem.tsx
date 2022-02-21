@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import Heading from '../../strum-design-system/components/Heading/Heading';
 import { atoms } from '../../strum-design-system/sprinkles.css';
+import { articleStyle } from '../Articles/article.css';
 
 interface ProfessionalItemProps extends CMSPRofessionalExperience<JSX.Element> {
   pdf?: boolean;
@@ -20,7 +21,7 @@ const ProfessionalItem: React.FC<ProfessionalItemProps> = (props) => {
   } = props;
 
   return (
-    <article>
+    <article className={articleStyle}>
       <Heading level={4}>
         <span
           className={atoms({

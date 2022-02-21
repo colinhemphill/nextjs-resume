@@ -18,7 +18,7 @@ export const monospaceFonts = `
 `;
 
 globalStyle('html, body, p', {
-  fontFamily: `Inter, ${systemFonts}`,
+  fontFamily: `Source Sans Pro, ${systemFonts}`,
   lineHeight: 1.5,
 });
 
@@ -36,7 +36,7 @@ globalStyle('a', {
 globalStyle('a:hover', { textDecorationColor: 'inherit' });
 
 globalStyle('p', {
-  marginBottom: vars.spacers[6],
+  marginBottom: vars.spacers[4],
   marginTop: 0,
 });
 

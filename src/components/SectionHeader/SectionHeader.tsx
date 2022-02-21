@@ -15,7 +15,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = (props) => {
   const { icon, text } = props;
   const darkMode = usePrefersDarkMode();
 
-  const iconClasses = composeWithAtoms({ marginRight: 2 }, 'fa-layers');
+  const iconClasses = composeWithAtoms({ marginRight: 2 }, 'fa-layers fa-fw');
 
   return (
     <Heading level={3}>
@@ -27,7 +27,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = (props) => {
         <FontAwesomeIcon
           color={darkMode ? colors.dark : colors.white}
           icon={icon}
-          transform="shrink-8"
+          transform="shrink-7"
         />
       </span>
       {text}
