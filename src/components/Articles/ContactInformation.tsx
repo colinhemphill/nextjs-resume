@@ -4,6 +4,7 @@ import { getCMSIntegration } from '../../cms';
 import Box from '../../strum-design-system/components/Box/Box';
 import Column from '../../strum-design-system/components/Layout/Column';
 import Row from '../../strum-design-system/components/Layout/Row';
+import NavListItem from '../../strum-design-system/components/Nav/NavListItem';
 import UnorderedList from '../../strum-design-system/components/Nav/UnorderedList';
 import SectionHeader from '../SectionHeader/SectionHeader';
 
@@ -19,18 +20,18 @@ const ContactInformation: React.FC<ContactInformationProps> = (props) => {
   return (
     <Box as="article" marginBottom={{ xs: 6, lg: 0 }}>
       <SectionHeader icon={faIdCard} text="Contact Information" />
-      <UnorderedList>
-        <li>
+      <UnorderedList direction="vertical">
+        <NavListItem>
           <Row>
             <Column width={{ xs: 'auto' }}>
               <strong>Location:</strong>
             </Column>
             <Column>{personalInformation.location}</Column>
           </Row>
-        </li>
+        </NavListItem>
         {privateInformation &&
           privateInformation.map((privateField) => (
-            <li key={privateField.label}>
+            <NavListItem key={privateField.label}>
               <Row>
                 <Column width={{ xs: 'auto' }}>
                   <strong>{privateField.label}:</strong>
@@ -39,7 +40,7 @@ const ContactInformation: React.FC<ContactInformationProps> = (props) => {
                   <CMS.RichTextComponent richText={privateField.content} />
                 </Column>
               </Row>
-            </li>
+            </NavListItem>
           ))}
       </UnorderedList>
     </Box>

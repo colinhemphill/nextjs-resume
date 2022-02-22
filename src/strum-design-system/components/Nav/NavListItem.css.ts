@@ -1,4 +1,4 @@
-import { style } from '@vanilla-extract/css';
+import { globalStyle, style } from '@vanilla-extract/css';
 import { vars } from '../../themes/contract.css';
 import { unorderedListStyle } from './UnorderedList.css';
 
@@ -11,4 +11,8 @@ export const navListItemStyle = style({
       marginBottom: vars.spacers[3],
     },
   },
+});
+
+globalStyle(`${navListItemStyle} p`, {
+  marginBottom: 0,
 });
