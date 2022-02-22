@@ -1,12 +1,13 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { CMSPersonalInformation } from '../cms-integration/markdown/personal';
 import { getFullName } from '../helpers/utils';
 
 interface PageHeadProps {
   baseURL?: string;
   description: string;
-  personalInformation: CMSPersonalInformation<unknown>;
+  personalInformation: CMSPersonalInformation;
   title: string;
 }
 
@@ -39,21 +40,21 @@ const PageHead: React.FC<PageHeadProps> = (props) => {
       <meta property="og:image" content={imgPath} />
       <meta
         property="profile:first_name"
-        content={personalInformation.given_name}
+        content={personalInformation.attributes.givenName}
       />
       <meta
         property="profile:last_name"
-        content={personalInformation.family_name}
+        content={personalInformation.attributes.familyName}
       />
 
       <meta name="twitter:card" content="summary" />
       <meta
         name="twitter:site"
-        content={`@${personalInformation.twitter_username}`}
+        content={`@${personalInformation.attributes.twitterUsername}`}
       />
       <meta
         name="twitter:creator"
-        content={`@${personalInformation.twitter_username}`}
+        content={`@${personalInformation.attributes.twitterUsername}`}
       />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />

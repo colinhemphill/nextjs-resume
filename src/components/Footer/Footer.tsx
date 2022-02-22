@@ -1,7 +1,7 @@
 import { faCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { getCMSIntegration } from '../../cms/';
+import { CMSPersonalInformation } from '../../cms-integration/markdown/personal';
 import { getFullName } from '../../helpers/utils';
 import AutoGrid from '../../strum-design-system/components/AutoGrid/AutoGrid';
 import AutoGridCell from '../../strum-design-system/components/AutoGrid/AutoGridCell';
@@ -9,19 +9,17 @@ import Container from '../../strum-design-system/components/Container/Container'
 import { atoms } from '../../strum-design-system/sprinkles.css';
 import { visuallyHidden } from '../../strum-design-system/styles/accessibility.css';
 import colors from '../../strum-design-system/themes/timbre/colors';
-import { CMSLink } from '../../_types/CMSLink';
 import { footerLinkStyle, footerStyle } from './Footer.css';
 
 interface FooterProps {
-  personalInformation: CMSPersonalInformation<unknown>;
-  links?: CMSLink[];
+  personalInformation: CMSPersonalInformation;
+  links?: any[];
   pdf?: boolean;
 }
 
 const Footer: React.FC<FooterProps> = (props) => {
   const { personalInformation, links, pdf = false } = props;
   const fullName = getFullName(personalInformation);
-  const CMS = getCMSIntegration();
 
   return (
     <footer className={footerStyle}>
@@ -37,7 +35,7 @@ const Footer: React.FC<FooterProps> = (props) => {
                   target="_blank"
                 >
                   <span className={visuallyHidden}>
-                    {personalInformation.given_name} on {link.title}
+                    {personalInformation.attributes.givenName} on {link.title}
                   </span>
                   <span className="fa-layers fa-fw">
                     <FontAwesomeIcon color={colors.primary} icon={faCircle} />
@@ -69,16 +67,7 @@ const Footer: React.FC<FooterProps> = (props) => {
             >
               Next.js
             </a>{' '}
-            and{' '}
-            <a
-              className={footerLinkStyle}
-              href={CMS.link}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              {CMS.name}
-            </a>
-            , and deployed on{' '}
+            and deployed on{' '}
             <a
               className={footerLinkStyle}
               href="https://vercel.com/"

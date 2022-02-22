@@ -2,7 +2,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import React from 'react';
-import '../helpers/fontawesome-config';
+import '../helpers/fontawesomeConfig';
 import '../strum-design-system';
 import StrumProvider from '../strum-design-system/components/StrumProvider/StrumProvider';
 import '../styles/app.css';

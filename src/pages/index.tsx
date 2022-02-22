@@ -1,23 +1,17 @@
 import { InferGetStaticPropsType, NextPage } from 'next';
 import React from 'react';
-import { getCMSIntegration } from '../cms/';
-import { PrismicRichText } from '../cms/prismic';
+import getCMSIntegration from '../cms-integration/getCMSIntegration';
 import ResumeLayout from '../components/Layouts/ResumeLayout';
 
 export const getStaticProps = async () => {
-  const CMS = getCMSIntegration();
-  const personalInformation = await CMS.getPersonalInformation();
-  const professionalExperiences = await CMS.getProfessionalExperiences();
-  const educationalExperiences = await CMS.getEducationalExperiences();
-  const skills = await CMS.getSkills();
-  const links = await CMS.getLinks();
+  const { education, personalInformation, professional, skills } =
+    await getCMSIntegration('markdown');
 
   return {
     props: {
-      educationalExperiences,
-      links,
+      education,
       personalInformation,
-      professionalExperiences,
+      professional,
       skills,
     },
   };
@@ -25,7 +19,7 @@ export const getStaticProps = async () => {
 
 export interface ResumePageProps
   extends InferGetStaticPropsType<typeof getStaticProps> {
-  privateInformation?: CMSPrivateInformation<PrismicRichText>[];
+  privateInformation?: any[];
 }
 
 const ResumePage: NextPage<ResumePageProps> = (props) => {

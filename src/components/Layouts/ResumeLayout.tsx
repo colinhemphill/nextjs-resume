@@ -4,8 +4,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import indefinite from 'indefinite';
 import React from 'react';
-import { getCMSIntegration } from '../../cms';
-import { formatDate, getFullName } from '../../helpers/utils';
+import { getFullName } from '../../helpers/utils';
 import { ResumePageProps } from '../../pages';
 import Box from '../../strum-design-system/components/Box/Box';
 import Column from '../../strum-design-system/components/Layout/Column';
@@ -24,26 +23,28 @@ import Skills from '../Skills/Skills';
 
 const ResumeLayout: React.FC<ResumePageProps> = (props) => {
   const {
-    educationalExperiences,
-    links,
+    education,
+    // links,
     personalInformation,
     privateInformation,
-    professionalExperiences,
+    professional,
     skills,
   } = props;
   const fullName = getFullName(personalInformation);
-  const jobTitle = indefinite(personalInformation.job_title);
-  const CMS = getCMSIntegration();
+  const jobTitle = indefinite(personalInformation.attributes.title);
 
   return (
     <>
       <PageHead
-        description={`Professional résumé for ${fullName}, ${jobTitle} living in ${personalInformation.location}.`}
+        description={`Professional résumé for ${fullName}, ${jobTitle} living in ${personalInformation.attributes.location}.`}
         personalInformation={personalInformation}
-        title={`Résumé | ${fullName} | ${personalInformation.location}`}
+        title={`Résumé | ${fullName} | ${personalInformation.attributes.location}`}
       />
 
-      <Header subtitle={personalInformation.job_title} title={fullName} />
+      <Header
+        subtitle={personalInformation.attributes.title}
+        title={fullName}
+      />
 
       <Section color="standard">
         <Row>
@@ -66,25 +67,8 @@ const ResumeLayout: React.FC<ResumePageProps> = (props) => {
           <SectionHeader icon={faBriefcase} text="Professional Experience" />
         </Box>
 
-        {professionalExperiences.map((experience) => (
-          <ProfessionalItem
-            end_date={
-              experience.end_date
-                ? formatDate(CMS.parseDate(experience.end_date))
-                : null
-            }
-            id={experience.id}
-            is_current={experience.is_current}
-            key={experience.id}
-            organization_name={experience.organization_name}
-            position_description={
-              <CMS.RichTextComponent
-                richText={experience.position_description}
-              />
-            }
-            position_title={experience.position_title}
-            start_date={formatDate(CMS.parseDate(experience.start_date))}
-          />
+        {professional.map((experience) => (
+          <ProfessionalItem key={experience.slug} {...experience} />
         ))}
       </Section>
 
@@ -93,19 +77,8 @@ const ResumeLayout: React.FC<ResumePageProps> = (props) => {
           <SectionHeader icon={faGraduationCap} text="Education" />
         </Box>
 
-        {educationalExperiences.map((experience) => (
-          <EducationItem
-            achievement_description={
-              <CMS.RichTextComponent
-                richText={experience.achievement_description}
-              />
-            }
-            achievement_title={experience.achievement_title}
-            id={experience.id}
-            key={experience.id}
-            organization_name={experience.organization_name}
-            year={experience.year}
-          />
+        {education.map((experience) => (
+          <EducationItem key={experience.slug} {...experience} />
         ))}
       </Section>
 
@@ -113,7 +86,7 @@ const ResumeLayout: React.FC<ResumePageProps> = (props) => {
         <HobbiesAndInterests personalInformation={personalInformation} />
       </Section>
 
-      <Footer personalInformation={personalInformation} links={links} />
+      <Footer personalInformation={personalInformation} />
     </>
   );
 };

@@ -1,6 +1,7 @@
 import { faIdCard } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
-import { getCMSIntegration } from '../../cms';
+import { CMSPersonalInformation } from '../../cms-integration/markdown/personal';
+import { CMSPrivateInformation } from '../../cms-integration/markdown/private';
 import Box from '../../strum-design-system/components/Box/Box';
 import Column from '../../strum-design-system/components/Layout/Column';
 import Row from '../../strum-design-system/components/Layout/Row';
@@ -9,13 +10,12 @@ import UnorderedList from '../../strum-design-system/components/Nav/UnorderedLis
 import SectionHeader from '../SectionHeader/SectionHeader';
 
 interface ContactInformationProps {
-  personalInformation: CMSPersonalInformation<unknown>;
-  privateInformation?: CMSPrivateInformation<unknown>[];
+  personalInformation: CMSPersonalInformation;
+  privateInformation?: CMSPrivateInformation[];
 }
 
 const ContactInformation: React.FC<ContactInformationProps> = (props) => {
   const { personalInformation, privateInformation } = props;
-  const CMS = getCMSIntegration();
 
   return (
     <Box as="article" marginBottom={{ xs: 6, lg: 0 }}>
@@ -26,18 +26,20 @@ const ContactInformation: React.FC<ContactInformationProps> = (props) => {
             <Column width={{ xs: 'auto' }}>
               <strong>Location:</strong>
             </Column>
-            <Column>{personalInformation.location}</Column>
+            <Column>{personalInformation.attributes.location}</Column>
           </Row>
         </NavListItem>
         {privateInformation &&
           privateInformation.map((privateField) => (
-            <NavListItem key={privateField.label}>
+            <NavListItem key={privateField.attributes.label}>
               <Row>
                 <Column width={{ xs: 'auto' }}>
-                  <strong>{privateField.label}:</strong>
+                  <strong>{privateField.attributes.label}:</strong>
                 </Column>
                 <Column>
-                  <CMS.RichTextComponent richText={privateField.content} />
+                  <div
+                    dangerouslySetInnerHTML={{ __html: privateField.html }}
+                  />
                 </Column>
               </Row>
             </NavListItem>

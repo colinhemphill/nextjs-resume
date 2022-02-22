@@ -1,11 +1,10 @@
 import React from 'react';
 import {
   educationalExperiences as prismicEducationalExperiences,
-  links as prismicLinks,
   personalInformation as prismicPersonalInformation,
   professionalExperiences as prismicProfessionalExperiences,
   skills as prismicSkills,
-} from '../fixtures/prismic';
+} from '../fixtures/markdown';
 import Index from '../pages/index';
 import { render } from '../testUtils';
 
@@ -27,10 +26,10 @@ describe('Render the main page', () => {
     process.env.NEXT_PUBLIC_CMS_INTEGRATION = 'prismic';
     const { container } = render(
       <Index
-        educationalExperiences={prismicEducationalExperiences}
-        links={prismicLinks}
+        education={prismicEducationalExperiences}
+        // links={prismicLinks}
         personalInformation={prismicPersonalInformation}
-        professionalExperiences={prismicProfessionalExperiences}
+        professional={prismicProfessionalExperiences}
         skills={prismicSkills}
       />,
     );

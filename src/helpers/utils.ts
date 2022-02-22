@@ -1,7 +1,9 @@
+import { CMSPersonalInformation } from '../cms-integration/markdown/personal';
+
 export const getFullName = (
-  personalInformation: CMSPersonalInformation<unknown>,
+  personalInformation: CMSPersonalInformation,
 ): string => {
-  return `${personalInformation.given_name} ${personalInformation.family_name}`;
+  return `${personalInformation.attributes.givenName} ${personalInformation.attributes.familyName}`;
 };
 
 export const formatDate = (date: Date | number): string => {

@@ -1,7 +1,8 @@
 import { GetServerSideProps } from 'next';
 import React from 'react';
 import { ResumePageProps } from '../..';
-import { getCMSIntegration } from '../../../cms';
+import getCMSIntegration from '../../../cms-integration/getCMSIntegration';
+import { getPrivateInformation } from '../../../cms-integration/markdown/private';
 import ResumeLayout from '../../../components/Layouts/ResumeLayout';
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
@@ -16,21 +17,16 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     return null;
   }
 
-  const CMS = getCMSIntegration();
-  const personalInformation = await CMS.getPersonalInformation();
-  const professionalExperiences = await CMS.getProfessionalExperiences();
-  const privateInformation = await CMS.getPrivateInformation();
-  const educationalExperiences = await CMS.getEducationalExperiences();
-  const skills = await CMS.getSkills();
-  const links = await CMS.getLinks();
+  const { education, personalInformation, professional, skills } =
+    await getCMSIntegration('markdown');
+  const privateInformation = await getPrivateInformation();
 
   return {
     props: {
-      educationalExperiences,
-      links,
+      education,
       personalInformation,
       privateInformation,
-      professionalExperiences,
+      professional,
       skills,
     },
   };

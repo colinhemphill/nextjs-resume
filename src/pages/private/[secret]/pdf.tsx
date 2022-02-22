@@ -5,7 +5,8 @@ import {
 import indefinite from 'indefinite';
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import React from 'react';
-import { getCMSIntegration } from '../../../cms';
+import getCMSIntegration from '../../../cms-integration/getCMSIntegration';
+import { getPrivateInformation } from '../../../cms-integration/markdown/private';
 import AboutMe from '../../../components/Articles/AboutMe';
 import ContactInformation from '../../../components/Articles/ContactInformation';
 import HobbiesAndInterests from '../../../components/Articles/HobbiesAndInterests';
@@ -16,7 +17,7 @@ import ProfessionalItem from '../../../components/ProfessionalItem/ProfessionalI
 import Section from '../../../components/Section/Section';
 import SectionHeader from '../../../components/SectionHeader/SectionHeader';
 import Skills from '../../../components/Skills/Skills';
-import { formatDate, getFullName } from '../../../helpers/utils';
+import { getFullName } from '../../../helpers/utils';
 import {
   pdfLayoutStyle,
   pdfMainStyle,
@@ -35,19 +36,16 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     return { props: {} };
   }
 
-  const CMS = getCMSIntegration();
-  const personalInformation = await CMS.getPersonalInformation();
-  const professionalExperiences = await CMS.getProfessionalExperiences();
-  const privateInformation = await CMS.getPrivateInformation();
-  const educationalExperiences = await CMS.getEducationalExperiences();
-  const skills = await CMS.getSkills();
+  const { education, personalInformation, professional, skills } =
+    await getCMSIntegration('markdown');
+  const privateInformation = await getPrivateInformation();
 
   return {
     props: {
-      educationalExperiences,
+      education,
       personalInformation,
       privateInformation,
-      professionalExperiences,
+      professional,
       skills,
     },
   };
@@ -65,7 +63,6 @@ const ResumePage = (props: Props): JSX.Element => {
   } = props;
   const fullName = getFullName(personalInformation);
   const jobTitle = indefinite(personalInformation.job_title);
-  const CMS = getCMSIntegration();
 
   return (
     <>
@@ -96,42 +93,12 @@ const ResumePage = (props: Props): JSX.Element => {
           <Section color="standard">
             <SectionHeader icon={faBriefcase} text="Professional Experience" />
             {professionalExperiences.map((experience) => (
-              <ProfessionalItem
-                end_date={
-                  experience.end_date
-                    ? formatDate(CMS.parseDate(experience.end_date))
-                    : null
-                }
-                id={experience.id}
-                is_current={experience.is_current}
-                key={experience.id}
-                organization_name={experience.organization_name}
-                pdf
-                position_description={
-                  <CMS.RichTextComponent
-                    richText={experience.position_description}
-                  />
-                }
-                position_title={experience.position_title}
-                start_date={formatDate(CMS.parseDate(experience.start_date))}
-              />
+              <ProfessionalItem key={experience.slug} pdf {...experience} />
             ))}
 
             <SectionHeader icon={faGraduationCap} text="Education" />
             {educationalExperiences.map((experience) => (
-              <EducationItem
-                achievement_description={
-                  <CMS.RichTextComponent
-                    richText={experience.achievement_description}
-                  />
-                }
-                achievement_title={experience.achievement_title}
-                id={experience.id}
-                key={experience.id}
-                organization_name={experience.organization_name}
-                pdf
-                year={experience.year}
-              />
+              <EducationItem key={experience.slug} pdf {...experience} />
             ))}
 
             <HobbiesAndInterests personalInformation={personalInformation} />
