@@ -3,7 +3,7 @@ import {
   faGraduationCap,
 } from '@fortawesome/free-solid-svg-icons';
 import indefinite from 'indefinite';
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import { InferGetServerSidePropsType, NextPage } from 'next';
 import React from 'react';
 import getCMSIntegration from '../../../cms-integration/getCMSIntegration';
 import { getPrivateInformation } from '../../../cms-integration/markdown/private';
@@ -24,7 +24,7 @@ import {
   pdfSidebarStyle,
 } from '../../../styles/pdf.css';
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
+export const getServerSideProps = async (ctx) => {
   const {
     params: { secret },
     res,
@@ -36,13 +36,14 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     return { props: {} };
   }
 
-  const { education, personalInformation, professional, skills } =
+  const { education, hobbies, personalInformation, professional, skills } =
     await getCMSIntegration('markdown');
   const privateInformation = await getPrivateInformation();
 
   return {
     props: {
       education,
+      hobbies,
       personalInformation,
       privateInformation,
       professional,
@@ -53,30 +54,31 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
 type Props = InferGetServerSidePropsType<typeof getServerSideProps>;
 
-const ResumePage = (props: Props): JSX.Element => {
+const ResumePage: NextPage<Props> = (props) => {
   const {
-    educationalExperiences,
+    education,
+    hobbies,
     personalInformation,
     privateInformation,
-    professionalExperiences,
+    professional,
     skills,
   } = props;
   const fullName = getFullName(personalInformation);
-  const jobTitle = indefinite(personalInformation.job_title);
+  const jobTitle = indefinite(personalInformation.attributes.title);
 
   return (
     <>
       <PageHead
-        description={`Professional résumé for ${fullName}, ${jobTitle} living in ${personalInformation.location}.`}
+        description={`Professional résumé for ${fullName}, ${jobTitle} living in ${personalInformation.attributes.location}.`}
         personalInformation={personalInformation}
-        title={`Résumé | ${fullName} | ${personalInformation.location}`}
+        title={`Résumé | ${fullName} | ${personalInformation.attributes.location}`}
       />
 
       <div className={pdfLayoutStyle}>
         <div className={pdfSidebarStyle}>
           <Header
             pdf
-            subtitle={personalInformation.job_title}
+            subtitle={personalInformation.attributes.title}
             title={fullName}
           />
           <Section color="alternate">
@@ -92,16 +94,16 @@ const ResumePage = (props: Props): JSX.Element => {
         <div className={pdfMainStyle}>
           <Section color="standard">
             <SectionHeader icon={faBriefcase} text="Professional Experience" />
-            {professionalExperiences.map((experience) => (
+            {professional.map((experience) => (
               <ProfessionalItem key={experience.slug} pdf {...experience} />
             ))}
 
             <SectionHeader icon={faGraduationCap} text="Education" />
-            {educationalExperiences.map((experience) => (
+            {education.map((experience) => (
               <EducationItem key={experience.slug} pdf {...experience} />
             ))}
 
-            <HobbiesAndInterests personalInformation={personalInformation} />
+            <HobbiesAndInterests hobbies={hobbies} />
           </Section>
         </div>
       </div>

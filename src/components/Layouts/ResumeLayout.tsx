@@ -24,6 +24,7 @@ import Skills from '../Skills/Skills';
 const ResumeLayout: React.FC<ResumePageProps> = (props) => {
   const {
     education,
+    hobbies,
     // links,
     personalInformation,
     privateInformation,
@@ -83,7 +84,7 @@ const ResumeLayout: React.FC<ResumePageProps> = (props) => {
       </Section>
 
       <Section color="alternate">
-        <HobbiesAndInterests personalInformation={personalInformation} />
+        <HobbiesAndInterests hobbies={hobbies} />
       </Section>
 
       <Footer personalInformation={personalInformation} />

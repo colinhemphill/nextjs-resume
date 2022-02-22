@@ -1,4 +1,5 @@
 import { CMSEducationalExperience } from '../cms-integration/markdown/educational';
+import { CMSHobbies } from '../cms-integration/markdown/hobbies';
 import { CMSPersonalInformation } from '../cms-integration/markdown/personal';
 import { CMSProfessionalExperience } from '../cms-integration/markdown/professional';
 import { CMSSkillCategory } from '../cms-integration/markdown/skills';
@@ -56,3 +57,5 @@ export const skills: CMSSkillCategory[] = [
     slug: 'test',
   },
 ];
+
+export const hobbies: CMSHobbies = { html: '<div>Test</div>' };

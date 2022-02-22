@@ -24,12 +24,13 @@ import {
 } from '../styles/pdf.css';
 
 export const getStaticProps = async () => {
-  const { education, personalInformation, professional, skills } =
+  const { education, hobbies, personalInformation, professional, skills } =
     await getCMSIntegration('markdown');
 
   return {
     props: {
       education,
+      hobbies,
       personalInformation,
       professional,
       skills,
@@ -40,7 +41,8 @@ export const getStaticProps = async () => {
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 const ResumePage: NextPage<Props> = (props) => {
-  const { education, personalInformation, professional, skills } = props;
+  const { education, hobbies, personalInformation, professional, skills } =
+    props;
   const fullName = getFullName(personalInformation);
   const jobTitle = indefinite(personalInformation.attributes.title);
 
@@ -78,7 +80,7 @@ const ResumePage: NextPage<Props> = (props) => {
               <EducationItem key={experience.slug} pdf {...experience} />
             ))}
 
-            <HobbiesAndInterests personalInformation={personalInformation} />
+            <HobbiesAndInterests hobbies={hobbies} />
           </Section>
         </div>
       </div>

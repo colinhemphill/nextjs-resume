@@ -2,4 +2,4 @@ Most of my free time is spent creating music! I enjoy many elements of performan
 
 Additionally, I enjoy tabletop gaming, video games, travel, and podcasting. My wife and I host an anime podcast called The AniMonday Podcast.
 
-On the side, I designed, created, and continue to maintain the following websites: [dotdotdarknessmusic.com](dotdotdarknessmusic.com), [animonday.moe](animonday.moe)
+On the side, I designed, created, and continue to maintain the following websites: [dotdotdarknessmusic.com](https://dotdotdarknessmusic.com), [animonday.moe](https://animonday.moe)

@@ -4,12 +4,13 @@ import getCMSIntegration from '../cms-integration/getCMSIntegration';
 import ResumeLayout from '../components/Layouts/ResumeLayout';
 
 export const getStaticProps = async () => {
-  const { education, personalInformation, professional, skills } =
+  const { education, hobbies, personalInformation, professional, skills } =
     await getCMSIntegration('markdown');
 
   return {
     props: {
       education,
+      hobbies,
       personalInformation,
       professional,
       skills,

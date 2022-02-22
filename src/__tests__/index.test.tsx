@@ -1,9 +1,10 @@
 import React from 'react';
 import {
-  educationalExperiences as prismicEducationalExperiences,
-  personalInformation as prismicPersonalInformation,
-  professionalExperiences as prismicProfessionalExperiences,
-  skills as prismicSkills,
+  educationalExperiences,
+  hobbies,
+  personalInformation,
+  professionalExperiences,
+  skills,
 } from '../fixtures/markdown';
 import Index from '../pages/index';
 import { render } from '../testUtils';
@@ -26,11 +27,11 @@ describe('Render the main page', () => {
     process.env.NEXT_PUBLIC_CMS_INTEGRATION = 'prismic';
     const { container } = render(
       <Index
-        education={prismicEducationalExperiences}
-        // links={prismicLinks}
-        personalInformation={prismicPersonalInformation}
-        professional={prismicProfessionalExperiences}
-        skills={prismicSkills}
+        education={educationalExperiences}
+        hobbies={hobbies}
+        personalInformation={personalInformation}
+        professional={professionalExperiences}
+        skills={skills}
       />,
     );
     expect(container).toMatchSnapshot();
