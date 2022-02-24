@@ -42,10 +42,7 @@ const ResumeLayout: React.FC<ResumePageProps> = (props) => {
         title={`Résumé | ${fullName} | ${personalInformation.attributes.location}`}
       />
 
-      <Header
-        subtitle={personalInformation.attributes.title}
-        title={fullName}
-      />
+      <Header {...props} />
 
       <Section color="standard">
         <Row>

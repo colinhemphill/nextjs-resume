@@ -23,7 +23,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Upgraded to Next.js 12.1
   - Use built-in ESLint config
   - Use built-in Jest config
-- Switched to "Inter" as the default font
+- Switched to [jsPDF](https://parall.ax/products/jspdf) for client-side PDF generation instead of Puppeteer for serverless PDF generation
+- Switched to "Source Sans Pro" as the default font
 
 ## [1.1.6] - 2021-12-26
 
