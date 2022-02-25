@@ -1,6 +1,7 @@
 import { faCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { CMSLink } from '../../cms-integration/markdown/links';
 import { CMSPersonalInformation } from '../../cms-integration/markdown/personal';
 import { getFullName } from '../../helpers/utils';
 import AutoGrid from '../../strum-design-system/components/AutoGrid/AutoGrid';
@@ -13,19 +14,18 @@ import { footerLinkStyle, footerStyle } from './Footer.css';
 
 interface FooterProps {
   personalInformation: CMSPersonalInformation;
-  links?: any[];
-  pdf?: boolean;
+  links?: CMSLink[];
 }
 
 const Footer: React.FC<FooterProps> = (props) => {
-  const { personalInformation, links, pdf = false } = props;
+  const { personalInformation, links } = props;
   const fullName = getFullName(personalInformation);
 
   return (
     <footer className={footerStyle}>
       <Container>
-        {!pdf && links && (
-          <AutoGrid horizontalAlign="center">
+        {links && (
+          <AutoGrid guttersX={2} guttersY={2} horizontalAlign="center">
             {links.map((link) => (
               <AutoGridCell key={link.href}>
                 <a
@@ -42,7 +42,7 @@ const Footer: React.FC<FooterProps> = (props) => {
                     <FontAwesomeIcon
                       aria-hidden
                       color={colors.white}
-                      icon={['fab', link.icon_name]}
+                      icon={['fab', link.iconName]}
                       transform="shrink-8"
                     />
                   </span>

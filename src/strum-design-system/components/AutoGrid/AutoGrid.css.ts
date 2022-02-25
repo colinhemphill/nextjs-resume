@@ -1,6 +1,7 @@
-import { createVar, style, styleVariants } from '@vanilla-extract/css';
+import { createVar, styleVariants } from '@vanilla-extract/css';
 import { recipe, RecipeVariants } from '@vanilla-extract/recipes';
 import { vars } from '../../themes/contract.css';
+import spacers from '../../themes/timbre/spacers';
 import { breakpointMediaQueries } from '../../utils/breakpointMediaQueries';
 import { columnVariants } from '../../utils/layout';
 import { rowBase } from '../Layout/Row.css';
@@ -8,17 +9,8 @@ import { rowBase } from '../Layout/Row.css';
 export const autoGridColumnsVar = createVar();
 export const autoGridEqualHeightVar = createVar();
 
-const autoGridBase = style([
-  rowBase,
-  {
-    vars: {
-      [vars.gutters.y]: vars.spacers[4],
-    },
-  },
-]);
-
 export const autoGridStyle = recipe({
-  base: autoGridBase,
+  base: rowBase,
   variants: {
     height: {
       equal: {
@@ -42,6 +34,18 @@ export const autoGridStyle = recipe({
     },
   },
 });
+
+export const autoGridXGuttersStyle = styleVariants(spacers, (gutterSize) => [
+  {
+    vars: { [vars.gutters.x]: gutterSize },
+  },
+]);
+
+export const autoGridYGuttersStyle = styleVariants(spacers, (gutterSize) => [
+  {
+    vars: { [vars.gutters.y]: gutterSize },
+  },
+]);
 
 export const autoGridXSColumnsStyle = styleVariants(
   columnVariants,

@@ -6,11 +6,7 @@ import Heading from '../../strum-design-system/components/Heading/Heading';
 import { atoms } from '../../strum-design-system/sprinkles.css';
 import { articleStyle } from '../Articles/article.css';
 
-interface ProfessionalItemProps extends CMSProfessionalExperience {
-  pdf?: boolean;
-}
-
-const ProfessionalItem: React.FC<ProfessionalItemProps> = (props) => {
+const ProfessionalItem: React.FC<CMSProfessionalExperience> = (props) => {
   return (
     <article className={articleStyle}>
       <Heading level={4}>

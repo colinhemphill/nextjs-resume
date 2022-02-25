@@ -1,5 +1,6 @@
 import React from 'react';
 import { Atoms } from '../../sprinkles.css';
+import spacers from '../../themes/timbre/spacers';
 import { composeWithAtoms } from '../../utils/compose';
 import {
   autoGridLGColumnsStyle,
@@ -7,15 +8,19 @@ import {
   autoGridSMColumnsStyle,
   autoGridStyle,
   AutoGridVariants,
+  autoGridXGuttersStyle,
   autoGridXLColumnsStyle,
   autoGridXSColumnsStyle,
   autoGridXXLColumnsStyle,
+  autoGridYGuttersStyle,
 } from './AutoGrid.css';
 
 interface AutoGrid {
   atoms?: Atoms;
   columns?: ColumnsBreakpoints;
   equalHeight?: boolean;
+  guttersX?: keyof typeof spacers;
+  guttersY?: keyof typeof spacers;
   horizontalAlign?: AutoGridVariants['horizontalAlign'];
   verticalAlign?: AutoGridVariants['verticalAlign'];
 }
@@ -26,9 +31,13 @@ const AutoGrid: React.FC<AutoGrid> = (props) => {
     children,
     columns,
     equalHeight = false,
+    guttersX = 4,
+    guttersY = 4,
     horizontalAlign,
     verticalAlign,
   } = props;
+
+  console.log(guttersX);
 
   const classes = composeWithAtoms(
     atomicProperties,
@@ -43,6 +52,8 @@ const AutoGrid: React.FC<AutoGrid> = (props) => {
     autoGridLGColumnsStyle[columns?.lg],
     autoGridXLColumnsStyle[columns?.xl],
     autoGridXXLColumnsStyle[columns?.xxl],
+    autoGridXGuttersStyle[guttersX],
+    autoGridYGuttersStyle[guttersY],
   );
 
   return <div className={classes}>{children}</div>;

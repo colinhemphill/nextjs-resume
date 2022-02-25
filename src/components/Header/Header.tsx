@@ -13,12 +13,11 @@ const PDFDownloadButton = dynamic(() => import('../PDF/PDFDownloadButton'), {
 });
 
 interface HeaderProps extends ResumePageProps {
-  pdf?: boolean;
   secret?: string;
 }
 
 const Header: React.FC<HeaderProps> = (props) => {
-  const { pdf = false, personalInformation } = props;
+  const { personalInformation } = props;
 
   return (
     <header className={headerStyle}>
@@ -36,14 +35,12 @@ const Header: React.FC<HeaderProps> = (props) => {
               text={personalInformation.attributes.title}
             />
           </Column>
-          {!pdf && (
-            <Column
-              atoms={{ paddingTop: { xs: 4, md: 0 } }}
-              width={{ xs: 12, sm: 12, md: 'auto' }}
-            >
-              <PDFDownloadButton {...props} />
-            </Column>
-          )}
+          <Column
+            atoms={{ paddingTop: { xs: 4, md: 0 } }}
+            width={{ xs: 12, sm: 12, md: 'auto' }}
+          >
+            <PDFDownloadButton {...props} />
+          </Column>
         </Row>
       </Container>
     </header>

@@ -5,13 +5,20 @@ import { CMSPrivateInformation } from '../cms-integration/markdown/private';
 import ResumeLayout from '../components/Layouts/ResumeLayout';
 
 export const getStaticProps = async () => {
-  const { education, hobbies, personalInformation, professional, skills } =
-    await getCMSIntegration('markdown');
+  const {
+    education,
+    hobbies,
+    links,
+    personalInformation,
+    professional,
+    skills,
+  } = await getCMSIntegration('markdown');
 
   return {
     props: {
       education,
       hobbies,
+      links,
       personalInformation,
       professional,
       skills,

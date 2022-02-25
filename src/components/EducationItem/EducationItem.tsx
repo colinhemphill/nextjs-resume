@@ -6,11 +6,7 @@ import Heading from '../../strum-design-system/components/Heading/Heading';
 import { atoms } from '../../strum-design-system/sprinkles.css';
 import { articleStyle } from '../Articles/article.css';
 
-interface EducationItemsProps extends CMSEducationalExperience {
-  pdf?: boolean;
-}
-
-const EducationItem: React.FC<EducationItemsProps> = (props) => {
+const EducationItem: React.FC<CMSEducationalExperience> = (props) => {
   return (
     <article className={articleStyle}>
       <Heading level={4} text={props.attributes.achievement} />

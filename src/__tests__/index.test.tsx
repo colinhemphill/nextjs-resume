@@ -2,6 +2,7 @@ import React from 'react';
 import {
   educationalExperiences,
   hobbies,
+  links,
   personalInformation,
   professionalExperiences,
   skills,
@@ -29,6 +30,7 @@ describe('Render the main page', () => {
       <Index
         education={educationalExperiences}
         hobbies={hobbies}
+        links={links}
         personalInformation={personalInformation}
         professional={professionalExperiences}
         skills={skills}

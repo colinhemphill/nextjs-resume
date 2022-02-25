@@ -4,7 +4,6 @@ import { sectionStyle } from './Section.css';
 
 interface Section {
   color?: keyof typeof sectionStyle;
-  pdf?: boolean;
 }
 
 const Section: React.FC<Section> = (props) => {

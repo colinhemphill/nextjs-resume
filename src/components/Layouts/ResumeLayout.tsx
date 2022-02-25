@@ -25,7 +25,7 @@ const ResumeLayout: React.FC<ResumePageProps> = (props) => {
   const {
     education,
     hobbies,
-    // links,
+    links,
     personalInformation,
     privateInformation,
     professional,
@@ -84,7 +84,7 @@ const ResumeLayout: React.FC<ResumePageProps> = (props) => {
         <HobbiesAndInterests hobbies={hobbies} />
       </Section>
 
-      <Footer personalInformation={personalInformation} />
+      <Footer links={links} personalInformation={personalInformation} />
     </>
   );
 };
