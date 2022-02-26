@@ -1,5 +1,5 @@
 import { IconName } from '@fortawesome/free-brands-svg-icons';
-import { links } from '../../../cms/links';
+import { links } from '../../../edit-me/cms/links';
 
 export interface CMSLink {
   href: string;

@@ -17,7 +17,12 @@ export interface CMSEducationalExperience {
 }
 
 const basePath = process.cwd();
-const educationPath = path.join(basePath, 'cms', 'educationalExperiences');
+const educationPath = path.join(
+  basePath,
+  'edit-me',
+  'cms',
+  'educationalExperiences',
+);
 
 export const getEducationalExperiences = async (): Promise<
   CMSEducationalExperience[]

@@ -1,5 +1,5 @@
 ---
-location: Placeholder, TX, USA
+location: Placeholder, TX
 familyName: Body
 givenName: Some
 title: Official Job Title

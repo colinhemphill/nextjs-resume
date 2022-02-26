@@ -233,7 +233,7 @@ const PDF: React.FC<ResumePageProps> = (props) => {
                         (star, starIndex) => (
                           <Image
                             key={starIndex}
-                            src={`${iconPath}/star.png`}
+                            src={`${iconPath}/star-yellow.png`}
                             style={styles.sectionHeadingStar}
                           />
                         ),

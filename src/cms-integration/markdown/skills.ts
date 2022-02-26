@@ -15,7 +15,7 @@ export interface CMSSkillCategory {
 }
 
 const basePath = process.cwd();
-const skillsPath = path.join(basePath, 'cms', 'skills');
+const skillsPath = path.join(basePath, 'edit-me', 'cms', 'skills');
 
 export const getSkillCategories = async (): Promise<CMSSkillCategory[]> => {
   const dir = await fs.readdir(skillsPath);

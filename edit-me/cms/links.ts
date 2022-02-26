@@ -1,4 +1,4 @@
-import { CMSLink } from '../src/cms-integration/markdown/links';
+import { CMSLink } from '../../src/cms-integration/markdown/links';
 
 export const links: CMSLink[] = [
   {

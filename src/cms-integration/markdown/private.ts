@@ -15,7 +15,12 @@ export interface CMSPrivateInformation {
 }
 
 const basePath = process.cwd();
-const privateInformationPath = path.join(basePath, 'cms', 'privateFields');
+const privateInformationPath = path.join(
+  basePath,
+  'edit-me',
+  'cms',
+  'privateFields',
+);
 
 export const getPrivateInformation = async (): Promise<
   CMSPrivateInformation[]
