@@ -1,52 +1,44 @@
-import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import classnames from 'classnames';
 import React from 'react';
-import styles from './Header.module.scss';
+import { getFullName } from '../../helpers/utils';
+import { ResumePageProps } from '../../pages';
+import Container from '../../strum-design-system/components/Container/Container';
+import Heading from '../../strum-design-system/components/Heading/Heading';
+import Column from '../../strum-design-system/components/Layout/Column';
+import Row from '../../strum-design-system/components/Layout/Row';
+import PDFDownloadButton from '../PDF/PDFDownloadButton';
+import { headerStyle } from './Header.css';
 
-interface Props {
-  pdf?: boolean;
+interface HeaderProps extends ResumePageProps {
   secret?: string;
-  subtitle: string;
-  title: string;
 }
 
-const Header = (props: Props): JSX.Element => {
-  const { pdf = false, secret, subtitle, title } = props;
-
-  let pdfAPI = '/api/pdf';
-  if (secret) {
-    pdfAPI += `?secret=${secret}`;
-  }
+const Header: React.FC<HeaderProps> = (props) => {
+  const { personalInformation } = props;
 
   return (
-    <header className={styles.header}>
-      <div className={pdf ? 'container-fluid' : 'container'}>
-        <div
-          className={classnames('row align-items-center', {
-            'text-center': pdf,
-            'text-md-start text-center': !pdf,
-          })}
-        >
-          <div className="col-md">
-            <h1 className="text-white">{title}</h1>
-            <h2 className="text-white mb-0">{subtitle}</h2>
-          </div>
-          {!pdf && (
-            <div className="col-md-auto mt-md-0 mt-xxs d-print-none d-block">
-              <a
-                className="btn btn-dark btn-lg"
-                href={pdfAPI}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <FontAwesomeIcon className="me-xxxs" icon={faFilePdf} />
-                Download as PDF
-              </a>
-            </div>
-          )}
-        </div>
-      </div>
+    <header className={headerStyle}>
+      <Container atoms={{ textAlign: { xs: 'center', md: 'left' } }}>
+        <Row verticalAlign="center">
+          <Column>
+            <Heading
+              atoms={{ color: 'white' }}
+              level={1}
+              text={getFullName(personalInformation)}
+            />
+            <Heading
+              atoms={{ color: 'white' }}
+              level={2}
+              text={personalInformation.attributes.title}
+            />
+          </Column>
+          <Column
+            atoms={{ paddingTop: { xs: 4, md: 0 } }}
+            width={{ xs: 12, sm: 12, md: 'auto' }}
+          >
+            <PDFDownloadButton />
+          </Column>
+        </Row>
+      </Container>
     </header>
   );
 };

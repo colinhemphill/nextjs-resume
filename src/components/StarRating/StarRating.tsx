@@ -1,24 +1,24 @@
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import styles from './StarRating.module.scss';
+import colors from '../../strum-design-system/themes/timbre/colors';
 
-interface Props {
+interface StarRatingProps {
   stars: 1 | 2 | 3;
 }
 
-const StarRating = (props: Props): JSX.Element => {
+const Star: React.FC<{ className?: string }> = ({ className }) => {
+  return <FontAwesomeIcon color={colors.yellow} icon={faStar} size="sm" />;
+};
+
+const StarRating: React.FC<StarRatingProps> = (props) => {
   const { stars } = props;
 
   return (
-    <span className="text-primary">
-      {stars >= 3 && <FontAwesomeIcon icon={faStar} />}
-      {stars >= 2 && (
-        <FontAwesomeIcon className={styles.secondStar} icon={faStar} />
-      )}
-      {stars >= 1 && (
-        <FontAwesomeIcon className={styles.thirdStar} icon={faStar} />
-      )}
+    <span>
+      {stars >= 1 && <Star />}
+      {stars >= 2 && <Star />}
+      {stars >= 3 && <Star />}
     </span>
   );
 };

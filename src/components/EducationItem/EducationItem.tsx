@@ -1,29 +1,23 @@
 import { faUniversity } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { CMSEducationalExperience } from '../../cms-integration/markdown/educational';
+import Heading from '../../strum-design-system/components/Heading/Heading';
+import { atoms } from '../../strum-design-system/sprinkles.css';
+import { articleStyle } from '../Articles/article.css';
 
-interface Props extends CMSEducationalExperience<JSX.Element> {
-  pdf?: boolean;
-}
-
-const EducationItem = (props: Props): JSX.Element => {
-  const {
-    achievement_description,
-    achievement_title,
-    organization_name,
-    pdf = false,
-  } = props;
-
+const EducationItem: React.FC<CMSEducationalExperience> = (props) => {
   return (
-    <article className={pdf ? 'mt-xxs' : 'mt-xs'}>
-      <h4 className="d-inline-block">{achievement_title}</h4>
+    <article className={articleStyle}>
+      <Heading level={4} text={props.attributes.achievement} />
       <div>
-        <FontAwesomeIcon className="me-xxxs" icon={faUniversity} />
-        {organization_name}
+        <FontAwesomeIcon
+          className={atoms({ marginRight: 2 })}
+          icon={faUniversity}
+        />
+        {props.attributes.institution}
       </div>
-      <div className={pdf ? 'mt-xxxs' : 'mt-xxs'}>
-        {achievement_description}
-      </div>
+      <div dangerouslySetInnerHTML={{ __html: props.html }} />
     </article>
   );
 };

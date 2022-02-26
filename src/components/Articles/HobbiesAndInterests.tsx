@@ -1,22 +1,17 @@
 import { faDiceD20 } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
-import { getCMSIntegration } from '../../cms';
+import { CMSHobbies } from '../../cms-integration/markdown/hobbies';
 import SectionHeader from '../SectionHeader/SectionHeader';
 
-interface Props {
-  personalInformation: CMSPersonalInformation<unknown>;
+interface HobbiesAndInterestsProps {
+  hobbies: CMSHobbies;
 }
 
-const HobbiesAndInterests = (props: Props): JSX.Element => {
-  const { personalInformation } = props;
-  const CMS = getCMSIntegration();
-
+const HobbiesAndInterests: React.FC<HobbiesAndInterestsProps> = (props) => {
   return (
     <article>
-      <SectionHeader icon={faDiceD20} text="Hobbies & Interests" />
-      <CMS.RichTextComponent
-        richText={personalInformation.hobbies_and_interests}
-      />
+      <SectionHeader icon={faDiceD20} text="Hobbies &amp; Interests" />
+      <div dangerouslySetInnerHTML={{ __html: props.hobbies.html }} />
     </article>
   );
 };

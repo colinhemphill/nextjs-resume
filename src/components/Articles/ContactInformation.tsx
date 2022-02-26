@@ -1,44 +1,51 @@
 import { faIdCard } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
-import { getCMSIntegration } from '../../cms';
+import { CMSPersonalInformation } from '../../cms-integration/markdown/personal';
+import { CMSPrivateInformation } from '../../cms-integration/markdown/private';
+import Box from '../../strum-design-system/components/Box/Box';
+import Column from '../../strum-design-system/components/Layout/Column';
+import Row from '../../strum-design-system/components/Layout/Row';
+import NavListItem from '../../strum-design-system/components/Nav/NavListItem';
+import UnorderedList from '../../strum-design-system/components/Nav/UnorderedList';
 import SectionHeader from '../SectionHeader/SectionHeader';
 
-interface Props {
-  personalInformation: CMSPersonalInformation<unknown>;
-  privateInformation?: CMSPrivateInformation<unknown>[];
+interface ContactInformationProps {
+  personalInformation: CMSPersonalInformation;
+  privateInformation?: CMSPrivateInformation[];
 }
 
-const ContactInformation = (props: Props): JSX.Element => {
+const ContactInformation: React.FC<ContactInformationProps> = (props) => {
   const { personalInformation, privateInformation } = props;
-  const CMS = getCMSIntegration();
 
   return (
-    <article>
+    <Box as="article" marginBottom={{ xs: 6, lg: 0 }}>
       <SectionHeader icon={faIdCard} text="Contact Information" />
-      <ul className="list-unstyled">
-        <li>
-          <div className="row mt-md-0 mt-xxxs">
-            <div className="col-lg-2 col-sm-3">
+      <UnorderedList direction="vertical">
+        <NavListItem>
+          <Row>
+            <Column width={{ xs: 'auto' }}>
               <strong>Location:</strong>
-            </div>
-            <div className="col">{personalInformation.location}</div>
-          </div>
-        </li>
+            </Column>
+            <Column>{personalInformation.attributes.location}</Column>
+          </Row>
+        </NavListItem>
         {privateInformation &&
           privateInformation.map((privateField) => (
-            <li key={privateField.label}>
-              <div className="row mt-md-0 mt-xxxs no-paragraph-margins">
-                <div className="col-lg-2 col-sm-3">
-                  <strong>{privateField.label}:</strong>
-                </div>
-                <div className="col">
-                  <CMS.RichTextComponent richText={privateField.content} />
-                </div>
-              </div>
-            </li>
+            <NavListItem key={privateField.attributes.label}>
+              <Row>
+                <Column width={{ xs: 'auto' }}>
+                  <strong>{privateField.attributes.label}:</strong>
+                </Column>
+                <Column>
+                  <div
+                    dangerouslySetInnerHTML={{ __html: privateField.html }}
+                  />
+                </Column>
+              </Row>
+            </NavListItem>
           ))}
-      </ul>
-    </article>
+      </UnorderedList>
+    </Box>
   );
 };
 

@@ -1,32 +1,28 @@
-import Document, {
-  DocumentContext,
-  DocumentInitialProps,
-  Head,
-  Html,
-  Main,
-  NextScript,
-} from 'next/document';
-import React from 'react';
+import Document, { Head, Html, Main, NextScript } from 'next/document';
+import { timbre } from '../strum-design-system/themes';
 
 class MyDocument extends Document {
-  static async getInitialProps(
-    ctx: DocumentContext,
-  ): Promise<DocumentInitialProps> {
+  static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx);
     return { ...initialProps };
   }
 
-  render(): JSX.Element {
+  render() {
     return (
       <Html lang="en">
         <Head>
-          <link rel="manifest" href="/manifest.json" />
-          <link rel="icon" sizes="192x192" href="/img/icons/favicon-192.png" />
-          <link rel="apple-touch-icon" href="/img/icons/favicon-512.png" />
-          <link rel="icon" href="/img/icons/favicon.ico" />
-          <meta name="theme-color" content="#0073e6" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="true"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=optional"
+            rel="stylesheet"
+          />
         </Head>
-        <body>
+        <body className={timbre}>
           <Main />
           <NextScript />
         </body>

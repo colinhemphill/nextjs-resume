@@ -29,6 +29,7 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+.env
 
 # vercel
 .vercel
@@ -37,3 +38,5 @@ yarn-error.log*
 **/public/workbox-*.js
 **/public/sw.js
 **/public/worker-*.js
+
+tsconfig.tsbuildinfo

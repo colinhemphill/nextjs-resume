@@ -1,16 +1,20 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
-import { getFullName } from '../helpers';
+import { CMSPersonalInformation } from '../cms-integration/markdown/personal';
+import { getFullName } from '../helpers/utils';
+import colors from '../strum-design-system/themes/timbre/colors';
 
-interface Props {
+interface PageHeadProps {
   baseURL?: string;
   description: string;
-  personalInformation: CMSPersonalInformation<unknown>;
+  personalInformation: CMSPersonalInformation;
   title: string;
 }
 
-const PageHead = (props: Props): JSX.Element => {
+const ogImgColor = `%23${colors.primary.replace('#', '')}`;
+
+const PageHead: React.FC<PageHeadProps> = (props) => {
   const {
     baseURL = typeof window !== 'undefined' ? window.location.origin : '',
     description,
@@ -20,8 +24,11 @@ const PageHead = (props: Props): JSX.Element => {
   const { pathname } = useRouter();
 
   const fullName = getFullName(personalInformation);
+  const ogImgTitle = encodeURI(
+    `**${fullName.toUpperCase()}** ${personalInformation.attributes.location.toUpperCase()}`,
+  );
+  const ogImg = `https://ogi.sh/gzzIXzt5-?title=${ogImgTitle}&backgroundColor=${ogImgColor}`;
   const url = baseURL + pathname;
-  const imgPath = baseURL + '/img/icons/favicon-512.png';
 
   return (
     <Head>
@@ -36,28 +43,37 @@ const PageHead = (props: Props): JSX.Element => {
       />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="profile" />
-      <meta property="og:image" content={imgPath} />
       <meta
         property="profile:first_name"
-        content={personalInformation.given_name}
+        content={personalInformation.attributes.givenName}
       />
       <meta
         property="profile:last_name"
-        content={personalInformation.family_name}
+        content={personalInformation.attributes.familyName}
       />
 
       <meta name="twitter:card" content="summary" />
-      <meta
-        name="twitter:site"
-        content={`@${personalInformation.twitter_username}`}
-      />
-      <meta
-        name="twitter:creator"
-        content={`@${personalInformation.twitter_username}`}
-      />
+      {personalInformation.attributes.twitterUsername && (
+        <>
+          <meta
+            name="twitter:site"
+            content={`@${personalInformation.attributes.twitterUsername}`}
+          />
+          <meta
+            name="twitter:creator"
+            content={`@${personalInformation.attributes.twitterUsername}`}
+          />
+        </>
+      )}
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={imgPath} />
+
+      {/* Share images served from https://ogimpact.sh/ */}
+      <meta property="og:image" content={ogImg} />
+      <meta name="image" content={ogImg} />
+      <meta itemProp="image" content={ogImg} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:image" content={ogImg} />
     </Head>
   );
 };

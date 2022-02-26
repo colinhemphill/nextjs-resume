@@ -5,6 +5,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] - 2022-02-26
+
+### Added
+
+- Uses [Vanilla Extract](https://vanilla-extract.style/) for styles
+- Uses custom Vanilla Extract styles and components based on an early version of the Strum Design System
+- Non-PDF styles now support dark mode
+- Defaults to a Markdown integration as the CMS
+  - Files in the project pull data for the résumé
+  - Requires a code change to edit the résumé
+
+### Removed
+
+- Contentful and Prismic integrations are no longer supported
+  - With this project rewrite, we may be adding CMS integrations as extra modules over time
+- No longer uses Sass or Sass modules
+- No longer uses Bootstrap
+
+### Changed
+
+- Upgraded to Next.js 12.1
+  - Use built-in ESLint config
+  - Use built-in Jest config
+- Switched to [React-pdf](https://react-pdf.org/) for client-side PDF generation instead of Puppeteer for serverless PDF generation
+- Switched to "Source Sans Pro" as the default font
+
 ## [1.1.6] - 2021-12-26
 
 - Upgraded to Next.js 12

@@ -1,35 +1,35 @@
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import classnames from 'classnames';
 import React from 'react';
+import { CMSSkillCategory } from '../../cms-integration/markdown/skills';
+import Box from '../../strum-design-system/components/Box/Box';
+import Heading from '../../strum-design-system/components/Heading/Heading';
+import Column from '../../strum-design-system/components/Layout/Column';
+import Row from '../../strum-design-system/components/Layout/Row';
 import SectionHeader from '../SectionHeader/SectionHeader';
 import StarRating from '../StarRating/StarRating';
 
-interface Props {
-  skills: CMSSkills[];
+interface SkillsProps {
+  skills: CMSSkillCategory[];
 }
 
-const Skills = (props: Props): JSX.Element => {
+const Skills: React.FC<SkillsProps> = (props) => {
   const { skills } = props;
 
   return (
-    <article className="mt-xs">
-      <SectionHeader icon={faCheck} text="Skills & Expertise" />
-      <div className="row mt-xxs">
-        {skills.map((skill, index) => (
-          <div
-            className={classnames('col-lg', {
-              'mt-lg-0 mt-xxs': index > 0,
-            })}
-            key={skill.id}
-          >
-            <h4 className="h5 text-uppercase">
-              <StarRating stars={skill.level} /> {skill.level_name}
-            </h4>
-            <p>{skill.skills_list}</p>
-          </div>
+    <Box marginTop={{ xs: 0, lg: 4 }}>
+      <SectionHeader icon={faCheck} text="Skills &amp; Expertise" />
+      <Row atoms={{ paddingTop: { xs: 2, lg: 0 } }}>
+        {skills.map((skill, skillIndex) => (
+          <Column key={skill.slug} width={{ xs: 12, lg: 4 }}>
+            <Heading level={4}>
+              <StarRating stars={(skills.length - skillIndex) as 1 | 2 | 3} />{' '}
+              {skill.attributes.title}
+            </Heading>
+            <div dangerouslySetInnerHTML={{ __html: skill.html }} />
+          </Column>
         ))}
-      </div>
-    </article>
+      </Row>
+    </Box>
   );
 };
 
