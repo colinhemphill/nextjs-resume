@@ -1,4 +1,3 @@
-import dynamic from 'next/dynamic';
 import React from 'react';
 import { getFullName } from '../../helpers/utils';
 import { ResumePageProps } from '../../pages';
@@ -6,11 +5,8 @@ import Container from '../../strum-design-system/components/Container/Container'
 import Heading from '../../strum-design-system/components/Heading/Heading';
 import Column from '../../strum-design-system/components/Layout/Column';
 import Row from '../../strum-design-system/components/Layout/Row';
+import PDFDownloadButton from '../PDF/PDFDownloadButton';
 import { headerStyle } from './Header.css';
-
-const PDFDownloadButton = dynamic(() => import('../PDF/PDFDownloadButton'), {
-  ssr: false,
-});
 
 interface HeaderProps extends ResumePageProps {
   secret?: string;
