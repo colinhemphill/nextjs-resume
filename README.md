@@ -82,3 +82,9 @@ This private URL is _only as secure as the people you send it to_. To invalidate
 ## Design and Customizations
 
 The template is built to be responsive, beautiful, and accessible right out of the box. It supports automatic dark/light mode themeing in the web version, and a great single-page print layout in the PDF version. The project supports a minimal set up configurations such as accent colors, but if you're a front end developer or designer, you can easily open up the source code and customize it however you see fit.
+
+We use [OG Impact](https://ogimpact.sh/) to generate dynamic Open Graph (Facebook/Twitter) share images. By default it will look something like this example from the Facebook Debugger:
+
+![Screenshot of Facebook debugger showing that the share image has been generated to display the text "Some Body—Placeholder, TX"](facebookDebugger.png)
+
+This dynamic share image will use your custom `primaryColor` setting, as well as data from the CMS.
