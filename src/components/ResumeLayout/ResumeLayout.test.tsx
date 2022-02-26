@@ -6,28 +6,20 @@ import {
   personalInformation,
   professionalExperiences,
   skills,
-} from '../fixtures/markdown';
-import Index from '../pages/index';
-import { render } from '../testUtils';
+} from '../../fixtures/markdown';
+import { render } from '../../testUtils';
+import ResumeLayout from './ResumeLayout';
 
 jest.mock('next/router', () => require('next-router-mock'));
 
-const DEFAULT_ENV = process.env;
-
-describe('Render the main page', () => {
+describe('<ResumeLayout />', () => {
   beforeEach(() => {
     jest.resetModules();
-    process.env = { ...DEFAULT_ENV };
   });
 
-  afterAll(() => {
-    process.env = DEFAULT_ENV;
-  });
-
-  it('Uses a Prismic integration', () => {
-    process.env.NEXT_PUBLIC_CMS_INTEGRATION = 'prismic';
+  it('Matches the snapshot', () => {
     const { container } = render(
-      <Index
+      <ResumeLayout
         education={educationalExperiences}
         hobbies={hobbies}
         links={links}

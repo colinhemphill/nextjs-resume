@@ -1,4 +1,5 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document';
+import { timbre } from '../strum-design-system/themes';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -21,7 +22,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <body>
+        <body className={timbre}>
           <Main />
           <NextScript />
         </body>

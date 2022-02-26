@@ -1,6 +1,6 @@
 # Next.js Static Generated Résumés
 
-A bootstrapped Next.js application designed to connect your preferred headless CMS and statically generate a clean, professional, and fast web-based résumé. The generator features an API endpoint to download the résumé as a PDF.
+A bootstrapped Next.js application designed built especially with software professionals in mind.
 
 [See an example](https://resume.colinhemphill.com)
 
@@ -10,13 +10,12 @@ Your résumé can also generate a secure URL that will display information not a
 
 - [Next.js](https://nextjs.org)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Bootstrap](https://getbootstrap.com/)
-- [SASS](https://sass-lang.com/)
+- [Vanilla Extract](https://vanilla-extract.style/)
 - [Font Awesome](https://fontawesome.com/)
 - [Jest](https://jestjs.io/)
 - [Testing Library](https://testing-library.com/)
 - [Vercel](https://vercel.com/)
-- [Puppeteer](https://developers.google.com/web/tools/puppeteer)
+- [React-pdf](https://react-pdf.org/)
 
 It also features a simple, effective, and not overbearing dev workflow using ESLint, Prettier, and stylelint.
 
@@ -38,8 +37,6 @@ The majority of the work you will need to complete is setting up and modifying y
 ### Set Up Your CMS
 
 Regardless of which supported CMS you choose, or if you are adding support for a new CMS, you will need to set up your schemas to match the expected items.
-
-View our [CMS setup document](README-CMS.md) to see the schemas that you will need alongside the name and description of each required field.
 
 ### Deploy Your Résumé
 

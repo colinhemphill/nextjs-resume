@@ -3,7 +3,7 @@ import React from 'react';
 import { ResumePageProps } from '../..';
 import getCMSIntegration from '../../../cms-integration/getCMSIntegration';
 import { getPrivateInformation } from '../../../cms-integration/markdown/private';
-import ResumeLayout from '../../../components/Layouts/ResumeLayout';
+import ResumeLayout from '../../../components/ResumeLayout/ResumeLayout';
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const {
