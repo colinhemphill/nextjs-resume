@@ -1,6 +1,6 @@
 {
-  "name": "Your Name's Professional Résumé",
-  "short_name": "Your Name",
+  "name": "Some Body's Professional Résumé",
+  "short_name": "Some Body",
   "icons": [
     {
       "src": "/img/icons/favicon-192.png",
@@ -13,7 +13,7 @@
       "sizes": "512x512"
     }
   ],
-  "background_color": "#33333d",
+  "background_color": "#18181b",
   "description": "Your professional description.",
   "display": "fullscreen",
   "start_url": "/",
