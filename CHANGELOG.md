@@ -12,9 +12,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Uses [Vanilla Extract](https://vanilla-extract.style/) for styles
 - Uses custom Vanilla Extract styles and components based on an early version of the Strum Design System
 - Non-PDF styles now support dark mode
+- Defaults to a Markdown integration as the CMS
+  - Files in the project pull data for the résumé
+  - Requires a code change to edit the résumé
 
 ### Removed
 
+- Contentful and Prismic integrations are no longer supported
+  - With this project rewrite, we will be adding CMS integrations as extra modules over time
 - No longer uses Sass or Sass modules
 - No longer uses Bootstrap
 
@@ -23,7 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Upgraded to Next.js 12.1
   - Use built-in ESLint config
   - Use built-in Jest config
-- Switched to [jsPDF](https://parall.ax/products/jspdf) for client-side PDF generation instead of Puppeteer for serverless PDF generation
+- Switched to [React-pdf](https://react-pdf.org/) for client-side PDF generation instead of Puppeteer for serverless PDF generation
 - Switched to "Source Sans Pro" as the default font
 
 ## [1.1.6] - 2021-12-26

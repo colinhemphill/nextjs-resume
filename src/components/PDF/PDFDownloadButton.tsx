@@ -14,7 +14,7 @@ const PDFDownloadButton: React.FC = () => {
         color: darkMode ? 'primary' : 'medium',
         size: 'lg',
       })}
-      href="/pdf"
+      href="/api/pdf"
       target="_blank"
     >
       <FontAwesomeIcon className={atoms({ marginRight: 2 })} icon={faFilePdf} />
