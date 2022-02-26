@@ -14,7 +14,8 @@ export interface CMSPrivateInformation {
   slug: string;
 }
 
-const privateInformationPath = path.join('cms', 'privateFields');
+const basePath = process.cwd();
+const privateInformationPath = path.join(basePath, 'cms', 'privateFields');
 
 export const getPrivateInformation = async (): Promise<
   CMSPrivateInformation[]

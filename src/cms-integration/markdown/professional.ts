@@ -17,15 +17,16 @@ export interface CMSProfessionalExperience {
   slug: string;
 }
 
-const experiencesPath = path.join('cms', 'professionalExperiences');
+const basePath = process.cwd();
+const professionalPath = path.join(basePath, 'cms', 'professionalExperiences');
 
 export const getProfessionalExperiences = async (): Promise<
   CMSProfessionalExperience[]
 > => {
-  const dir = (await fs.readdir(experiencesPath)).reverse();
+  const dir = (await fs.readdir(professionalPath)).reverse();
   return Promise.all(
     dir.map(async (filename) => {
-      const file = await fs.readFile(path.join(experiencesPath, filename));
+      const file = await fs.readFile(path.join(professionalPath, filename));
       const { attributes, body } =
         parseFrontMatter<ProfessionalExperienceMarkdownAttributes>(
           file.toString(),

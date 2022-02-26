@@ -14,7 +14,8 @@ export interface CMSSkillCategory {
   slug: string;
 }
 
-const skillsPath = path.join('cms', 'skills');
+const basePath = process.cwd();
+const skillsPath = path.join(basePath, 'cms', 'skills');
 
 export const getSkillCategories = async (): Promise<CMSSkillCategory[]> => {
   const dir = await fs.readdir(skillsPath);

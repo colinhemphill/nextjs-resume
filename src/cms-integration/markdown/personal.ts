@@ -17,7 +17,8 @@ export interface CMSPersonalInformation {
   html: string;
 }
 
-const personalPath = path.join('cms', 'personal.md');
+const basePath = process.cwd();
+const personalPath = path.join(basePath, 'cms', 'personal.md');
 
 export const getPersonalInformation =
   async (): Promise<CMSPersonalInformation> => {

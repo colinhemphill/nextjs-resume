@@ -6,7 +6,8 @@ export interface CMSHobbies {
   html: string;
 }
 
-const hobbiesPath = path.join('cms', 'hobbies.md');
+const basePath = process.cwd();
+const hobbiesPath = path.join(basePath, 'cms', 'hobbies.md');
 
 export const getHobbies = async (): Promise<CMSHobbies> => {
   const file = await fs.readFile(hobbiesPath);
