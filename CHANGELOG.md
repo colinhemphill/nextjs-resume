@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Defaults to a Markdown integration as the CMS
   - Files in the project pull data for the résumé
   - Requires a code change to edit the résumé
+- Uses [OG Impact](https://ogimpact.sh/) to dynamically generate OG share images
 
 ### Removed
 
