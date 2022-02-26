@@ -53,14 +53,18 @@ const PageHead: React.FC<PageHeadProps> = (props) => {
       />
 
       <meta name="twitter:card" content="summary" />
-      <meta
-        name="twitter:site"
-        content={`@${personalInformation.attributes.twitterUsername}`}
-      />
-      <meta
-        name="twitter:creator"
-        content={`@${personalInformation.attributes.twitterUsername}`}
-      />
+      {personalInformation.attributes.twitterUsername && (
+        <>
+          <meta
+            name="twitter:site"
+            content={`@${personalInformation.attributes.twitterUsername}`}
+          />
+          <meta
+            name="twitter:creator"
+            content={`@${personalInformation.attributes.twitterUsername}`}
+          />
+        </>
+      )}
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
 
