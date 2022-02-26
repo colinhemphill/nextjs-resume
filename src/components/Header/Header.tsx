@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = (props) => {
             atoms={{ paddingTop: { xs: 4, md: 0 } }}
             width={{ xs: 12, sm: 12, md: 'auto' }}
           >
-            <PDFDownloadButton {...props} />
+            <PDFDownloadButton />
           </Column>
         </Row>
       </Container>

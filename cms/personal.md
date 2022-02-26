@@ -1,9 +1,9 @@
 ---
-location: Austin, TX
-familyName: Hemphill
-givenName: Colin
-title: Front End Engineer
-twitterUsername: colin_hemphill
+location: Placeholder, TX, USA
+familyName: Body
+givenName: Some
+title: Official Job Title
+twitterUsername: some_body
 ---
 
-I am a full stack developer with an emphasis on the front end. I specialize in building large-scale, performant, and user-friendly applications in React. Throughout my career, I have expressed a strong eye for design, and I take the user experience seriously!
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices in iaculis nunc sed augue lacus viverra vitae congue. Neque viverra justo nec ultrices. Urna nunc id cursus metus aliquam eleifend mi in nulla. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra.

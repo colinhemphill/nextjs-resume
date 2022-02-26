@@ -37,8 +37,6 @@ const AutoGrid: React.FC<AutoGrid> = (props) => {
     verticalAlign,
   } = props;
 
-  console.log(guttersX);
-
   const classes = composeWithAtoms(
     atomicProperties,
     autoGridStyle({

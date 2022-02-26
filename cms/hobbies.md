@@ -1,5 +1,3 @@
-Most of my free time is spent creating music! I enjoy many elements of performance and production, and I play the guitar, piano, and drums. My professional training in audio engineering and my access to a well-equipped home studio leads to top quality audio and video production for music, podcasting, live streaming on Twitch, demo videos, and even Zoom video calls.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices in iaculis nunc sed augue lacus viverra vitae congue. Neque viverra justo nec ultrices. Urna nunc id cursus metus aliquam eleifend mi in nulla. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra.
 
-Additionally, I enjoy tabletop gaming, video games, travel, and podcasting. My wife and I host an anime podcast called The AniMonday Podcast.
-
-On the side, I designed, created, and continue to maintain the following websites: [dotdotdarknessmusic.com](https://dotdotdarknessmusic.com), [animonday.moe](https://animonday.moe)
+All Markdown files will be rendered as rich text, so you can include features such as [links](#).

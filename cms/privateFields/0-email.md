@@ -2,4 +2,4 @@
 label: Email
 ---
 
-<a href="mailto:colin@colinhemphill.com">colin@colinhemphill.com</a>
+<a href="mailto:somebody@gmail.com">somebody@gmail.com</a>

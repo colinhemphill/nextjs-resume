@@ -1,11 +1,10 @@
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { ResumePageProps } from '../../pages';
 import { buttonStyle } from '../../strum-design-system/components/Button/Button.css';
 import { atoms } from '../../strum-design-system/sprinkles.css';
 
-const PDFDownloadButton: React.FC<ResumePageProps> = (props) => {
+const PDFDownloadButton: React.FC = () => {
   return (
     <a
       className={buttonStyle({
@@ -16,7 +15,7 @@ const PDFDownloadButton: React.FC<ResumePageProps> = (props) => {
       target="_blank"
     >
       <FontAwesomeIcon className={atoms({ marginRight: 2 })} icon={faFilePdf} />
-      Download PDF
+      View or Download PDF
     </a>
   );
 };
