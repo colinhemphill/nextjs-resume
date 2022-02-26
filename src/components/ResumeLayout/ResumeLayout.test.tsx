@@ -6,8 +6,8 @@ import {
   personalInformation,
   professionalExperiences,
   skills,
-} from '../../fixtures/markdown';
-import { render } from '../../testUtils';
+} from '../../test/fixtures/markdown';
+import { render } from '../../test/testUtils';
 import ResumeLayout from './ResumeLayout';
 
 jest.mock('next/router', () => require('next-router-mock'));

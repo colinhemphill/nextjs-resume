@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '../../testUtils';
+import { render } from '../../test/testUtils';
 import Section from './Section';
 
 jest.mock('next/router', () => require('next-router-mock'));
