@@ -20,7 +20,13 @@ Your résumé can also generate a secure URL that will display information not a
 - [Testing Library](https://testing-library.com/)
 - [Vercel](https://vercel.com/)
 
-![Screenshot of the application's Lighthouse score showing a 99 in "Performance", a 100 in "Accessibility", a 100 in "Best Practices", a 100 in "SEO", and that "Progressive Web App" is active.](lighthouse.png)
+### It's FAST
+
+Your static generated site will load extremely quickly wherever you decide to deploy it, but it's built to deploy to Vercel with just one or two clicks. The screenshot here is from the very first Lighthouse test I ran on my own production deploy, using emulated mobile with "Slow 4G Throttling".
+
+![Screenshot of the application's Lighthouse score showing a 100 in "Performance", a 100 in "Accessibility", a 100 in "Best Practices", a 100 in "SEO", and that "Progressive Web App" is active.](docs/lighthouse.png)
+
+[View Lighthouse Report](docs/lighthouse-report.pdf)
 
 ## How To Use This Project
 
@@ -85,6 +91,6 @@ The template is built to be responsive, beautiful, and accessible right out of t
 
 We use [OG Impact](https://ogimpact.sh/) to generate dynamic Open Graph (Facebook/Twitter) share images. By default it will look something like this example from the Facebook Debugger:
 
-![Screenshot of Facebook debugger showing that the share image has been generated to display the text "Some Body—Placeholder, TX"](facebookDebugger.png)
+![Screenshot of Facebook debugger showing that the share image has been generated to display the text "Some Body—Placeholder, TX"](docs/facebookDebugger.png)
 
 This dynamic share image will use your custom `primaryColor` setting, as well as data from the CMS.
