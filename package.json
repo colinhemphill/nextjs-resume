@@ -63,7 +63,7 @@
     "@types/node": "17.0.21",
     "@types/react": "17.0.39",
     "@types/react-transition-group": "4.4.4",
-    "@vanilla-extract/babel-plugin": "1.1.4",
+    "@vanilla-extract/babel-plugin": "1.1.5",
     "copyfiles": "2.4.1",
     "eslint": "8.10.0",
     "eslint-config-next": "12.1.0",
