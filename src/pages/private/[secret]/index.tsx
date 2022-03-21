@@ -17,16 +17,25 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     return null;
   }
 
-  const { education, personalInformation, professional, skills } =
-    await getCMSIntegration('markdown');
+  const {
+    education,
+    hobbies,
+    links,
+    personalInformation,
+    professional,
+    skills,
+  } = await getCMSIntegration('markdown');
   const privateInformation = await getPrivateInformation();
 
   return {
     props: {
       education,
+      hobbies,
+      links,
       personalInformation,
       privateInformation,
       professional,
+      secret,
       skills,
     },
   };

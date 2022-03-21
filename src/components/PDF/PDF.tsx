@@ -163,6 +163,11 @@ const styles = StyleSheet.create({
   bold: { fontWeight: 700 },
   flexColumn: { display: 'flex', flexDirection: 'column' },
   flexRow: { alignItems: 'center', display: 'flex', flexDirection: 'row' },
+  flexRowAlignStart: {
+    alignItems: 'flex-start',
+    display: 'flex',
+    flexDirection: 'row',
+  },
   a: {
     color: colors.primary,
     textDecoration: 'underline',
@@ -178,8 +183,14 @@ const htmlProps: Omit<HtmlProps, 'children'> = {
 };
 
 const PDF: React.FC<ResumePageProps> = (props) => {
-  const { education, hobbies, personalInformation, professional, skills } =
-    props;
+  const {
+    education,
+    hobbies,
+    personalInformation,
+    privateInformation,
+    professional,
+    skills,
+  } = props;
   const fullName = getFullName(personalInformation);
   const year = new Date().getFullYear();
 
@@ -216,6 +227,14 @@ const PDF: React.FC<ResumePageProps> = (props) => {
                 <Text style={styles.bold}>Location:</Text>
                 <Text>&nbsp;{personalInformation.attributes.location}</Text>
               </View>
+              {privateInformation?.map((privateField) => (
+                <View key={privateField.slug} style={styles.flexRowAlignStart}>
+                  <Text style={styles.bold}>
+                    {privateField.attributes.label}:&nbsp;
+                  </Text>
+                  <Html {...htmlProps}>{privateField.html}</Html>
+                </View>
+              ))}
             </View>
             <View style={styles.section}>
               <View style={styles.sectionHeading}>
