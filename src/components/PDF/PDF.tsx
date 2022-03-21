@@ -227,7 +227,7 @@ const PDF: React.FC<ResumePageProps> = (props) => {
                 <Text style={styles.bold}>Location:</Text>
                 <Text>&nbsp;{personalInformation.attributes.location}</Text>
               </View>
-              {privateInformation.map((privateField) => (
+              {privateInformation?.map((privateField) => (
                 <View key={privateField.slug} style={styles.flexRowAlignStart}>
                   <Text style={styles.bold}>
                     {privateField.attributes.label}:&nbsp;
