@@ -29,6 +29,7 @@ export const getStaticProps = async () => {
 export interface ResumePageProps
   extends InferGetStaticPropsType<typeof getStaticProps> {
   privateInformation?: CMSPrivateInformation[];
+  secret?: string;
 }
 
 const ResumePage: NextPage<ResumePageProps> = (props) => {

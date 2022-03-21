@@ -8,12 +8,8 @@ import Row from '../../strum-design-system/components/Layout/Row';
 import PDFDownloadButton from '../PDF/PDFDownloadButton';
 import { headerStyle } from './Header.css';
 
-interface HeaderProps extends ResumePageProps {
-  secret?: string;
-}
-
-const Header: React.FC<HeaderProps> = (props) => {
-  const { personalInformation } = props;
+const Header: React.FC<ResumePageProps> = (props) => {
+  const { personalInformation, secret } = props;
 
   return (
     <header className={headerStyle}>
@@ -35,7 +31,7 @@ const Header: React.FC<HeaderProps> = (props) => {
             atoms={{ paddingTop: { xs: 4, md: 0 } }}
             width={{ xs: 12, sm: 12, md: 'auto' }}
           >
-            <PDFDownloadButton />
+            <PDFDownloadButton secret={secret} />
           </Column>
         </Row>
       </Container>
