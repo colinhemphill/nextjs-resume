@@ -36,7 +36,7 @@
     "@react-pdf/renderer": "2.1.1",
     "@vanilla-extract/css": "1.6.8",
     "@vanilla-extract/css-utils": "0.1.2",
-    "@vanilla-extract/next-plugin": "2.0.1",
+    "@vanilla-extract/next-plugin": "2.0.2",
     "@vanilla-extract/recipes": "0.2.4",
     "@vanilla-extract/sprinkles": "1.4.0",
     "blob-stream": "0.1.3",
