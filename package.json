@@ -23,6 +23,7 @@
     "prepare": "husky install && npm run copy",
     "start": "next start",
     "test": "jest",
+    "test:staged": "jest  --updateSnapshot --onlyChanged",
     "test:update": "jest --updateSnapshot",
     "types": "tsc -p tsconfig.json --noEmit"
   },
