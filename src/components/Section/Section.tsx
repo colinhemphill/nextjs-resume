@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import Container from '../../strum-design-system/components/Container/Container';
 import { sectionStyle } from './Section.css';
 
@@ -6,7 +6,7 @@ interface Section {
   color?: keyof typeof sectionStyle;
 }
 
-const Section: React.FC<Section> = (props) => {
+const Section: React.FC<PropsWithChildren<Section>> = (props) => {
   const { children, color } = props;
 
   return (

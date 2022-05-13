@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { Atoms } from '../../sprinkles.css';
 import { composeWithAtoms } from '../../utils/compose';
 import { breadcrumbItemStyle } from './BreadcrumbItem.css';
@@ -8,7 +8,7 @@ interface BreadcrumbItem {
   current?: boolean;
 }
 
-const BreadcrumbItem: React.FC<BreadcrumbItem> = (props) => {
+const BreadcrumbItem: React.FC<PropsWithChildren<BreadcrumbItem>> = (props) => {
   const { atoms: atomicProperties, children, current = false } = props;
 
   const classes = composeWithAtoms(atomicProperties, breadcrumbItemStyle);

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Section /> Matches the snapshot 1`] = `
+<div>
+  <section
+    class="Section_sectionStyle_alternate__1t64bv43 Section__1t64bv40 sprinkles_paddingTop_6_xs__1pzb2zolo sprinkles_paddingTop_6_md__1pzb2zolq sprinkles_paddingTop_8_lg__1pzb2zom3 sprinkles_paddingBottom_6_xs__1pzb2zof6 sprinkles_paddingBottom_6_md__1pzb2zof8 sprinkles_paddingBottom_8_lg__1pzb2zofl Section__1t64bv41 sprinkles_backgroundColor_medium_darkMode__1pzb2zono sprinkles_backgroundColor_light_lightMode__1pzb2zonn sprinkles_color_white_darkMode__1pzb2zopf sprinkles_color_dark_lightMode__1pzb2zooz"
+  >
+    <div
+      class="Container_containerStyle__rjkhb02 Container_containerFluidStyle__rjkhb01 margin_mxAuto__1nlkou20 Container__rjkhb00 sprinkles_paddingLeft_4_xs__1pzb2zoh0 sprinkles_paddingRight_4_xs__1pzb2zoj6"
+    >
+      <div>
+        Test
+      </div>
+    </div>
+  </section>
+</div>
+`;

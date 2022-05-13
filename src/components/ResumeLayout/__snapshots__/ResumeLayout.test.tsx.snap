@@ -1,0 +1,670 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ResumeLayout /> Matches the snapshot 1`] = `
+<div>
+  <header
+    class="Header__1xhgu2h0 sprinkles_paddingTop_8_xs__1pzb2zom0 sprinkles_paddingBottom_8_xs__1pzb2zofi sprinkles_backgroundColor_black_darkMode__1pzb2zonc sprinkles_backgroundColor_primary_lightMode__1pzb2zont"
+  >
+    <div
+      class="Container_containerStyle__rjkhb02 Container_containerFluidStyle__rjkhb01 margin_mxAuto__1nlkou20 Container__rjkhb00 sprinkles_paddingLeft_4_xs__1pzb2zoh0 sprinkles_paddingRight_4_xs__1pzb2zoj6 sprinkles_textAlign_center_xs__1pzb2zon0 sprinkles_textAlign_left_md__1pzb2zomw"
+    >
+      <div
+        class="Row_rowStyle__p6dtm90 Row_rowStyle_verticalAlign_center__p6dtm98"
+      >
+        <div
+          class="Column_columnStyle__1y78ssd0"
+        >
+          <h1
+            class="Heading_headingStyleVariants_1__nbnubj1 Heading_headingBaseStyle__nbnubj0 sprinkles_color_white_darkMode__1pzb2zopf sprinkles_color_white_lightMode__1pzb2zoph"
+          >
+            Some Body
+          </h1>
+          <h2
+            class="Heading_headingStyleVariants_2__nbnubj2 Heading_headingBaseStyle__nbnubj0 sprinkles_color_white_darkMode__1pzb2zopf sprinkles_color_white_lightMode__1pzb2zoph"
+          >
+            Cool Person
+          </h2>
+        </div>
+        <div
+          class="Column_columnStyle__1y78ssd0 Column_xsColumnsStyle_12__1y78ssdc Column_smColumnsStyle_12__1y78ssdp Column_mdColumnsStyle_auto__1y78ssd13 sprinkles_paddingTop_4_xs__1pzb2zolc sprinkles_paddingTop_0_md__1pzb2zokq"
+        >
+          <a
+            class="Button_buttonBaseStyle__105ch171 borderRadius_rounded__1ilbsqa0 Button__105ch170 sprinkles_paddingLeft_4_xs__1pzb2zoh0 sprinkles_paddingRight_4_xs__1pzb2zoj6 sprinkles_paddingTop_2_xs__1pzb2zol0 sprinkles_paddingBottom_2_xs__1pzb2zoei Button_buttonStyle_color_medium__105ch175 Button_buttonStyle_size_lg__105ch178"
+            href="/api/pdf"
+            target="_blank"
+          >
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-file-pdf sprinkles_marginRight_2_xs__1pzb2zo80"
+              data-icon="file-pdf"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              viewBox="0 0 384 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M88 304H80V256H88C101.3 256 112 266.7 112 280C112 293.3 101.3 304 88 304zM192 256H200C208.8 256 216 263.2 216 272V336C216 344.8 208.8 352 200 352H192V256zM224 0V128C224 145.7 238.3 160 256 160H384V448C384 483.3 355.3 512 320 512H64C28.65 512 0 483.3 0 448V64C0 28.65 28.65 0 64 0H224zM64 224C55.16 224 48 231.2 48 240V368C48 376.8 55.16 384 64 384C72.84 384 80 376.8 80 368V336H88C118.9 336 144 310.9 144 280C144 249.1 118.9 224 88 224H64zM160 368C160 376.8 167.2 384 176 384H200C226.5 384 248 362.5 248 336V272C248 245.5 226.5 224 200 224H176C167.2 224 160 231.2 160 240V368zM288 224C279.2 224 272 231.2 272 240V368C272 376.8 279.2 384 288 384C296.8 384 304 376.8 304 368V320H336C344.8 320 352 312.8 352 304C352 295.2 344.8 288 336 288H304V256H336C344.8 256 352 248.8 352 240C352 231.2 344.8 224 336 224H288zM256 0L384 128H256V0z"
+                fill="currentColor"
+              />
+            </svg>
+            View or Download PDF
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section
+    class="Section_sectionStyle_standard__1t64bv44 Section__1t64bv40 sprinkles_paddingTop_6_xs__1pzb2zolo sprinkles_paddingTop_6_md__1pzb2zolq sprinkles_paddingTop_8_lg__1pzb2zom3 sprinkles_paddingBottom_6_xs__1pzb2zof6 sprinkles_paddingBottom_6_md__1pzb2zof8 sprinkles_paddingBottom_8_lg__1pzb2zofl Section__1t64bv42 sprinkles_backgroundColor_dark_darkMode__1pzb2zonf sprinkles_backgroundColor_white_lightMode__1pzb2zonz sprinkles_color_white_darkMode__1pzb2zopf sprinkles_color_dark_lightMode__1pzb2zooz"
+  >
+    <div
+      class="Container_containerStyle__rjkhb02 Container_containerFluidStyle__rjkhb01 margin_mxAuto__1nlkou20 Container__rjkhb00 sprinkles_paddingLeft_4_xs__1pzb2zoh0 sprinkles_paddingRight_4_xs__1pzb2zoj6"
+    >
+      <div
+        class="Row_rowStyle__p6dtm90"
+      >
+        <div
+          class="Column_columnStyle__1y78ssd0 Column_xsColumnsStyle_12__1y78ssdc Column_lgColumnsStyle_6__1y78ssd19"
+        >
+          <article
+            class="sprinkles_marginBottom_6_xs__1pzb2zo4c sprinkles_marginBottom_0_lg__1pzb2zo3f"
+          >
+            <h3
+              class="Heading_headingStyleVariants_3__nbnubj3 Heading_headingBaseStyle__nbnubj0"
+            >
+              <span
+                class="fa-layers fa-fw sprinkles_marginRight_2_xs__1pzb2zo80"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-circle "
+                  color="#18181b"
+                  data-icon="circle"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-user "
+                  color="#ffffff"
+                  data-icon="user"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style="transform-origin: 0.4375em 0.5em;"
+                  viewBox="0 0 448 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    transform="translate(224 256)"
+                  >
+                    <g
+                      transform="translate(0, 0)  scale(0.5625, 0.5625)  rotate(0 0 0)"
+                    >
+                      <path
+                        d="M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304z"
+                        fill="currentColor"
+                        transform="translate(-224 -256)"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              About Me
+            </h3>
+            <div>
+              <div>
+                Test
+              </div>
+            </div>
+          </article>
+        </div>
+        <div
+          class="Column_columnStyle__1y78ssd0 Column_xsColumnsStyle_12__1y78ssdc Column_lgColumnsStyle_6__1y78ssd19"
+        >
+          <article
+            class="sprinkles_marginBottom_6_xs__1pzb2zo4c sprinkles_marginBottom_0_lg__1pzb2zo3f"
+          >
+            <h3
+              class="Heading_headingStyleVariants_3__nbnubj3 Heading_headingBaseStyle__nbnubj0"
+            >
+              <span
+                class="fa-layers fa-fw sprinkles_marginRight_2_xs__1pzb2zo80"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-circle "
+                  color="#18181b"
+                  data-icon="circle"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-id-card "
+                  color="#ffffff"
+                  data-icon="id-card"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style="transform-origin: 0.5625em 0.5em;"
+                  viewBox="0 0 576 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    transform="translate(288 256)"
+                  >
+                    <g
+                      transform="translate(0, 0)  scale(0.5625, 0.5625)  rotate(0 0 0)"
+                    >
+                      <path
+                        d="M528 32h-480C21.49 32 0 53.49 0 80V96h576V80C576 53.49 554.5 32 528 32zM0 432C0 458.5 21.49 480 48 480h480c26.51 0 48-21.49 48-48V128H0V432zM368 192h128C504.8 192 512 199.2 512 208S504.8 224 496 224h-128C359.2 224 352 216.8 352 208S359.2 192 368 192zM368 256h128C504.8 256 512 263.2 512 272S504.8 288 496 288h-128C359.2 288 352 280.8 352 272S359.2 256 368 256zM368 320h128c8.836 0 16 7.164 16 16S504.8 352 496 352h-128c-8.836 0-16-7.164-16-16S359.2 320 368 320zM176 192c35.35 0 64 28.66 64 64s-28.65 64-64 64s-64-28.66-64-64S140.7 192 176 192zM112 352h128c26.51 0 48 21.49 48 48c0 8.836-7.164 16-16 16h-192C71.16 416 64 408.8 64 400C64 373.5 85.49 352 112 352z"
+                        fill="currentColor"
+                        transform="translate(-288 -256)"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              Contact Information
+            </h3>
+            <ul
+              class="UnorderedList_unorderedListStyle_vertical__yvpv9n2 UnorderedList_unorderedListBaseStyle__yvpv9n0"
+            >
+              <li
+                class="NavListItem_navListItemStyle__u7rcfu0"
+              >
+                <div
+                  class="Row_rowStyle__p6dtm90"
+                >
+                  <div
+                    class="Column_columnStyle__1y78ssd0 Column_xsColumnsStyle_auto__1y78ssdd"
+                  >
+                    <strong>
+                      Location:
+                    </strong>
+                  </div>
+                  <div
+                    class="Column_columnStyle__1y78ssd0"
+                  >
+                    Somewhere Only We Know
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+      <div
+        class="sprinkles_marginTop_0_xs__1pzb2zo9u sprinkles_marginTop_4_lg__1pzb2zoal"
+      >
+        <h3
+          class="Heading_headingStyleVariants_3__nbnubj3 Heading_headingBaseStyle__nbnubj0"
+        >
+          <span
+            class="fa-layers fa-fw sprinkles_marginRight_2_xs__1pzb2zo80"
+          >
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-circle "
+              color="#18181b"
+              data-icon="circle"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"
+                fill="currentColor"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-check "
+              color="#ffffff"
+              data-icon="check"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style="transform-origin: 0.4375em 0.5em;"
+              viewBox="0 0 448 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                transform="translate(224 256)"
+              >
+                <g
+                  transform="translate(0, 0)  scale(0.5625, 0.5625)  rotate(0 0 0)"
+                >
+                  <path
+                    d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"
+                    fill="currentColor"
+                    transform="translate(-224 -256)"
+                  />
+                </g>
+              </g>
+            </svg>
+          </span>
+          Skills & Expertise
+        </h3>
+        <div
+          class="Row_rowStyle__p6dtm90 sprinkles_paddingTop_2_xs__1pzb2zol0 sprinkles_paddingTop_0_lg__1pzb2zokr"
+        >
+          <div
+            class="Column_columnStyle__1y78ssd0 Column_xsColumnsStyle_12__1y78ssdc Column_lgColumnsStyle_4__1y78ssd17"
+          >
+            <h4
+              class="Heading_headingStyleVariants_4__nbnubj4 Heading_headingBaseStyle__nbnubj0"
+            >
+              <span>
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-star fa-sm "
+                  color="#ecc94b"
+                  data-icon="star"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 576 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+               
+              Proficient
+            </h4>
+            <div>
+              <div>
+                Test
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    class="Section_sectionStyle_alternate__1t64bv43 Section__1t64bv40 sprinkles_paddingTop_6_xs__1pzb2zolo sprinkles_paddingTop_6_md__1pzb2zolq sprinkles_paddingTop_8_lg__1pzb2zom3 sprinkles_paddingBottom_6_xs__1pzb2zof6 sprinkles_paddingBottom_6_md__1pzb2zof8 sprinkles_paddingBottom_8_lg__1pzb2zofl Section__1t64bv41 sprinkles_backgroundColor_medium_darkMode__1pzb2zono sprinkles_backgroundColor_light_lightMode__1pzb2zonn sprinkles_color_white_darkMode__1pzb2zopf sprinkles_color_dark_lightMode__1pzb2zooz"
+  >
+    <div
+      class="Container_containerStyle__rjkhb02 Container_containerFluidStyle__rjkhb01 margin_mxAuto__1nlkou20 Container__rjkhb00 sprinkles_paddingLeft_4_xs__1pzb2zoh0 sprinkles_paddingRight_4_xs__1pzb2zoj6"
+    >
+      <div
+        class="sprinkles_marginBottom_6_xs__1pzb2zo4c"
+      >
+        <h3
+          class="Heading_headingStyleVariants_3__nbnubj3 Heading_headingBaseStyle__nbnubj0"
+        >
+          <span
+            class="fa-layers fa-fw sprinkles_marginRight_2_xs__1pzb2zo80"
+          >
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-circle "
+              color="#18181b"
+              data-icon="circle"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"
+                fill="currentColor"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-briefcase "
+              color="#ffffff"
+              data-icon="briefcase"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style="transform-origin: 0.5em 0.5em;"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                transform="translate(256 256)"
+              >
+                <g
+                  transform="translate(0, 0)  scale(0.5625, 0.5625)  rotate(0 0 0)"
+                >
+                  <path
+                    d="M320 336c0 8.844-7.156 16-16 16h-96C199.2 352 192 344.8 192 336V288H0v144C0 457.6 22.41 480 48 480h416c25.59 0 48-22.41 48-48V288h-192V336zM464 96H384V48C384 22.41 361.6 0 336 0h-160C150.4 0 128 22.41 128 48V96H48C22.41 96 0 118.4 0 144V256h512V144C512 118.4 489.6 96 464 96zM336 96h-160V48h160V96z"
+                    fill="currentColor"
+                    transform="translate(-256 -256)"
+                  />
+                </g>
+              </g>
+            </svg>
+          </span>
+          Professional Experience
+        </h3>
+      </div>
+      <article
+        class="article_articleStyle__on6lov0"
+      >
+        <h4
+          class="Heading_headingStyleVariants_4__nbnubj4 Heading_headingBaseStyle__nbnubj0"
+        >
+          <span
+            class="sprinkles_paddingLeft_2_xs__1pzb2zogo sprinkles_paddingRight_2_xs__1pzb2zoiu sprinkles_backgroundColor_white_darkMode__1pzb2zonx sprinkles_backgroundColor_dark_lightMode__1pzb2zonh sprinkles_borderRadius_rounded_xs__1pzb2zoc sprinkles_color_dark_darkMode__1pzb2zoox sprinkles_color_white_lightMode__1pzb2zoph"
+          >
+            My Title
+          </span>
+           
+          at 
+          The Zebra
+        </h4>
+        <div>
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-calendar sprinkles_marginRight_2_xs__1pzb2zo80"
+            data-icon="calendar"
+            data-prefix="far"
+            focusable="false"
+            role="img"
+            viewBox="0 0 448 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M152 64H296V24C296 10.75 306.7 0 320 0C333.3 0 344 10.75 344 24V64H384C419.3 64 448 92.65 448 128V448C448 483.3 419.3 512 384 512H64C28.65 512 0 483.3 0 448V128C0 92.65 28.65 64 64 64H104V24C104 10.75 114.7 0 128 0C141.3 0 152 10.75 152 24V64zM48 448C48 456.8 55.16 464 64 464H384C392.8 464 400 456.8 400 448V192H48V448z"
+              fill="currentColor"
+            />
+          </svg>
+          2018-02-15
+          –
+          Current
+        </div>
+        <div
+          class="sprinkles_marginTop_4_xs__1pzb2zoai"
+        >
+          <div>
+            Test
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section
+    class="Section_sectionStyle_standard__1t64bv44 Section__1t64bv40 sprinkles_paddingTop_6_xs__1pzb2zolo sprinkles_paddingTop_6_md__1pzb2zolq sprinkles_paddingTop_8_lg__1pzb2zom3 sprinkles_paddingBottom_6_xs__1pzb2zof6 sprinkles_paddingBottom_6_md__1pzb2zof8 sprinkles_paddingBottom_8_lg__1pzb2zofl Section__1t64bv42 sprinkles_backgroundColor_dark_darkMode__1pzb2zonf sprinkles_backgroundColor_white_lightMode__1pzb2zonz sprinkles_color_white_darkMode__1pzb2zopf sprinkles_color_dark_lightMode__1pzb2zooz"
+  >
+    <div
+      class="Container_containerStyle__rjkhb02 Container_containerFluidStyle__rjkhb01 margin_mxAuto__1nlkou20 Container__rjkhb00 sprinkles_paddingLeft_4_xs__1pzb2zoh0 sprinkles_paddingRight_4_xs__1pzb2zoj6"
+    >
+      <div
+        class="sprinkles_marginBottom_6_xs__1pzb2zo4c"
+      >
+        <h3
+          class="Heading_headingStyleVariants_3__nbnubj3 Heading_headingBaseStyle__nbnubj0"
+        >
+          <span
+            class="fa-layers fa-fw sprinkles_marginRight_2_xs__1pzb2zo80"
+          >
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-circle "
+              color="#18181b"
+              data-icon="circle"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"
+                fill="currentColor"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-graduation-cap "
+              color="#ffffff"
+              data-icon="graduation-cap"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style="transform-origin: 0.625em 0.5em;"
+              viewBox="0 0 640 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                transform="translate(320 256)"
+              >
+                <g
+                  transform="translate(0, 0)  scale(0.5625, 0.5625)  rotate(0 0 0)"
+                >
+                  <path
+                    d="M623.1 136.9l-282.7-101.2c-13.73-4.91-28.7-4.91-42.43 0L16.05 136.9C6.438 140.4 0 149.6 0 160s6.438 19.65 16.05 23.09L76.07 204.6c-11.89 15.8-20.26 34.16-24.55 53.95C40.05 263.4 32 274.8 32 288c0 9.953 4.814 18.49 11.94 24.36l-24.83 149C17.48 471.1 25 480 34.89 480H93.11c9.887 0 17.41-8.879 15.78-18.63l-24.83-149C91.19 306.5 96 297.1 96 288c0-10.29-5.174-19.03-12.72-24.89c4.252-17.76 12.88-33.82 24.94-47.03l190.6 68.23c13.73 4.91 28.7 4.91 42.43 0l282.7-101.2C633.6 179.6 640 170.4 640 160S633.6 140.4 623.1 136.9zM351.1 314.4C341.7 318.1 330.9 320 320 320c-10.92 0-21.69-1.867-32-5.555L142.8 262.5L128 405.3C128 446.6 213.1 480 320 480c105.1 0 192-33.4 192-74.67l-14.78-142.9L351.1 314.4z"
+                    fill="currentColor"
+                    transform="translate(-320 -256)"
+                  />
+                </g>
+              </g>
+            </svg>
+          </span>
+          Education
+        </h3>
+      </div>
+      <article
+        class="article_articleStyle__on6lov0"
+      >
+        <h4
+          class="Heading_headingStyleVariants_4__nbnubj4 Heading_headingBaseStyle__nbnubj0"
+        >
+          Degree
+        </h4>
+        <div>
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-building-columns sprinkles_marginRight_2_xs__1pzb2zo80"
+            data-icon="building-columns"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M243.4 2.587C251.4-.8625 260.6-.8625 268.6 2.587L492.6 98.59C506.6 104.6 514.4 119.6 511.3 134.4C508.3 149.3 495.2 159.1 479.1 160V168C479.1 181.3 469.3 192 455.1 192H55.1C42.74 192 31.1 181.3 31.1 168V160C16.81 159.1 3.708 149.3 .6528 134.4C-2.402 119.6 5.429 104.6 19.39 98.59L243.4 2.587zM256 128C273.7 128 288 113.7 288 96C288 78.33 273.7 64 256 64C238.3 64 224 78.33 224 96C224 113.7 238.3 128 256 128zM127.1 416H167.1V224H231.1V416H280V224H344V416H384V224H448V420.3C448.6 420.6 449.2 420.1 449.8 421.4L497.8 453.4C509.5 461.2 514.7 475.8 510.6 489.3C506.5 502.8 494.1 512 480 512H31.1C17.9 512 5.458 502.8 1.372 489.3C-2.715 475.8 2.515 461.2 14.25 453.4L62.25 421.4C62.82 420.1 63.41 420.6 63.1 420.3V224H127.1V416z"
+              fill="currentColor"
+            />
+          </svg>
+          Test School
+        </div>
+        <div>
+          <div>
+            Test
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section
+    class="Section_sectionStyle_alternate__1t64bv43 Section__1t64bv40 sprinkles_paddingTop_6_xs__1pzb2zolo sprinkles_paddingTop_6_md__1pzb2zolq sprinkles_paddingTop_8_lg__1pzb2zom3 sprinkles_paddingBottom_6_xs__1pzb2zof6 sprinkles_paddingBottom_6_md__1pzb2zof8 sprinkles_paddingBottom_8_lg__1pzb2zofl Section__1t64bv41 sprinkles_backgroundColor_medium_darkMode__1pzb2zono sprinkles_backgroundColor_light_lightMode__1pzb2zonn sprinkles_color_white_darkMode__1pzb2zopf sprinkles_color_dark_lightMode__1pzb2zooz"
+  >
+    <div
+      class="Container_containerStyle__rjkhb02 Container_containerFluidStyle__rjkhb01 margin_mxAuto__1nlkou20 Container__rjkhb00 sprinkles_paddingLeft_4_xs__1pzb2zoh0 sprinkles_paddingRight_4_xs__1pzb2zoj6"
+    >
+      <article>
+        <h3
+          class="Heading_headingStyleVariants_3__nbnubj3 Heading_headingBaseStyle__nbnubj0"
+        >
+          <span
+            class="fa-layers fa-fw sprinkles_marginRight_2_xs__1pzb2zo80"
+          >
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-circle "
+              color="#18181b"
+              data-icon="circle"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"
+                fill="currentColor"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-dice-d20 "
+              color="#ffffff"
+              data-icon="dice-d20"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style="transform-origin: 0.5em 0.5em;"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                transform="translate(256 256)"
+              >
+                <g
+                  transform="translate(0, 0)  scale(0.5625, 0.5625)  rotate(0 0 0)"
+                >
+                  <path
+                    d="M20.04 317.3C18 317.3 16 315.8 16 313.3V150.5c0-2.351 1.91-4.012 4.001-4.012c.6882 0 1.396 .18 2.062 .5748l76.62 45.1l-75.28 122.3C22.59 316.8 21.31 317.3 20.04 317.3zM231.4 405.2l-208.2-22.06c-4.27-.4821-7.123-4.117-7.123-7.995c0-1.401 .3725-2.834 1.185-4.161L122.7 215.1L231.4 405.2zM31.1 420.1c0-2.039 1.508-4.068 3.93-4.068c.1654 0 .3351 .0095 .5089 .0291l203.6 22.31v65.66C239.1 508.6 236.2 512 232 512c-1.113 0-2.255-.2387-3.363-.7565L34.25 423.6C32.69 422.8 31.1 421.4 31.1 420.1zM33.94 117.1c-1.289-.7641-1.938-2.088-1.938-3.417c0-1.281 .6019-2.567 1.813-3.364l150.8-98.59C185.1 10.98 187.3 10.64 188.6 10.64c4.32 0 8.003 3.721 8.003 8.022c0 1.379-.3788 2.818-1.237 4.214L115.5 165.8L33.94 117.1zM146.8 175.1l95.59-168.4C245.5 2.53 250.7 0 255.1 0s10.5 2.53 13.62 7.624l95.59 168.4H146.8zM356.4 207.1l-100.4 175.7L155.6 207.1H356.4zM476.1 415.1c2.422 0 3.93 2.029 3.93 4.068c0 1.378-.6893 2.761-2.252 3.524l-194.4 87.66c-1.103 .5092-2.241 .7443-3.35 .7443c-4.2 0-7.994-3.371-7.994-7.994v-65.69l203.6-22.28C475.7 416 475.9 415.1 476.1 415.1zM494.8 370.9C495.6 372.3 496 373.7 496 375.1c0 3.872-2.841 7.499-7.128 7.98l-208.2 22.06l108.6-190.1L494.8 370.9zM316.6 22.87c-.8581-1.395-1.237-2.834-1.237-4.214c0-4.301 3.683-8.022 8.003-8.022c1.308 0 2.675 .3411 4.015 1.11l150.8 98.59c1.211 .7973 1.813 2.076 1.813 3.353c0 1.325-.6488 2.649-1.938 3.429L396.5 165.8L316.6 22.87zM491.1 146.5c2.091 0 4.001 1.661 4.001 4.012v162.8c0 2.483-2.016 4.006-4.053 4.006c-1.27 0-2.549-.5919-3.353-1.912l-75.28-122.3l76.62-45.1C490.6 146.7 491.3 146.5 491.1 146.5z"
+                    fill="currentColor"
+                    transform="translate(-256 -256)"
+                  />
+                </g>
+              </g>
+            </svg>
+          </span>
+          Hobbies & Interests
+        </h3>
+        <div>
+          <div>
+            Test
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <footer
+    class="Footer__1jkfoa50 sprinkles_paddingTop_8_xs__1pzb2zom0 sprinkles_paddingBottom_8_xs__1pzb2zofi sprinkles_backgroundColor_black_darkMode__1pzb2zonc sprinkles_backgroundColor_medium_lightMode__1pzb2zonq sprinkles_color_white_darkMode__1pzb2zopf sprinkles_color_white_lightMode__1pzb2zoph sprinkles_textAlign_center_xs__1pzb2zon0"
+  >
+    <div
+      class="Container_containerStyle__rjkhb02 Container_containerFluidStyle__rjkhb01 margin_mxAuto__1nlkou20 Container__rjkhb00 sprinkles_paddingLeft_4_xs__1pzb2zoh0 sprinkles_paddingRight_4_xs__1pzb2zoj6"
+    >
+      <div
+        class="AutoGrid_autoGridStyle__1atju7c2 AutoGrid_autoGridStyle_horizontalAlign_center__1atju7c6 AutoGrid_autoGridXGuttersStyle_2__1atju7cf AutoGrid_autoGridYGuttersStyle_2__1atju7cs"
+      >
+        <div
+          class="AutoGridCell_autoGridCellStyle__1nerxdg0 Column_columnStyle__1y78ssd0"
+        >
+          <a
+            class="fa-3x"
+            href="https://github.com/colinhemphill"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="accessibility_visuallyHidden__pozwzn0"
+            >
+              Some
+               on 
+              GitHub
+            </span>
+            <span
+              class="fa-layers fa-fw"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-circle "
+                color="#0073e6"
+                data-icon="circle"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        class="sprinkles_marginTop_4_xs__1pzb2zoai"
+      >
+        Copyright ©
+        2022
+         
+        Some Body
+      </div>
+      <div>
+        <small>
+          This résumé was generated with
+           
+          <a
+            class="Footer_footerLinkStyle__1jkfoa51"
+            href="https://nextjs.org/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Next.js
+          </a>
+           
+          and deployed on
+           
+          <a
+            class="Footer_footerLinkStyle__1jkfoa51"
+            href="https://vercel.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Vercel
+          </a>
+          . Learn how to deploy your own resume with the
+           
+          <a
+            class="Footer_footerLinkStyle__1jkfoa51"
+            href="https://github.com/colinhemphill/nextjs-resume-generator"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            nextjs-resume-generator
+          </a>
+          !
+        </small>
+      </div>
+    </div>
+  </footer>
+</div>
+`;

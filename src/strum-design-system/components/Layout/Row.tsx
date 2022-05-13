@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { Atoms } from '../../sprinkles.css';
 import { composeWithAtoms } from '../../utils/compose';
 import { rowStyle, RowVariants } from './Row.css';
@@ -9,7 +9,7 @@ interface Row {
   verticalAlign?: RowVariants['verticalAlign'];
 }
 
-const Row: React.FC<Row> = (props) => {
+const Row: React.FC<PropsWithChildren<Row>> = (props) => {
   const {
     atoms: atomicProperties,
     children,

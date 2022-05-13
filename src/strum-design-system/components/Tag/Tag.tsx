@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { Atoms } from '../../sprinkles.css';
 import { composeWithAtoms } from '../../utils/compose';
 import Box from '../Box/Box';
@@ -10,7 +10,7 @@ interface Tag {
   size?: TagVariants['size'];
 }
 
-const Tag: React.FC<Tag> = (props) => {
+const Tag: React.FC<PropsWithChildren<Tag>> = (props) => {
   const { atoms: atomicProperties, children, color, size } = props;
 
   const classes = composeWithAtoms(atomicProperties, tagStyle({ color, size }));

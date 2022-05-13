@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
-const Wrapper: React.FC = ({ children }) => {
+const Wrapper: React.FC<PropsWithChildren<any>> = ({ children }) => {
   return <>{children}</>;
 };
 
