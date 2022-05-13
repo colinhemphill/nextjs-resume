@@ -1,6 +1,12 @@
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { createContext, useContext, useEffect, useRef } from 'react';
+import React, {
+  createContext,
+  PropsWithChildren,
+  useContext,
+  useEffect,
+  useRef,
+} from 'react';
 import { Transition } from 'react-transition-group';
 import Button from '../Button/Button';
 import ContainerFluid from '../Container/ContainerFluid';
@@ -18,7 +24,7 @@ export const ModalContext = createContext<{
   toggle: () => void;
 }>({ isOpen: false, toggle: () => null });
 
-const Modal: React.FC = (props) => {
+const Modal: React.FC<PropsWithChildren<any>> = (props) => {
   const { children } = props;
   const { isOpen, toggle } = useContext(ModalContext);
   const menuRef = useRef(null);

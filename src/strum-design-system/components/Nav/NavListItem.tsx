@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { Atoms } from '../../sprinkles.css';
 import { composeWithAtoms } from '../../utils/compose';
 import { navListItemStyle } from './NavListItem.css';
@@ -8,7 +8,7 @@ interface NavListItem {
   atoms?: Atoms;
 }
 
-const NavListItem: React.FC<NavListItem> = (props) => {
+const NavListItem: React.FC<PropsWithChildren<NavListItem>> = (props) => {
   const { atoms: atomicProperties, children } = props;
 
   const classes = composeWithAtoms(atomicProperties, navListItemStyle);

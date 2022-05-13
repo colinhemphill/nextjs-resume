@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { Atoms } from '../../sprinkles.css';
 import { composeWithAtoms } from '../../utils/compose';
 import { alertStyle, AlertVariants } from './Alert.css';
@@ -8,7 +8,7 @@ interface Alert {
   color: AlertVariants['color'];
 }
 
-const Alert: React.FC<Alert> = (props) => {
+const Alert: React.FC<PropsWithChildren<Alert>> = (props) => {
   const { atoms: atomicProperties, children, color } = props;
 
   const style = composeWithAtoms(

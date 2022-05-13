@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { PropsWithChildren, useEffect } from 'react';
 import { timbre } from '../../themes';
 import {
   darkScheme,
@@ -12,7 +12,9 @@ export interface StrumProviderProps {
   theme?: string | null;
 }
 
-const StrumProvider: React.FC<StrumProviderProps> = (props) => {
+const StrumProvider: React.FC<PropsWithChildren<StrumProviderProps>> = (
+  props,
+) => {
   const { children, colorScheme = 'system', theme = timbre } = props;
 
   useEffect(() => {

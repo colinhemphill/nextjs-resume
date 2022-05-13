@@ -195,7 +195,9 @@ const PDF: React.FC<ResumePageProps> = (props) => {
   const year = new Date().getFullYear();
 
   return (
+    // @ts-ignore
     <Document author={fullName} title={`Résume for ${fullName}, ${year}`}>
+      {/* @ts-ignore */}
       <Page size="LETTER" style={styles.page}>
         <View style={styles.sidebar}>
           <View style={styles.header}>

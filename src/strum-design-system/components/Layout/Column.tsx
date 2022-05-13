@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { Atoms } from '../../sprinkles.css';
 import { composeWithAtoms } from '../../utils/compose';
 import {
@@ -16,7 +16,7 @@ interface Column {
   width?: ColumnsBreakpoints;
 }
 
-const Column: React.FC<Column> = (props) => {
+const Column: React.FC<PropsWithChildren<Column>> = (props) => {
   const { atoms: atomicProperties, children, width } = props;
 
   const classes = composeWithAtoms(

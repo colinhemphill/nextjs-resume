@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { Atoms } from '../../sprinkles.css';
 import spacers from '../../themes/timbre/spacers';
 import { composeWithAtoms } from '../../utils/compose';
@@ -25,7 +25,7 @@ interface AutoGrid {
   verticalAlign?: AutoGridVariants['verticalAlign'];
 }
 
-const AutoGrid: React.FC<AutoGrid> = (props) => {
+const AutoGrid: React.FC<PropsWithChildren<AutoGrid>> = (props) => {
   const {
     atoms: atomicProperties,
     children,
