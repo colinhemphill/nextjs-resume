@@ -24,7 +24,7 @@ export const ModalContext = createContext<{
   toggle: () => void;
 }>({ isOpen: false, toggle: () => null });
 
-const Modal: React.FC<PropsWithChildren<any>> = (props) => {
+const Modal: React.FC<PropsWithChildren<{}>> = (props) => {
   const { children } = props;
   const { isOpen, toggle } = useContext(ModalContext);
   const menuRef = useRef(null);

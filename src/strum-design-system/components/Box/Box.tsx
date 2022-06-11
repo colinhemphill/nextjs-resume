@@ -1,4 +1,4 @@
-import { createBox } from '@dessert-box/react';
+import { createBox } from './index';
 import { atoms } from '../../sprinkles.css';
 
 const Box = createBox({ atoms });
