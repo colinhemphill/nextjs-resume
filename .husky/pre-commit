@@ -3,4 +3,3 @@
 
 npm run copy
 npx lint-staged
-npm run test:staged
