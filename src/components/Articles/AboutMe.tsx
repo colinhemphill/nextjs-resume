@@ -1,8 +1,8 @@
 import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { Box, Text } from '@strum/react';
 import React from 'react';
 import { CMSPersonalInformation } from '../../cms-integration/markdown/personal';
-import Box from '../../strum-design-system/components/Box/Box';
-import SectionHeader from '../SectionHeader/SectionHeader';
+import SectionHeading from '../SectionHeading/SectionHeading';
 
 interface AboutMeProps {
   personalInformation: CMSPersonalInformation;
@@ -12,9 +12,11 @@ const AboutMe: React.FC<AboutMeProps> = (props) => {
   const { personalInformation } = props;
 
   return (
-    <Box as="article" marginBottom={{ xs: 6, lg: 0 }}>
-      <SectionHeader icon={faUser} text="About Me" />
-      <div dangerouslySetInnerHTML={{ __html: personalInformation.html }} />
+    <Box as="article">
+      <SectionHeading icon={faUser} text="About Me" />
+      <Text>
+        <div dangerouslySetInnerHTML={{ __html: personalInformation.html }} />
+      </Text>
     </Box>
   );
 };

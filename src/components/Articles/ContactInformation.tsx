@@ -1,13 +1,9 @@
 import { faIdCard } from '@fortawesome/free-solid-svg-icons';
+import { Box, Nav, NavItem, Text } from '@strum/react';
 import React from 'react';
 import { CMSPersonalInformation } from '../../cms-integration/markdown/personal';
 import { CMSPrivateInformation } from '../../cms-integration/markdown/private';
-import Box from '../../strum-design-system/components/Box/Box';
-import Column from '../../strum-design-system/components/Layout/Column';
-import Row from '../../strum-design-system/components/Layout/Row';
-import NavListItem from '../../strum-design-system/components/Nav/NavListItem';
-import UnorderedList from '../../strum-design-system/components/Nav/UnorderedList';
-import SectionHeader from '../SectionHeader/SectionHeader';
+import SectionHeading from '../SectionHeading/SectionHeading';
 
 interface ContactInformationProps {
   personalInformation: CMSPersonalInformation;
@@ -18,9 +14,17 @@ const ContactInformation: React.FC<ContactInformationProps> = (props) => {
   const { personalInformation, privateInformation } = props;
 
   return (
-    <Box as="article" marginBottom={{ xs: 6, lg: 0 }}>
-      <SectionHeader icon={faIdCard} text="Contact Information" />
-      <UnorderedList direction="vertical">
+    <Box as="article">
+      <SectionHeading icon={faIdCard} text="Contact Information" />
+      <Nav direction="vertical">
+        <NavItem>
+          <Text as="p">
+            <strong>Location: </strong>
+            {personalInformation.attributes.location}
+          </Text>
+        </NavItem>
+      </Nav>
+      {/* <UnorderedList direction="vertical">
         <NavListItem>
           <Row>
             <Column width={{ xs: 'auto' }}>
@@ -44,7 +48,7 @@ const ContactInformation: React.FC<ContactInformationProps> = (props) => {
               </Row>
             </NavListItem>
           ))}
-      </UnorderedList>
+      </UnorderedList> */}
     </Box>
   );
 };

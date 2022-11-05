@@ -1,16 +1,9 @@
-import { faCircle } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Container } from '@strum/react';
 import React from 'react';
 import { CMSLink } from '../../cms-integration/markdown/links';
 import { CMSPersonalInformation } from '../../cms-integration/markdown/personal';
 import { getFullName } from '../../helpers/utils';
-import AutoGrid from '../../strum-design-system/components/AutoGrid/AutoGrid';
-import AutoGridCell from '../../strum-design-system/components/AutoGrid/AutoGridCell';
-import Container from '../../strum-design-system/components/Container/Container';
-import { atoms } from '../../strum-design-system/sprinkles.css';
-import { visuallyHidden } from '../../strum-design-system/styles/accessibility.css';
-import colors from '../../strum-design-system/themes/timbre/colors';
-import { footerLinkStyle, footerStyle } from './Footer.css';
+import { footerStyle } from './Footer.css';
 
 interface FooterProps {
   personalInformation: CMSPersonalInformation;
@@ -24,7 +17,7 @@ const Footer: React.FC<FooterProps> = (props) => {
   return (
     <footer className={footerStyle}>
       <Container>
-        {links && (
+        {/* {links && (
           <AutoGrid guttersX={2} guttersY={2} horizontalAlign="center">
             {links.map((link) => (
               <AutoGridCell key={link.href}>
@@ -42,7 +35,7 @@ const Footer: React.FC<FooterProps> = (props) => {
                     <FontAwesomeIcon
                       aria-hidden
                       color={colors.white}
-                      icon={['fab', link.iconName]}
+                      icon={link.icon}
                       transform="shrink-8"
                     />
                   </span>
@@ -87,7 +80,7 @@ const Footer: React.FC<FooterProps> = (props) => {
             </a>
             !
           </small>
-        </div>
+        </div> */}
       </Container>
     </footer>
   );

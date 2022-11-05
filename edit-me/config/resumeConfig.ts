@@ -1,5 +1,12 @@
+import { AccentColor } from '../../src/tokens/accents';
+import { NeutralColor } from '../../src/tokens/neutrals';
+
 interface ResumeConfig {
-  primaryColor: string;
+  accentColor: AccentColor;
+  neutralColor: NeutralColor;
 }
 
-export const resumeConfig: ResumeConfig = { primaryColor: '#0073e6' };
+export const resumeConfig: ResumeConfig = {
+  accentColor: 'blue',
+  neutralColor: 'mauve',
+};

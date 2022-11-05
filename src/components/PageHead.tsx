@@ -1,9 +1,9 @@
+import { blueDark } from '@radix-ui/colors';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { CMSPersonalInformation } from '../cms-integration/markdown/personal';
 import { getFullName } from '../helpers/utils';
-import colors from '../strum-design-system/themes/timbre/colors';
 
 interface PageHeadProps {
   baseURL?: string;
@@ -12,7 +12,7 @@ interface PageHeadProps {
   title: string;
 }
 
-const ogImgColor = `%23${colors.primary.replace('#', '')}`;
+const ogImgColor = `%23${blueDark.blue9.replace('#', '')}`;
 
 const PageHead: React.FC<PageHeadProps> = (props) => {
   const {

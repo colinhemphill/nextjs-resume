@@ -1,25 +1,19 @@
 import {
   faBriefcase,
+  faDiceD20,
   faGraduationCap,
 } from '@fortawesome/free-solid-svg-icons';
+import { Box, Stack } from '@strum/react';
 import indefinite from 'indefinite';
 import React from 'react';
 import { getFullName } from '../../helpers/utils';
 import { ResumePageProps } from '../../pages';
-import Box from '../../strum-design-system/components/Box/Box';
-import Column from '../../strum-design-system/components/Layout/Column';
-import Row from '../../strum-design-system/components/Layout/Row';
 import AboutMe from '../Articles/AboutMe';
 import ContactInformation from '../Articles/ContactInformation';
-import HobbiesAndInterests from '../Articles/HobbiesAndInterests';
-import EducationItem from '../EducationItem/EducationItem';
-import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import PageHead from '../PageHead';
-import ProfessionalItem from '../ProfessionalItem/ProfessionalItem';
 import Section from '../Section/Section';
-import SectionHeader from '../SectionHeader/SectionHeader';
-import Skills from '../Skills/Skills';
+import SectionHeading from '../SectionHeading/SectionHeading';
 
 const ResumeLayout: React.FC<ResumePageProps> = (props) => {
   const {
@@ -45,21 +39,48 @@ const ResumeLayout: React.FC<ResumePageProps> = (props) => {
 
       <Header secret={secret} {...props} />
 
-      <Section color="standard">
-        <Row>
-          <Column width={{ xs: 12, lg: 6 }}>
+      <Section>
+        <Stack
+          direction={{ xs: 'vertical', lg: 'horizontal' }}
+          gap={{ xs: '4', lg: '8' }}
+          wrap={false}
+        >
+          <Box flexBasis="0" flexGrow={1}>
             <AboutMe personalInformation={personalInformation} />
-          </Column>
-          <Column width={{ xs: 12, lg: 6 }}>
+          </Box>
+          <Box flexBasis="0" flexGrow={1}>
             <ContactInformation
               personalInformation={personalInformation}
               privateInformation={privateInformation}
             />
-          </Column>
-        </Row>
+          </Box>
+        </Stack>
+      </Section>
+
+      <Section>
+        <SectionHeading
+          icon={faBriefcase}
+          level="2"
+          text="Professional Experience"
+        />
+      </Section>
+
+      <Section>
+        <SectionHeading icon={faGraduationCap} level="2" text="Education" />
+      </Section>
+
+      <Section>
+        <SectionHeading
+          icon={faDiceD20}
+          level="2"
+          text="Hobbies &amp; Interests"
+        />
+      </Section>
+
+      {/*
 
         <Skills skills={skills} />
-      </Section>
+
 
       <Section color="alternate">
         <Box marginBottom={6}>
@@ -85,7 +106,7 @@ const ResumeLayout: React.FC<ResumePageProps> = (props) => {
         <HobbiesAndInterests hobbies={hobbies} />
       </Section>
 
-      <Footer links={links} personalInformation={personalInformation} />
+      <Footer links={links} personalInformation={personalInformation} /> */}
     </>
   );
 };

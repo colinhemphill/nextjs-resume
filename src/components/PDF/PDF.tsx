@@ -8,13 +8,12 @@ import {
   Text,
   View,
 } from '@react-pdf/renderer';
+import { tokens } from '@strum/react';
 import React from 'react';
 import Html from 'react-pdf-html';
 import { HtmlProps } from 'react-pdf-html/dist/Html';
 import { getFullName } from '../../helpers/utils';
 import { ResumePageProps } from '../../pages';
-import colors from '../../strum-design-system/themes/timbre/colors';
-import spacers from '../../strum-design-system/themes/timbre/spacers';
 
 const domain = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -61,7 +60,7 @@ const fontSizes = {
 const styles = StyleSheet.create({
   page: {
     alignItems: 'stretch',
-    backgroundColor: colors.white,
+    backgroundColor: tokens.colors.white,
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'nowrap',
@@ -72,19 +71,19 @@ const styles = StyleSheet.create({
   },
   sidebar: {
     alignSelf: 'stretch',
-    backgroundColor: colors.light,
+    backgroundColor: tokens.neutral.mauve.light.neutral2,
     display: 'flex',
-    color: colors.dark,
+    color: tokens.neutral.mauve.light.neutral12,
     flexBasis: `${sidebarWidth}in`,
     flexDirection: 'column',
     flexGrow: 0,
     flexShrink: 1,
   },
-  sidebarContent: { padding: spacers[4] },
+  sidebarContent: { padding: tokens.space[4] },
   header: {
-    backgroundColor: colors.primary,
-    color: colors.white,
-    padding: `${spacers[6]} ${spacers[4]}`,
+    backgroundColor: tokens.accent.blue.light.accent9,
+    color: tokens.colors.white,
+    padding: `${tokens.space[6]} ${tokens.space[4]}`,
     textAlign: 'center',
   },
   headerTitle: { fontSize: fontSizes.xl, fontWeight: 700 },
@@ -96,9 +95,9 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     flexGrow: 1,
     flexShrink: 0,
-    padding: spacers[4],
+    padding: tokens.space[4],
   },
-  section: { marginBottom: spacers[4] },
+  section: { marginBottom: tokens.space[4] },
   sectionHeading: {
     alignItems: 'center',
     display: 'flex',
@@ -112,18 +111,18 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     fontSize: fontSizes.m,
     fontWeight: 700,
-    marginBottom: spacers[1],
+    marginBottom: tokens.space[1],
   },
   sectionHeadingIcon: {
     height: fontSizes.m,
-    marginRight: spacers[1],
+    marginRight: tokens.space[1],
     width: fontSizes.m,
   },
   sectionHeadingStars: {
     alignItems: 'center',
     display: 'flex',
     flexDirection: 'row',
-    marginRight: spacers[1],
+    marginRight: tokens.space[1],
   },
   sectionHeadingStar: {
     height: fontSizes.xxs,
@@ -136,14 +135,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     fontSize: fontSizes.s,
     fontWeight: 700,
-    marginBottom: spacers[1],
-    marginTop: spacers[3],
+    marginBottom: tokens.space[1],
+    marginTop: tokens.space[3],
   },
   itemSubheadingRow: {
     alignItems: 'center',
     display: 'flex',
     flexDirection: 'row',
-    marginBottom: spacers[1],
+    marginBottom: tokens.space[1],
   },
   itemSubheading: {
     fontSize: fontSizes.xxs,
@@ -151,14 +150,14 @@ const styles = StyleSheet.create({
   },
   itemSubheadingIcon: {
     height: fontSizes.xxs,
-    marginRight: spacers[1],
+    marginRight: tokens.space[1],
   },
   professionalTitle: {
-    backgroundColor: colors.dark,
+    backgroundColor: tokens.accent.blue.light.accent9,
     borderRadius: '3px',
-    color: colors.white,
+    color: tokens.colors.white,
     fontWeight: 700,
-    paddingHorizontal: spacers[1],
+    paddingHorizontal: tokens.space[1],
   },
   bold: { fontWeight: 700 },
   flexColumn: { display: 'flex', flexDirection: 'column' },
@@ -169,7 +168,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   a: {
-    color: colors.primary,
+    color: tokens.accent.blue.light.accent9,
     textDecoration: 'underline',
   },
 });
@@ -343,7 +342,7 @@ const PDF: React.FC<ResumePageProps> = (props) => {
               {...htmlProps}
               stylesheet={{
                 ...htmlProps.stylesheet,
-                p: { marginBottom: spacers[1] },
+                p: { marginBottom: tokens.space[1] },
               }}
             >
               {hobbies.html}

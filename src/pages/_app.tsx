@@ -1,31 +1,42 @@
-import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config as faConfig } from '@fortawesome/fontawesome-svg-core';
+import { Albert_Sans } from '@next/font/google';
+import { blueDark } from '@radix-ui/colors';
+import { StrumProvider } from '@strum/react';
+import { assignInlineVars } from '@vanilla-extract/dynamic';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import React from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
-import '../helpers/fontawesomeConfig';
-import '../strum-design-system';
-import StrumProvider from '../strum-design-system/components/StrumProvider/StrumProvider';
-import colors from '../strum-design-system/themes/timbre/colors';
-import '../styles/app.css';
+
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import '@strum/react/styles';
+import '../globals.css';
+faConfig.autoAddCss = false;
+
+const albertSans = Albert_Sans({
+  subsets: ['latin'],
+  variable: '--fonts-sans',
+});
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content={colors.primary} />
+        <meta name="theme-color" content={blueDark.blue9} />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="icon" href="/favicon-512.png" sizes="512x512" />
         <link rel="apple-touch-icon" href="/favicon-512.png" />
-        <link rel="manifest" href="/manifest.json" />
       </Head>
 
-      <ErrorBoundary>
-        <StrumProvider>
+      <StrumProvider>
+        <main
+          style={assignInlineVars({
+            '--fonts-sans': albertSans.style.fontFamily,
+          })}
+        >
           <Component {...pageProps} />
-        </StrumProvider>
-      </ErrorBoundary>
+        </main>
+      </StrumProvider>
     </>
   );
 };

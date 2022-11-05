@@ -1,18 +1,17 @@
+import { Box, BoxProps, Container } from '@strum/react';
 import React, { PropsWithChildren } from 'react';
-import Container from '../../strum-design-system/components/Container/Container';
-import { sectionStyle } from './Section.css';
 
 interface Section {
-  color?: keyof typeof sectionStyle;
+  color?: BoxProps['backgroundColor'];
 }
 
 const Section: React.FC<PropsWithChildren<Section>> = (props) => {
   const { children, color } = props;
 
   return (
-    <section className={sectionStyle[color]}>
+    <Box as="section" backgroundColor={color} paddingY="8">
       <Container>{children}</Container>
-    </section>
+    </Box>
   );
 };
 
