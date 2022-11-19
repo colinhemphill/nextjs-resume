@@ -1,5 +1,7 @@
+import { vars } from '@strum/react';
 import { globalStyle } from '@vanilla-extract/css';
 
 globalStyle('p', {
-  margin: 0,
+  marginBottom: vars.space[3],
+  marginTop: 0,
 });

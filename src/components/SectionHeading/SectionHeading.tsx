@@ -14,7 +14,7 @@ const SectionHeading: React.FC<SectionHeadingProps> = (props) => {
   const { icon, level = '3', text } = props;
 
   return (
-    <Box marginBottom="2">
+    <Box marginBottom={level === '2' ? '6' : '2'}>
       <Heading level={level}>
         <Box as="span" className="fa-layers fa-fw" marginRight="2">
           <Text as="span" color="neutral12">

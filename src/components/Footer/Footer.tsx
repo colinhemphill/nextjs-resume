@@ -1,9 +1,8 @@
-import { Container } from '@strum/react';
+import { Box, Container, Text } from '@strum/react';
 import React from 'react';
 import { CMSLink } from '../../cms-integration/markdown/links';
 import { CMSPersonalInformation } from '../../cms-integration/markdown/personal';
 import { getFullName } from '../../helpers/utils';
-import { footerStyle } from './Footer.css';
 
 interface FooterProps {
   personalInformation: CMSPersonalInformation;
@@ -15,8 +14,18 @@ const Footer: React.FC<FooterProps> = (props) => {
   const fullName = getFullName(personalInformation);
 
   return (
-    <footer className={footerStyle}>
+    <Box
+      as="footer"
+      borderColor="neutral6"
+      borderTopStyle="solid"
+      borderWidth="2"
+      paddingY="8"
+      textAlign="center"
+    >
       <Container>
+        <Text size="small">
+          Copyright ©{new Date().getFullYear()} {fullName}
+        </Text>
         {/* {links && (
           <AutoGrid guttersX={2} guttersY={2} horizontalAlign="center">
             {links.map((link) => (
@@ -82,7 +91,7 @@ const Footer: React.FC<FooterProps> = (props) => {
           </small>
         </div> */}
       </Container>
-    </footer>
+    </Box>
   );
 };
 

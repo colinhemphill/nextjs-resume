@@ -10,7 +10,7 @@ interface StarRatingProps {
 const Star: React.FC<{ className?: string }> = () => {
   return (
     <FontAwesomeIcon
-      color={tokens.accent.yellow.dark.accent9}
+      color={tokens.accent.amber.dark.accent9}
       icon={faStar}
       size="sm"
     />

@@ -1,5 +1,6 @@
 import {
   faBriefcase,
+  faCheck,
   faDiceD20,
   faGraduationCap,
 } from '@fortawesome/free-solid-svg-icons';
@@ -10,10 +11,15 @@ import { getFullName } from '../../helpers/utils';
 import { ResumePageProps } from '../../pages';
 import AboutMe from '../Articles/AboutMe';
 import ContactInformation from '../Articles/ContactInformation';
+import HobbiesAndInterests from '../Articles/HobbiesAndInterests';
+import EducationItem from '../EducationItem/EducationItem';
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import PageHead from '../PageHead';
+import ProfessionalItem from '../ProfessionalItem/ProfessionalItem';
 import Section from '../Section/Section';
 import SectionHeading from '../SectionHeading/SectionHeading';
+import Skills from '../Skills/Skills';
 
 const ResumeLayout: React.FC<ResumePageProps> = (props) => {
   const {
@@ -55,18 +61,31 @@ const ResumeLayout: React.FC<ResumePageProps> = (props) => {
             />
           </Box>
         </Stack>
+
+        <Box marginTop="6">
+          <SectionHeading icon={faCheck} text="Skills &amp; Expertise" />
+          <Skills skills={skills} />
+        </Box>
       </Section>
 
-      <Section>
+      <Section color="neutral2">
         <SectionHeading
           icon={faBriefcase}
           level="2"
           text="Professional Experience"
         />
+
+        {professional.map((experience) => (
+          <ProfessionalItem key={experience.slug} {...experience} />
+        ))}
       </Section>
 
       <Section>
         <SectionHeading icon={faGraduationCap} level="2" text="Education" />
+
+        {education.map((experience) => (
+          <EducationItem key={experience.slug} {...experience} />
+        ))}
       </Section>
 
       <Section>
@@ -75,38 +94,11 @@ const ResumeLayout: React.FC<ResumePageProps> = (props) => {
           level="2"
           text="Hobbies &amp; Interests"
         />
-      </Section>
 
-      {/*
-
-        <Skills skills={skills} />
-
-
-      <Section color="alternate">
-        <Box marginBottom={6}>
-          <SectionHeader icon={faBriefcase} text="Professional Experience" />
-        </Box>
-
-        {professional.map((experience) => (
-          <ProfessionalItem key={experience.slug} {...experience} />
-        ))}
-      </Section>
-
-      <Section color="standard">
-        <Box marginBottom={6}>
-          <SectionHeader icon={faGraduationCap} text="Education" />
-        </Box>
-
-        {education.map((experience) => (
-          <EducationItem key={experience.slug} {...experience} />
-        ))}
-      </Section>
-
-      <Section color="alternate">
         <HobbiesAndInterests hobbies={hobbies} />
       </Section>
 
-      <Footer links={links} personalInformation={personalInformation} /> */}
+      <Footer links={links} personalInformation={personalInformation} />
     </>
   );
 };
