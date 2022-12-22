@@ -1,4 +1,5 @@
-import { StarIcon } from '@heroicons/react/20/solid';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
 interface StarRatingProps {
@@ -7,7 +8,10 @@ interface StarRatingProps {
 
 const Star: React.FC<{ className?: string }> = () => {
   return (
-    <StarIcon className="inline h-5 w-5 text-accent-light-11 dark:text-amber-dark-11" />
+    <FontAwesomeIcon
+      className="inline h-5 w-5 text-accent-light-11 dark:text-amber-dark-11"
+      icon={faStar}
+    />
   );
 };
 

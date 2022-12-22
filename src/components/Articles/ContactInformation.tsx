@@ -1,4 +1,4 @@
-import { IdentificationIcon } from '@heroicons/react/24/solid';
+import { faIdCard } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { CMSPersonalInformation } from '../../cms-integration/markdown/personal';
 import { CMSPrivateInformation } from '../../cms-integration/markdown/private';
@@ -15,7 +15,7 @@ export const ContactInformation: React.FC<ContactInformationProps> = ({
 }) => {
   return (
     <article>
-      <SectionHeading Icon={IdentificationIcon} text="Contact Information" />
+      <SectionHeading icon={faIdCard} text="Contact Information" />
       <ul className="mt-2">
         <li>
           <strong>Location:</strong> {personalInformation.attributes.location}

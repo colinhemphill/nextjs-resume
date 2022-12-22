@@ -14,6 +14,7 @@ module.exports = {
       ...colors.neutrals,
       accent: colors.accents[resumeConfig.accentColor],
       neutral: colors.neutrals[resumeConfig.neutralColor],
+      inherit: 'inherit',
       transparent: 'transparent',
     },
     extend: {

@@ -1,4 +1,5 @@
-import { DocumentArrowDownIcon } from '@heroicons/react/24/solid';
+import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { CMSPersonalInformation } from '../../cms-integration/markdown/personal';
 import { getFullName } from '../../helpers/utils';
@@ -22,8 +23,11 @@ const Header: React.FC<HeaderProps> = ({ personalInformation }) => {
           </div>
           <div className="mt-6 md:mt-0">
             <Button size="lg" type="button">
-              <DocumentArrowDownIcon className="inline h-6 w-6" />
-              {` `}
+              <FontAwesomeIcon
+                className="mr-2 align-middle"
+                icon={faFilePdf}
+                size="lg"
+              />
               <span className="align-middle">View or Download PDF</span>
             </Button>
           </div>

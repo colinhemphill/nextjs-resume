@@ -1,4 +1,4 @@
-import { CheckIcon } from '@heroicons/react/20/solid';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { CMSSkillCategory } from '../../cms-integration/markdown/skills';
 import Heading from '../Heading/Heading';
@@ -12,7 +12,7 @@ interface SkillsProps {
 const Skills: React.FC<SkillsProps> = ({ skills }) => {
   return (
     <article>
-      <SectionHeading Icon={CheckIcon} text="Skills &amp; Expertise" />
+      <SectionHeading icon={faCheck} text="Skills &amp; Expertise" />
 
       <div className="mt-2 grid grid-flow-row gap-6 lg:grid-flow-col">
         {skills.map((skill, skillIndex) => (
