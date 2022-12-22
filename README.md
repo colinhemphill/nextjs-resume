@@ -10,8 +10,6 @@ Your résumé can also generate a secure URL that will display information not a
 
 - [Next.js](https://nextjs.org)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Vanilla Extract](https://vanilla-extract.style/)
-- [Font Awesome 6](https://fontawesome.com/)
 - [React-pdf](https://react-pdf.org/)
 - [Marked](https://marked.js.org/)
 - [Front Matter](https://frontmatter.codes/docs/markdown)

@@ -1,6 +1,4 @@
-import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { tokens } from '@strum/react';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
 interface StarRatingProps {
@@ -9,11 +7,12 @@ interface StarRatingProps {
 
 const Star: React.FC<{ className?: string }> = () => {
   return (
-    <FontAwesomeIcon
-      color={tokens.accent.amber.dark.accent9}
-      icon={faStar}
-      size="sm"
-    />
+    <></>
+    // <FontAwesomeIcon
+    //   color={tokens.accent.amber.dark.accent9}
+    //   icon={faStar}
+    //   size="sm"
+    // />
   );
 };
 

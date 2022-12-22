@@ -1,5 +1,3 @@
-import { faUniversity } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Box, Heading, Text } from '@strum/react';
 import React from 'react';
 import { CMSEducationalExperience } from '../../cms-integration/markdown/educational';
@@ -12,7 +10,7 @@ const EducationItem: React.FC<CMSEducationalExperience> = (props) => {
 
       <Box marginBottom="3" marginTop="2">
         <Box as="span" marginRight="2">
-          <FontAwesomeIcon icon={faUniversity} />
+          {/* <FontAwesomeIcon icon={faUniversity} /> */}
         </Box>
         {props.attributes.institution}
       </Box>

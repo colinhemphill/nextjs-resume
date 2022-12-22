@@ -1,5 +1,4 @@
-import { faCalendar } from '@fortawesome/free-regular-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Box, Heading, Text } from '@strum/react';
 import React from 'react';
 import { CMSProfessionalExperience } from '../../cms-integration/markdown/professional';
@@ -25,7 +24,7 @@ const ProfessionalItem: React.FC<CMSProfessionalExperience> = (props) => {
       <Box marginBottom="3" marginTop="2">
         <Text>
           <Box as="span" marginRight="2">
-            <FontAwesomeIcon icon={faCalendar} />
+            {/* <FontAwesomeIcon icon={faCalendar} /> */}
           </Box>
           {props.attributes.startDate}–
           {!props.attributes.endDate ? 'Current' : props.attributes.endDate}

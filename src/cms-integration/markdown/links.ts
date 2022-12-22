@@ -1,9 +1,8 @@
-import { IconDefinition } from '@fortawesome/free-brands-svg-icons';
 import { links } from '../../../edit-me/cms/links';
 
 export interface CMSLink {
   href: string;
-  icon: IconDefinition;
+  icon?: JSX.Element;
   title: string;
 }
 

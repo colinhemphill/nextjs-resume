@@ -1,9 +1,8 @@
-import { faIdCard } from '@fortawesome/free-solid-svg-icons';
+// import { faIdCard } from '@fortawesome/free-solid-svg-icons';
 import { Box, Nav, NavItem, Text } from '@strum/react';
 import React from 'react';
 import { CMSPersonalInformation } from '../../cms-integration/markdown/personal';
 import { CMSPrivateInformation } from '../../cms-integration/markdown/private';
-import SectionHeading from '../SectionHeading/SectionHeading';
 
 interface ContactInformationProps {
   personalInformation: CMSPersonalInformation;
@@ -15,7 +14,7 @@ const ContactInformation: React.FC<ContactInformationProps> = (props) => {
 
   return (
     <Box as="article">
-      <SectionHeading icon={faIdCard} text="Contact Information" />
+      {/* <SectionHeading icon={faIdCard} text="Contact Information" /> */}
       <Nav direction="vertical">
         <NavItem>
           <Text as="p">
