@@ -28,7 +28,7 @@ const Button: React.FC<PropsWithChildren<ButtonProps>> = ({
 
   return (
     <button
-      className={`rounded bg-accent-light-10 text-accent-light-contrast hover:bg-accent-light-11 ${sizeClasses}`}
+      className={`rounded-md border-2 border-accent-light-7 bg-accent-light-1 font-medium text-accent-light-11 outline-none transition hover:border-accent-light-8 focus:border-transparent focus:bg-accent-light-10 focus:text-accent-light-contrast focus:ring-4 focus:ring-accent-light-transparent hover:focus:border-transparent dark:border-accent-dark-7 dark:bg-accent-dark-1 dark:text-accent-dark-11 dark:hover:border-accent-dark-8 focus:dark:ring-accent-dark-transparent ${sizeClasses}`}
       {...rest}
     >
       {children}

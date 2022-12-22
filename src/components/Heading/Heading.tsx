@@ -2,7 +2,7 @@ import { PropsWithChildren } from 'react';
 
 type Level = 1 | 2 | 3 | 4 | 5 | 6;
 
-interface HeadingProps {
+export interface HeadingProps {
   level: Level;
   size?: Level;
 }

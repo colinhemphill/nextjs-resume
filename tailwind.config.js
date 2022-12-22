@@ -14,9 +14,19 @@ module.exports = {
       ...colors.neutrals,
       accent: colors.accents[resumeConfig.accentColor],
       neutral: colors.neutrals[resumeConfig.neutralColor],
+      transparent: 'transparent',
     },
     extend: {
-      container: { center: true, padding: '2rem' },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '1rem',
+          sm: '2rem',
+          lg: '4rem',
+          xl: '5rem',
+          '2xl': '6rem',
+        },
+      },
       fontFamily: {
         sans: ['var(--font-albert)'],
       },

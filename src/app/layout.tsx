@@ -12,7 +12,7 @@ const albert = Albert_Sans({
   subsets: ['latin'],
 });
 
-const getData = async () => {
+export const getCMSData = async () => {
   const {
     education,
     hobbies,
@@ -36,7 +36,7 @@ const getData = async () => {
 const RootLayout: React.FC<PropsWithChildren<CMSData>> = async ({
   children,
 }) => {
-  const data = await getData();
+  const data = await getCMSData();
 
   return (
     <html lang="en" className={albert.variable}>

@@ -1,11 +1,10 @@
 import { Box, Heading, Text } from '@strum/react';
 import React from 'react';
 import { CMSEducationalExperience } from '../../cms-integration/markdown/educational';
-import { articleStyle } from '../Articles/article.css';
 
 const EducationItem: React.FC<CMSEducationalExperience> = (props) => {
   return (
-    <Box as="article" className={articleStyle}>
+    <Box as="article">
       <Heading level="3">{props.attributes.achievement}</Heading>
 
       <Box marginBottom="3" marginTop="2">

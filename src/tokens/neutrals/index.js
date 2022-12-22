@@ -4,6 +4,7 @@ const olive = require('./olive');
 const sage = require('./sage');
 const sand = require('./sand');
 const slate = require('./slate');
+const strum = require('./strum');
 
 module.exports = {
   gray,
@@ -12,4 +13,5 @@ module.exports = {
   sage,
   sand,
   slate,
+  strum,
 };

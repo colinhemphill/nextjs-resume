@@ -1,55 +1,33 @@
-// import { faIdCard } from '@fortawesome/free-solid-svg-icons';
-import { Box, Nav, NavItem, Text } from '@strum/react';
+import { IdentificationIcon } from '@heroicons/react/24/solid';
 import React from 'react';
 import { CMSPersonalInformation } from '../../cms-integration/markdown/personal';
 import { CMSPrivateInformation } from '../../cms-integration/markdown/private';
+import SectionHeading from '../SectionHeading/SectionHeading';
 
 interface ContactInformationProps {
   personalInformation: CMSPersonalInformation;
   privateInformation?: CMSPrivateInformation[];
 }
 
-const ContactInformation: React.FC<ContactInformationProps> = (props) => {
-  const { personalInformation, privateInformation } = props;
-
+export const ContactInformation: React.FC<ContactInformationProps> = ({
+  personalInformation,
+  privateInformation,
+}) => {
   return (
-    <Box as="article">
-      {/* <SectionHeading icon={faIdCard} text="Contact Information" /> */}
-      <Nav direction="vertical">
-        <NavItem>
-          <Text as="p">
-            <strong>Location: </strong>
-            {personalInformation.attributes.location}
-          </Text>
-        </NavItem>
-      </Nav>
-      {/* <UnorderedList direction="vertical">
-        <NavListItem>
-          <Row>
-            <Column width={{ xs: 'auto' }}>
-              <strong>Location:</strong>
-            </Column>
-            <Column>{personalInformation.attributes.location}</Column>
-          </Row>
-        </NavListItem>
+    <article>
+      <SectionHeading Icon={IdentificationIcon} text="Contact Information" />
+      <ul className="mt-2">
+        <li>
+          <strong>Location:</strong> {personalInformation.attributes.location}
+        </li>
         {privateInformation &&
           privateInformation.map((privateField) => (
-            <NavListItem key={privateField.attributes.label}>
-              <Row>
-                <Column width={{ xs: 'auto' }}>
-                  <strong>{privateField.attributes.label}:</strong>
-                </Column>
-                <Column>
-                  <div
-                    dangerouslySetInnerHTML={{ __html: privateField.html }}
-                  />
-                </Column>
-              </Row>
-            </NavListItem>
+            <li key={privateField.attributes.label}>
+              <strong>{privateField.attributes.label}</strong>{' '}
+              <div dangerouslySetInnerHTML={{ __html: privateField.html }} />
+            </li>
           ))}
-      </UnorderedList> */}
-    </Box>
+      </ul>
+    </article>
   );
 };
-
-export default ContactInformation;

@@ -2,11 +2,10 @@
 import { Box, Heading, Text } from '@strum/react';
 import React from 'react';
 import { CMSProfessionalExperience } from '../../cms-integration/markdown/professional';
-import { articleStyle } from '../Articles/article.css';
 
 const ProfessionalItem: React.FC<CMSProfessionalExperience> = (props) => {
   return (
-    <Box as="article" className={articleStyle}>
+    <Box as="article">
       <Heading level="3">
         <Box
           as="span"
