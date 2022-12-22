@@ -9,14 +9,14 @@ type HtmlButtonProps = DetailedHTMLProps<
   HTMLButtonElement
 >;
 
-const sizes = {
+const sizeVariants = {
   sm: 'text-sm py-1 px-4',
   md: 'text-base py-2 px-6',
   lg: 'text-lg py-3 px-8',
 };
 
 interface ButtonProps extends HtmlButtonProps {
-  size?: keyof typeof sizes;
+  size?: keyof typeof sizeVariants;
 }
 
 const Button: React.FC<PropsWithChildren<ButtonProps>> = ({
@@ -24,7 +24,7 @@ const Button: React.FC<PropsWithChildren<ButtonProps>> = ({
   size = 'md',
   ...rest
 }) => {
-  const sizeClasses = sizes[size];
+  const sizeClasses = sizeVariants[size];
 
   return (
     <button

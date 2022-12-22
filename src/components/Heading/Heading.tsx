@@ -1,13 +1,13 @@
 import { PropsWithChildren } from 'react';
 
-type Level = 1 | 2 | 3 | 4 | 5 | 6;
+const colorVariants = {
+  accent11: 'text-accent-light-11 dark:text-accent-dark-11',
+  accent12: 'text-accent-light-12 dark:text-accent-dark-12',
+  neutral11: 'text-neutral-light-11 dark:text-neutral-dark-11',
+  neutral12: 'text-neutral-light-12 dark:text-neutral-dark-12',
+};
 
-export interface HeadingProps {
-  level: Level;
-  size?: Level;
-}
-
-const sizes = {
+const sizeVariants = {
   1: 'text-4xl',
   2: 'text-3xl',
   3: 'text-2xl',
@@ -16,32 +16,64 @@ const sizes = {
   6: 'text-base',
 };
 
+export interface HeadingProps {
+  color?: keyof typeof colorVariants;
+  level: keyof typeof sizeVariants;
+  size?: keyof typeof sizeVariants;
+}
+
 const Heading: React.FC<PropsWithChildren<HeadingProps>> = ({
   children,
+  color = 'neutral12',
   level,
   size,
 }) => {
   const baseClasses = 'font-bold';
-  const sizeClasses = sizes[size || level];
+  const colorClasses = colorVariants[color];
+  const sizeClasses = sizeVariants[size || level];
 
   switch (level) {
     case 1: {
-      return <h1 className={`${baseClasses} ${sizeClasses}`}>{children}</h1>;
+      return (
+        <h1 className={`${baseClasses} ${colorClasses} ${sizeClasses}`}>
+          {children}
+        </h1>
+      );
     }
     case 2: {
-      return <h2 className={`${baseClasses} ${sizeClasses}`}>{children}</h2>;
+      return (
+        <h2 className={`${baseClasses} ${colorClasses} ${sizeClasses}`}>
+          {children}
+        </h2>
+      );
     }
     case 3: {
-      return <h3 className={`${baseClasses} ${sizeClasses}`}>{children}</h3>;
+      return (
+        <h3 className={`${baseClasses} ${colorClasses} ${sizeClasses}`}>
+          {children}
+        </h3>
+      );
     }
     case 4: {
-      return <h4 className={`${baseClasses} ${sizeClasses}`}>{children}</h4>;
+      return (
+        <h4 className={`${baseClasses} ${colorClasses} ${sizeClasses}`}>
+          {children}
+        </h4>
+      );
     }
     case 5: {
-      return <h5 className={`${baseClasses} ${sizeClasses}`}>{children}</h5>;
+      return (
+        <h5 className={`${baseClasses} ${colorClasses} ${sizeClasses}`}>
+          {children}
+        </h5>
+      );
     }
     case 6: {
-      return <h6 className={`${baseClasses} ${sizeClasses}`}>{children}</h6>;
+      return (
+        <h6 className={`${baseClasses} ${colorClasses} ${sizeClasses}`}>
+          {children}
+        </h6>
+      );
     }
   }
 };

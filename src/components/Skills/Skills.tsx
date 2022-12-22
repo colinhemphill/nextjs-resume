@@ -14,7 +14,7 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => {
     <article>
       <SectionHeading Icon={CheckIcon} text="Skills &amp; Expertise" />
 
-      <div className="mt-2 grid grid-flow-col gap-6">
+      <div className="mt-2 grid grid-flow-row gap-6 lg:grid-flow-col">
         {skills.map((skill, skillIndex) => (
           <div key={skill.attributes.title}>
             <Heading level={4}>
@@ -30,20 +30,6 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => {
           </div>
         ))}
       </div>
-
-      {/* <div className="mt-2">
-        {skills.map((skill, skillIndex) => (
-          <div key={skill.attributes.title}>
-            <Text size="large" weight="bold">
-              <StarRating stars={(skills.length - skillIndex) as 1 | 2 | 3} />{' '}
-              {skill.attributes.title}
-            </Text>
-            <Text color="neutral11">
-              <div dangerouslySetInnerHTML={{ __html: skill.html }} />
-            </Text>
-          </div>
-        ))}
-      </div> */}
     </article>
   );
 };

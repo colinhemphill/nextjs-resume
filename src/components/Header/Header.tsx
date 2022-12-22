@@ -16,7 +16,9 @@ const Header: React.FC<HeaderProps> = ({ personalInformation }) => {
         <div className="flex flex-col items-center text-center md:flex-row md:text-left">
           <div className="flex flex-1 flex-col gap-2">
             <Heading level={1}>{getFullName(personalInformation)}</Heading>
-            <Heading level={2}>{personalInformation.attributes.title}</Heading>
+            <Heading color="neutral11" level={2}>
+              {personalInformation.attributes.title}
+            </Heading>
           </div>
           <div className="mt-6 md:mt-0">
             <Button size="lg" type="button">
