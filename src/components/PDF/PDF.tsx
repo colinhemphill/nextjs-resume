@@ -12,8 +12,8 @@ import { tokens } from '@strum/react';
 import React from 'react';
 import Html from 'react-pdf-html';
 import { HtmlProps } from 'react-pdf-html/dist/Html';
+import { CMSData } from '../../cms-integration/getCMSIntegration';
 import { getFullName } from '../../helpers/utils';
-import { ResumePageProps } from '../../pages';
 
 const domain = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -181,7 +181,7 @@ const htmlProps: Omit<HtmlProps, 'children'> = {
   },
 };
 
-const PDF: React.FC<ResumePageProps> = (props) => {
+const PDF: React.FC<CMSData> = (props) => {
   const {
     education,
     hobbies,

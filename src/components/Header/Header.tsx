@@ -1,41 +1,33 @@
-import { Box, Container, Heading, Stack } from '@strum/react';
+import { DocumentArrowDownIcon } from '@heroicons/react/24/solid';
 import React from 'react';
+import { CMSPersonalInformation } from '../../cms-integration/markdown/personal';
 import { getFullName } from '../../helpers/utils';
-import { ResumePageProps } from '../../pages';
-import PDFDownloadButton from '../PDF/PDFDownloadButton';
+import Button from '../Button/Button';
+import Heading from '../Heading/Heading';
 
-const Header: React.FC<ResumePageProps> = (props) => {
-  const { personalInformation, secret } = props;
+interface HeaderProps {
+  personalInformation: CMSPersonalInformation;
+}
 
+const Header: React.FC<HeaderProps> = ({ personalInformation }) => {
   return (
-    <Box
-      as="header"
-      borderBottomStyle="solid"
-      borderColor="neutral6"
-      borderWidth="2"
-      paddingY="6"
-    >
-      <Container>
-        <Stack
-          alignItems="center"
-          direction={{ xs: 'vertical', md: 'horizontal' }}
-          justifyContent={{ xs: 'center', md: 'space-between' }}
-          wrap={false}
-        >
-          <div>
-            <Heading color="neutral12" level="1">
-              {getFullName(personalInformation)}
-            </Heading>
-            <Heading color="neutral11" level="2">
-              {personalInformation.attributes.title}
-            </Heading>
+    <div className="border-b-2 border-neutral-light-6 py-10 dark:border-neutral-dark-6">
+      <div className="container">
+        <div className="flex flex-col items-center text-center md:flex-row md:text-left">
+          <div className="flex flex-1 flex-col gap-2">
+            <Heading level={1}>{getFullName(personalInformation)}</Heading>
+            <Heading level={2}>{personalInformation.attributes.title}</Heading>
           </div>
-          <div>
-            <PDFDownloadButton secret={secret} />
+          <div className="mt-6 md:mt-0">
+            <Button size="lg" type="button">
+              <DocumentArrowDownIcon className="inline h-6 w-6" />
+              {` `}
+              <span className="align-middle">View or Download PDF</span>
+            </Button>
           </div>
-        </Stack>
-      </Container>
-    </Box>
+        </div>
+      </div>
+    </div>
   );
 };
 
