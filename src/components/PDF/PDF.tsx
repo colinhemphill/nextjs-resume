@@ -242,7 +242,7 @@ const PDF: React.FC<CMSData> = (props) => {
                 <Text>&nbsp;{personalInformation.attributes.location}</Text>
               </View>
               {privateInformation?.map((privateField) => (
-                <View key={privateField.slug} style={styles.flexRowAlignStart}>
+                <View key={privateField.slug}>
                   <Text style={styles.bold}>
                     {privateField.attributes.label}:&nbsp;
                   </Text>

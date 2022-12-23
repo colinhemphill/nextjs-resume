@@ -1,4 +1,4 @@
 interface PageProps {
-  params: { slug: string };
+  params: { secret?: string };
   searchParams?: { [key: string]: string | string[] | undefined };
 }

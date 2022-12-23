@@ -6,9 +6,13 @@ import PDFDownloadButton from '../PDF/PDFDownloadButton';
 
 interface HeaderProps {
   personalInformation: CMSPersonalInformation;
+  secret?: string;
 }
 
-export const Header: React.FC<HeaderProps> = ({ personalInformation }) => {
+export const Header: React.FC<HeaderProps> = ({
+  personalInformation,
+  secret,
+}) => {
   return (
     <div className="mb-12 border-b-2 border-neutral-light-4 py-12 dark:border-neutral-dark-4">
       <div className="container">
@@ -20,7 +24,7 @@ export const Header: React.FC<HeaderProps> = ({ personalInformation }) => {
             </Heading>
           </div>
           <div className="mt-6 md:mt-0">
-            <PDFDownloadButton />
+            <PDFDownloadButton secret={secret} />
           </div>
         </div>
       </div>
