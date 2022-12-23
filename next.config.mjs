@@ -7,7 +7,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: { appDir: true },
+  experimental: { appDir: true, runtime: 'nodejs' },
   reactStrictMode: true,
   swcMinify: true,
 };
