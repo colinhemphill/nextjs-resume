@@ -6,6 +6,21 @@ A résumé built especially with software professionals in mind. Impress your po
 
 Your résumé can also generate a secure URL that will display information not accessible on the public URL. The secure version can include private information such as email, phone number, and mailing address. You can send the private link to a potential employer or use it to generate a more complete PDF for yourself.
 
+## Features
+
+- Update your résumé with simple Markdown files
+  - Integration with external headless CMS systems is possible by integrating a custom fetcher
+- Beautiful and accessible web app to view your résumé, link on social media, and send to potential employers
+- Generate a PDF on demand to view, download, or print
+- Use a secret link to generate the résumé with additional private information
+- Easily customizable
+  - 19 accent color palettes out-of-the-box
+  - 6 neutral color palettes out-of-the-box
+  - Automatic light and dark modes for each palette
+  - Tailwind styling for making it your own
+  - Create custom color palettes
+- Dynamic OG share images in light or dark mode
+
 ## Technology
 
 - [Next.js](https://nextjs.org)
@@ -43,6 +58,24 @@ Clone the project you just created to your local machine. Open it in your favori
 - `accentColor`: `string`. The name of an accent palette from [Radix UI Colors](https://www.radix-ui.com/docs/colors/palette-composition/the-scales#colors). If using a standard color, the contrasting text color will be white, and if using a bright color, the contrasting text color will be black.
 - `neutralColor`: `string`. The name of a neutral palette from [Radix UI Grays](https://www.radix-ui.com/docs/colors/palette-composition/the-scales#grays).
 - `ogImageTheme`: `'light' | 'dark'`. Your OG share image will generate either a light or a dark variant.
+
+### Color Palette Examples
+
+The résumé generator provides 19 accent color palettes and 6 neutral color palettes out-of-the-box. Below are screenshots from a few variations in both light and dark mode.
+
+| Light Mode                                                                          | Dark Mode                                                                         |
+| ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| **BLUE/MAUVE** ![Blue accent light mode](/docs/screenshots/Blue-LightMode.png)      | **BLUE/MAUVE** ![Blue accent dark mode](/docs/screenshots/Blue-DarkMode.png)      |
+| **TOMATO/GRAY** ![Tomato accent light mode](/docs/screenshots/Tomato-LightMode.png) | **TOMATO/GRAY** ![Tomato accent dark mode](/docs/screenshots/Tomato-DarkMode.png) |
+| **MINT/MAUVE** ![Mint accent light mode](/docs/screenshots/Mint-LightMode.png)      | **MINT/MAUVE** ![Mint accent dark mode](/docs/screenshots/Mint-DarkMode.png)      |
+
+### OG Image Examples
+
+Your accent, neutral, and color scheme preferences also apply to the generated OG image.
+
+| Light Mode                                                                     | Dark Mode                                                                       |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
+| **BLUE/MAUVE** ![Blue accent light mode OG image](/docs/og/Blue-LightMode.png) | **BLUE/MAUVE** ![Blue accent dark mode share image](/docs/og/Blue-DarkMode.png) |
 
 ### Set Up Your CMS
 
