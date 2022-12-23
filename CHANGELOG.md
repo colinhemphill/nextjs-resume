@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Newly designed web layout
 - Migrated to Next.js 13 server component layouts
 - Migrated to [Tailwind CSS](https://tailwindcss.com/)
+- Renamed "Education" to "Achievements" to cover more general uses
 
 ## [2.0.6] - 2022-08-04
 
