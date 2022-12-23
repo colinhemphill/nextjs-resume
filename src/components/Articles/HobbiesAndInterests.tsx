@@ -1,4 +1,4 @@
-import { faDiceD20 } from '@fortawesome/free-solid-svg-icons';
+import { faPaintBrush } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { CMSHobbies } from '../../cms-integration/markdown/hobbies';
 import Prose from '../Prose';
@@ -15,7 +15,7 @@ export const HobbiesAndInterests: React.FC<HobbiesAndInterestsProps> = ({
     <article className="py-12">
       <div className="mb-6 flex justify-center">
         <SectionHeading
-          icon={faDiceD20}
+          icon={faPaintBrush}
           level={2}
           text="Hobbies &amp; Interests"
         />
