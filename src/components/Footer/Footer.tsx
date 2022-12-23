@@ -14,10 +14,10 @@ const Footer: React.FC<FooterProps> = ({ personalInformation, links }) => {
   const fullName = getFullName(personalInformation);
 
   return (
-    <footer className="mt-10 bg-neutral-dark-2 py-10 text-neutral-dark-12">
+    <footer className="mt-12 bg-neutral-dark-2 py-12 text-neutral-dark-12">
       <div className="container text-center">
         <div className="flex justify-center">
-          <div className="fa-3x grid grid-flow-row gap-2 lg:grid-flow-col">
+          <div className="fa-3x grid grid-flow-col gap-2">
             {links.map((link) => (
               <a className="no-underline" href={link.href} key={link.title}>
                 <span className="sr-only">

@@ -1,39 +1,34 @@
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Box, Heading, Text } from '@strum/react';
+import { faCalendar } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { CMSProfessionalExperience } from '../../cms-integration/markdown/professional';
+import Heading from '../Heading/Heading';
 
-const ProfessionalItem: React.FC<CMSProfessionalExperience> = (props) => {
+const ProfessionalItem: React.FC<CMSProfessionalExperience> = ({
+  attributes,
+  html,
+}) => {
   return (
-    <Box as="article">
-      <Heading level="3">
-        <Box
-          as="span"
-          backgroundColor="neutral12"
-          borderRadius="medium"
-          color="neutral1"
-          fontWeight="bold"
-          paddingX="2"
-        >
-          {props.attributes.title}
-        </Box>{' '}
-        at {props.attributes.organization}
+    <article className="border-t-2 border-neutral-light-6 py-6 first-of-type:border-none last-of-type:pb-0 dark:border-neutral-dark-2">
+      <Heading level={3}>
+        <span className="rounded-md bg-neutral-light-12 px-2 text-neutral-light-1 dark:bg-neutral-dark-12 dark:text-neutral-dark-1">
+          {attributes.title}
+        </span>
+        <span> at {attributes.organization}</span>
       </Heading>
 
-      <Box marginBottom="3" marginTop="2">
-        <Text>
-          <Box as="span" marginRight="2">
-            {/* <FontAwesomeIcon icon={faCalendar} /> */}
-          </Box>
-          {props.attributes.startDate}–
-          {!props.attributes.endDate ? 'Current' : props.attributes.endDate}
-        </Text>
-      </Box>
+      <div className="mt-1 font-medium tracking-wide">
+        <FontAwesomeIcon className="mr-2" icon={faCalendar} />
+        {attributes.startDate}–
+        {!attributes.endDate ? 'Current' : attributes.endDate}
+      </div>
 
-      <Text as="p">
-        <div dangerouslySetInnerHTML={{ __html: props.html }} />
-      </Text>
-    </Box>
+      <div
+        className="prose lg:prose-xl prose-neutral mt-2"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
+    </article>
   );
 };
 

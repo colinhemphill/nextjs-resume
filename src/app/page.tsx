@@ -1,5 +1,6 @@
 import AboutMe from '../components/Articles/AboutMe';
 import { ContactInformation } from '../components/Articles/ContactInformation';
+import Professional from '../components/Articles/Professional';
 import Skills from '../components/Skills/Skills';
 import { getCMSData } from './layout';
 
@@ -14,8 +15,12 @@ const Page: React.FC<PageProps> = async ({ params, searchParams }) => {
         <ContactInformation personalInformation={data.personalInformation} />
       </div>
 
-      <div className="mt-10">
+      <div className="mt-12">
         <Skills skills={data.skills} />
+      </div>
+
+      <div className="mt-12">
+        <Professional professionalExperience={data.professional} />
       </div>
     </div>
   );

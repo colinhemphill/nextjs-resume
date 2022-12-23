@@ -12,7 +12,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ personalInformation }) => {
   return (
-    <div className="mb-10 border-b-2 border-neutral-light-6 py-10 dark:border-neutral-dark-6">
+    <div className="mb-12 border-b-2 border-neutral-light-4 py-12 dark:border-neutral-dark-4">
       <div className="container">
         <div className="flex flex-col items-center text-center md:flex-row md:text-left">
           <div className="flex flex-1 flex-col gap-2">

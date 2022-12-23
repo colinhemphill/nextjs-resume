@@ -10,10 +10,12 @@ interface AboutMeProps {
 const AboutMe: React.FC<AboutMeProps> = ({ personalInformation }) => {
   return (
     <article>
-      <SectionHeading icon={faUser} text="About Me" />
-      <div className="prose lg:prose-xl prose-neutral mt-2">
-        <div dangerouslySetInnerHTML={{ __html: personalInformation.html }} />
-      </div>
+      <SectionHeading icon={faUser} level={3} text="About Me" />
+
+      <div
+        className="prose lg:prose-xl prose-neutral mt-2"
+        dangerouslySetInnerHTML={{ __html: personalInformation.html }}
+      />
     </article>
   );
 };

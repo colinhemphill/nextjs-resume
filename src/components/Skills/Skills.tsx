@@ -12,7 +12,7 @@ interface SkillsProps {
 const Skills: React.FC<SkillsProps> = ({ skills }) => {
   return (
     <article>
-      <SectionHeading icon={faCheck} text="Skills &amp; Expertise" />
+      <SectionHeading icon={faCheck} level={3} text="Skills &amp; Expertise" />
 
       <div className="mt-2 grid grid-flow-row gap-6 lg:grid-flow-col">
         {skills.map((skill, skillIndex) => (
@@ -23,6 +23,7 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => {
                 {skill.attributes.title}
               </div>
             </Heading>
+
             <div
               className="prose lg:prose-xl prose-neutral mt-2"
               dangerouslySetInnerHTML={{ __html: skill.html }}

@@ -9,7 +9,7 @@ export const HobbiesAndInterests: React.FC<HobbiesAndInterestsProps> = (
   props,
 ) => {
   return (
-    <article
+    <div
       className="prose lg:prose-xl prose-neutral mt-2"
       dangerouslySetInnerHTML={{ __html: props.hobbies.html }}
     />
