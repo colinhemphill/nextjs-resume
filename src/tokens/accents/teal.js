@@ -1,7 +1,5 @@
 const radixColors = require('@radix-ui/colors');
-const { hsl } = require('polished');
 const { baseColors } = require('../color');
-const custom9 = hsl(173, 0.95, 0.26);
 
 module.exports = {
   dark: {
@@ -13,8 +11,7 @@ module.exports = {
     6: radixColors.tealDark.teal6,
     7: radixColors.tealDark.teal7,
     8: radixColors.tealDark.teal8,
-    // 9: radixColors.tealDark.teal9,
-    9: custom9,
+    9: radixColors.tealDark.teal9,
     10: radixColors.tealDark.teal10,
     11: radixColors.tealDark.teal11,
     12: radixColors.tealDark.teal12,
@@ -30,8 +27,7 @@ module.exports = {
     6: radixColors.teal.teal6,
     7: radixColors.teal.teal7,
     8: radixColors.teal.teal8,
-    // 9: radixColors.teal.teal9,
-    9: custom9,
+    9: radixColors.teal.teal9,
     10: radixColors.teal.teal10,
     11: radixColors.teal.teal11,
     12: radixColors.teal.teal12,
