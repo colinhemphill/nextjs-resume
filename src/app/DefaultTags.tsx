@@ -23,7 +23,7 @@ const DefaultTags: React.FC = async () => {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta
         name="theme-color"
-        content={accents[resumeConfig.accentColor].light[9]}
+        content={accents[resumeConfig.accentColor].light[10]}
       />
 
       <meta property="og:site_name" content="Professional Résumé" />

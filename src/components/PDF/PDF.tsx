@@ -8,12 +8,23 @@ import {
   Text,
   View,
 } from '@react-pdf/renderer';
-import { tokens } from '@strum/react';
 import React from 'react';
 import Html from 'react-pdf-html';
 import { HtmlProps } from 'react-pdf-html/dist/Html';
+import createTw from 'react-pdf-tailwind';
+import resumeConfig from '../../../edit-me/config/resumeConfig';
+import tailwindConfig from '../../../tailwind.config';
 import { CMSData } from '../../cms-integration/getCMSIntegration';
 import { getFullName } from '../../helpers/utils';
+import accents from '../../tokens/accents';
+import neutrals from '../../tokens/neutrals';
+
+const accentColor = accents[resumeConfig.accentColor].light;
+const neutralColor = neutrals[resumeConfig.neutralColor].light;
+
+const tw = createTw({
+  theme: tailwindConfig.theme,
+});
 
 const domain = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -59,32 +70,16 @@ const fontSizes = {
 
 const styles = StyleSheet.create({
   page: {
-    alignItems: 'stretch',
-    backgroundColor: tokens.colors.white,
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'nowrap',
     fontFamily: 'Source Sans Pro',
-    fontSize: fontSizes.xxs,
-    justifyContent: 'flex-start',
-    lineHeight: 1.3,
   },
   sidebar: {
-    alignSelf: 'stretch',
-    backgroundColor: tokens.neutral.mauve.light.neutral2,
-    display: 'flex',
-    color: tokens.neutral.mauve.light.neutral12,
+    backgroundColor: neutralColor[2],
+    color: neutralColor[12],
     flexBasis: `${sidebarWidth}in`,
-    flexDirection: 'column',
-    flexGrow: 0,
-    flexShrink: 1,
   },
-  sidebarContent: { padding: tokens.space[4] },
   header: {
-    backgroundColor: tokens.accent.blue.light.accent9,
-    color: tokens.colors.white,
-    padding: `${tokens.space[6]} ${tokens.space[4]}`,
-    textAlign: 'center',
+    backgroundColor: accentColor[10],
+    color: neutralColor[1],
   },
   headerTitle: { fontSize: fontSizes.xl, fontWeight: 700 },
   headerSubtitle: { fontSize: fontSizes.l, fontWeight: 700 },
@@ -95,9 +90,9 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     flexGrow: 1,
     flexShrink: 0,
-    padding: tokens.space[4],
+    // padding: tokens.space[4],
   },
-  section: { marginBottom: tokens.space[4] },
+  section: {},
   sectionHeading: {
     alignItems: 'center',
     display: 'flex',
@@ -111,18 +106,18 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     fontSize: fontSizes.m,
     fontWeight: 700,
-    marginBottom: tokens.space[1],
+    // marginBottom: tokens.space[1],
   },
   sectionHeadingIcon: {
     height: fontSizes.m,
-    marginRight: tokens.space[1],
+    // marginRight: tokens.space[1],
     width: fontSizes.m,
   },
   sectionHeadingStars: {
     alignItems: 'center',
     display: 'flex',
     flexDirection: 'row',
-    marginRight: tokens.space[1],
+    // marginRight: tokens.space[1],
   },
   sectionHeadingStar: {
     height: fontSizes.xxs,
@@ -135,14 +130,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     fontSize: fontSizes.s,
     fontWeight: 700,
-    marginBottom: tokens.space[1],
-    marginTop: tokens.space[3],
+    // marginBottom: tokens.space[1],
+    // marginTop: tokens.space[3],
   },
   itemSubheadingRow: {
     alignItems: 'center',
     display: 'flex',
     flexDirection: 'row',
-    marginBottom: tokens.space[1],
+    // marginBottom: tokens.space[1],
   },
   itemSubheading: {
     fontSize: fontSizes.xxs,
@@ -150,14 +145,11 @@ const styles = StyleSheet.create({
   },
   itemSubheadingIcon: {
     height: fontSizes.xxs,
-    marginRight: tokens.space[1],
+    // marginRight: tokens.space[1],
   },
   professionalTitle: {
-    backgroundColor: tokens.accent.blue.light.accent9,
-    borderRadius: '3px',
-    color: tokens.colors.white,
-    fontWeight: 700,
-    paddingHorizontal: tokens.space[1],
+    backgroundColor: neutralColor[12],
+    color: neutralColor[1],
   },
   bold: { fontWeight: 700 },
   flexColumn: { display: 'flex', flexDirection: 'column' },
@@ -168,7 +160,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   a: {
-    color: tokens.accent.blue.light.accent9,
+    color: accentColor[10],
     textDecoration: 'underline',
   },
 });
@@ -197,15 +189,26 @@ const PDF: React.FC<CMSData> = (props) => {
     // @ts-ignore
     <Document author={fullName} title={`Résume for ${fullName}, ${year}`}>
       {/* @ts-ignore */}
-      <Page size="LETTER" style={styles.page}>
-        <View style={styles.sidebar}>
-          <View style={styles.header}>
+      <Page
+        size="LETTER"
+        style={{
+          ...styles.page,
+          ...tw('flex items-stretch flex-row justify-start flex-nowrap'),
+        }}
+      >
+        <View
+          style={{
+            ...styles.sidebar,
+            ...tw('self-stretch flex flex-col grow-0 shrink-0'),
+          }}
+        >
+          <View style={{ ...styles.header, ...tw('px-4 py-8 text-center') }}>
             <Text style={styles.headerTitle}>{fullName}</Text>
             <Text style={styles.headerSubtitle}>
               {personalInformation.attributes.title}
             </Text>
           </View>
-          <View style={styles.sidebarContent}>
+          <View style={tw('px-4 py-6')}>
             <View style={styles.section}>
               <View style={styles.sectionHeadingNonHTML}>
                 <Image
@@ -279,7 +282,12 @@ const PDF: React.FC<CMSData> = (props) => {
             {professional.map((professionalExperience) => (
               <View key={professionalExperience.slug}>
                 <View style={styles.itemHeading}>
-                  <Text style={styles.professionalTitle}>
+                  <Text
+                    style={{
+                      ...styles.professionalTitle,
+                      ...tw('rounded-md px-2 font-bold'),
+                    }}
+                  >
                     {professionalExperience.attributes.title}
                   </Text>
                   <Text>
@@ -342,7 +350,7 @@ const PDF: React.FC<CMSData> = (props) => {
               {...htmlProps}
               stylesheet={{
                 ...htmlProps.stylesheet,
-                p: { marginBottom: tokens.space[1] },
+                // p: { marginBottom: tokens.space[1] },
               }}
             >
               {hobbies.html}
