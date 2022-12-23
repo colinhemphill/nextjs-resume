@@ -1,17 +1,27 @@
+import { faDiceD20 } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { CMSHobbies } from '../../cms-integration/markdown/hobbies';
+import Prose from '../Prose';
+import SectionHeading from '../SectionHeading/SectionHeading';
 
 interface HobbiesAndInterestsProps {
   hobbies: CMSHobbies;
 }
 
-export const HobbiesAndInterests: React.FC<HobbiesAndInterestsProps> = (
-  props,
-) => {
+export const HobbiesAndInterests: React.FC<HobbiesAndInterestsProps> = ({
+  hobbies,
+}) => {
   return (
-    <div
-      className="prose lg:prose-xl prose-neutral mt-2"
-      dangerouslySetInnerHTML={{ __html: props.hobbies.html }}
-    />
+    <article className="py-12">
+      <div className="mb-6 flex justify-center">
+        <SectionHeading
+          icon={faDiceD20}
+          level={2}
+          text="Hobbies &amp; Interests"
+        />
+      </div>
+
+      <Prose html={hobbies.html} />
+    </article>
   );
 };

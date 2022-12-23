@@ -1,10 +1,8 @@
-import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { CMSPersonalInformation } from '../../cms-integration/markdown/personal';
 import { getFullName } from '../../helpers/utils';
-import Button from '../Button/Button';
 import Heading from '../Heading/Heading';
+import PDFDownloadButton from '../PDF/PDFDownloadButton';
 
 interface HeaderProps {
   personalInformation: CMSPersonalInformation;
@@ -22,14 +20,7 @@ const Header: React.FC<HeaderProps> = ({ personalInformation }) => {
             </Heading>
           </div>
           <div className="mt-6 md:mt-0">
-            <Button size="lg" type="button">
-              <FontAwesomeIcon
-                className="mr-2 align-middle"
-                icon={faFilePdf}
-                size="lg"
-              />
-              <span className="align-middle">View or Download PDF</span>
-            </Button>
+            <PDFDownloadButton />
           </div>
         </div>
       </div>

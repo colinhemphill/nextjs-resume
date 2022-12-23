@@ -1,7 +1,4 @@
-import {
-  CMSEducationalExperience,
-  getEducationalExperiences,
-} from './markdown/educational';
+import { CMSAchievement, getAchievements } from './markdown/achievements';
 import { CMSHobbies, getHobbies } from './markdown/hobbies';
 import { CMSLink, getLinks } from './markdown/links';
 import {
@@ -18,7 +15,7 @@ import { CMSSkillCategory, getSkillCategories } from './markdown/skills';
 type CMS = 'markdown';
 
 export interface CMSData {
-  education: CMSEducationalExperience[];
+  achievements: CMSAchievement[];
   hobbies: CMSHobbies;
   links: CMSLink[];
   personalInformation: CMSPersonalInformation;
@@ -30,7 +27,7 @@ export interface CMSData {
 const getCMSIntegration = async (cms: CMS): Promise<CMSData> => {
   if (cms === 'markdown') {
     return {
-      education: await getEducationalExperiences(),
+      achievements: await getAchievements(),
       hobbies: await getHobbies(),
       links: await getLinks(),
       personalInformation: await getPersonalInformation(),

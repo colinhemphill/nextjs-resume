@@ -4,37 +4,28 @@ import { marked } from 'marked';
 import path from 'path';
 import invariant from 'tiny-invariant';
 
-export interface EducationalExperienceMarkdownAttributes {
+export interface AchievementMarkdownAttributes {
   achievement: string;
   completionYear: string;
   institution: string;
 }
 
-export interface CMSEducationalExperience {
-  attributes: EducationalExperienceMarkdownAttributes;
+export interface CMSAchievement {
+  attributes: AchievementMarkdownAttributes;
   html: string;
   slug: string;
 }
 
 const basePath = process.cwd();
-const educationPath = path.join(
-  basePath,
-  'edit-me',
-  'cms',
-  'educationalExperiences',
-);
+const achievements = path.join(basePath, 'edit-me', 'cms', 'achievements');
 
-export const getEducationalExperiences = async (): Promise<
-  CMSEducationalExperience[]
-> => {
-  const dir = (await fs.readdir(educationPath)).reverse();
+export const getAchievements = async (): Promise<CMSAchievement[]> => {
+  const dir = (await fs.readdir(achievements)).reverse();
   return Promise.all(
     dir.map(async (filename) => {
-      const file = await fs.readFile(path.join(educationPath, filename));
+      const file = await fs.readFile(path.join(achievements, filename));
       const { attributes, body } =
-        parseFrontMatter<EducationalExperienceMarkdownAttributes>(
-          file.toString(),
-        );
+        parseFrontMatter<AchievementMarkdownAttributes>(file.toString());
 
       invariant(
         attributes?.achievement,

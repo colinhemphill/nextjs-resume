@@ -2,6 +2,7 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { CMSSkillCategory } from '../../cms-integration/markdown/skills';
 import Heading from '../Heading/Heading';
+import Prose from '../Prose';
 import SectionHeading from '../SectionHeading/SectionHeading';
 import StarRating from '../StarRating/StarRating';
 
@@ -24,10 +25,7 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => {
               </div>
             </Heading>
 
-            <div
-              className="prose lg:prose-xl prose-neutral mt-2"
-              dangerouslySetInnerHTML={{ __html: skill.html }}
-            />
+            <Prose html={skill.html} />
           </div>
         ))}
       </div>

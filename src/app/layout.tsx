@@ -17,31 +17,11 @@ const albert = Albert_Sans({
   subsets: ['latin'],
 });
 
-export const getCMSData = async () => {
-  const {
-    education,
-    hobbies,
-    links,
-    personalInformation,
-    professional,
-    skills,
-  } = await getCMSIntegration('markdown');
-
-  return {
-    education,
-    hobbies,
-    links,
-    personalInformation,
-    professional,
-    skills,
-  };
-};
-
 // @ts-expect-error Server Component
 const RootLayout: React.FC<PropsWithChildren<CMSData>> = async ({
   children,
 }) => {
-  const data = await getCMSData();
+  const data = await getCMSIntegration('markdown');
 
   return (
     <html lang="en" className={albert.variable}>

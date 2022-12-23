@@ -4,6 +4,6 @@
 
 @layer components {
   a {
-    @apply underline decoration-accent-light-9 decoration-solid decoration-from-font underline-offset-2 hover:decoration-inherit dark:decoration-accent-dark-9;
+    @apply underline decoration-accent-light-9 decoration-solid decoration-2 underline-offset-2 hover:decoration-inherit dark:decoration-accent-dark-9;
   }
 }

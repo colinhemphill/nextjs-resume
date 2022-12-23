@@ -183,7 +183,7 @@ const htmlProps: Omit<HtmlProps, 'children'> = {
 
 const PDF: React.FC<CMSData> = (props) => {
   const {
-    education,
+    achievements,
     hobbies,
     personalInformation,
     privateInformation,
@@ -308,13 +308,13 @@ const PDF: React.FC<CMSData> = (props) => {
                 src={`${iconPath}/circle-graduation-cap.png`}
                 style={styles.sectionHeadingIcon}
               />
-              <Text>Education</Text>
+              <Text>Achievements</Text>
             </View>
-            {education.map((educationExperience) => (
-              <View key={educationExperience.slug}>
+            {achievements.map((achievement) => (
+              <View key={achievement.slug}>
                 <View style={styles.itemHeading}>
                   <Text style={styles.bold}>
-                    {educationExperience.attributes.achievement}
+                    {achievement.attributes.achievement}
                   </Text>
                 </View>
                 <View style={styles.itemSubheadingRow}>
@@ -323,10 +323,10 @@ const PDF: React.FC<CMSData> = (props) => {
                     style={styles.itemSubheadingIcon}
                   />
                   <Text style={styles.itemSubheading}>
-                    {educationExperience.attributes.institution}
+                    {achievement.attributes.institution}
                   </Text>
                 </View>
-                <Html {...htmlProps}>{educationExperience.html}</Html>
+                <Html {...htmlProps}>{achievement.html}</Html>
               </View>
             ))}
           </View>

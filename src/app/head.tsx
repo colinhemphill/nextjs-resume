@@ -1,9 +1,9 @@
+import getCMSIntegration from '../cms-integration/getCMSIntegration';
 import { getFullName } from '../helpers/utils';
 import DefaultTags from './DefaultTags';
-import { getCMSData } from './layout';
 
 const Head = async () => {
-  const data = await getCMSData();
+  const data = await getCMSIntegration('markdown');
   const fullName = getFullName(data.personalInformation);
   const title = `Résumé | ${fullName} | ${data.personalInformation.attributes.location}`;
   const description = `Professional résumé for ${fullName}.`;
