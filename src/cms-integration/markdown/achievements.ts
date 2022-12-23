@@ -6,7 +6,7 @@ import invariant from 'tiny-invariant';
 
 export interface AchievementMarkdownAttributes {
   achievement: string;
-  completionYear: string;
+  completionYear: number;
   institution: string;
 }
 

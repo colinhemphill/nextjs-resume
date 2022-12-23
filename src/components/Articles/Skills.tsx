@@ -1,10 +1,10 @@
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { CMSSkillCategory } from '../../cms-integration/markdown/skills';
-import Heading from '../Heading/Heading';
+import { Heading } from '../Heading/Heading';
 import Prose from '../Prose';
-import SectionHeading from '../SectionHeading/SectionHeading';
-import StarRating from '../StarRating/StarRating';
+import { SectionHeading } from '../SectionHeading/SectionHeading';
+import { StarRating } from '../StarRating/StarRating';
 
 interface SkillsProps {
   skills: CMSSkillCategory[];

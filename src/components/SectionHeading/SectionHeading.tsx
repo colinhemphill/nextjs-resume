@@ -1,7 +1,7 @@
 import { faCircle, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import Heading, { HeadingProps } from '../Heading/Heading';
+import { Heading, HeadingProps } from '../Heading/Heading';
 
 interface SectionHeadingProps {
   icon?: IconDefinition;
@@ -9,7 +9,7 @@ interface SectionHeadingProps {
   text: string;
 }
 
-const SectionHeading: React.FC<SectionHeadingProps> = (props) => {
+export const SectionHeading: React.FC<SectionHeadingProps> = (props) => {
   const { icon, level = 3, text } = props;
 
   return (
@@ -36,5 +36,3 @@ const SectionHeading: React.FC<SectionHeadingProps> = (props) => {
     </Heading>
   );
 };
-
-export default SectionHeading;

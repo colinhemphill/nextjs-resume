@@ -1,7 +1,7 @@
 import { faMortarBoard } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { CMSAchievement } from '../../cms-integration/markdown/achievements';
-import SectionHeading from '../SectionHeading/SectionHeading';
+import { SectionHeading } from '../SectionHeading/SectionHeading';
 import AchievementItem from './AchievementItem';
 
 interface AchievementsProps {

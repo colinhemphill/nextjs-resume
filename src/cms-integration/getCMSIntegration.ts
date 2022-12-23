@@ -24,7 +24,7 @@ export interface CMSData {
   skills: CMSSkillCategory[];
 }
 
-const getCMSIntegration = async (cms: CMS): Promise<CMSData> => {
+export const getCMSIntegration = async (cms: CMS): Promise<CMSData> => {
   if (cms === 'markdown') {
     return {
       achievements: await getAchievements(),
@@ -37,5 +37,3 @@ const getCMSIntegration = async (cms: CMS): Promise<CMSData> => {
   }
   return null;
 };
-
-export default getCMSIntegration;

@@ -1,10 +1,11 @@
 import { Albert_Sans } from '@next/font/google';
 import { PropsWithChildren } from 'react';
-import getCMSIntegration, {
+import {
   CMSData,
+  getCMSIntegration,
 } from '../cms-integration/getCMSIntegration';
-import Footer from '../components/Footer/Footer';
-import Header from '../components/Header/Header';
+import { Footer } from '../components/Footer/Footer';
+import { Header } from '../components/Header/Header';
 
 import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false;

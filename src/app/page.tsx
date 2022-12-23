@@ -1,4 +1,4 @@
-import getCMSIntegration from '../cms-integration/getCMSIntegration';
+import { getCMSIntegration } from '../cms-integration/getCMSIntegration';
 import AboutMe from '../components/Articles/AboutMe';
 import Achievements from '../components/Articles/Achievements';
 import { ContactInformation } from '../components/Articles/ContactInformation';

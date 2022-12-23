@@ -1,4 +1,4 @@
-import getCMSIntegration from '../cms-integration/getCMSIntegration';
+import { getCMSIntegration } from '../cms-integration/getCMSIntegration';
 import { getFullName } from '../helpers/utils';
 import DefaultTags from './DefaultTags';
 

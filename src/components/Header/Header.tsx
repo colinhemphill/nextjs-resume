@@ -1,14 +1,14 @@
 import React from 'react';
 import { CMSPersonalInformation } from '../../cms-integration/markdown/personal';
 import { getFullName } from '../../helpers/utils';
-import Heading from '../Heading/Heading';
+import { Heading } from '../Heading/Heading';
 import PDFDownloadButton from '../PDF/PDFDownloadButton';
 
 interface HeaderProps {
   personalInformation: CMSPersonalInformation;
 }
 
-const Header: React.FC<HeaderProps> = ({ personalInformation }) => {
+export const Header: React.FC<HeaderProps> = ({ personalInformation }) => {
   return (
     <div className="mb-12 border-b-2 border-neutral-light-4 py-12 dark:border-neutral-dark-4">
       <div className="container">
@@ -27,5 +27,3 @@ const Header: React.FC<HeaderProps> = ({ personalInformation }) => {
     </div>
   );
 };
-
-export default Header;

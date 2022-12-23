@@ -22,7 +22,7 @@ export interface HeadingProps {
   size?: keyof typeof sizeVariants;
 }
 
-const Heading: React.FC<PropsWithChildren<HeadingProps>> = ({
+export const Heading: React.FC<PropsWithChildren<HeadingProps>> = ({
   children,
   color = 'neutral12',
   level,
@@ -77,5 +77,3 @@ const Heading: React.FC<PropsWithChildren<HeadingProps>> = ({
     }
   }
 };
-
-export default Heading;

@@ -2,7 +2,7 @@ import { faDiceD20 } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { CMSHobbies } from '../../cms-integration/markdown/hobbies';
 import Prose from '../Prose';
-import SectionHeading from '../SectionHeading/SectionHeading';
+import { SectionHeading } from '../SectionHeading/SectionHeading';
 
 interface HobbiesAndInterestsProps {
   hobbies: CMSHobbies;

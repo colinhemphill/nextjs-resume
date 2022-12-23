@@ -15,7 +15,7 @@ const Star: React.FC<{ className?: string }> = () => {
   );
 };
 
-const StarRating: React.FC<StarRatingProps> = (props) => {
+export const StarRating: React.FC<StarRatingProps> = (props) => {
   const { stars } = props;
 
   return (
@@ -26,5 +26,3 @@ const StarRating: React.FC<StarRatingProps> = (props) => {
     </span>
   );
 };
-
-export default StarRating;
