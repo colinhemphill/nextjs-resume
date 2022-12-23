@@ -145,7 +145,7 @@ const mockData: CMSData = {
     },
     {
       attributes: { title: 'Familiar' },
-      html: '<p>Business Planning, WF, PFlow, National Security, XMLBeans, TCD, Jiu-Jitsu, AAR, Military Training, General Insurance</p>\n',
+      html: '<p>Business Planning, WF, PFlow, XMLBeans, TCD, Jiu-Jitsu, AAR, General Insurance</p>\n',
       slug: '2',
     },
   ],

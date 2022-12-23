@@ -12,18 +12,20 @@ const Professional: React.FC<ProfessionalProps> = ({
   professionalExperience,
 }) => {
   return (
-    <article className="rounded-xl bg-neutral-light-3 p-12 dark:bg-neutral-dark-3">
-      <div className="flex justify-center">
-        <SectionHeading
-          icon={faBriefcase}
-          level={2}
-          text="Professional Experience"
-        />
-      </div>
+    <article className="rounded-xl bg-neutral-light-3 py-12 dark:bg-neutral-dark-3">
+      <div className="container">
+        <div className="flex justify-center text-center">
+          <SectionHeading
+            icon={faBriefcase}
+            level={2}
+            text="Professional Experience"
+          />
+        </div>
 
-      {professionalExperience.map((professional) => (
-        <ProfessionalItem key={professional.slug} {...professional} />
-      ))}
+        {professionalExperience.map((professional) => (
+          <ProfessionalItem key={professional.slug} {...professional} />
+        ))}
+      </div>
     </article>
   );
 };
