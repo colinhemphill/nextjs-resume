@@ -25,7 +25,7 @@ const RootLayout: React.FC<PropsWithChildren<CMSData>> = async ({
 
   return (
     <html lang="en" className={albert.variable}>
-      <body className="bg-neutral-light-1 text-neutral-light-12 dark:bg-neutral-dark-1 dark:text-neutral-dark-12">
+      <body className="selection:text-fuchsia-900 bg-neutral-light-1 text-neutral-light-12 selection:bg-accent-light-transparent dark:bg-neutral-dark-1 dark:text-neutral-dark-12 dark:selection:bg-accent-dark-transparent">
         <Header personalInformation={data.personalInformation} />
         {children}
 
