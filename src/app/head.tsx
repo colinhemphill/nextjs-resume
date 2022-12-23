@@ -13,6 +13,9 @@ const Head = async () => {
       <DefaultTags />
       <meta name="description" content={description} />
 
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+
       <title>{title}</title>
     </>
   );
