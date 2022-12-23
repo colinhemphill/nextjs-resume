@@ -49,9 +49,9 @@ A series of Markdown files at `edit-me/cms/professionalExperiences`. You can use
 
 The markdown content will be rendered as HTML to display a description of each work experience.
 
-### Educational Experiences
+### Achievements
 
-A series of Markdown files at `edit-me/cms/educationalExperiences`. You can use a number prefix to order them, as the items will be displayed in the same order they are arranged in the folder.
+A series of Markdown files at `edit-me/cms/achievements`. These are useful for degrees from a university or boot camp, certifications, etc. You can use a number prefix to order them, as the items will be displayed in the same order they are arranged in the folder.
 
 | Field Name    | Type             | Description                                                                 |
 | ------------- | ---------------- | --------------------------------------------------------------------------- |
@@ -59,7 +59,7 @@ A series of Markdown files at `edit-me/cms/educationalExperiences`. You can use 
 | `institution` | text, required   | The name of the university, boot camp, etc. you earned the achievement from |
 | `year`        | number, required | The year you completed the achievement                                      |
 
-The markdown content will be rendered as HTML to display a description of each education experience.
+The markdown content will be rendered as HTML to display a description of each achievement..
 
 ### Hobbies
 

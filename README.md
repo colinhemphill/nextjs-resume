@@ -1,4 +1,4 @@
-# Next.js Static Generated Résumés
+# Next.js and Tailwind Résumé
 
 A résumé built especially with software professionals in mind. Impress your potential employer with a beautiful and incredibly fast résumé website, or generate a PDF for email and print.
 
@@ -13,18 +13,16 @@ Your résumé can also generate a secure URL that will display information not a
 - [React-pdf](https://react-pdf.org/)
 - [Marked](https://marked.js.org/)
 - [Front Matter](https://frontmatter.codes/docs/markdown)
-- [OG Impact](https://ogimpact.sh/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Radix UI Colors](https://www.radix-ui.com/colors)
+- [Vercel OG Image Generation](https://vercel.com/docs/concepts/functions/edge-functions/og-image-generation)
 - [Jest](https://jestjs.io/)
 - [Testing Library](https://testing-library.com/)
 - [Vercel](https://vercel.com/)
 
 ### It's FAST
 
-Your static generated site will load extremely quickly wherever you decide to deploy it, but it's built to deploy to Vercel with just one or two clicks. The screenshot here is from the very first Lighthouse test I ran on my own production deploy, using emulated mobile with "Slow 4G Throttling".
-
-![Screenshot of the application's Lighthouse score showing a 100 in "Performance", a 100 in "Accessibility", a 100 in "Best Practices", a 100 in "SEO", and that "Progressive Web App" is active.](docs/lighthouse.png)
-
-[View Lighthouse Report](docs/lighthouse-report.pdf)
+Your résumé will use the latest Vercel technology including Next.js 13 server components and edge functions, and will load fast even on older devices and poor network conditions.
 
 ## How To Use This Project
 
@@ -40,9 +38,11 @@ The project is designed to be deployed with [Vercel](https://vercel.com). By cli
 
 ### Modify Custom Config
 
-Clone the project you just created to your local machine. Open it in your favorite editor, and open up the `edit-me/config/` folder at the root. Here you will find a couple of placeholder images that you can swap out if you want. You can also edit the `manifest.json` and `resumeConfig.ts` to meet your needs. The config file contains the following constants that will be used throughout the project:
+Clone the project you just created to your local machine. Open it in your favorite editor, and open up the `edit-me/config/` folder at the root. Here you will find a couple of placeholder images that you can swap out if you want. You can also edit the `manifest.json` and `resumeConfig.ts` to meet your needs. The config file contains the following constants that will be used throughout the project (these are typed to provide appropriate autocomplete and error checking):
 
-- `primaryColor`: `string`. A HEX color that will be used for accents. This color should meet the WCAG guidelines for color accessibility when using white text on top. The default blue color meets AA contrast standards.
+- `accentColor`: `string`. The name of an accent palette from [Radix UI Colors](https://www.radix-ui.com/docs/colors/palette-composition/the-scales#colors). If using a standard color, the contrasting text color will be white, and if using a bright color, the contrasting text color will be black.
+- `neutralColor`: `string`. The name of a neutral palette from [Radix UI Grays](https://www.radix-ui.com/docs/colors/palette-composition/the-scales#grays).
+- `ogImageTheme`: `'light' | 'dark'`. Your OG share image will generate either a light or a dark variant.
 
 ### Set Up Your CMS
 
@@ -87,8 +87,8 @@ This private URL is _only as secure as the people you send it to_. To invalidate
 
 The template is built to be responsive, beautiful, and accessible right out of the box. It supports automatic dark/light mode themeing in the web version, and a great single-page print layout in the PDF version. The project supports a minimal set of configurations such as accent colors, but if you're a front end developer or designer, you can easily open up the source code and customize it however you see fit.
 
-We use [OG Impact](https://ogimpact.sh/) to generate dynamic Open Graph (Facebook/Twitter) share images. By default it will look something like this example from the Facebook Debugger:
+If you really want to go deep on customization, you can create your own themes in the `src/tokens` folder to add custom accent and neutral palettes. You also have full control of the Tailwind configuration in the root folder `tailwind.config.js` file.
 
-![Screenshot of Facebook debugger showing that the share image has been generated to display the text "Some Body—Placeholder, TX"](docs/facebookDebugger.png)
+We use [Vercel OG Image Generation](https://vercel.com/docs/concepts/functions/edge-functions/og-image-generation) to generate dynamic Open Graph (Facebook/Twitter) share images. You can edit the layout, styles, and text of OG Image using Tailwind classes in `src/pages/api/og.tsx`.
 
-This dynamic share image will use your custom `primaryColor` setting, as well as data from the CMS.
+This dynamic share image will use your custom `accentColor` setting, as well as data from the CMS.
