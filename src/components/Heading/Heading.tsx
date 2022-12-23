@@ -3,6 +3,8 @@ import { PropsWithChildren } from 'react';
 const colorVariants = {
   accent11: 'text-accent-light-11 dark:text-accent-dark-11',
   accent12: 'text-accent-light-12 dark:text-accent-dark-12',
+  error11: 'text-red-light-12 dark:text-red-dark-11',
+  error12: 'text-red-light-12 dark:text-red-dark-12',
   neutral11: 'text-neutral-light-11 dark:text-neutral-dark-11',
   neutral12: 'text-neutral-light-12 dark:text-neutral-dark-12',
 };
