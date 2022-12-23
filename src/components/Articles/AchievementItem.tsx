@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { CMSAchievement } from '../../cms-integration/markdown/achievements';
 import { Heading } from '../Heading/Heading';
-import Prose from '../Prose';
+import Prose from '../Prose/Prose';
 
 const AchievementItem: React.FC<CMSAchievement> = ({ attributes, html }) => {
   return (

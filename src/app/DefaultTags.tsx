@@ -33,6 +33,32 @@ const DefaultTags: React.FC = async () => {
       <meta property="og:image:height" content="630" />
       <meta property="og:image:width" content="1200" />
 
+      <meta property="og:type" content="profile" />
+      <meta
+        property="profile:first_name"
+        content={data.personalInformation.attributes.givenName}
+      />
+      <meta
+        property="profile:last_name"
+        content={data.personalInformation.attributes.familyName}
+      />
+
+      <meta name="twitter:card" content="summary" />
+      {data.personalInformation.attributes.twitterUsername && (
+        <>
+          <meta
+            name="twitter:site"
+            content={`@${data.personalInformation.attributes.twitterUsername}`}
+          />
+          <meta
+            name="twitter:creator"
+            content={`@${data.personalInformation.attributes.twitterUsername}`}
+          />
+        </>
+      )}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:image" content={ogImage} />
+
       <meta name="image" content={ogImage} />
       <meta itemProp="image" content={ogImage} />
     </>

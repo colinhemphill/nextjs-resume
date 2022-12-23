@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { CMSProfessionalExperience } from '../../cms-integration/markdown/professional';
 import { Heading } from '../Heading/Heading';
-import Prose from '../Prose';
+import Prose from '../Prose/Prose';
 
 const ProfessionalItem: React.FC<CMSProfessionalExperience> = ({
   attributes,
