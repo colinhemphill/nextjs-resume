@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> Snapshot 1`] = `
+<div>
+  <div
+    class="mb-12 border-b-2 border-neutral-light-4 py-12 dark:border-neutral-dark-4"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="flex flex-col items-center text-center md:flex-row md:text-left"
+      >
+        <div
+          class="flex flex-1 flex-col gap-2"
+        >
+          <h1
+            class="font-bold text-neutral-light-12 dark:text-neutral-dark-12 text-4xl"
+          >
+            Some Body
+          </h1>
+          <h2
+            class="font-bold text-neutral-light-11 dark:text-neutral-dark-11 text-3xl"
+          >
+            Official Job Title
+          </h2>
+        </div>
+        <div
+          class="mt-6 md:mt-0"
+        >
+          <a
+            class="rounded-md border-2 border-accent-light-7 bg-accent-light-1 font-medium text-accent-light-11 no-underline outline-none transition hover:border-accent-light-8 focus:border-transparent focus:bg-accent-light-10 focus:text-accent-light-contrast focus:ring-4 focus:ring-accent-light-transparent hover:focus:border-transparent dark:border-accent-dark-7 dark:bg-accent-dark-1 dark:text-accent-dark-11 dark:hover:border-accent-dark-8 focus:dark:ring-accent-dark-transparent text-lg py-3 px-8"
+            href="/api/pdf"
+          >
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-file-pdf fa-lg mr-2"
+              data-icon="file-pdf"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              viewBox="0 0 384 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM64 224H88c30.9 0 56 25.1 56 56s-25.1 56-56 56H80v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V320 240c0-8.8 7.2-16 16-16zm24 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H80v48h8zm72-64c0-8.8 7.2-16 16-16h24c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H176c-8.8 0-16-7.2-16-16V240zm32 112h8c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16h-8v96zm96-128h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H304v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H304v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V304 240c0-8.8 7.2-16 16-16z"
+                fill="currentColor"
+              />
+            </svg>
+            View or Download PDF
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

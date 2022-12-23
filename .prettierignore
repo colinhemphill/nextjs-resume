@@ -2,4 +2,3 @@
 .vercel/*
 node_modules/*
 package-lock.json
-src/**/*.scss

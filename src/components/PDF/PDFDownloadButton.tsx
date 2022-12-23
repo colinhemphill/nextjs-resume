@@ -1,31 +1,21 @@
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import usePrefersDarkMode from '../../helpers/useDarkMode';
-import { buttonStyle } from '../../strum-design-system/components/Button/Button.css';
-import { atoms } from '../../strum-design-system/sprinkles.css';
+import ButtonLink from '../Button/ButtonLink';
 
 interface PDFDownloadButtonProps {
   secret?: string;
 }
 
-const PDFDownloadButton: React.FC<PDFDownloadButtonProps> = (props) => {
-  const { secret } = props;
-  const darkMode = usePrefersDarkMode();
-
+const PDFDownloadButton: React.FC<PDFDownloadButtonProps> = ({ secret }) => {
   return (
-    // eslint-disable-next-line react/jsx-no-target-blank
-    <a
-      className={buttonStyle({
-        color: darkMode ? 'primary' : 'medium',
-        size: 'lg',
-      })}
+    <ButtonLink
       href={secret ? `/api/pdf?secret=${secret}` : '/api/pdf'}
-      target="_blank"
+      size="lg"
     >
-      <FontAwesomeIcon className={atoms({ marginRight: 2 })} icon={faFilePdf} />
+      <FontAwesomeIcon className="mr-2" icon={faFilePdf} size="lg" />
       View or Download PDF
-    </a>
+    </ButtonLink>
   );
 };
 

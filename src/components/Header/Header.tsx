@@ -1,42 +1,33 @@
 import React from 'react';
+import { CMSPersonalInformation } from '../../cms-integration/markdown/personal';
 import { getFullName } from '../../helpers/utils';
-import { ResumePageProps } from '../../pages';
-import Container from '../../strum-design-system/components/Container/Container';
-import Heading from '../../strum-design-system/components/Heading/Heading';
-import Column from '../../strum-design-system/components/Layout/Column';
-import Row from '../../strum-design-system/components/Layout/Row';
+import { Heading } from '../Heading/Heading';
 import PDFDownloadButton from '../PDF/PDFDownloadButton';
-import { headerStyle } from './Header.css';
 
-const Header: React.FC<ResumePageProps> = (props) => {
-  const { personalInformation, secret } = props;
+interface HeaderProps {
+  personalInformation: CMSPersonalInformation;
+  secret?: string;
+}
 
+export const Header: React.FC<HeaderProps> = ({
+  personalInformation,
+  secret,
+}) => {
   return (
-    <header className={headerStyle}>
-      <Container atoms={{ textAlign: { xs: 'center', md: 'left' } }}>
-        <Row verticalAlign="center">
-          <Column>
-            <Heading
-              atoms={{ color: 'white' }}
-              level={1}
-              text={getFullName(personalInformation)}
-            />
-            <Heading
-              atoms={{ color: 'white' }}
-              level={2}
-              text={personalInformation.attributes.title}
-            />
-          </Column>
-          <Column
-            atoms={{ paddingTop: { xs: 4, md: 0 } }}
-            width={{ xs: 12, sm: 12, md: 'auto' }}
-          >
+    <div className="mb-12 border-b-2 border-neutral-light-4 py-12 dark:border-neutral-dark-4">
+      <div className="container">
+        <div className="flex flex-col items-center text-center md:flex-row md:text-left">
+          <div className="flex flex-1 flex-col gap-2">
+            <Heading level={1}>{getFullName(personalInformation)}</Heading>
+            <Heading color="neutral11" level={2}>
+              {personalInformation.attributes.title}
+            </Heading>
+          </div>
+          <div className="mt-6 md:mt-0">
             <PDFDownloadButton secret={secret} />
-          </Column>
-        </Row>
-      </Container>
-    </header>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
-
-export default Header;

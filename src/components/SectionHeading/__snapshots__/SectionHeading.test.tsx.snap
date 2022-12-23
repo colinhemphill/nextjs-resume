@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SectionHeading /> Snapshot 1`] = `
+<div>
+  <h3
+    class="font-bold text-neutral-light-12 dark:text-neutral-dark-12 text-2xl"
+  >
+    <div
+      class="flex items-center gap-2"
+    >
+      <div>
+        Section Heading
+      </div>
+    </div>
+  </h3>
+</div>
+`;

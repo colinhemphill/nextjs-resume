@@ -4,93 +4,70 @@ import React from 'react';
 import { CMSLink } from '../../cms-integration/markdown/links';
 import { CMSPersonalInformation } from '../../cms-integration/markdown/personal';
 import { getFullName } from '../../helpers/utils';
-import AutoGrid from '../../strum-design-system/components/AutoGrid/AutoGrid';
-import AutoGridCell from '../../strum-design-system/components/AutoGrid/AutoGridCell';
-import Container from '../../strum-design-system/components/Container/Container';
-import { atoms } from '../../strum-design-system/sprinkles.css';
-import { visuallyHidden } from '../../strum-design-system/styles/accessibility.css';
-import colors from '../../strum-design-system/themes/timbre/colors';
-import { footerLinkStyle, footerStyle } from './Footer.css';
 
 interface FooterProps {
   personalInformation: CMSPersonalInformation;
   links?: CMSLink[];
 }
 
-const Footer: React.FC<FooterProps> = (props) => {
-  const { personalInformation, links } = props;
+export const Footer: React.FC<FooterProps> = ({
+  personalInformation,
+  links,
+}) => {
   const fullName = getFullName(personalInformation);
 
   return (
-    <footer className={footerStyle}>
-      <Container>
+    <footer className="mt-12 bg-neutral-dark-3 py-12 text-neutral-dark-12">
+      <div className="container text-center">
         {links && (
-          <AutoGrid guttersX={2} guttersY={2} horizontalAlign="center">
-            {links.map((link) => (
-              <AutoGridCell key={link.href}>
-                <a
-                  className="fa-3x"
-                  href={link.href}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <span className={visuallyHidden}>
+          <div className="flex justify-center">
+            <div className="fa-3x grid grid-flow-col gap-2">
+              {links.map((link) => (
+                <a className="no-underline" href={link.href} key={link.title}>
+                  <span className="sr-only">
                     {personalInformation.attributes.givenName} on {link.title}
                   </span>
                   <span className="fa-layers fa-fw">
-                    <FontAwesomeIcon color={colors.primary} icon={faCircle} />
+                    <FontAwesomeIcon
+                      className="text-accent-light-10"
+                      icon={faCircle}
+                    />
                     <FontAwesomeIcon
                       aria-hidden
-                      color={colors.white}
-                      icon={['fab', link.iconName]}
+                      className="text-accent-light-contrast"
+                      icon={link.icon}
                       transform="shrink-8"
                     />
                   </span>
                 </a>
-              </AutoGridCell>
-            ))}
-          </AutoGrid>
+              ))}
+            </div>
+          </div>
         )}
 
-        <div className={atoms({ marginTop: 4 })}>
+        <div className="mt-6">
           Copyright ©{new Date().getFullYear()} {fullName}
         </div>
 
-        <div>
-          <small>
-            This résumé was generated with{' '}
-            <a
-              className={footerLinkStyle}
-              href="https://nextjs.org/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Next.js
-            </a>{' '}
-            and deployed on{' '}
-            <a
-              className={footerLinkStyle}
-              href="https://vercel.com/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Vercel
-            </a>
-            . Learn how to deploy your own resume with the{' '}
-            <a
-              className={footerLinkStyle}
-              href="https://github.com/colinhemphill/nextjs-resume-generator"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              nextjs-resume-generator
-            </a>
-            !
-          </small>
+        <div className="mt-1 text-sm">
+          This résumé was generated with{' '}
+          <a className="link" href="https://nextjs.org/">
+            Next.js
+          </a>{' '}
+          and deployed on{' '}
+          <a className="link" href="https://vercel.com/">
+            Vercel
+          </a>
+          . Learn how to deploy your own resume with the{' '}
+          <a
+            className="link"
+            href="https://github.com/colinhemphill/nextjs-resume-generator"
+          >
+            nextjs-resume-generator
+          </a>
+          !
         </div>
-      </Container>
+      </div>
     </footer>
   );
 };
-
-export default Footer;

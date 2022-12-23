@@ -11,10 +11,14 @@ import {
 import React from 'react';
 import Html from 'react-pdf-html';
 import { HtmlProps } from 'react-pdf-html/dist/Html';
+import resumeConfig from '../../../edit-me/config/resumeConfig';
+import { CMSData } from '../../cms-integration/getCMSIntegration';
 import { getFullName } from '../../helpers/utils';
-import { ResumePageProps } from '../../pages';
-import colors from '../../strum-design-system/themes/timbre/colors';
-import spacers from '../../strum-design-system/themes/timbre/spacers';
+import accents from '../../tokens/accents';
+import neutrals from '../../tokens/neutrals';
+
+const accentColor = accents[resumeConfig.accentColor].light;
+const neutralColor = neutrals[resumeConfig.neutralColor].light;
 
 const domain = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -57,11 +61,19 @@ const fontSizes = {
   xs: 12,
   xxs: 10,
 };
+const spacers = {
+  1: '6px',
+  2: '8px',
+  3: '10px',
+  4: '12px',
+  5: '14px',
+  6: '16px',
+};
 
 const styles = StyleSheet.create({
   page: {
     alignItems: 'stretch',
-    backgroundColor: colors.white,
+    backgroundColor: neutralColor[1],
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'nowrap',
@@ -72,9 +84,9 @@ const styles = StyleSheet.create({
   },
   sidebar: {
     alignSelf: 'stretch',
-    backgroundColor: colors.light,
+    backgroundColor: neutralColor[3],
     display: 'flex',
-    color: colors.dark,
+    color: neutralColor[12],
     flexBasis: `${sidebarWidth}in`,
     flexDirection: 'column',
     flexGrow: 0,
@@ -82,8 +94,8 @@ const styles = StyleSheet.create({
   },
   sidebarContent: { padding: spacers[4] },
   header: {
-    backgroundColor: colors.primary,
-    color: colors.white,
+    backgroundColor: accentColor[10],
+    color: accentColor.contrast,
     padding: `${spacers[6]} ${spacers[4]}`,
     textAlign: 'center',
   },
@@ -154,9 +166,9 @@ const styles = StyleSheet.create({
     marginRight: spacers[1],
   },
   professionalTitle: {
-    backgroundColor: colors.dark,
+    backgroundColor: neutralColor[12],
     borderRadius: '3px',
-    color: colors.white,
+    color: neutralColor[1],
     fontWeight: 700,
     paddingHorizontal: spacers[1],
   },
@@ -169,7 +181,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   a: {
-    color: colors.primary,
+    color: accentColor[11],
     textDecoration: 'underline',
   },
 });
@@ -182,9 +194,9 @@ const htmlProps: Omit<HtmlProps, 'children'> = {
   },
 };
 
-const PDF: React.FC<ResumePageProps> = (props) => {
+const PDF: React.FC<CMSData> = (props) => {
   const {
-    education,
+    achievements,
     hobbies,
     personalInformation,
     privateInformation,
@@ -230,7 +242,7 @@ const PDF: React.FC<ResumePageProps> = (props) => {
                 <Text>&nbsp;{personalInformation.attributes.location}</Text>
               </View>
               {privateInformation?.map((privateField) => (
-                <View key={privateField.slug} style={styles.flexRowAlignStart}>
+                <View key={privateField.slug}>
                   <Text style={styles.bold}>
                     {privateField.attributes.label}:&nbsp;
                   </Text>
@@ -309,13 +321,13 @@ const PDF: React.FC<ResumePageProps> = (props) => {
                 src={`${iconPath}/circle-graduation-cap.png`}
                 style={styles.sectionHeadingIcon}
               />
-              <Text>Education</Text>
+              <Text>Achievements</Text>
             </View>
-            {education.map((educationExperience) => (
-              <View key={educationExperience.slug}>
+            {achievements.map((achievement) => (
+              <View key={achievement.slug}>
                 <View style={styles.itemHeading}>
                   <Text style={styles.bold}>
-                    {educationExperience.attributes.achievement}
+                    {achievement.attributes.achievement}
                   </Text>
                 </View>
                 <View style={styles.itemSubheadingRow}>
@@ -324,10 +336,10 @@ const PDF: React.FC<ResumePageProps> = (props) => {
                     style={styles.itemSubheadingIcon}
                   />
                   <Text style={styles.itemSubheading}>
-                    {educationExperience.attributes.institution}
+                    {achievement.attributes.institution}
                   </Text>
                 </View>
-                <Html {...htmlProps}>{educationExperience.html}</Html>
+                <Html {...htmlProps}>{achievement.html}</Html>
               </View>
             ))}
           </View>

@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  a {
+    @apply underline decoration-accent-light-9 decoration-solid decoration-2 underline-offset-2 hover:decoration-inherit dark:decoration-accent-dark-9;
+  }
+}
