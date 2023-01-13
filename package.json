@@ -34,7 +34,7 @@
     "@next/font": "13.1.1",
     "@radix-ui/colors": "0.1.8",
     "@react-pdf/renderer": "3.0.2",
-    "@vercel/og": "0.0.22",
+    "@vercel/og": "0.0.27",
     "front-matter": "4.0.2",
     "indefinite": "2.4.2",
     "marked": "4.2.5",
