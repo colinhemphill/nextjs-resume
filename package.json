@@ -42,7 +42,7 @@
     "next-compose-plugins": "2.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-pdf-html": "1.1.15",
+    "react-pdf-html": "1.1.16",
     "tiny-invariant": "1.3.1"
   },
   "devDependencies": {
