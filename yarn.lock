@@ -370,7 +370,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:7.21.0, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.16.4, @babel/runtime@npm:^7.20.7, @babel/runtime@npm:^7.9.2":
+"@babel/runtime@npm:7.21.0, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.20.13, @babel/runtime@npm:^7.20.7, @babel/runtime@npm:^7.9.2":
   version: 7.21.0
   resolution: "@babel/runtime@npm:7.21.0"
   dependencies:
@@ -833,19 +833,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/bundle-analyzer@npm:13.1.1":
-  version: 13.1.1
-  resolution: "@next/bundle-analyzer@npm:13.1.1"
+"@next/bundle-analyzer@npm:13.1.6":
+  version: 13.1.6
+  resolution: "@next/bundle-analyzer@npm:13.1.6"
   dependencies:
     webpack-bundle-analyzer: 4.7.0
-  checksum: c755cb46ac812dc32f7177ccce84addcc2004648beb317fe498443a2fed2730093b8fcf74e651c6701fae3f2c6faa3a062222231457b27cf5c2af6b6fa91b50c
+  checksum: 4f6b42d5c0068b0d71186462843f20e1352541c1da46be857166194531d16745fe54342cf7f2e059f8b1f88ec607b8dac6699169ef05baad4458698ef535fe72
   languageName: node
   linkType: hard
 
-"@next/env@npm:13.1.1":
-  version: 13.1.1
-  resolution: "@next/env@npm:13.1.1"
-  checksum: e265b9b9e7c28023b33ba99b95e84abdfa501507e2f1b7d7b6469ab93d21edbb59fe4378f0557d12864508b747ff1fbc2f9c7de3d704ba51a37c7295fddb0ec1
+"@next/env@npm:13.1.6":
+  version: 13.1.6
+  resolution: "@next/env@npm:13.1.6"
+  checksum: 0f911a18f0b3372007632fffa87f5d7f802c00d07b3bf757d2d09574735ae43f60000ecdf64b6f06e195971c508c2bcee82dd1e3aab27a08a4300eb0317652bb
   languageName: node
   linkType: hard
 
@@ -858,100 +858,100 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/font@npm:13.1.1":
-  version: 13.1.1
-  resolution: "@next/font@npm:13.1.1"
-  checksum: 468a77d3a6db4a95ece3cc99c28dcaaf6135354ad81c3954a08a6c7d977693d7b7f07ff835b972a80d25794b711d6cb6545ea55fe6bed4c624346f3524061d19
+"@next/font@npm:13.1.6":
+  version: 13.1.6
+  resolution: "@next/font@npm:13.1.6"
+  checksum: 06499c9361d8ecf1bca47f20dfb226b6e9f77668afe967809cd8a4eade1b8620f9d723032098b2a0a9df2d2e2df96ad17e8128fcb7f494c99951ee8a61027966
   languageName: node
   linkType: hard
 
-"@next/swc-android-arm-eabi@npm:13.1.1":
-  version: 13.1.1
-  resolution: "@next/swc-android-arm-eabi@npm:13.1.1"
+"@next/swc-android-arm-eabi@npm:13.1.6":
+  version: 13.1.6
+  resolution: "@next/swc-android-arm-eabi@npm:13.1.6"
   conditions: os=android & cpu=arm
   languageName: node
   linkType: hard
 
-"@next/swc-android-arm64@npm:13.1.1":
-  version: 13.1.1
-  resolution: "@next/swc-android-arm64@npm:13.1.1"
+"@next/swc-android-arm64@npm:13.1.6":
+  version: 13.1.6
+  resolution: "@next/swc-android-arm64@npm:13.1.6"
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:13.1.1":
-  version: 13.1.1
-  resolution: "@next/swc-darwin-arm64@npm:13.1.1"
+"@next/swc-darwin-arm64@npm:13.1.6":
+  version: 13.1.6
+  resolution: "@next/swc-darwin-arm64@npm:13.1.6"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:13.1.1":
-  version: 13.1.1
-  resolution: "@next/swc-darwin-x64@npm:13.1.1"
+"@next/swc-darwin-x64@npm:13.1.6":
+  version: 13.1.6
+  resolution: "@next/swc-darwin-x64@npm:13.1.6"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-freebsd-x64@npm:13.1.1":
-  version: 13.1.1
-  resolution: "@next/swc-freebsd-x64@npm:13.1.1"
+"@next/swc-freebsd-x64@npm:13.1.6":
+  version: 13.1.6
+  resolution: "@next/swc-freebsd-x64@npm:13.1.6"
   conditions: os=freebsd & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm-gnueabihf@npm:13.1.1":
-  version: 13.1.1
-  resolution: "@next/swc-linux-arm-gnueabihf@npm:13.1.1"
+"@next/swc-linux-arm-gnueabihf@npm:13.1.6":
+  version: 13.1.6
+  resolution: "@next/swc-linux-arm-gnueabihf@npm:13.1.6"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:13.1.1":
-  version: 13.1.1
-  resolution: "@next/swc-linux-arm64-gnu@npm:13.1.1"
+"@next/swc-linux-arm64-gnu@npm:13.1.6":
+  version: 13.1.6
+  resolution: "@next/swc-linux-arm64-gnu@npm:13.1.6"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:13.1.1":
-  version: 13.1.1
-  resolution: "@next/swc-linux-arm64-musl@npm:13.1.1"
+"@next/swc-linux-arm64-musl@npm:13.1.6":
+  version: 13.1.6
+  resolution: "@next/swc-linux-arm64-musl@npm:13.1.6"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:13.1.1":
-  version: 13.1.1
-  resolution: "@next/swc-linux-x64-gnu@npm:13.1.1"
+"@next/swc-linux-x64-gnu@npm:13.1.6":
+  version: 13.1.6
+  resolution: "@next/swc-linux-x64-gnu@npm:13.1.6"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:13.1.1":
-  version: 13.1.1
-  resolution: "@next/swc-linux-x64-musl@npm:13.1.1"
+"@next/swc-linux-x64-musl@npm:13.1.6":
+  version: 13.1.6
+  resolution: "@next/swc-linux-x64-musl@npm:13.1.6"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:13.1.1":
-  version: 13.1.1
-  resolution: "@next/swc-win32-arm64-msvc@npm:13.1.1"
+"@next/swc-win32-arm64-msvc@npm:13.1.6":
+  version: 13.1.6
+  resolution: "@next/swc-win32-arm64-msvc@npm:13.1.6"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-ia32-msvc@npm:13.1.1":
-  version: 13.1.1
-  resolution: "@next/swc-win32-ia32-msvc@npm:13.1.1"
+"@next/swc-win32-ia32-msvc@npm:13.1.6":
+  version: 13.1.6
+  resolution: "@next/swc-win32-ia32-msvc@npm:13.1.6"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:13.1.1":
-  version: 13.1.1
-  resolution: "@next/swc-win32-x64-msvc@npm:13.1.1"
+"@next/swc-win32-x64-msvc@npm:13.1.6":
+  version: 13.1.6
+  resolution: "@next/swc-win32-x64-msvc@npm:13.1.6"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -1038,61 +1038,61 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-pdf/font@npm:^2.3.1":
-  version: 2.3.1
-  resolution: "@react-pdf/font@npm:2.3.1"
+"@react-pdf/font@npm:^2.3.2":
+  version: 2.3.2
+  resolution: "@react-pdf/font@npm:2.3.2"
   dependencies:
-    "@babel/runtime": ^7.16.4
+    "@babel/runtime": ^7.20.13
     "@react-pdf/types": ^2.0.9
     cross-fetch: ^3.1.5
     fontkit: ^2.0.2
     is-url: ^1.2.4
-  checksum: f3b9db3cb09f038941bc926b5167020f3a3981ebac9ebf0c49a5fd4cefacd0402827f43959b206efd13e758827dcc219d38781216e7f9dd991ee0b7808951699
+  checksum: 156bb454763736b46b7282f56f789a23820eb0806652bf99e047a53b1cbcc2e6234d96de61ad756b5d1e22d669a67d2a1eb3b7866e8e1942180a96a3a03d5171
   languageName: node
   linkType: hard
 
-"@react-pdf/image@npm:^2.2.0":
-  version: 2.2.0
-  resolution: "@react-pdf/image@npm:2.2.0"
+"@react-pdf/image@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "@react-pdf/image@npm:2.2.1"
   dependencies:
-    "@babel/runtime": ^7.16.4
+    "@babel/runtime": ^7.20.13
     "@react-pdf/png-js": ^2.2.0
     cross-fetch: ^3.1.5
-  checksum: 071bac3fb34cb4ce8a41e58ae14afd6427885ae327840b5666c2ad6c293a1a4524bcb9bf5c72dfdee44de432cc31928a7a9cc67d6da77ffb5b8c6aa3121d5953
+  checksum: d2b3c9e5b6a23c377724072c875eaeea6389fa513ae0e88ed442d7efb0eaa373b0f195e7c6b9404297ede802d063cf20109800f4d7b951087f66bb64f7c04f1a
   languageName: node
   linkType: hard
 
-"@react-pdf/layout@npm:^3.4.0":
-  version: 3.4.0
-  resolution: "@react-pdf/layout@npm:3.4.0"
+"@react-pdf/layout@npm:^3.4.1":
+  version: 3.4.1
+  resolution: "@react-pdf/layout@npm:3.4.1"
   dependencies:
-    "@babel/runtime": ^7.16.4
+    "@babel/runtime": ^7.20.13
     "@react-pdf/fns": 2.0.0
-    "@react-pdf/image": ^2.2.0
-    "@react-pdf/pdfkit": ^3.0.0
+    "@react-pdf/image": ^2.2.1
+    "@react-pdf/pdfkit": ^3.0.2
     "@react-pdf/primitives": ^3.0.0
-    "@react-pdf/stylesheet": ^4.1.1
-    "@react-pdf/textkit": ^4.1.0
+    "@react-pdf/stylesheet": ^4.1.3
+    "@react-pdf/textkit": ^4.1.1
     "@react-pdf/types": ^2.2.0
-    "@react-pdf/yoga": ^4.1.0
+    "@react-pdf/yoga": ^4.1.1
     cross-fetch: ^3.1.5
     emoji-regex: ^8.0.0
     queue: ^6.0.1
-  checksum: bf095f40d3f88980ebe43676b6bec6f76a4fc681e4bf8dedd9a92402323dab0576cfa03e44d2c7de5ca2a7867d8e2cc36da5507808281163b1433bd2f93401af
+  checksum: bd1d2ed0ec8a46a0688fb812d29b324772395ed1b4f8329f9bf47ef425921db430a4651672c900bfc8581087dbbf836018f370048124fb006b9b9329ed41eee1
   languageName: node
   linkType: hard
 
-"@react-pdf/pdfkit@npm:^3.0.0, @react-pdf/pdfkit@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "@react-pdf/pdfkit@npm:3.0.1"
+"@react-pdf/pdfkit@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "@react-pdf/pdfkit@npm:3.0.2"
   dependencies:
-    "@babel/runtime": ^7.16.4
+    "@babel/runtime": ^7.20.13
     "@react-pdf/png-js": ^2.2.0
     browserify-zlib: ^0.2.0
     crypto-js: ^4.0.0
     fontkit: ^2.0.2
     vite-compatible-readable-stream: ^3.6.1
-  checksum: d2c5a157ada00a5936b82fb559cd65edf141426edf0a5688a62f1ba3685f0800c8b35564cce461a9eacbb86d801e1966548f094d4075d24139a4f9b09f2d7b1b
+  checksum: 8ab264e699751c1eb5245eb712c62c681c916e081fdf21a60bfda993f4f39336b238c799baba20d9b9b642a0819f46edd8e93de8dad5f1ce177b6ea57fee83a4
   languageName: node
   linkType: hard
 
@@ -1112,34 +1112,34 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-pdf/render@npm:^3.2.1":
-  version: 3.2.1
-  resolution: "@react-pdf/render@npm:3.2.1"
+"@react-pdf/render@npm:^3.2.2":
+  version: 3.2.2
+  resolution: "@react-pdf/render@npm:3.2.2"
   dependencies:
-    "@babel/runtime": ^7.16.4
+    "@babel/runtime": ^7.20.13
     "@react-pdf/fns": 2.0.0
     "@react-pdf/primitives": ^3.0.0
-    "@react-pdf/textkit": ^4.1.0
+    "@react-pdf/textkit": ^4.1.1
     "@react-pdf/types": ^2.1.0
     abs-svg-path: ^0.1.1
     color-string: ^1.5.3
     normalize-svg-path: ^1.1.0
     parse-svg-path: ^0.1.2
     svg-arc-to-cubic-bezier: ^3.2.0
-  checksum: ac076ceca86f436b7dff66af2f852f9d400fe39d451a09c990eb9d9705547403d0e915bc3cc9bc0dfe813c0afdd5908f73724288bdc05e0ec70c1c9707dd79b4
+  checksum: c1261cbe9228db184d8b86c121d5febed2a701a682fc0f715661613e4bc1c6f72b86fd37e6b91eb626a136b0b8e543628da212cff3b0ec00ed62659efac49eb6
   languageName: node
   linkType: hard
 
-"@react-pdf/renderer@npm:3.1.5":
-  version: 3.1.5
-  resolution: "@react-pdf/renderer@npm:3.1.5"
+"@react-pdf/renderer@npm:3.1.6":
+  version: 3.1.6
+  resolution: "@react-pdf/renderer@npm:3.1.6"
   dependencies:
-    "@babel/runtime": ^7.16.4
-    "@react-pdf/font": ^2.3.1
-    "@react-pdf/layout": ^3.4.0
-    "@react-pdf/pdfkit": ^3.0.1
+    "@babel/runtime": ^7.20.13
+    "@react-pdf/font": ^2.3.2
+    "@react-pdf/layout": ^3.4.1
+    "@react-pdf/pdfkit": ^3.0.2
     "@react-pdf/primitives": ^3.0.0
-    "@react-pdf/render": ^3.2.1
+    "@react-pdf/render": ^3.2.2
     "@react-pdf/types": ^2.2.0
     events: ^3.3.0
     loose-envify: ^1.1.0
@@ -1149,34 +1149,34 @@ __metadata:
     scheduler: ^0.17.0
   peerDependencies:
     react: ^16.8.6 || ^17.0.0 || ^18.0.0
-  checksum: 025a3a3ce3d757e07b78b1be97721d8966c5fac9e8a55141876865ce73807967a86e0b67d0332a47fd081388e8210f9b6aa8fc52da8dc1904edae95da47577cf
+  checksum: 6e5739507e68818a0a57e38240c5266ca55a1a12f19b06fe1a73eced40d338d454f19718ad2098902ede157c0fd75dc4ceb34a33a38cccdf97655302512733c1
   languageName: node
   linkType: hard
 
-"@react-pdf/stylesheet@npm:^4.1.1":
-  version: 4.1.2
-  resolution: "@react-pdf/stylesheet@npm:4.1.2"
+"@react-pdf/stylesheet@npm:^4.1.3":
+  version: 4.1.3
+  resolution: "@react-pdf/stylesheet@npm:4.1.3"
   dependencies:
-    "@babel/runtime": ^7.16.4
+    "@babel/runtime": ^7.20.13
     "@react-pdf/fns": 2.0.0
     "@react-pdf/types": ^2.2.0
     color-string: ^1.5.3
     hsl-to-hex: ^1.0.0
     media-engine: ^1.0.3
     postcss-value-parser: ^4.1.0
-  checksum: be3310afe592fec96b0c011a47c2f02cf7a7e81812f8587b73e863ba255b7caa66daea3348c5b8fc142b64a4746354689921dd64c7aa61fbc4ccecc107cc4d03
+  checksum: 43b48dc7f1bc767b9e1e7bbc94455b6e62b4b784c63590164e86f4d9786cfa2e750e8852a9ec59dc62a10342628cac40abf0814ddf6163ff45d017b966095a6c
   languageName: node
   linkType: hard
 
-"@react-pdf/textkit@npm:^4.1.0":
-  version: 4.1.0
-  resolution: "@react-pdf/textkit@npm:4.1.0"
+"@react-pdf/textkit@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "@react-pdf/textkit@npm:4.1.1"
   dependencies:
-    "@babel/runtime": ^7.16.4
+    "@babel/runtime": ^7.20.13
     "@react-pdf/fns": 2.0.0
     hyphen: ^1.6.4
     unicode-properties: ^1.4.1
-  checksum: f4eb696fb6028820f17fb186be40159e47951bab30762d12b592fbcdae40955b22a7aa442928c01d04d9f8c72fed68ccfea54b113bbd74e5441c4731c2d34e5f
+  checksum: c8f19bc5aca0d030a07bfd70e267256433b3a5614e2fad2b9c6117564db2b32ff31985be2c2aac2890f23c3f7bf4e87c0bf0e2a63d8084198c7f785d735dc2d4
   languageName: node
   linkType: hard
 
@@ -1187,12 +1187,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-pdf/yoga@npm:^4.1.0":
-  version: 4.1.0
-  resolution: "@react-pdf/yoga@npm:4.1.0"
+"@react-pdf/yoga@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "@react-pdf/yoga@npm:4.1.1"
   dependencies:
-    "@babel/runtime": ^7.16.4
-  checksum: c9e1b9afcb6af93d1d045fbcfaa11150987803575ea21b58edad9bd816eda5d2470a63c79074525a26776177610f60a4f58363a4fd1688f38ded0074e4ed92c6
+    "@babel/runtime": ^7.20.13
+  checksum: d1e93afccf1253c9a665bd04530193ec8979b9896c6cb6b5d65d141bc6752b91a8854ecd83899099e1e55887692fe3fb145d0c33bc1395ff275ed83214fdf474
   languageName: node
   linkType: hard
 
@@ -1475,10 +1475,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:18.14.0":
+"@types/node@npm:*":
   version: 18.14.0
   resolution: "@types/node@npm:18.14.0"
   checksum: d83fcf5e4ed544755dd9028f5cbb6b9d46235043159111bb2ad62223729aee581c0144a9f6df8ba73d74011db9ed4ebd7af2fd5e0996714e3beb508a5da8ac5c
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:18.14.1":
+  version: 18.14.1
+  resolution: "@types/node@npm:18.14.1"
+  checksum: 58556bbdb0050e44a4934742c1da2530812782c06d266a758e669e44c5aa196166c5fce45fdb03f016876717e3840478b3220129bb77367f979607564047f0a3
   languageName: node
   linkType: hard
 
@@ -1624,14 +1631,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/og@npm:0.0.27":
-  version: 0.0.27
-  resolution: "@vercel/og@npm:0.0.27"
+"@vercel/og@npm:0.1.0":
+  version: 0.1.0
+  resolution: "@vercel/og@npm:0.1.0"
   dependencies:
     "@resvg/resvg-wasm": 2.0.0-alpha.4
-    satori: 0.0.46
+    satori: 0.2.2
     yoga-wasm-web: 0.3.0
-  checksum: 543ed081284913d5b33fe439a75b389f6c00e2a929d03be238b192a5b7f9d7e03c10f3bdf42e842c55950efdbba75957c03ca7375aed0339c333911a608f7e7a
+  checksum: 484cf8c807d2eaeecdb52ee9afa700e922dd2b8a43ab6f1f9a7c3be8a271362712914aad1701c16729cfef7462d00c27f60561f2904d605a388e1486f4b139d7
   languageName: node
   linkType: hard
 
@@ -6022,17 +6029,17 @@ __metadata:
     "@fortawesome/free-brands-svg-icons": 6.3.0
     "@fortawesome/free-solid-svg-icons": 6.3.0
     "@fortawesome/react-fontawesome": 0.2.0
-    "@next/bundle-analyzer": 13.1.1
-    "@next/font": 13.1.1
+    "@next/bundle-analyzer": 13.1.6
+    "@next/font": 13.1.6
     "@radix-ui/colors": 0.1.8
-    "@react-pdf/renderer": 3.1.5
+    "@react-pdf/renderer": 3.1.6
     "@tailwindcss/typography": 0.5.9
     "@testing-library/jest-dom": 5.16.5
     "@testing-library/react": 14.0.0
     "@types/jest": 29.4.0
-    "@types/node": 18.14.0
+    "@types/node": 18.14.1
     "@types/react": 18.0.28
-    "@vercel/og": 0.0.27
+    "@vercel/og": 0.1.0
     autoprefixer: 10.4.13
     copyfiles: 2.4.1
     eslint: 8.34.0
@@ -6045,7 +6052,7 @@ __metadata:
     jest-environment-jsdom: 29.4.3
     lint-staged: 13.1.2
     marked: 4.2.12
-    next: 13.1.1
+    next: 13.1.6
     next-compose-plugins: 2.2.1
     postcss: 8.4.21
     prettier: 2.8.4
@@ -6060,24 +6067,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"next@npm:13.1.1":
-  version: 13.1.1
-  resolution: "next@npm:13.1.1"
+"next@npm:13.1.6":
+  version: 13.1.6
+  resolution: "next@npm:13.1.6"
   dependencies:
-    "@next/env": 13.1.1
-    "@next/swc-android-arm-eabi": 13.1.1
-    "@next/swc-android-arm64": 13.1.1
-    "@next/swc-darwin-arm64": 13.1.1
-    "@next/swc-darwin-x64": 13.1.1
-    "@next/swc-freebsd-x64": 13.1.1
-    "@next/swc-linux-arm-gnueabihf": 13.1.1
-    "@next/swc-linux-arm64-gnu": 13.1.1
-    "@next/swc-linux-arm64-musl": 13.1.1
-    "@next/swc-linux-x64-gnu": 13.1.1
-    "@next/swc-linux-x64-musl": 13.1.1
-    "@next/swc-win32-arm64-msvc": 13.1.1
-    "@next/swc-win32-ia32-msvc": 13.1.1
-    "@next/swc-win32-x64-msvc": 13.1.1
+    "@next/env": 13.1.6
+    "@next/swc-android-arm-eabi": 13.1.6
+    "@next/swc-android-arm64": 13.1.6
+    "@next/swc-darwin-arm64": 13.1.6
+    "@next/swc-darwin-x64": 13.1.6
+    "@next/swc-freebsd-x64": 13.1.6
+    "@next/swc-linux-arm-gnueabihf": 13.1.6
+    "@next/swc-linux-arm64-gnu": 13.1.6
+    "@next/swc-linux-arm64-musl": 13.1.6
+    "@next/swc-linux-x64-gnu": 13.1.6
+    "@next/swc-linux-x64-musl": 13.1.6
+    "@next/swc-win32-arm64-msvc": 13.1.6
+    "@next/swc-win32-ia32-msvc": 13.1.6
+    "@next/swc-win32-x64-msvc": 13.1.6
     "@swc/helpers": 0.4.14
     caniuse-lite: ^1.0.30001406
     postcss: 8.4.14
@@ -6124,7 +6131,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 97a9154d620770388e6a0a84982b094172b851f49b408ac53d83fc4110470dbef63225b9c0008e223c60759b5aa606a547bd909b15d6a166526e168877dfc802
+  checksum: 584977e382bd826c21e7fc5f67bca50e4d95741a854b1686394d45331404479c7266569671227421975fc18e5cf70769a4ad7edede7450d4497213205bba77c8
   languageName: node
   linkType: hard
 
@@ -7277,9 +7284,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"satori@npm:0.0.46":
-  version: 0.0.46
-  resolution: "satori@npm:0.0.46"
+"satori@npm:0.2.2":
+  version: 0.2.2
+  resolution: "satori@npm:0.2.2"
   dependencies:
     "@shuding/opentype.js": 1.4.0-beta.0
     css-background-parser: ^0.1.0
@@ -7288,7 +7295,7 @@ __metadata:
     emoji-regex: ^10.2.1
     postcss-value-parser: ^4.2.0
     yoga-wasm-web: ^0.3.0
-  checksum: 0a0a73637a9ca6c2aec7cbb2ff58677791c764dd83b03b6908864914ce0f46aaee4e67aa9544d6a3ac449056c4fa3436f914404913c2f18718802410aa3d1ec9
+  checksum: 453674e2d639e6b342c75d05fc52991d85e5b2e80a1d0d5590389055965a8ff51cac23f3fa9c12f08f5c73422ebda5899c63c3f7b94f9a18d8e88c5b182cd71f
   languageName: node
   linkType: hard
 

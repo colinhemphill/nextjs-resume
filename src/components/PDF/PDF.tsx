@@ -42,22 +42,22 @@ Font.register({
     {
       fontStyle: 'normal',
       fontWeight: 400,
-      src: `${fontPath}/AlbertSans-Regular-Converted.ttf`,
+      src: `${fontPath}/AlbertSans-Regular.ttf`,
     },
     {
       fontStyle: 'italic',
       fontWeight: 400,
-      src: `${fontPath}/AlbertSans-Italic-Converted.ttf`,
+      src: `${fontPath}/AlbertSans-Italic.ttf`,
     },
     {
       fontStyle: 'normal',
       fontWeight: 700,
-      src: `${fontPath}/AlbertSans-Bold-Converted.ttf`,
+      src: `${fontPath}/AlbertSans-Bold.ttf`,
     },
     {
       fontStyle: 'italic',
       fontWeight: 700,
-      src: `${fontPath}/AlbertSans-BoldItalic-Converted.ttf`,
+      src: `${fontPath}/AlbertSans-BoldItalic.ttf`,
     },
   ],
 });

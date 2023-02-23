@@ -3,7 +3,7 @@ import { links } from '../../../edit-me/cms/links';
 
 export interface CMSLink {
   href: string;
-  icon?: IconDefinition;
+  icon: IconDefinition;
   title: string;
 }
 

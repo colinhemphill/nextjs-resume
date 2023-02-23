@@ -1,3 +1,4 @@
+import { notFound } from 'next/navigation';
 import { getCMSIntegration } from '../../../cms-integration/getCMSIntegration';
 import { getPrivateInformation } from '../../../cms-integration/markdown/private';
 import AboutMe from '../../../components/Articles/AboutMe';
@@ -16,7 +17,7 @@ const Page: React.FC<PageProps> = async ({ params }) => {
   const { secret } = params;
 
   if (secret !== privateKey) {
-    throw new Error('Not authorized');
+    return notFound();
   }
 
   const data = await getCMSIntegration('markdown');

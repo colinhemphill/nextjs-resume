@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [3.1.0] - 2023-02-22
 
+### Added
+
+- PDF rendering now supports emojis
+  - Requires connection to Twemoji at runtime
+- Loads a monospace font in case you need to support code samples
+  - Use the `font-mono` Tailwind class anywhere you want monospace
+
 ### Changed
 
 - Dependency upgrades
@@ -14,6 +21,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Adjust font sizes accordingly
 - Don't hyphenate paragraphs in PDF
 - Switch to rendering SVG components for PDF icons instead of raster images
+- Use the `notFound` function to generate an error if private key doesn't match
+  - Newer version of Next is able to prebuild the page correctly now
+- Improved error page for incorrect private key
 
 ### Fixed
 

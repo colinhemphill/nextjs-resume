@@ -29,6 +29,7 @@ module.exports = {
         },
       },
       fontFamily: {
+        mono: ['var(--font-roboto-mono)'],
         sans: ['var(--font-albert)'],
       },
     },
