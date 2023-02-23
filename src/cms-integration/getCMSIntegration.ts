@@ -25,15 +25,13 @@ export interface CMSData {
 }
 
 export const getCMSIntegration = async (cms: CMS): Promise<CMSData> => {
-  if (cms === 'markdown') {
-    return {
-      achievements: await getAchievements(),
-      hobbies: await getHobbies(),
-      links: await getLinks(),
-      personalInformation: await getPersonalInformation(),
-      professional: await getProfessionalExperiences(),
-      skills: await getSkillCategories(),
-    };
-  }
-  return null;
+  // TODO: CMS switch for future CMS integrations
+  return {
+    achievements: await getAchievements(),
+    hobbies: await getHobbies(),
+    links: await getLinks(),
+    personalInformation: await getPersonalInformation(),
+    professional: await getProfessionalExperiences(),
+    skills: await getSkillCategories(),
+  };
 };

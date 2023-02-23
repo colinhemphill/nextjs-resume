@@ -5,12 +5,39 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.1.0] - 2023-02-22
+
+### Added
+
+- PDF rendering now supports emojis
+  - Requires connection to Twemoji at runtime
+- Loads a monospace font in case you need to support code samples
+  - Use the `font-mono` Tailwind class anywhere you want monospace
+
+### Changed
+
+- Dependency upgrades
+- Default to Albert Sans as the PDF font to match the web look and feel
+  - Adjust font sizes accordingly
+- Don't hyphenate paragraphs in PDF
+- Switch to rendering SVG components for PDF icons instead of raster images
+- Use the `notFound` function to generate an error if private key doesn't match
+  - Newer version of Next is able to prebuild the page correctly now
+- Improved error page for incorrect private key
+
+### Fixed
+
+- Improved rendering of ordered and unordered lists in PDF
+  - Thanks to [justin-hackin](https://github.com/justin-hackin) for the find and custom renderer function
+- Minor flexbox improvements
+  - Switch to percentage layout of sidebar and main content on PDF instead of basing it on inches
+- Text selection colors correctly match the chosen theme
+
 ## [3.0.3] - 2023-02-21
 
 ### Changed
 
 - Dependency upgrades
--
 
 ## [3.0.2] - 2022-12-31
 

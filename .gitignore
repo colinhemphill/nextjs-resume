@@ -3,7 +3,9 @@
 # dependencies
 /node_modules
 /.pnp
-.pnp.js
+.pnp.*
+.yarn
+.yarnrc.yml
 
 # testing
 /coverage
@@ -39,4 +41,6 @@ yarn-error.log*
 **/public/sw.js
 **/public/worker-*.js
 
+# other
+.vscode
 tsconfig.tsbuildinfo

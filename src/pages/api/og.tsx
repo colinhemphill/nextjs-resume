@@ -15,7 +15,7 @@ const albertSansRegular = fetch(
 ).then((res) => res.arrayBuffer());
 
 export const config = {
-  runtime: 'experimental-edge',
+  runtime: 'edge',
 };
 
 const handler = async (req: NextRequest) => {
