@@ -31,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Thanks to [justin-hackin](https://github.com/justin-hackin) for the find and custom renderer function
 - Minor flexbox improvements
   - Switch to percentage layout of sidebar and main content on PDF instead of basing it on inches
+- Text selection colors correctly match the chosen theme
 
 ## [3.0.3] - 2023-02-21
 

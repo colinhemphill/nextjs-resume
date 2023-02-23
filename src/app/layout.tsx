@@ -23,7 +23,7 @@ const robotoMono = Roboto_Mono({
 const RootLayout: React.FC<PropsWithChildren> = async ({ children }) => {
   return (
     <html lang="en" className={`${albert.variable} ${robotoMono.variable}`}>
-      <body className="selection:text-fuchsia-900 bg-neutral-light-1 text-neutral-light-12 selection:bg-accent-light-transparent dark:bg-neutral-dark-1 dark:text-neutral-dark-12 dark:selection:bg-accent-dark-transparent">
+      <body className="bg-neutral-light-1 text-neutral-light-12 selection:bg-accent-light-transparent selection:text-neutral-light-12 dark:bg-neutral-dark-1 dark:text-neutral-dark-12 dark:selection:bg-accent-dark-transparent dark:selection:text-neutral-dark-12">
         {children}
       </body>
     </html>
