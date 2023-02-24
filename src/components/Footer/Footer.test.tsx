@@ -1,4 +1,4 @@
-import { getCMSIntegration } from '../../cms-integration/getCMSIntegration';
+import { getCMSIntegration } from '../../cms-integration/__mocks__/getCMSIntegration';
 import { render } from '../../test-utils';
 import { Footer } from './Footer';
 
