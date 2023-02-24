@@ -1,3 +1,4 @@
+import { cache } from 'react';
 import { CMSAchievement, getAchievements } from './markdown/achievements';
 import { CMSHobbies, getHobbies } from './markdown/hobbies';
 import { CMSLink, getLinks } from './markdown/links';
@@ -24,7 +25,7 @@ export interface CMSData {
   skills: CMSSkillCategory[];
 }
 
-export const getCMSIntegration = async (cms: CMS): Promise<CMSData> => {
+export const getCMSIntegration = cache(async (cms: CMS): Promise<CMSData> => {
   // TODO: CMS switch for future CMS integrations
   return {
     achievements: await getAchievements(),
@@ -34,4 +35,4 @@ export const getCMSIntegration = async (cms: CMS): Promise<CMSData> => {
     professional: await getProfessionalExperiences(),
     skills: await getSkillCategories(),
   };
-};
+});
