@@ -3,7 +3,7 @@
 exports[`<Footer /> Snapshot with links 1`] = `
 <div>
   <footer
-    class="mt-12 bg-neutral-dark-3 py-12 text-neutral-dark-12"
+    class="mt-12 bg-neutral-3 py-12 text-neutral-12"
   >
     <div
       class="container text-center"
@@ -30,7 +30,7 @@ exports[`<Footer /> Snapshot with links 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-circle text-accent-light-10"
+                class="svg-inline--fa fa-circle text-accent-9"
                 data-icon="circle"
                 data-prefix="fas"
                 focusable="false"
@@ -39,13 +39,13 @@ exports[`<Footer /> Snapshot with links 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512z"
+                  d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"
                   fill="currentColor"
                 />
               </svg>
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-github text-accent-light-contrast"
+                class="svg-inline--fa fa-github text-accentContrast"
                 data-icon="github"
                 data-prefix="fab"
                 focusable="false"
@@ -86,7 +86,7 @@ exports[`<Footer /> Snapshot with links 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-circle text-accent-light-10"
+                class="svg-inline--fa fa-circle text-accent-9"
                 data-icon="circle"
                 data-prefix="fas"
                 focusable="false"
@@ -95,13 +95,13 @@ exports[`<Footer /> Snapshot with links 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512z"
+                  d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"
                   fill="currentColor"
                 />
               </svg>
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-instagram text-accent-light-contrast"
+                class="svg-inline--fa fa-instagram text-accentContrast"
                 data-icon="instagram"
                 data-prefix="fab"
                 focusable="false"
@@ -142,7 +142,7 @@ exports[`<Footer /> Snapshot with links 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-circle text-accent-light-10"
+                class="svg-inline--fa fa-circle text-accent-9"
                 data-icon="circle"
                 data-prefix="fas"
                 focusable="false"
@@ -151,13 +151,13 @@ exports[`<Footer /> Snapshot with links 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512z"
+                  d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"
                   fill="currentColor"
                 />
               </svg>
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-linkedin text-accent-light-contrast"
+                class="svg-inline--fa fa-linkedin text-accentContrast"
                 data-icon="linkedin"
                 data-prefix="fab"
                 focusable="false"
@@ -198,7 +198,7 @@ exports[`<Footer /> Snapshot with links 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-circle text-accent-light-10"
+                class="svg-inline--fa fa-circle text-accent-9"
                 data-icon="circle"
                 data-prefix="fas"
                 focusable="false"
@@ -207,13 +207,13 @@ exports[`<Footer /> Snapshot with links 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512z"
+                  d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"
                   fill="currentColor"
                 />
               </svg>
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-npm text-accent-light-contrast"
+                class="svg-inline--fa fa-npm text-accentContrast"
                 data-icon="npm"
                 data-prefix="fab"
                 focusable="false"
@@ -254,7 +254,7 @@ exports[`<Footer /> Snapshot with links 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-circle text-accent-light-10"
+                class="svg-inline--fa fa-circle text-accent-9"
                 data-icon="circle"
                 data-prefix="fas"
                 focusable="false"
@@ -263,13 +263,13 @@ exports[`<Footer /> Snapshot with links 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512z"
+                  d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"
                   fill="currentColor"
                 />
               </svg>
               <svg
                 aria-hidden="true"
-                class="svg-inline--fa fa-twitter text-accent-light-contrast"
+                class="svg-inline--fa fa-twitter text-accentContrast"
                 data-icon="twitter"
                 data-prefix="fab"
                 focusable="false"
@@ -342,7 +342,7 @@ exports[`<Footer /> Snapshot with links 1`] = `
 exports[`<Footer /> Snapshot without links 1`] = `
 <div>
   <footer
-    class="mt-12 bg-neutral-dark-3 py-12 text-neutral-dark-12"
+    class="mt-12 bg-neutral-3 py-12 text-neutral-12"
   >
     <div
       class="container text-center"

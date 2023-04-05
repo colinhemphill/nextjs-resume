@@ -7,7 +7,7 @@ exports[`<StarRating /> Snapshot 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="svg-inline--fa fa-star inline h-5 w-5 text-accent-light-11 dark:text-amber-dark-11"
+      class="svg-inline--fa fa-star inline h-5 w-5 text-accent-11 dark:text-amber-11"
       data-icon="star"
       data-prefix="fas"
       focusable="false"
@@ -22,7 +22,7 @@ exports[`<StarRating /> Snapshot 1`] = `
     </svg>
     <svg
       aria-hidden="true"
-      class="svg-inline--fa fa-star inline h-5 w-5 text-accent-light-11 dark:text-amber-dark-11"
+      class="svg-inline--fa fa-star inline h-5 w-5 text-accent-11 dark:text-amber-11"
       data-icon="star"
       data-prefix="fas"
       focusable="false"
@@ -37,7 +37,7 @@ exports[`<StarRating /> Snapshot 1`] = `
     </svg>
     <svg
       aria-hidden="true"
-      class="svg-inline--fa fa-star inline h-5 w-5 text-accent-light-11 dark:text-amber-dark-11"
+      class="svg-inline--fa fa-star inline h-5 w-5 text-accent-11 dark:text-amber-11"
       data-icon="star"
       data-prefix="fas"
       focusable="false"

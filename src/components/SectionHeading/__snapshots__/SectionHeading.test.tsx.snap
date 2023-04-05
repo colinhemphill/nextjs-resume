@@ -3,7 +3,7 @@
 exports[`<SectionHeading /> Snapshot 1`] = `
 <div>
   <h3
-    class="font-bold text-neutral-light-12 dark:text-neutral-dark-12 text-2xl"
+    class="font-bold text-neutral-12 text-2xl"
   >
     <div
       class="flex items-center gap-2"
