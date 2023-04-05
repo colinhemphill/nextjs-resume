@@ -17,7 +17,7 @@ export const Footer: React.FC<FooterProps> = ({
   const fullName = getFullName(personalInformation);
 
   return (
-    <footer className="mt-12 bg-neutral-dark-3 py-12 text-neutral-dark-12">
+    <footer className="mt-12 bg-neutral-3 py-12 text-neutral-12">
       <div className="container text-center">
         {links && (
           <div className="flex justify-center">
@@ -29,12 +29,12 @@ export const Footer: React.FC<FooterProps> = ({
                   </span>
                   <span className="fa-layers fa-fw">
                     <FontAwesomeIcon
-                      className="text-accent-light-10"
+                      className="text-accent-9"
                       icon={faCircle}
                     />
                     <FontAwesomeIcon
                       aria-hidden
-                      className="text-accent-light-contrast"
+                      className="text-accentContrast"
                       icon={link.icon}
                       transform="shrink-8"
                     />

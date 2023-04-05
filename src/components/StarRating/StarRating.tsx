@@ -9,7 +9,7 @@ interface StarRatingProps {
 const Star: React.FC<{ className?: string }> = () => {
   return (
     <FontAwesomeIcon
-      className="inline h-5 w-5 text-accent-light-11 dark:text-amber-dark-11"
+      className="inline h-5 w-5 text-accent-11 dark:text-amber-11"
       icon={faStar}
     />
   );

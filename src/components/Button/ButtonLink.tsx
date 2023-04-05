@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import {
   AnchorHTMLAttributes,
   DetailedHTMLProps,
@@ -28,7 +29,10 @@ const ButtonLink: React.FC<PropsWithChildren<ButtonLinkProps>> = ({
 
   return (
     <a
-      className={`rounded-md border-2 border-accent-light-7 bg-accent-light-1 font-medium text-accent-light-11 no-underline outline-none transition hover:border-accent-light-8 focus:border-transparent focus:bg-accent-light-10 focus:text-accent-light-contrast focus:ring-4 focus:ring-accent-light-transparent hover:focus:border-transparent dark:border-accent-dark-7 dark:bg-accent-dark-1 dark:text-accent-dark-11 dark:hover:border-accent-dark-8 focus:dark:ring-accent-dark-transparent ${sizeClasses}`}
+      className={clsx(
+        'rounded-md border-2 border-accent-7 bg-accent-1 font-medium text-accent-11 no-underline outline-none transition hover:border-accent-8 focus:border-transparent focus:bg-accent-9 focus:text-accentContrast focus:ring-4 focus:ring-accent-6 hover:focus:border-transparent',
+        sizeClasses,
+      )}
       {...rest}
     >
       {children}

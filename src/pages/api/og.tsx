@@ -1,11 +1,12 @@
+import * as colors from '@radix-ui/colors';
 import { ImageResponse } from '@vercel/og';
 import { NextRequest } from 'next/server';
 import resumeConfig from '../../../edit-me/config/resumeConfig';
-import accents from '../../tokens/accents';
-import neutrals from '../../tokens/neutrals';
 
-const accentColor = accents[resumeConfig.accentColor];
-const neutralColor = neutrals[resumeConfig.neutralColor];
+const configAccent = resumeConfig.accentColor;
+const configNeutral = resumeConfig.neutralColor;
+const accentColor = colors[configAccent];
+const neutralColor = colors[configNeutral];
 
 const albertSansBold = fetch(
   new URL('../../../public/fonts/AlbertSans-Bold.ttf', import.meta.url),
@@ -32,21 +33,21 @@ const handler = async (req: NextRequest) => {
       (
         <div
           style={{
-            backgroundColor: neutral[1],
+            backgroundColor: neutral[`${configNeutral}1`],
           }}
           tw="flex w-full h-full items-center justify-center"
         >
           <div
             style={{
-              backgroundColor: accent[1],
-              color: accent[11],
-              borderColor: accent[7],
+              backgroundColor: accent[`${configAccent}1`],
+              color: accent[`${configAccent}11`],
+              borderColor: accent[`${configAccent}7`],
             }}
             tw="flex flex-col items-center justify-center text-center w-9/12 h-8/12 border-2 rounded-xl"
           >
             <div
               style={{
-                color: accent[12],
+                color: accent[`${configAccent}12`],
                 fontFamily: 'Albert Sans Bold',
                 fontWeight: 700,
               }}
@@ -56,14 +57,17 @@ const handler = async (req: NextRequest) => {
             </div>
             <div
               style={{
-                color: accent[11],
+                color: accent[`${configAccent}11`],
                 fontFamily: 'Albert Sans Regular',
               }}
               tw="text-6xl"
             >
               Professional Résumé
             </div>
-            <div style={{ color: accent[12] }} tw="mt-12 text-4xl rounded-lg">
+            <div
+              style={{ color: accent[`${configAccent}12`] }}
+              tw="mt-12 text-4xl rounded-lg"
+            >
               Available online or as a PDF
             </div>
           </div>

@@ -17,13 +17,10 @@ export const SectionHeading: React.FC<SectionHeadingProps> = (props) => {
       <div className="flex items-center gap-2">
         {icon && (
           <span className="fa-layers fa-fw hidden md:flex">
-            <FontAwesomeIcon
-              className="text-neutral-light-12 dark:text-neutral-dark-12"
-              icon={faCircle}
-            />
+            <FontAwesomeIcon className="text-neutral-12" icon={faCircle} />
             <FontAwesomeIcon
               aria-hidden
-              className="text-neutral-light-1 dark:text-neutral-dark-1"
+              className="text-neutral-1"
               icon={icon}
               transform="shrink-8"
             />
