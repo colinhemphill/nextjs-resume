@@ -1026,7 +1026,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@radix-ui/colors@npm:^0.1.8":
+"@radix-ui/colors@npm:0.1.8":
   version: 0.1.8
   resolution: "@radix-ui/colors@npm:0.1.8"
   checksum: 35fb8e48b1333e0a800ee55ce554d29016c10d2cb23aa161c6476c32b8231ec78f0ae57535ad482aa35adf0b64c957d92da88ef7f3a3f4a2f8c06870208c7ed1
@@ -2598,7 +2598,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clsx@npm:^1.2.1":
+"clsx@npm:1.2.1":
   version: 1.2.1
   resolution: "clsx@npm:1.2.1"
   checksum: 30befca8019b2eb7dbad38cff6266cf543091dae2825c856a62a8ccf2c3ab9c2907c4d12b288b73101196767f66812365400a227581484a05f968b0307cfaf12
@@ -6014,7 +6014,7 @@ __metadata:
     "@fortawesome/free-brands-svg-icons": 6.4.0
     "@fortawesome/free-solid-svg-icons": 6.4.0
     "@fortawesome/react-fontawesome": 0.2.0
-    "@radix-ui/colors": ^0.1.8
+    "@radix-ui/colors": 0.1.8
     "@react-pdf/renderer": 3.1.9
     "@tailwindcss/typography": 0.5.9
     "@testing-library/jest-dom": 5.16.5
@@ -6024,7 +6024,7 @@ __metadata:
     "@types/react": 18.0.33
     "@vercel/og": 0.5.0
     autoprefixer: 10.4.14
-    clsx: ^1.2.1
+    clsx: 1.2.1
     copyfiles: 2.4.1
     eslint: 8.37.0
     eslint-config-next: 13.2.4
@@ -6048,7 +6048,7 @@ __metadata:
     typescript: 5.0.3
     webpack: 5.78.0
     windy-radix-palette: 0.5.0
-    windy-radix-typography: ^0.1.0
+    windy-radix-typography: 0.1.0
   languageName: unknown
   linkType: soft
 
@@ -8472,7 +8472,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"windy-radix-typography@npm:^0.1.0":
+"windy-radix-typography@npm:0.1.0":
   version: 0.1.0
   resolution: "windy-radix-typography@npm:0.1.0"
   peerDependencies:

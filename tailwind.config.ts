@@ -5,15 +5,33 @@ import { toRadixVars } from 'windy-radix-palette/vars';
 import windyRadixTypographyPlugin from 'windy-radix-typography';
 import resumeConfig from './edit-me/config/resumeConfig';
 import { contrastColor } from './src/helpers/colorContrast';
+import * as colors from '@radix-ui/colors';
 
 export default {
   content: [
     './src/app/**/*.{js,ts,jsx,tsx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
   ],
-  plugins: [windyRadixPlugin, typographyPlugin, windyRadixTypographyPlugin],
+  plugins: [
+    windyRadixPlugin({
+      // only generate CSS vars for configured color choices
+      colors: {
+        [resumeConfig.accentColor]: colors[resumeConfig.accentColor],
+        [`${resumeConfig.accentColor}Dark`]:
+          colors[`${resumeConfig.accentColor}Dark`],
+        amber: colors.amber,
+        ambeDark: colors.amberDark,
+        [resumeConfig.neutralColor]: colors[resumeConfig.neutralColor],
+        [`${resumeConfig.neutralColor}Dark`]:
+          colors[`${resumeConfig.neutralColor}Dark`],
+      },
+    }),
+    typographyPlugin,
+    windyRadixTypographyPlugin,
+  ],
   theme: {
     extend: {
+      // add semantic names for configured color choices
       colors: {
         accent: toRadixVars(resumeConfig.accentColor),
         accentContrast: contrastColor,
