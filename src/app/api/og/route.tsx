@@ -18,7 +18,7 @@ export const runtime = 'edge';
 export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);
-    const theme = searchParams.get('theme') || 'light';
+    const theme = searchParams.get('theme') || resumeConfig.ogImageTheme;
     const name = searchParams.get('name');
     const fontBold = await albertSansBold;
     const fontRegular = await albertSansRegular;
