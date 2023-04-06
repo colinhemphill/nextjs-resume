@@ -62,6 +62,17 @@ Font.register({
   ],
 });
 
+Font.register({
+  family: 'JetBrains Mono',
+  fonts: [
+    {
+      fontStyle: 'normal',
+      fontWeight: 500,
+      src: `${fontPath}/JetBrainsMono-Medium.ttf`,
+    },
+  ],
+});
+
 const hyphenationCallback = (word) => {
   // don't hyphenate
   return [word];
@@ -207,6 +218,13 @@ const styles = StyleSheet.create({
   list: {
     marginTop: spacers[2],
   },
+  code: {
+    backgroundColor: neutralColor[`${configNeutral}4`],
+    borderRadius: '3px',
+    fontFamily: 'JetBrains Mono',
+    fontWeight: 500,
+    paddingHorizontal: spacers[2],
+  },
 });
 
 const htmlProps: Omit<HtmlProps, 'children'> = {
@@ -217,6 +235,7 @@ const htmlProps: Omit<HtmlProps, 'children'> = {
     p: styles.sectionParagraph,
     ul: styles.list,
     ol: styles.list,
+    code: styles.code,
   },
 };
 
