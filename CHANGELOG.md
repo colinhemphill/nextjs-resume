@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.3.1] - 2023-04-06
+
+### Changed
+
+- Migrated the OG generator from `/pages/api/og.tsx` to a route handler at `/app/api/og/route.tsx`
+  - This is a non-breaking change from the perspective of using the API, but if you've already modified your OG generator to customize the styles or content, you'll want to make those changes in the route handler now
+
 ## [3.3.0] - 2023-04-06
 
 ### Added

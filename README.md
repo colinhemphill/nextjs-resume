@@ -133,6 +133,6 @@ The template is built to be responsive, beautiful, and accessible right out of t
 
 If you really want to go deep on customization, you can create your own themes in the `src/tokens` folder to add custom accent and neutral palettes. You also have full control of the Tailwind configuration in the root folder `tailwind.config.js` file.
 
-We use [Vercel OG Image Generation](https://vercel.com/docs/concepts/functions/edge-functions/og-image-generation) to generate dynamic Open Graph (Facebook/Twitter) share images. You can edit the layout, styles, and text of OG Image using Tailwind classes in `src/pages/api/og.tsx`.
+We use [Vercel OG Image Generation](https://vercel.com/docs/concepts/functions/edge-functions/og-image-generation) in a [Route Handler](https://beta.nextjs.org/docs/routing/route-handlers) to generate dynamic Open Graph (Facebook/Twitter) share images. You can edit the layout, styles, and text of OG Image using Tailwind classes in `src/app/api/og/route.tsx`.
 
 This dynamic share image will use your custom `accentColor` setting, as well as data from the CMS.
