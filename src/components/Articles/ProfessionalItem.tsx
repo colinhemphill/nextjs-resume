@@ -10,9 +10,9 @@ const ProfessionalItem: React.FC<CMSProfessionalExperience> = ({
   html,
 }) => {
   return (
-    <article className="border-t-2 border-neutral-light-6 py-6 first-of-type:border-none last-of-type:pb-0 dark:border-neutral-dark-2">
+    <article className="border-t-2 border-neutral-6 py-6 first-of-type:border-none last-of-type:pb-0">
       <Heading level={3}>
-        <span className="rounded-md bg-neutral-light-12 px-2 text-neutral-light-1 dark:bg-neutral-dark-12 dark:text-neutral-dark-1">
+        <span className="rounded-md bg-neutral-12 px-2 text-neutral-1">
           {attributes.title}
         </span>
         <span> at {attributes.organization}</span>

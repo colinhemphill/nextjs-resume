@@ -7,7 +7,7 @@ import Prose from '../Prose/Prose';
 
 const AchievementItem: React.FC<CMSAchievement> = ({ attributes, html }) => {
   return (
-    <article className="border-t-2 border-neutral-light-6 py-6 first-of-type:border-none last-of-type:pb-0 dark:border-neutral-dark-2">
+    <article className="border-t-2 border-neutral-6 py-6 first-of-type:border-none last-of-type:pb-0">
       <Heading level={3}>{attributes.achievement}</Heading>
 
       <div className="mt-1 font-medium tracking-wide">

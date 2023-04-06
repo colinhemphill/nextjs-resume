@@ -12,7 +12,7 @@ const Professional: React.FC<ProfessionalProps> = ({
   professionalExperience,
 }) => {
   return (
-    <article className="rounded-xl bg-neutral-light-3 py-12 dark:bg-neutral-dark-3">
+    <article className="rounded-xl bg-neutral-3 py-12">
       <div className="container">
         <div className="flex justify-center text-center">
           <SectionHeading

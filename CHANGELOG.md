@@ -5,6 +5,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.3.0] - 2023-04-06
+
+### Added
+
+- Styles for inline `code` blocks
+
+### Changed
+
+- Dependency upgrades
+- Rewrote Tailwind config in TypeScript (a [Tailwind 3.3 feature](https://tailwindcss.com/blog/tailwindcss-v3-3))
+- Use [windy-radix-palette](https://github.com/brattonross/windy-radix-palette) to manage colors, with a few personal touches
+  - Supports automatic dark mode, so I was able to remove most `dark:` prefixes
+  - Supports semantic color names so I am able to keep the `neutral` and `accent` conventions
+  - Adds an `accentContrast` color name to determine the appropriate contrasting color for configured accent color (Radix "bright" colors like "sky" and "mint" require black foreground text)
+- `resumeConfig` is now a TypeScript file
+- `resumeConfig` now uses enums for the `accentColor` and `neutralColor` properties
+  - e.g. `accentColor: AccentColors.Blue`
+- Swap "Roboto Mono" for "JetBrains Mono" as the default monospace font
+
+### Removed
+
+- Tailwind Typography plugin and `prose` classes
+  - Now uses a few custom styles that are easier to control and match to the rest of the document
+
 ## [3.2.1] - 2023-03-02
 
 ### Changed

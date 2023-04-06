@@ -1,10 +1,10 @@
+import * as colors from '@radix-ui/colors';
 import { Metadata } from 'next';
-import { Albert_Sans, Roboto_Mono } from 'next/font/google';
+import { Albert_Sans, JetBrains_Mono } from 'next/font/google';
 import { PropsWithChildren } from 'react';
 import resumeConfig from '../../edit-me/config/resumeConfig';
 import { getCMSIntegration } from '../cms-integration/getCMSIntegration';
 import { getFullName } from '../helpers/utils';
-import accents from '../tokens/accents';
 
 // ICONS CONFIG
 import { config } from '@fortawesome/fontawesome-svg-core';
@@ -12,6 +12,7 @@ config.autoAddCss = false;
 
 // STYLES
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import clsx from 'clsx';
 import { headers } from 'next/headers';
 import './globals.css';
 
@@ -21,10 +22,10 @@ const albert = Albert_Sans({
   variable: '--font-albert',
 });
 
-const robotoMono = Roboto_Mono({
+const jetBrainsMono = JetBrains_Mono({
   display: 'swap',
   subsets: ['latin'],
-  variable: '--font-roboto-mono',
+  variable: '--font-jetbrains-mono',
 });
 
 const vercelURL = process.env.NEXT_PUBLIC_VERCEL_URL;
@@ -65,7 +66,8 @@ export const generateMetadata = async (): Promise<Metadata> => {
       url: baseURL,
       images,
     },
-    themeColor: accents[resumeConfig.accentColor].light[9],
+    themeColor:
+      colors[resumeConfig.accentColor][`${resumeConfig.accentColor}9`],
     title,
     twitter: {
       site: siteName,
@@ -81,8 +83,8 @@ export const generateMetadata = async (): Promise<Metadata> => {
 // @ts-expect-error Server Component
 const RootLayout: React.FC<PropsWithChildren> = async ({ children }) => {
   return (
-    <html lang="en" className={`${albert.variable} ${robotoMono.variable}`}>
-      <body className="bg-neutral-light-1 text-neutral-light-12 selection:bg-accent-light-transparent selection:text-neutral-light-12 dark:bg-neutral-dark-1 dark:text-neutral-dark-12 dark:selection:bg-accent-dark-transparent dark:selection:text-neutral-dark-12">
+    <html lang="en" className={clsx(albert.variable, jetBrainsMono.variable)}>
+      <body className="bg-neutral-1 text-neutral-12 selection:bg-accent-11 selection:text-neutral-1">
         {children}
       </body>
     </html>

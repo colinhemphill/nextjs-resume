@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/alt-text */
+import * as colors from '@radix-ui/colors';
 import {
   Document,
   Font,
-  Image,
   Page,
   StyleSheet,
   Text,
@@ -13,10 +13,8 @@ import Html from 'react-pdf-html';
 import { HtmlProps } from 'react-pdf-html/dist/Html';
 import resumeConfig from '../../../edit-me/config/resumeConfig';
 import { CMSData } from '../../cms-integration/getCMSIntegration';
+import { contrastColor } from '../../helpers/colorContrast';
 import { getFullName } from '../../helpers/utils';
-import accents from '../../tokens/accents';
-import neutrals from '../../tokens/neutrals';
-import { htmlRenderers } from './htmlRenderers';
 import { BuildingColumns } from './Icons/BuildingColumns';
 import { Calendar } from './Icons/Calendar';
 import { CircleBriefcase } from './Icons/CircleBriefcase';
@@ -26,15 +24,17 @@ import { CircleIdCard } from './Icons/CircleIdCard';
 import { CirclePaintbrush } from './Icons/CirclePaintbrush';
 import { CircleUser } from './Icons/CircleUser';
 import { Star } from './Icons/Star';
+import { htmlRenderers } from './htmlRenderers';
 
-const accentColor = accents[resumeConfig.accentColor].light;
-const neutralColor = neutrals[resumeConfig.neutralColor].light;
+const configAccent = resumeConfig.accentColor;
+const configNeutral = resumeConfig.neutralColor;
+const accentColor = colors[configAccent];
+const neutralColor = colors[configNeutral];
 
 const domain = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
   : 'http://localhost:3000';
 const fontPath = `${domain}/fonts`;
-const iconPath = `${domain}/pdf/fa-icons`;
 
 Font.register({
   family: 'Albert Sans',
@@ -58,6 +58,17 @@ Font.register({
       fontStyle: 'italic',
       fontWeight: 700,
       src: `${fontPath}/AlbertSans-BoldItalic.ttf`,
+    },
+  ],
+});
+
+Font.register({
+  family: 'JetBrains Mono',
+  fonts: [
+    {
+      fontStyle: 'normal',
+      fontWeight: 500,
+      src: `${fontPath}/JetBrainsMono-Medium.ttf`,
     },
   ],
 });
@@ -95,7 +106,7 @@ const spacers = {
 const styles = StyleSheet.create({
   page: {
     alignItems: 'stretch',
-    backgroundColor: neutralColor[1],
+    backgroundColor: neutralColor[`${configNeutral}1`],
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'nowrap',
@@ -106,9 +117,9 @@ const styles = StyleSheet.create({
   },
   sidebar: {
     alignSelf: 'stretch',
-    backgroundColor: neutralColor[3],
+    backgroundColor: neutralColor[`${configNeutral}3`],
     display: 'flex',
-    color: neutralColor[12],
+    color: neutralColor[`${configNeutral}12`],
     flexBasis: '30%',
     flexDirection: 'column',
     flexGrow: 0,
@@ -116,8 +127,8 @@ const styles = StyleSheet.create({
   },
   sidebarContent: { padding: spacers[4] },
   header: {
-    backgroundColor: accentColor[10],
-    color: accentColor.contrast,
+    backgroundColor: accentColor[`${configAccent}9`],
+    color: contrastColor,
     padding: `${spacers[6]} ${spacers[4]}`,
     textAlign: 'center',
   },
@@ -186,9 +197,9 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
   },
   professionalTitle: {
-    backgroundColor: neutralColor[12],
+    backgroundColor: neutralColor[`${configNeutral}12`],
     borderRadius: '3px',
-    color: neutralColor[1],
+    color: neutralColor[`${configNeutral}1`],
     fontWeight: 700,
     paddingHorizontal: spacers[1],
   },
@@ -201,11 +212,18 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   a: {
-    color: accentColor[11],
+    color: accentColor[`${configAccent}11`],
     textDecoration: 'underline',
   },
   list: {
     marginTop: spacers[2],
+  },
+  code: {
+    backgroundColor: neutralColor[`${configNeutral}4`],
+    borderRadius: '3px',
+    fontFamily: 'JetBrains Mono',
+    fontWeight: 500,
+    paddingHorizontal: spacers[2],
   },
 });
 
@@ -217,6 +235,7 @@ const htmlProps: Omit<HtmlProps, 'children'> = {
     p: styles.sectionParagraph,
     ul: styles.list,
     ol: styles.list,
+    code: styles.code,
   },
 };
 

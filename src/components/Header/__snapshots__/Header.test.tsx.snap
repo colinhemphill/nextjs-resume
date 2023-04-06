@@ -3,7 +3,7 @@
 exports[`<Header /> Snapshot 1`] = `
 <div>
   <div
-    class="mb-12 border-b-2 border-neutral-light-4 py-12 dark:border-neutral-dark-4"
+    class="mb-12 border-b-2 border-neutral-4 py-12"
   >
     <div
       class="container"
@@ -15,12 +15,12 @@ exports[`<Header /> Snapshot 1`] = `
           class="flex flex-1 flex-col gap-2"
         >
           <h1
-            class="font-bold text-neutral-light-12 dark:text-neutral-dark-12 text-4xl"
+            class="font-bold text-neutral-12 text-4xl"
           >
             Some Body
           </h1>
           <h2
-            class="font-bold text-neutral-light-11 dark:text-neutral-dark-11 text-3xl"
+            class="font-bold text-neutral-11 text-3xl"
           >
             Official Job Title
           </h2>
@@ -29,7 +29,7 @@ exports[`<Header /> Snapshot 1`] = `
           class="mt-6 md:mt-0"
         >
           <a
-            class="rounded-md border-2 border-accent-light-7 bg-accent-light-1 font-medium text-accent-light-11 no-underline outline-none transition hover:border-accent-light-8 focus:border-transparent focus:bg-accent-light-10 focus:text-accent-light-contrast focus:ring-4 focus:ring-accent-light-transparent hover:focus:border-transparent dark:border-accent-dark-7 dark:bg-accent-dark-1 dark:text-accent-dark-11 dark:hover:border-accent-dark-8 focus:dark:ring-accent-dark-transparent text-lg py-3 px-8"
+            class="rounded-md border-2 border-accent-7 bg-accent-1 font-medium text-accent-11 no-underline outline-none transition hover:border-accent-8 focus:border-transparent focus:bg-accent-9 focus:text-accentContrast focus:ring-4 focus:ring-accent-6 hover:focus:border-transparent text-lg py-3 px-8"
             href="/api/pdf"
           >
             <svg
@@ -39,11 +39,11 @@ exports[`<Header /> Snapshot 1`] = `
               data-prefix="fas"
               focusable="false"
               role="img"
-              viewBox="0 0 448 512"
+              viewBox="0 0 512 512"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V304H296 272 184 160c-35.3 0-64 28.7-64 64v80 48 16H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zM160 352h24c30.9 0 56 25.1 56 56s-25.1 56-56 56h-8v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm24 80c13.3 0 24-10.7 24-24s-10.7-24-24-24h-8v48h8zm88-80h24c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H272c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm24 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16h-8v96h8zm72-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H400v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H400v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"
+                d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V304H176c-35.3 0-64 28.7-64 64V512H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56H192v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H192v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H304c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H320v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"
                 fill="currentColor"
               />
             </svg>

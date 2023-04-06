@@ -64,10 +64,10 @@ I've tested the project with `npm`, `pnpm`, and `yarn` and haven't run into any 
 
 ### Modify Custom Config
 
-Open the project in favorite editor, and open up the `edit-me/config/` folder at the root. Here you will find a couple of placeholder images that you can swap out if you want. You can also edit the `manifest.json` and `resumeConfig.ts` to meet your needs. The config file contains the following constants that will be used throughout the project (these are typed to provide appropriate autocomplete and error checking):
+Open the project in favorite editor, and open up the `edit-me/config/` folder at the root. Here you will find a couple of placeholder images that you can swap out if you want. You can also edit the `resumeConfig.ts` to meet your needs. The config file contains the following constants that will be used throughout the project (these are typed to provide appropriate autocomplete and error checking):
 
-- `accentColor`: `string`. The name of an accent palette from [Radix UI Colors](https://www.radix-ui.com/docs/colors/palette-composition/the-scales#colors). If using a standard color, the contrasting text color will be white, and if using a bright color, the contrasting text color will be black.
-- `neutralColor`: `string`. The name of a neutral palette from [Radix UI Grays](https://www.radix-ui.com/docs/colors/palette-composition/the-scales#grays).
+- `accentColor`: `AccentColor`. The name of an accent palette from [Radix UI Colors](https://www.radix-ui.com/docs/colors/palette-composition/the-scales#colors). If using a standard color, the contrasting text color will be white, and if using a bright color, the contrasting text color will be black.
+- `neutralColor`: `NeutralColor`. The name of a neutral palette from [Radix UI Grays](https://www.radix-ui.com/docs/colors/palette-composition/the-scales#grays).
 - `ogImageTheme`: `'light' | 'dark'`. Your OG share image will generate either a light or a dark variant.
 
 ### Color Palette Examples

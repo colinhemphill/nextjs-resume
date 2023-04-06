@@ -12,7 +12,7 @@ export default function Error({ error }: { error: Error }) {
 
   return (
     <div className="container mt-12 text-center">
-      <div className="rounded-xl bg-neutral-light-3 py-12 dark:bg-neutral-dark-3">
+      <div className="rounded-xl bg-neutral-3 py-12">
         <Heading color="error11" level={2}>
           {error.message}
         </Heading>
