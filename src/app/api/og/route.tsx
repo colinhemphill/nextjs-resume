@@ -1,23 +1,21 @@
 import * as colors from '@radix-ui/colors';
 import { ImageResponse } from '@vercel/og';
 import { NextRequest } from 'next/server';
-import resumeConfig from '../../../edit-me/config/resumeConfig';
+import resumeConfig from '../../../../edit-me/config/resumeConfig';
 
 const configAccent = resumeConfig.accentColor;
 const configNeutral = resumeConfig.neutralColor;
 
 const albertSansBold = fetch(
-  new URL('../../../public/fonts/AlbertSans-Bold.ttf', import.meta.url),
+  new URL('../../../../public/fonts/AlbertSans-Bold.ttf', import.meta.url),
 ).then((res) => res.arrayBuffer());
 const albertSansRegular = fetch(
-  new URL('../../../public/fonts/AlbertSans-Regular.ttf', import.meta.url),
+  new URL('../../../../public/fonts/AlbertSans-Regular.ttf', import.meta.url),
 ).then((res) => res.arrayBuffer());
 
-export const config = {
-  runtime: 'edge',
-};
+export const runtime = 'edge';
 
-const handler = async (req: NextRequest) => {
+export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);
     const theme = searchParams.get('theme') || 'light';
@@ -99,6 +97,4 @@ const handler = async (req: NextRequest) => {
       status: 500,
     });
   }
-};
-
-export default handler;
+}
