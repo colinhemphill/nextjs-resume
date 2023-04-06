@@ -1,11 +1,9 @@
-import typographyPlugin from '@tailwindcss/typography';
+import * as colors from '@radix-ui/colors';
 import type { Config } from 'tailwindcss';
 import windyRadixPlugin from 'windy-radix-palette';
 import { toRadixVars } from 'windy-radix-palette/vars';
-import windyRadixTypographyPlugin from 'windy-radix-typography';
 import resumeConfig from './edit-me/config/resumeConfig';
 import { contrastColor } from './src/helpers/colorContrast';
-import * as colors from '@radix-ui/colors';
 
 export default {
   content: [
@@ -26,8 +24,6 @@ export default {
           colors[`${resumeConfig.neutralColor}Dark`],
       },
     }),
-    typographyPlugin,
-    windyRadixTypographyPlugin,
   ],
   theme: {
     extend: {

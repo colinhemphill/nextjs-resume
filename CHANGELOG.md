@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [3.3.0] - 2023-04-06
 
+### Added
+
+- Styles for inline `code` blocks
+
 ### Changed
 
 - Dependency upgrades
@@ -19,6 +23,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `resumeConfig` now uses enums for the `accentColor` and `neutralColor` properties
   - e.g. `accentColor: AccentColors.Blue`
 - Swap "Roboto Mono" for "JetBrains Mono" as the default monospace font
+
+### Removed
+
+- Tailwind Typography plugin and `prose` classes
+  - Now uses a few custom styles that are easier to control and match to the rest of the document
 
 ## [3.2.1] - 2023-03-02
 
