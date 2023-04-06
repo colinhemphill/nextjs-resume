@@ -1627,14 +1627,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/og@npm:0.4.2":
-  version: 0.4.2
-  resolution: "@vercel/og@npm:0.4.2"
+"@vercel/og@npm:0.5.0":
+  version: 0.5.0
+  resolution: "@vercel/og@npm:0.5.0"
   dependencies:
     "@resvg/resvg-wasm": 2.4.1
     satori: 0.4.4
     yoga-wasm-web: 0.3.3
-  checksum: 958d0856f4e1aa469948eff2fcdb88ad92d729893c6795047a47b924e258037256f42d1defe945782be8f2e4a4bfa6d92a5a97cc1dec6c869ac62883b4ae97e6
+  checksum: bf6a361ad7f29fc32c04692fd19162f7b6c1dea9fa0f30bd601d810c853997c27f95e8e4e376dbf217bcf510e67e9f745db945426404e58f1806ae776604431d
   languageName: node
   linkType: hard
 
@@ -6022,7 +6022,7 @@ __metadata:
     "@types/jest": 29.5.0
     "@types/node": 18.15.11
     "@types/react": 18.0.33
-    "@vercel/og": 0.4.2
+    "@vercel/og": 0.5.0
     autoprefixer: 10.4.14
     clsx: ^1.2.1
     copyfiles: 2.4.1
@@ -6039,14 +6039,14 @@ __metadata:
     next: 13.2.4
     postcss: 8.4.21
     prettier: 2.8.7
-    prettier-plugin-tailwindcss: 0.2.6
+    prettier-plugin-tailwindcss: 0.2.7
     react: 18.2.0
     react-dom: 18.2.0
     react-pdf-html: 1.1.18
     tailwindcss: 3.3.1
     tiny-invariant: 1.3.1
     typescript: 5.0.3
-    webpack: 5.77.0
+    webpack: 5.78.0
     windy-radix-palette: 0.5.0
     windy-radix-typography: ^0.1.0
   languageName: unknown
@@ -6737,9 +6737,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-tailwindcss@npm:0.2.6":
-  version: 0.2.6
-  resolution: "prettier-plugin-tailwindcss@npm:0.2.6"
+"prettier-plugin-tailwindcss@npm:0.2.7":
+  version: 0.2.7
+  resolution: "prettier-plugin-tailwindcss@npm:0.2.7"
   peerDependencies:
     "@ianvs/prettier-plugin-sort-imports": "*"
     "@prettier/plugin-php": "*"
@@ -6788,7 +6788,7 @@ __metadata:
       optional: true
     prettier-plugin-twig-melody:
       optional: true
-  checksum: 5cda3cee9657ca67708f348829b168932c89f099fb1bec821afcb9f6e2c3bfdac9bae31cd2a38ecbe5548182093dd4072a8ba9857a25675e8616b35e1eb14ed2
+  checksum: dca201a7454e6eb32b8e5ec0b585add295c4a88fcd92d94d7dd8bdf2040c7210b12efb04764c457781467e7ecec7f32105e9dceb881736a6859c3b2a7a3ad461
   languageName: node
   linkType: hard
 
@@ -8330,9 +8330,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack@npm:5.77.0":
-  version: 5.77.0
-  resolution: "webpack@npm:5.77.0"
+"webpack@npm:5.78.0":
+  version: 5.78.0
+  resolution: "webpack@npm:5.78.0"
   dependencies:
     "@types/eslint-scope": ^3.7.3
     "@types/estree": ^0.0.51
@@ -8363,7 +8363,7 @@ __metadata:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: 21341bb72cbbf61dfb3af91eabe9290a6c05139f268eff3c419e5339deb6c79f2f36de55d9abf017d3ccbad290a535c02325001b2816acc393f3c022e67ac17c
+  checksum: 4213e5bcc23e54c2f2a589e8e96f1fb71a2c05d5033ffda6dd8bae32284abfa0eb6b6d0707806e8dcfa48a8fcda2448d3af6c4539061679251d94c0996bebf99
   languageName: node
   linkType: hard
 

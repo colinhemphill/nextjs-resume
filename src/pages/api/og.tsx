@@ -5,8 +5,6 @@ import resumeConfig from '../../../edit-me/config/resumeConfig';
 
 const configAccent = resumeConfig.accentColor;
 const configNeutral = resumeConfig.neutralColor;
-const accentColor = colors[configAccent];
-const neutralColor = colors[configNeutral];
 
 const albertSansBold = fetch(
   new URL('../../../public/fonts/AlbertSans-Bold.ttf', import.meta.url),
@@ -26,8 +24,11 @@ const handler = async (req: NextRequest) => {
     const name = searchParams.get('name');
     const fontBold = await albertSansBold;
     const fontRegular = await albertSansRegular;
-    const accent = accentColor[theme];
-    const neutral = neutralColor[theme];
+
+    const accent =
+      colors[theme === 'dark' ? `${configAccent}Dark` : configAccent];
+    const neutral =
+      colors[theme === 'dark' ? `${configNeutral}Dark` : configNeutral];
 
     return new ImageResponse(
       (
@@ -93,6 +94,7 @@ const handler = async (req: NextRequest) => {
       },
     );
   } catch (e: any) {
+    console.log(e);
     return new Response('Failed to generate OG image', {
       status: 500,
     });
