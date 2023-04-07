@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.5.0] - 2023-04-07
+
+### Added
+
+- `resumeConfig.appTheme` property
+  - If set to `ThemeSetting.System`, Tailwind will use `media` mode to set the color theme
+  - If set to `ThemeSetting.Light` or `ThemeSetting.Dark`, Tailwind will use the `class` mode to set the color scheme
+  - The app layout applies the `dark` class if `resumeConfig.appTheme` is set to `ThemeSetting.Dark`
+- `resumeConfig.pdfTheme` property
+  - Will set the color theme only for a generated PDF
+  - Can be set independently of the app theme
+  - Defaults to `Theme.Light` for printing purposes
+
+### Changed
+
+- All PDF icons use the color helper functions
+
 ## [3.4.0] - 2023-04-07
 
 ### Added

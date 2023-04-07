@@ -1,10 +1,10 @@
-import * as colors from '@radix-ui/colors';
 import { Path, Svg } from '@react-pdf/renderer';
 import React from 'react';
 import resumeConfig from '../../../../edit-me/config/resumeConfig';
+import { getNeutralColor } from '../../../helpers/colors';
 
-const neutralColor =
-  colors[resumeConfig.neutralColor][`${resumeConfig.neutralColor}12`];
+const theme = resumeConfig.pdfTheme;
+const neutralColor = getNeutralColor(12, theme);
 
 export const Calendar: React.FC<PdfIconProps> = ({ size }) => {
   return (

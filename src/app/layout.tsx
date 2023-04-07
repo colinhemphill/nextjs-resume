@@ -14,6 +14,7 @@ config.autoAddCss = false;
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import clsx from 'clsx';
 import { headers } from 'next/headers';
+import { ThemeSetting } from '../../edit-me/config/Config';
 import './globals.css';
 
 const albert = Albert_Sans({
@@ -81,7 +82,14 @@ export const generateMetadata = async (): Promise<Metadata> => {
 // @ts-expect-error Server Component
 const RootLayout: React.FC<PropsWithChildren> = async ({ children }) => {
   return (
-    <html lang="en" className={clsx(albert.variable, jetBrainsMono.variable)}>
+    <html
+      lang="en"
+      className={clsx(
+        albert.variable,
+        jetBrainsMono.variable,
+        resumeConfig.appTheme === ThemeSetting.Dark && 'dark',
+      )}
+    >
       <body className="bg-neutral-1 text-neutral-12 selection:bg-accent-11 selection:text-neutral-1">
         {children}
       </body>

@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/alt-text */
-import * as colors from '@radix-ui/colors';
 import {
   Document,
   Font,
@@ -14,6 +13,7 @@ import { HtmlProps } from 'react-pdf-html/dist/Html';
 import resumeConfig from '../../../edit-me/config/resumeConfig';
 import { CMSData } from '../../cms-integration/getCMSIntegration';
 import { contrastColor } from '../../helpers/colorContrast';
+import { getAccentColor, getNeutralColor } from '../../helpers/colors';
 import { getFullName } from '../../helpers/utils';
 import { BuildingColumns } from './Icons/BuildingColumns';
 import { Calendar } from './Icons/Calendar';
@@ -25,12 +25,9 @@ import { CirclePaintbrush } from './Icons/CirclePaintbrush';
 import { CircleUser } from './Icons/CircleUser';
 import { Star } from './Icons/Star';
 import { htmlRenderers } from './htmlRenderers';
+import { Theme } from '../../../edit-me/config/Config';
 
-const configAccent = resumeConfig.accentColor;
-const configNeutral = resumeConfig.neutralColor;
-const accentColor = colors[configAccent];
-const neutralColor = colors[configNeutral];
-
+const theme = resumeConfig.pdfTheme;
 const domain = process.env.NEXT_PUBLIC_VERCEL_URL
   ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
   : 'http://localhost:3000';
@@ -106,7 +103,8 @@ const spacers = {
 const styles = StyleSheet.create({
   page: {
     alignItems: 'stretch',
-    backgroundColor: neutralColor[`${configNeutral}1`],
+    backgroundColor: getNeutralColor(1, theme),
+    color: getNeutralColor(12, theme),
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'nowrap',
@@ -117,9 +115,9 @@ const styles = StyleSheet.create({
   },
   sidebar: {
     alignSelf: 'stretch',
-    backgroundColor: neutralColor[`${configNeutral}3`],
+    backgroundColor: getNeutralColor(3, theme),
     display: 'flex',
-    color: neutralColor[`${configNeutral}12`],
+    color: getNeutralColor(12, theme),
     flexBasis: '30%',
     flexDirection: 'column',
     flexGrow: 0,
@@ -127,7 +125,10 @@ const styles = StyleSheet.create({
   },
   sidebarContent: { padding: spacers[4] },
   header: {
-    backgroundColor: accentColor[`${configAccent}9`],
+    backgroundColor:
+      theme === Theme.Dark
+        ? getNeutralColor(2, theme)
+        : getAccentColor(9, theme),
     color: contrastColor,
     padding: `${spacers[6]} ${spacers[4]}`,
     textAlign: 'center',
@@ -197,9 +198,9 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
   },
   professionalTitle: {
-    backgroundColor: neutralColor[`${configNeutral}12`],
+    backgroundColor: getNeutralColor(12, theme),
     borderRadius: '3px',
-    color: neutralColor[`${configNeutral}1`],
+    color: getNeutralColor(1, theme),
     fontWeight: 700,
     paddingHorizontal: spacers[1],
   },
@@ -212,14 +213,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   a: {
-    color: accentColor[`${configAccent}11`],
+    color: getAccentColor(11, theme),
     textDecoration: 'underline',
   },
   list: {
     marginTop: spacers[2],
   },
   code: {
-    backgroundColor: neutralColor[`${configNeutral}4`],
+    backgroundColor: getNeutralColor(4, theme),
     borderRadius: '3px',
     fontFamily: 'JetBrains Mono',
     fontWeight: 500,
