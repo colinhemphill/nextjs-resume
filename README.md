@@ -17,8 +17,7 @@ Your résumé can also generate a secure URL that will display information not a
   - 19 accent color palettes out-of-the-box
   - 6 neutral color palettes out-of-the-box
   - Automatic light and dark modes for each palette
-  - Tailwind styling for making it your own
-  - Create custom color palettes
+  - Tailwind classes to modify app and generated images
 - Dynamic OG share images in light or dark mode
 
 ## Technology
@@ -30,7 +29,7 @@ Your résumé can also generate a secure URL that will display information not a
 - [Front Matter](https://frontmatter.codes/docs/markdown)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Radix UI Colors](https://www.radix-ui.com/colors)
-- [Vercel OG Image Generation](https://vercel.com/docs/concepts/functions/edge-functions/og-image-generation)
+- [Vercel Image Generation](https://beta.nextjs.org/docs/optimizing/image-generation)
 - [Jest](https://jestjs.io/)
 - [Testing Library](https://testing-library.com/)
 - [Vercel](https://vercel.com/)
@@ -133,8 +132,22 @@ This private URL is _only as secure as the people you send it to_. To invalidate
 
 The template is built to be responsive, beautiful, and accessible right out of the box. It supports automatic dark/light mode themeing in the web version, and a great single-page print layout in the PDF version. The project supports a minimal set of configurations such as accent colors, but if you're a front end developer or designer, you can easily open up the source code and customize it however you see fit.
 
-If you really want to go deep on customization, you can create your own themes in the `src/tokens` folder to add custom accent and neutral palettes. You also have full control of the Tailwind configuration in the root folder `tailwind.config.js` file.
+If you really want to go deep on customization, you have full control of the Tailwind configuration in the root folder `tailwind.config.ts` file.
 
 We use [Vercel Image Generation](https://beta.nextjs.org/docs/optimizing/image-generation) to generate dynamic Open Graph (Facebook/Twitter) share images and app icons. You can edit the layout, styles, and text of OG Image using Tailwind classes in `src/app/api/og/route.tsx` and the icon in `src/app/icon.tsx`.
 
 This dynamic share image will use your custom `accentColor` setting, as well as data from the CMS.
+
+## Getting the Latest Updates
+
+To sync your personal résumé with the newest version of this project, you can do the following:
+
+```bash
+// add the original repo as a git remote
+git remote add upstream git@github.com:colinhemphill/nextjs-resume.git
+
+// pull changes from upstream
+git pull upstream main
+```
+
+Then resolve any merge conflicts and make your desired changes. You'll need to look over the [CHANGELOG](/CHANGELOG.md) to see what happened since the last time you pulled, and please note that upstream changes could break your customizations!
