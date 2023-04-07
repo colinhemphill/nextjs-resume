@@ -35,8 +35,13 @@ export enum NeutralColors {
   Sand = 'sand',
 }
 
+export enum Theme {
+  Dark = 'dark',
+  Light = 'light',
+}
+
 export interface ResumeConfig {
   accentColor: AccentColorsBasic | AccentColorsBright;
   neutralColor: NeutralColors;
-  ogImageTheme: 'dark' | 'light';
+  imageTheme: Theme;
 }

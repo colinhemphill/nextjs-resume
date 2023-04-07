@@ -26,13 +26,19 @@ export interface CMSData {
 }
 
 export const getCMSIntegration = cache(async (cms: CMS): Promise<CMSData> => {
-  // TODO: CMS switch for future CMS integrations
-  return {
-    achievements: await getAchievements(),
-    hobbies: await getHobbies(),
-    links: await getLinks(),
-    personalInformation: await getPersonalInformation(),
-    professional: await getProfessionalExperiences(),
-    skills: await getSkillCategories(),
-  };
+  switch (cms) {
+    case 'markdown': {
+      return {
+        achievements: await getAchievements(),
+        hobbies: await getHobbies(),
+        links: await getLinks(),
+        personalInformation: await getPersonalInformation(),
+        professional: await getProfessionalExperiences(),
+        skills: await getSkillCategories(),
+      };
+    }
+    default: {
+      throw new Error(`${cms} CMS is not supported`);
+    }
+  }
 });

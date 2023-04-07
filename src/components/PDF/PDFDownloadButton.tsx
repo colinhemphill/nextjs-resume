@@ -13,7 +13,7 @@ const PDFDownloadButton: React.FC<PDFDownloadButtonProps> = ({ secret }) => {
       href={secret ? `/api/pdf?secret=${secret}` : '/api/pdf'}
       size="lg"
     >
-      <FontAwesomeIcon className="mr-2" icon={faFilePdf} size="lg" />
+      <FontAwesomeIcon icon={faFilePdf} size="lg" />
       View or Download PDF
     </ButtonLink>
   );

@@ -1,7 +1,9 @@
-import { AccentColors, NeutralColors, ResumeConfig } from './Config';
+import { AccentColors, NeutralColors, ResumeConfig, Theme } from './Config';
 
-export default {
+const config: ResumeConfig = {
   accentColor: AccentColors.Blue,
   neutralColor: NeutralColors.Mauve,
-  ogImageTheme: 'light',
-} satisfies ResumeConfig;
+  imageTheme: Theme.Light,
+};
+
+export default config;

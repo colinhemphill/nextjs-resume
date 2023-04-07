@@ -1,16 +1,13 @@
-import * as colors from '@radix-ui/colors';
-import { ImageResponse } from '@vercel/og';
-import { NextRequest } from 'next/server';
+import { ImageResponse, NextRequest } from 'next/server';
+import { Theme } from '../../../../edit-me/config/Config';
 import resumeConfig from '../../../../edit-me/config/resumeConfig';
-
-const configAccent = resumeConfig.accentColor;
-const configNeutral = resumeConfig.neutralColor;
+import { getAccentColor, getNeutralColor } from '../../../helpers/colors';
 
 const albertSansBold = fetch(
-  new URL('../../../../public/fonts/AlbertSans-Bold.ttf', import.meta.url),
+  new URL('public/fonts/AlbertSans-Bold.ttf', import.meta.url),
 ).then((res) => res.arrayBuffer());
 const albertSansRegular = fetch(
-  new URL('../../../../public/fonts/AlbertSans-Regular.ttf', import.meta.url),
+  new URL('public/fonts/AlbertSans-Regular.ttf', import.meta.url),
 ).then((res) => res.arrayBuffer());
 
 export const runtime = 'edge';
@@ -18,35 +15,31 @@ export const runtime = 'edge';
 export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);
-    const theme = searchParams.get('theme') || resumeConfig.ogImageTheme;
+    const theme =
+      (searchParams.get('theme') as Theme) || resumeConfig.imageTheme;
     const name = searchParams.get('name');
     const fontBold = await albertSansBold;
     const fontRegular = await albertSansRegular;
-
-    const accent =
-      colors[theme === 'dark' ? `${configAccent}Dark` : configAccent];
-    const neutral =
-      colors[theme === 'dark' ? `${configNeutral}Dark` : configNeutral];
 
     return new ImageResponse(
       (
         <div
           style={{
-            backgroundColor: neutral[`${configNeutral}1`],
+            backgroundColor: getNeutralColor(1, theme),
           }}
           tw="flex w-full h-full items-center justify-center"
         >
           <div
             style={{
-              backgroundColor: accent[`${configAccent}1`],
-              color: accent[`${configAccent}11`],
-              borderColor: accent[`${configAccent}7`],
+              backgroundColor: getAccentColor(1, theme),
+              color: getAccentColor(11, theme),
+              borderColor: getAccentColor(7, theme),
             }}
             tw="flex flex-col items-center justify-center text-center w-9/12 h-8/12 border-2 rounded-xl"
           >
             <div
               style={{
-                color: accent[`${configAccent}12`],
+                color: getAccentColor(12, theme),
                 fontFamily: 'Albert Sans Bold',
                 fontWeight: 700,
               }}
@@ -56,7 +49,7 @@ export async function GET(req: NextRequest) {
             </div>
             <div
               style={{
-                color: accent[`${configAccent}11`],
+                color: getAccentColor(11, theme),
                 fontFamily: 'Albert Sans Regular',
               }}
               tw="text-6xl"
@@ -64,7 +57,7 @@ export async function GET(req: NextRequest) {
               Professional Résumé
             </div>
             <div
-              style={{ color: accent[`${configAccent}12`] }}
+              style={{ color: getAccentColor(12, theme) }}
               tw="mt-12 text-4xl rounded-lg"
             >
               Available online or as a PDF

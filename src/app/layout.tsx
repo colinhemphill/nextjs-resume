@@ -40,9 +40,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
   const siteName = `${fullName} Professional Résumé`;
   const title = `Résumé | ${fullName} | ${data.personalInformation.attributes.location}`;
   const description = `Professional résumé for ${fullName}.`;
-  const ogImage = `${baseURL}/api/og?name=${encodeURIComponent(
-    fullName,
-  )}&theme=${resumeConfig.ogImageTheme}`;
+  const ogImage = `${baseURL}/api/og?name=${encodeURIComponent(fullName)}`;
   const images = {
     url: ogImage,
     height: 630,
