@@ -68,7 +68,7 @@ Open the project in favorite editor, and open up the `edit-me/config/` folder at
 
 - `accentColor`: `AccentColor`. The name of an accent palette from [Radix UI Colors](https://www.radix-ui.com/docs/colors/palette-composition/the-scales#colors). If using a standard color, the contrasting text color will be white, and if using a bright color, the contrasting text color will be black.
 - `neutralColor`: `NeutralColor`. The name of a neutral palette from [Radix UI Grays](https://www.radix-ui.com/docs/colors/palette-composition/the-scales#grays).
-- `imageTheme`: `'light' | 'dark'`. Your OG share image and favicons will generate either a light or a dark variant.
+- `imageTheme`: `'light' | 'dark'`. Your OG share image and icons will generate either a light or a dark variant.
 
 ### Color Palette Examples
 
@@ -133,6 +133,6 @@ The template is built to be responsive, beautiful, and accessible right out of t
 
 If you really want to go deep on customization, you can create your own themes in the `src/tokens` folder to add custom accent and neutral palettes. You also have full control of the Tailwind configuration in the root folder `tailwind.config.js` file.
 
-We use [Vercel OG Image Generation](https://vercel.com/docs/concepts/functions/edge-functions/og-image-generation) in a [Route Handler](https://beta.nextjs.org/docs/routing/route-handlers) to generate dynamic Open Graph (Facebook/Twitter) share images. You can edit the layout, styles, and text of OG Image using Tailwind classes in `src/app/api/og/route.tsx`.
+We use [Vercel Image Generation](https://beta.nextjs.org/docs/optimizing/image-generation) to generate dynamic Open Graph (Facebook/Twitter) share images and app icons. You can edit the layout, styles, and text of OG Image using Tailwind classes in `src/app/api/og/route.tsx` and the icon in `src/app/icon.tsx`.
 
 This dynamic share image will use your custom `accentColor` setting, as well as data from the CMS.

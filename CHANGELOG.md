@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.4.0] - 2023-04-07
+
+### Added
+
+- Helper functions for getting Radix colors based on a requested shade and your `resumeConfig` settings
+- Generate app icons using the new [image generation](https://beta.nextjs.org/docs/optimizing/image-generation) and [file-based metadata](https://beta.nextjs.org/docs/api-reference/metadata#file-based-metadata) features
+- Add a file-based metadata route for generating a sitemap
+
+### Changed
+
+- Dependency upgrades, including [Next.js 13.3](https://nextjs.org/blog/next-13-3)
+- The `ogImageTheme` setting in `resumeConfig.ts` is now called `imageTheme` since it also applies to icon generation
+  - It also uses a `Theme` enum instead of a plain string now
+- Minor styling adjustments
+
+### Removed
+
+- All manually created static images used for icons and favicons
+
 ## [3.3.1] - 2023-04-06
 
 ### Changed
