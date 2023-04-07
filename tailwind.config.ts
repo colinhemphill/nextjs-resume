@@ -2,6 +2,7 @@ import * as colors from '@radix-ui/colors';
 import type { Config } from 'tailwindcss';
 import windyRadixPlugin from 'windy-radix-palette';
 import { toRadixVars } from 'windy-radix-palette/vars';
+import { ThemeSetting } from './edit-me/config/Config';
 import resumeConfig from './edit-me/config/resumeConfig';
 import { contrastColor } from './src/helpers/colorContrast';
 
@@ -10,6 +11,7 @@ export default {
     './src/app/**/*.{js,ts,jsx,tsx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
   ],
+  darkMode: resumeConfig.appTheme === ThemeSetting.System ? 'media' : 'class',
   plugins: [
     windyRadixPlugin({
       // only generate CSS vars for configured color choices

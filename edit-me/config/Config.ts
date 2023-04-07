@@ -40,8 +40,16 @@ export enum Theme {
   Light = 'light',
 }
 
+export enum ThemeSetting {
+  Dark = 'dark',
+  Light = 'light',
+  System = 'system',
+}
+
 export interface ResumeConfig {
   accentColor: AccentColorsBasic | AccentColorsBright;
   neutralColor: NeutralColors;
   imageTheme: Theme;
+  pdfTheme: Theme;
+  appTheme: ThemeSetting;
 }

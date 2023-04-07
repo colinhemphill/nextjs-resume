@@ -68,7 +68,9 @@ Open the project in favorite editor, and open up the `edit-me/config/` folder at
 
 - `accentColor`: `AccentColor`. The name of an accent palette from [Radix UI Colors](https://www.radix-ui.com/docs/colors/palette-composition/the-scales#colors). If using a standard color, the contrasting text color will be white, and if using a bright color, the contrasting text color will be black.
 - `neutralColor`: `NeutralColor`. The name of a neutral palette from [Radix UI Grays](https://www.radix-ui.com/docs/colors/palette-composition/the-scales#grays).
-- `imageTheme`: `'light' | 'dark'`. Your OG share image and icons will generate either a light or a dark variant.
+- `appTheme`: `'system' | 'light' | 'dark'`. If `appTheme` is set to `system`, the résumé site will default to the user's system preference. If set to `light` or `dark` the user's preference will be overriden.
+- `imageTheme`: `'light' | 'dark'`. Your OG share image and app icons will be generated in either a light or a dark variant.
+- `pdfTheme`: `'light' | 'dark'`. Your PDF will be generated in either a light or a dark variant.
 
 ### Color Palette Examples
 
