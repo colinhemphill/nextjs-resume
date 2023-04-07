@@ -31,8 +31,8 @@ const configNeutral = resumeConfig.neutralColor;
 const accentColor = colors[configAccent];
 const neutralColor = colors[configNeutral];
 
-const domain = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
+const domain = process.env.NEXT_PUBLIC_VERCEL_URL
+  ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
   : 'http://localhost:3000';
 const fontPath = `${domain}/fonts`;
 

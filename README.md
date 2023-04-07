@@ -68,7 +68,7 @@ Open the project in favorite editor, and open up the `edit-me/config/` folder at
 
 - `accentColor`: `AccentColor`. The name of an accent palette from [Radix UI Colors](https://www.radix-ui.com/docs/colors/palette-composition/the-scales#colors). If using a standard color, the contrasting text color will be white, and if using a bright color, the contrasting text color will be black.
 - `neutralColor`: `NeutralColor`. The name of a neutral palette from [Radix UI Grays](https://www.radix-ui.com/docs/colors/palette-composition/the-scales#grays).
-- `ogImageTheme`: `'light' | 'dark'`. Your OG share image will generate either a light or a dark variant.
+- `imageTheme`: `'light' | 'dark'`. Your OG share image and favicons will generate either a light or a dark variant.
 
 ### Color Palette Examples
 
