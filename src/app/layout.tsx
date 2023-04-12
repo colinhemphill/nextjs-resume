@@ -29,24 +29,19 @@ const jetBrainsMono = JetBrains_Mono({
   variable: '--font-jetbrains-mono',
 });
 
-const vercelURL = process.env.NEXT_PUBLIC_VERCEL_URL;
-const dev = process.env.NODE_ENV === 'development';
-const protocol = dev ? 'http' : 'https';
+export const vercelURL = process.env.NEXT_PUBLIC_VERCEL_URL;
+export const dev = process.env.NODE_ENV === 'development';
+export const protocol = dev ? 'http' : 'https';
 
 export const generateMetadata = async (): Promise<Metadata> => {
   const host = headers().get('host');
-  const baseURL = `${protocol}://${vercelURL || host}`;
+  const baseURL = `${protocol}://${host || vercelURL}`;
   const siteName = `${fullName} Professional Résumé`;
   const title = `Résumé | ${fullName} | Somewhere`;
   const description = `Professional résumé for ${fullName}.`;
-  const ogImage = `${baseURL}/api/og?name=${encodeURIComponent(fullName)}`;
-  const images = {
-    url: ogImage,
-    height: 630,
-    width: 1200,
-  };
 
   return {
+    metadataBase: new URL(baseURL),
     applicationName: siteName,
     authors: { name: fullName },
     creator: fullName,
@@ -61,7 +56,6 @@ export const generateMetadata = async (): Promise<Metadata> => {
       description,
       siteName,
       url: baseURL,
-      images,
     },
     themeColor:
       colors[resumeConfig.accentColor][`${resumeConfig.accentColor}9`],
@@ -71,7 +65,6 @@ export const generateMetadata = async (): Promise<Metadata> => {
       creator: fullName,
       description,
       title,
-      images,
     },
     viewport: 'width=device-width, initial-scale=1',
   };

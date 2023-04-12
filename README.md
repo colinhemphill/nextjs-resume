@@ -9,10 +9,11 @@ Your résumé can also generate a secure URL that will display information not a
 ## Features
 
 - Update your résumé with simple Markdown files
-  - Integration with external headless CMS systems is possible by integrating a custom fetcher
+  - Type safe content management using [Contentlayer](https://www.contentlayer.dev/)
+  - Integration with external CMS systems will be possible in the future
 - Beautiful and accessible web app to view your résumé, link on social media, and send to potential employers
-- Generate a PDF on demand to view, download, or print
 - Use a secret link to generate the résumé with additional private information
+- Generate a PDF on demand to view, download, or print in light or dark mode
 - Easily customizable
   - 19 accent color palettes out-of-the-box
   - 6 neutral color palettes out-of-the-box
@@ -25,8 +26,7 @@ Your résumé can also generate a secure URL that will display information not a
 - [Next.js](https://nextjs.org)
 - [TypeScript](https://www.typescriptlang.org/)
 - [React-pdf](https://react-pdf.org/)
-- [Marked](https://marked.js.org/)
-- [Front Matter](https://frontmatter.codes/docs/markdown)
+- [Contentlayer](https://www.contentlayer.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Radix UI Colors](https://www.radix-ui.com/colors)
 - [Vercel Image Generation](https://beta.nextjs.org/docs/optimizing/image-generation)
@@ -63,7 +63,7 @@ I've tested the project with `npm`, `pnpm`, and `yarn` and haven't run into any 
 
 ### Modify Custom Config
 
-Open the project in favorite editor, and open up the `edit-me/config/` folder at the root. Here you will find a couple of placeholder images that you can swap out if you want. You can also edit the `resumeConfig.ts` to meet your needs. The config file contains the following constants that will be used throughout the project (these are typed to provide appropriate autocomplete and error checking):
+Open the project in favorite editor, and open up the `edit-me/config/` folder at the root. You can edit the `resumeConfig.ts` file to meet your needs. The config file contains the following constants that will be used throughout the project (these are typed to provide appropriate autocomplete and error checking):
 
 - `accentColor`: `AccentColor`. The name of an accent palette from [Radix UI Colors](https://www.radix-ui.com/docs/colors/palette-composition/the-scales#colors). If using a standard color, the contrasting text color will be white, and if using a bright color, the contrasting text color will be black.
 - `neutralColor`: `NeutralColor`. The name of a neutral palette from [Radix UI Grays](https://www.radix-ui.com/docs/colors/palette-composition/the-scales#grays).
@@ -91,9 +91,9 @@ Your accent, neutral, and color scheme preferences also apply to the generated O
 
 ### Set Up Your CMS
 
-Next, modify the mock CMS data that is included in `edit-me/cms/`. Each Markdown file uses Front Matter fields that are used to add attributes to the item. These attributes are type safe, so the project won't run if required fields are missing or invalid. The rest of the Markdown file will be rendered as HTML to provide a description of the item.
+Next, modify the mock CMS data that is included in `edit-me/content/`. Each Markdown file uses Front Matter fields that are used to add attributes to the item. These attributes are type safe, so the project won't run if required fields are missing or invalid. The rest of the Markdown file will be rendered as HTML to provide a description of the item.
 
-Although the mock files should be pretty self-explanatory, you can view the [CMS setup document](README-CMS.md) for detailed descriptions of required and optional fields.
+Although the mock files should be pretty self-explanatory, you can view the [Contentlayer config](contentlayer.config.js) for detailed descriptions of required and optional fields.
 
 ### Environment Variables
 
