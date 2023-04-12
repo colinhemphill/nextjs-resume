@@ -1,14 +1,10 @@
 import { faMortarBoard } from '@fortawesome/free-solid-svg-icons';
+import { allAchievements } from 'contentlayer/generated';
 import React from 'react';
-import { CMSAchievement } from '../../cms-integration/markdown/achievements';
 import { SectionHeading } from '../SectionHeading/SectionHeading';
 import AchievementItem from './AchievementItem';
 
-interface AchievementsProps {
-  achievements: CMSAchievement[];
-}
-
-const Achievements: React.FC<AchievementsProps> = ({ achievements }) => {
+const Achievements: React.FC = () => {
   return (
     <article className="rounded-xl bg-neutral-3 py-12">
       <div className="container">
@@ -16,8 +12,8 @@ const Achievements: React.FC<AchievementsProps> = ({ achievements }) => {
           <SectionHeading icon={faMortarBoard} level={2} text="Achievements" />
         </div>
 
-        {achievements.map((achievement) => (
-          <AchievementItem key={achievement.slug} {...achievement} />
+        {allAchievements.map((achievement) => (
+          <AchievementItem key={achievement._id} {...achievement} />
         ))}
       </div>
     </article>

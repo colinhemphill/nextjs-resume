@@ -1,16 +1,10 @@
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
+import { allProfessionalExperiences } from 'contentlayer/generated';
 import React from 'react';
-import { CMSProfessionalExperience } from '../../cms-integration/markdown/professional';
 import { SectionHeading } from '../SectionHeading/SectionHeading';
 import ProfessionalItem from './ProfessionalItem';
 
-interface ProfessionalProps {
-  professionalExperience: CMSProfessionalExperience[];
-}
-
-const Professional: React.FC<ProfessionalProps> = ({
-  professionalExperience,
-}) => {
+const Professional: React.FC = () => {
   return (
     <article className="rounded-xl bg-neutral-3 py-12">
       <div className="container">
@@ -22,8 +16,8 @@ const Professional: React.FC<ProfessionalProps> = ({
           />
         </div>
 
-        {professionalExperience.map((professional) => (
-          <ProfessionalItem key={professional.slug} {...professional} />
+        {allProfessionalExperiences.map((professional) => (
+          <ProfessionalItem key={professional._id} {...professional} />
         ))}
       </div>
     </article>

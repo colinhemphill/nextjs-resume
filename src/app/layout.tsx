@@ -1,10 +1,9 @@
 import * as colors from '@radix-ui/colors';
+import { personal } from 'contentlayer/generated';
 import { Metadata } from 'next';
 import { Albert_Sans, JetBrains_Mono } from 'next/font/google';
 import { PropsWithChildren } from 'react';
 import resumeConfig from '../../edit-me/config/resumeConfig';
-import { getCMSIntegration } from '../cms-integration/getCMSIntegration';
-import { getFullName } from '../helpers/utils';
 
 // ICONS CONFIG
 import { config } from '@fortawesome/fontawesome-svg-core';
@@ -12,8 +11,8 @@ config.autoAddCss = false;
 
 // STYLES
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import clsx from 'clsx';
 import { headers } from 'next/headers';
+import { twMerge } from 'tailwind-merge';
 import { ThemeSetting } from '../../edit-me/config/Config';
 import './globals.css';
 
@@ -36,10 +35,9 @@ const protocol = dev ? 'http' : 'https';
 export const generateMetadata = async (): Promise<Metadata> => {
   const host = headers().get('host');
   const baseURL = `${protocol}://${vercelURL || host}`;
-  const data = await getCMSIntegration('markdown');
-  const fullName = getFullName(data.personalInformation);
+  const fullName = 'Test User';
   const siteName = `${fullName} Professional Résumé`;
-  const title = `Résumé | ${fullName} | ${data.personalInformation.attributes.location}`;
+  const title = `Résumé | ${fullName} | Somewhere`;
   const description = `Professional résumé for ${fullName}.`;
   const ogImage = `${baseURL}/api/og?name=${encodeURIComponent(fullName)}`;
   const images = {
@@ -57,8 +55,8 @@ export const generateMetadata = async (): Promise<Metadata> => {
     keywords: ['resume', fullName, 'next.js', 'pdf'],
     openGraph: {
       type: 'profile',
-      firstName: data.personalInformation.attributes.givenName,
-      lastName: data.personalInformation.attributes.familyName,
+      firstName: personal.givenName,
+      lastName: personal.familyName,
       title,
       description,
       siteName,
@@ -84,7 +82,7 @@ const RootLayout: React.FC<PropsWithChildren> = async ({ children }) => {
   return (
     <html
       lang="en"
-      className={clsx(
+      className={twMerge(
         albert.variable,
         jetBrainsMono.variable,
         resumeConfig.appTheme === ThemeSetting.Dark && 'dark',

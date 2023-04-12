@@ -15,11 +15,10 @@
   "homepage": "https://github.com/colinhemphill/nextjs-resume-generator",
   "scripts": {
     "build": "next build",
-    "copy": "copyfiles --flat edit-me/config/**/*.{png,ico,json} public",
-    "dev": "next dev",
+    "dev": "contentlayer dev & next dev",
     "format": "prettier --write 'src/**/*.{json,js,ts,tsx}'",
     "lint": "next lint",
-    "prepare": "husky install && npm run copy",
+    "prepare": "husky install",
     "start": "next start",
     "test": "jest",
     "test:update": "jest -u",
@@ -33,25 +32,25 @@
     "@fortawesome/react-fontawesome": "0.2.0",
     "@radix-ui/colors": "0.1.8",
     "@react-pdf/renderer": "3.1.9",
+    "class-variance-authority": "0.5.2",
     "clsx": "1.2.1",
-    "front-matter": "4.0.2",
+    "contentlayer": "0.3.1",
     "indefinite": "2.4.2",
-    "marked": "4.3.0",
     "next": "13.3.0",
+    "next-contentlayer": "0.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-pdf-html": "1.1.18",
-    "tiny-invariant": "1.3.1"
+    "tailwind-merge": "1.12.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "14.0.0",
     "@types/jest": "29.5.0",
     "@types/node": "18.15.11",
-    "@types/react": "18.0.33",
+    "@types/react": "18.0.35",
     "autoprefixer": "10.4.14",
-    "copyfiles": "2.4.1",
-    "eslint": "8.37.0",
+    "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
     "eslint-config-prettier": "8.8.0",
     "husky": "8.0.3",
@@ -62,8 +61,8 @@
     "prettier": "2.8.7",
     "prettier-plugin-tailwindcss": "0.2.7",
     "tailwindcss": "3.3.1",
-    "typescript": "5.0.3",
+    "typescript": "5.0.4",
     "webpack": "5.78.0",
-    "windy-radix-palette": "0.5.0"
+    "windy-radix-palette": "0.6.0"
   }
 }

@@ -1,5 +1,6 @@
 import * as colors from '@radix-ui/colors';
 import type { Config } from 'tailwindcss';
+import plugin from 'tailwindcss/plugin';
 import windyRadixPlugin from 'windy-radix-palette';
 import { toRadixVars } from 'windy-radix-palette/vars';
 import { ThemeSetting } from './edit-me/config/Config';
@@ -20,11 +21,16 @@ export default {
         [`${resumeConfig.accentColor}Dark`]:
           colors[`${resumeConfig.accentColor}Dark`],
         amber: colors.amber,
-        ambeDark: colors.amberDark,
+        amberDark: colors.amberDark,
         [resumeConfig.neutralColor]: colors[resumeConfig.neutralColor],
         [`${resumeConfig.neutralColor}Dark`]:
           colors[`${resumeConfig.neutralColor}Dark`],
+        red: colors.red,
+        redDark: colors.redDark,
       },
+    }),
+    plugin(function ({ addVariant }) {
+      addVariant('hocus', ['&:hover', '&:focus']);
     }),
   ],
   theme: {
@@ -33,6 +39,7 @@ export default {
       colors: {
         accent: toRadixVars(resumeConfig.accentColor),
         accentContrast: contrastColor,
+        danger: toRadixVars('red'),
         neutral: toRadixVars(resumeConfig.neutralColor),
       },
       container: {

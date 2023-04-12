@@ -1,10 +1,6 @@
-import { CMSPersonalInformation } from '../cms-integration/markdown/personal';
+import { personal } from 'contentlayer/generated';
 
-export const getFullName = (
-  personalInformation: CMSPersonalInformation,
-): string => {
-  return `${personalInformation.attributes.givenName} ${personalInformation.attributes.familyName}`;
-};
+export const fullName = `${personal.givenName} ${personal.familyName}`;
 
 export const formatDate = (date: Date | number): string => {
   return new Intl.DateTimeFormat('en-US', {
