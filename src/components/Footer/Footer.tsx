@@ -21,12 +21,7 @@ export const Footer: React.FC = () => {
                   <span className="sr-only">
                     {personal.givenName} on {link.title}
                   </span>
-                  <FontAwesomeIcon
-                    aria-hidden
-                    className="text-accentContrast"
-                    icon={link.icon}
-                    size="lg"
-                  />
+                  <FontAwesomeIcon aria-hidden icon={link.icon} size="lg" />
                 </ButtonLink>
               ))}
             </div>

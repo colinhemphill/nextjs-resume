@@ -12,6 +12,7 @@ config.autoAddCss = false;
 // STYLES
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { headers } from 'next/headers';
+import { fullName } from 'src/helpers/utils';
 import { twMerge } from 'tailwind-merge';
 import { ThemeSetting } from '../../edit-me/config/Config';
 import './globals.css';
@@ -35,7 +36,6 @@ const protocol = dev ? 'http' : 'https';
 export const generateMetadata = async (): Promise<Metadata> => {
   const host = headers().get('host');
   const baseURL = `${protocol}://${vercelURL || host}`;
-  const fullName = 'Test User';
   const siteName = `${fullName} Professional Résumé`;
   const title = `Résumé | ${fullName} | Somewhere`;
   const description = `Professional résumé for ${fullName}.`;

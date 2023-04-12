@@ -1,4 +1,12 @@
+import { allPrivateFields } from 'contentlayer/generated';
 import { notFound } from 'next/navigation';
+import AboutMe from 'src/components/Articles/AboutMe';
+import Achievements from 'src/components/Articles/Achievements';
+import { AdditionalInfo } from 'src/components/Articles/AdditionalInfo';
+import { ContactInformation } from 'src/components/Articles/ContactInformation';
+import Professional from 'src/components/Articles/Professional';
+import Skills from 'src/components/Articles/Skills';
+import { Footer } from 'src/components/Footer/Footer';
 import { Header } from '../../../components/Header/Header';
 
 const privateKey = process.env.PRIVATE_KEY;
@@ -11,40 +19,36 @@ const Page: React.FC<PageProps> = async ({ params }) => {
     return notFound();
   }
 
+  const privateInformation = allPrivateFields;
+
   return (
     <>
       <Header secret={secret} />
 
-      {/* <div className="container">
+      <div className="container">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <AboutMe personalInformation={data.personalInformation} />
-          <ContactInformation
-            personalInformation={data.personalInformation}
-            privateInformation={privateInformation}
-          />
+          <AboutMe />
+          <ContactInformation privateInformation={privateInformation} />
         </div>
 
         <div className="mt-12">
-          <Skills skills={data.skills} />
+          <Skills />
         </div>
 
         <div className="mt-12">
-          <Professional professionalExperience={data.professional} />
+          <Professional />
         </div>
 
         <div className="mt-12">
-          <Achievements achievements={data.achievements} />
+          <Achievements />
         </div>
 
         <div className="mt-12">
-          <HobbiesAndInterests hobbies={data.hobbies} />
+          <AdditionalInfo />
         </div>
       </div>
 
-      <Footer
-        links={data.links}
-        personalInformation={data.personalInformation}
-      /> */}
+      <Footer />
     </>
   );
 };

@@ -11,7 +11,7 @@ const headingVariants = cva('font-bold', {
       primary: 'text-primary-11',
     },
     size: {
-      1: 'text-4xl md:text-5xl md:leading-normal',
+      1: 'text-4xl md:text-5xl',
       2: 'text-2xl md:text-3xl',
       3: 'text-xl md:text-2xl',
       4: 'text-lg md:text-xl',

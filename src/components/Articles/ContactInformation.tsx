@@ -1,13 +1,15 @@
 import { faIdCard } from '@fortawesome/free-solid-svg-icons';
-import { personal } from 'contentlayer/generated';
+import { PrivateField, personal } from 'contentlayer/generated';
 import React from 'react';
 import { SectionHeading } from '../SectionHeading/SectionHeading';
 
 interface ContactInformationProps {
-  // privateInformation?: CMSPrivateInformation[];
+  privateInformation?: PrivateField[];
 }
 
-export const ContactInformation: React.FC = () => {
+export const ContactInformation: React.FC<ContactInformationProps> = ({
+  privateInformation,
+}) => {
   return (
     <article>
       <SectionHeading icon={faIdCard} level={3} text="Contact Information" />
@@ -18,12 +20,12 @@ export const ContactInformation: React.FC = () => {
         </li>
 
         {/* private access required */}
-        {/* {privateInformation?.map((privateField) => (
-          <li className="mt-3" key={privateField.attributes.label}>
-            <strong>{privateField.attributes.label}</strong>{' '}
-            <div dangerouslySetInnerHTML={{ __html: privateField.html }} />
+        {privateInformation?.map((privateField) => (
+          <li className="mt-3" key={privateField.label}>
+            <strong>{privateField.label}</strong>{' '}
+            <div dangerouslySetInnerHTML={{ __html: privateField.body.html }} />
           </li>
-        ))} */}
+        ))}
       </ul>
     </article>
   );

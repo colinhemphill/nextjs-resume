@@ -7,14 +7,22 @@ import {
   Text,
   View,
 } from '@react-pdf/renderer';
+import {
+  PrivateField,
+  additionalInfo,
+  allAchievements,
+  allProfessionalExperiences,
+  allSkills,
+  personal,
+} from 'contentlayer/generated';
 import React from 'react';
 import Html from 'react-pdf-html';
 import { HtmlProps } from 'react-pdf-html/dist/Html';
+import { Theme } from '../../../edit-me/config/Config';
 import resumeConfig from '../../../edit-me/config/resumeConfig';
-import { CMSData } from '../../cms-integration/getCMSIntegration';
 import { contrastColor } from '../../helpers/colorContrast';
 import { getAccentColor, getNeutralColor } from '../../helpers/colors';
-import { getFullName } from '../../helpers/utils';
+import { fullName } from '../../helpers/utils';
 import { BuildingColumns } from './Icons/BuildingColumns';
 import { Calendar } from './Icons/Calendar';
 import { CircleBriefcase } from './Icons/CircleBriefcase';
@@ -25,7 +33,6 @@ import { CirclePaintbrush } from './Icons/CirclePaintbrush';
 import { CircleUser } from './Icons/CircleUser';
 import { Star } from './Icons/Star';
 import { htmlRenderers } from './htmlRenderers';
-import { Theme } from '../../../edit-me/config/Config';
 
 const theme = resumeConfig.pdfTheme;
 const domain = process.env.NEXT_PUBLIC_VERCEL_URL
@@ -240,16 +247,11 @@ const htmlProps: Omit<HtmlProps, 'children'> = {
   },
 };
 
-const PDF: React.FC<CMSData> = (props) => {
-  const {
-    achievements,
-    hobbies,
-    personalInformation,
-    privateInformation,
-    professional,
-    skills,
-  } = props;
-  const fullName = getFullName(personalInformation);
+interface PDFProps {
+  privateInformation?: PrivateField[];
+}
+
+const PDF: React.FC<PDFProps> = ({ privateInformation }) => {
   const year = new Date().getFullYear();
 
   return (
@@ -260,9 +262,7 @@ const PDF: React.FC<CMSData> = (props) => {
         <View style={styles.sidebar}>
           <View style={styles.header}>
             <Text style={styles.headerTitle}>{fullName}</Text>
-            <Text style={styles.headerSubtitle}>
-              {personalInformation.attributes.title}
-            </Text>
+            <Text style={styles.headerSubtitle}>{personal.title}</Text>
           </View>
           <View style={styles.sidebarContent}>
             <View style={styles.section}>
@@ -270,7 +270,7 @@ const PDF: React.FC<CMSData> = (props) => {
                 <CircleUser size={fontSizes.m} />
                 <Text>About Me</Text>
               </View>
-              <Html {...htmlProps}>{personalInformation.html}</Html>
+              <Html {...htmlProps}>{personal.body.html}</Html>
             </View>
             <View style={styles.section}>
               <View style={styles.sectionHeadingNonHTML}>
@@ -279,14 +279,12 @@ const PDF: React.FC<CMSData> = (props) => {
               </View>
               <View style={styles.flexRow}>
                 <Text style={styles.bold}>Location:</Text>
-                <Text>&nbsp;{personalInformation.attributes.location}</Text>
+                <Text>&nbsp;{personal.location}</Text>
               </View>
               {privateInformation?.map((privateField) => (
-                <View key={privateField.slug}>
-                  <Text style={styles.bold}>
-                    {privateField.attributes.label}:&nbsp;
-                  </Text>
-                  <Html {...htmlProps}>{privateField.html}</Html>
+                <View key={privateField._id}>
+                  <Text style={styles.bold}>{privateField.label}:&nbsp;</Text>
+                  <Html {...htmlProps}>{privateField.body.html}</Html>
                 </View>
               ))}
             </View>
@@ -295,19 +293,19 @@ const PDF: React.FC<CMSData> = (props) => {
                 <CircleCheck size={fontSizes.m} />
                 <Text>Skills &amp; Expertise</Text>
               </View>
-              {skills.map((skill, skillIndex) => (
-                <View key={skill.slug}>
+              {allSkills.map((skill, skillIndex) => (
+                <View key={skill._id}>
                   <View style={styles.itemHeading}>
                     <View style={styles.sectionHeadingStars}>
-                      {Array.from(Array(skills.length - skillIndex)).map(
+                      {Array.from(Array(allSkills.length - skillIndex)).map(
                         (star, starIndex) => (
                           <Star key={starIndex} size={fontSizes.xxs} />
                         ),
                       )}
                     </View>
-                    <Text style={styles.bold}>{skill.attributes.title}</Text>
+                    <Text style={styles.bold}>{skill.title}</Text>
                   </View>
-                  <Html {...htmlProps}>{skill.html}</Html>
+                  <Html {...htmlProps}>{skill.body.html}</Html>
                 </View>
               ))}
             </View>
@@ -319,26 +317,24 @@ const PDF: React.FC<CMSData> = (props) => {
               <CircleBriefcase size={fontSizes.m} />
               <Text>Professional Experience</Text>
             </View>
-            {professional.map((professionalExperience) => (
-              <View key={professionalExperience.slug}>
+            {allProfessionalExperiences.map((professionalExperience) => (
+              <View key={professionalExperience._id}>
                 <View style={styles.itemHeading}>
                   <Text style={styles.professionalTitle}>
-                    {professionalExperience.attributes.title}
+                    {professionalExperience.title}
                   </Text>
-                  <Text>
-                    &nbsp;at {professionalExperience.attributes.organization}
-                  </Text>
+                  <Text>&nbsp;at {professionalExperience.organization}</Text>
                 </View>
                 <View style={styles.itemSubheadingRow}>
                   <Calendar size={fontSizes.xxs} />
                   <Text style={styles.itemSubheading}>
-                    {professionalExperience.attributes.startDate}—
-                    {professionalExperience.attributes.endDate
-                      ? professionalExperience.attributes.endDate
+                    {professionalExperience.startDate}—
+                    {professionalExperience.endDate
+                      ? professionalExperience.endDate
                       : 'Current'}
                   </Text>
                 </View>
-                <Html {...htmlProps}>{professionalExperience.html}</Html>
+                <Html {...htmlProps}>{professionalExperience.body.html}</Html>
               </View>
             ))}
           </View>
@@ -347,27 +343,25 @@ const PDF: React.FC<CMSData> = (props) => {
               <CircleGraduationCap size={fontSizes.m} />
               <Text>Achievements</Text>
             </View>
-            {achievements.map((achievement) => (
-              <View key={achievement.slug}>
+            {allAchievements.map((achievement) => (
+              <View key={achievement._id}>
                 <View style={styles.itemHeading}>
-                  <Text style={styles.bold}>
-                    {achievement.attributes.achievement}
-                  </Text>
+                  <Text style={styles.bold}>{achievement.achievement}</Text>
                 </View>
                 <View style={styles.itemSubheadingRow}>
                   <BuildingColumns size={fontSizes.xxs} />
                   <Text style={styles.itemSubheading}>
-                    {achievement.attributes.institution}
+                    {achievement.organization}
                   </Text>
                 </View>
-                <Html {...htmlProps}>{achievement.html}</Html>
+                <Html {...htmlProps}>{achievement.body.html}</Html>
               </View>
             ))}
           </View>
           <View style={styles.section}>
             <View style={styles.sectionHeading}>
               <CirclePaintbrush size={fontSizes.m} />
-              <Text>Hobbies &amp; Interests</Text>
+              <Text>{additionalInfo.title}</Text>
             </View>
             <Html
               {...htmlProps}
@@ -376,7 +370,7 @@ const PDF: React.FC<CMSData> = (props) => {
                 p: { marginBottom: spacers[1] },
               }}
             >
-              {hobbies.html}
+              {additionalInfo.body.html}
             </Html>
           </View>
         </View>
