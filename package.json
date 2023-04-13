@@ -22,7 +22,7 @@
     "start": "next start",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
-    "test:update": "vitest --update",
+    "test:update": "vitest run --update",
     "test:watch": "vitest",
     "types": "tsc -p tsconfig.json --noEmit"
   },
