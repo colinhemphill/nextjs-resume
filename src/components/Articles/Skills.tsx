@@ -1,5 +1,5 @@
+import { allSkills } from '@content';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import { allSkills } from 'contentlayer/generated';
 import React from 'react';
 import { Heading } from '../Heading/Heading';
 import Prose from '../Prose/Prose';

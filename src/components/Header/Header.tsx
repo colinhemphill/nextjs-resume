@@ -1,4 +1,4 @@
-import { personal } from 'contentlayer/generated';
+import { personal } from '@content';
 import React from 'react';
 import { fullName } from '../../helpers/utils';
 import { Heading } from '../Heading/Heading';

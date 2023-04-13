@@ -1,5 +1,5 @@
+import { PrivateField, personal } from '@content';
 import { faIdCard } from '@fortawesome/free-solid-svg-icons';
-import { PrivateField, personal } from 'contentlayer/generated';
 import React from 'react';
 import { SectionHeading } from '../SectionHeading/SectionHeading';
 

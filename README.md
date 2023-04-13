@@ -30,7 +30,7 @@ Your résumé can also generate a secure URL that will display information not a
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Radix UI Colors](https://www.radix-ui.com/colors)
 - [Vercel Image Generation](https://beta.nextjs.org/docs/optimizing/image-generation)
-- [Jest](https://jestjs.io/)
+- [Vitest](https://vitest.dev/)
 - [Testing Library](https://testing-library.com/)
 - [Vercel](https://vercel.com/)
 
@@ -63,13 +63,15 @@ I've tested the project with `npm`, `pnpm`, and `yarn` and haven't run into any 
 
 ### Modify Custom Config
 
-Open the project in favorite editor, and open up the `edit-me/config/` folder at the root. You can edit the `resumeConfig.ts` file to meet your needs. The config file contains the following constants that will be used throughout the project (these are typed to provide appropriate autocomplete and error checking):
+Open the project in favorite editor, and open up the `edit-me/config/` folder at the root where you can edit the `resumeConfig.ts` file to meet your needs. The config file contains the following constants that will be used throughout the project (these are typed to provide appropriate autocomplete and error checking):
 
 - `accentColor`: `AccentColor`. The name of an accent palette from [Radix UI Colors](https://www.radix-ui.com/docs/colors/palette-composition/the-scales#colors). If using a standard color, the contrasting text color will be white, and if using a bright color, the contrasting text color will be black.
 - `neutralColor`: `NeutralColor`. The name of a neutral palette from [Radix UI Grays](https://www.radix-ui.com/docs/colors/palette-composition/the-scales#grays).
 - `appTheme`: `'system' | 'light' | 'dark'`. If `appTheme` is set to `system`, the résumé site will default to the user's system preference. If set to `light` or `dark` the user's preference will be overriden.
 - `imageTheme`: `'light' | 'dark'`. Your OG share image and app icons will be generated in either a light or a dark variant.
 - `pdfTheme`: `'light' | 'dark'`. Your PDF will be generated in either a light or a dark variant.
+
+You'll also find `links.ts` which generates external links at the bottom of the document. You can use any icon from the [Fontawesome free and brand icon](https://fontawesome.com/search?o=r&m=free&f=brands) sets alongside these links.
 
 ### Color Palette Examples
 

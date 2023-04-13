@@ -1,6 +1,6 @@
+import { Achievement } from '@content';
 import { faUniversity } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Achievement } from 'contentlayer/generated';
 import React from 'react';
 import { Heading } from '../Heading/Heading';
 import Prose from '../Prose/Prose';

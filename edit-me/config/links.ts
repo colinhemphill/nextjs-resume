@@ -28,7 +28,6 @@ export const links: CMSLink[] = [
     icon: faNpm,
     title: 'NPM',
   },
-
   {
     href: 'https://twitter.com',
     icon: faTwitter,

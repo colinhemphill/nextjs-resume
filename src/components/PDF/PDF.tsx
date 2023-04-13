@@ -1,5 +1,13 @@
 /* eslint-disable jsx-a11y/alt-text */
 import {
+  PrivateField,
+  additionalInfo,
+  allAchievements,
+  allProfessionalExperiences,
+  allSkills,
+  personal,
+} from '@content';
+import {
   Document,
   Font,
   Page,
@@ -7,19 +15,11 @@ import {
   Text,
   View,
 } from '@react-pdf/renderer';
-import {
-  PrivateField,
-  additionalInfo,
-  allAchievements,
-  allProfessionalExperiences,
-  allSkills,
-  personal,
-} from 'contentlayer/generated';
 import React from 'react';
 import Html from 'react-pdf-html';
 import { HtmlProps } from 'react-pdf-html/dist/Html';
-import { Theme } from '../../../edit-me/config/Config';
 import resumeConfig from '../../../edit-me/config/resumeConfig';
+import { Theme } from '../../../edit-me/types/Config';
 import { contrastColor } from '../../helpers/colorContrast';
 import { getAccentColor, getNeutralColor } from '../../helpers/colors';
 import { fullName } from '../../helpers/utils';

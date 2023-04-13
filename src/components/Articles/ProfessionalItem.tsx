@@ -1,6 +1,6 @@
+import { ProfessionalExperience } from '@content';
 import { faCalendar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ProfessionalExperience } from 'contentlayer/generated';
 import React from 'react';
 import { Heading } from '../Heading/Heading';
 import Prose from '../Prose/Prose';

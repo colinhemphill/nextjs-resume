@@ -1,4 +1,5 @@
-import { render } from '../../test-utils';
+import { render } from '@test-utils';
+import { describe, expect, test } from 'vitest';
 import { Footer } from './Footer';
 
 describe('<Footer />', () => {

@@ -1,4 +1,4 @@
-import { AccentColorsBright, ResumeConfig } from '../../edit-me/config/Config';
+import { AccentColorsBright, ResumeConfig } from '../../edit-me/types/Config';
 import config from '../../edit-me/config/resumeConfig';
 
 const isBrightColor = (

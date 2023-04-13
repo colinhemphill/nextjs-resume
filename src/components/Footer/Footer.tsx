@@ -1,6 +1,6 @@
+import { personal } from '@content';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { personal } from 'contentlayer/generated';
-import { links } from 'edit-me/content/links';
+import { links } from 'edit-me/config/links';
 import React from 'react';
 import { fullName } from 'src/helpers/utils';
 import ButtonLink from '../Button/ButtonLink';

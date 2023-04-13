@@ -1,5 +1,5 @@
+import { allProfessionalExperiences } from '@content';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
-import { allProfessionalExperiences } from 'contentlayer/generated';
 import React from 'react';
 import { SectionHeading } from '../SectionHeading/SectionHeading';
 import ProfessionalItem from './ProfessionalItem';

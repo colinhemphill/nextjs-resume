@@ -26,10 +26,16 @@
     ],
     "strictNullChecks": true,
     "paths": {
-      "contentlayer/generated": [
+      "@content": [
         "./.contentlayer/generated"
+      ],
+      "@test-utils": [
+        "./src/test-utils.tsx"
       ]
-    }
+    },
+    "types": [
+      "vitest/globals"
+    ]
   },
   "exclude": [
     "node_modules"

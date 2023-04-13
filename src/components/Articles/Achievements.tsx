@@ -1,5 +1,5 @@
+import { allAchievements } from '@content';
 import { faMortarBoard } from '@fortawesome/free-solid-svg-icons';
-import { allAchievements } from 'contentlayer/generated';
 import React from 'react';
 import { SectionHeading } from '../SectionHeading/SectionHeading';
 import AchievementItem from './AchievementItem';

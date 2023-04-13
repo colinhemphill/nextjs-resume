@@ -1,4 +1,4 @@
-import { allPrivateFields } from 'contentlayer/generated';
+import { allPrivateFields } from '@content';
 import { notFound } from 'next/navigation';
 import AboutMe from 'src/components/Articles/AboutMe';
 import Achievements from 'src/components/Articles/Achievements';

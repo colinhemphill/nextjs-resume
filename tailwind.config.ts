@@ -3,7 +3,7 @@ import type { Config } from 'tailwindcss';
 import plugin from 'tailwindcss/plugin';
 import windyRadixPlugin from 'windy-radix-palette';
 import { toRadixVars } from 'windy-radix-palette/vars';
-import { ThemeSetting } from './edit-me/config/Config';
+import { ThemeSetting } from './edit-me/types/Config';
 import resumeConfig from './edit-me/config/resumeConfig';
 import { contrastColor } from './src/helpers/colorContrast';
 

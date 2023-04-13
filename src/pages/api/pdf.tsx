@@ -1,5 +1,5 @@
+import { allPrivateFields } from '@content';
 import ReactPDF from '@react-pdf/renderer';
-import { allPrivateFields } from 'contentlayer/generated';
 import { NextApiHandler } from 'next';
 import PDF from '../../components/PDF/PDF';
 

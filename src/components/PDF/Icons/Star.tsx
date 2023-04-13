@@ -1,7 +1,7 @@
 import { amberDark } from '@radix-ui/colors';
 import { Path, Svg } from '@react-pdf/renderer';
 import React from 'react';
-import { Theme } from '../../../../edit-me/config/Config';
+import { Theme } from '../../../../edit-me/types/Config';
 import resumeConfig from '../../../../edit-me/config/resumeConfig';
 import { getAccentColor } from '../../../helpers/colors';
 

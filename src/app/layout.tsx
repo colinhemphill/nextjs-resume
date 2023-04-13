@@ -1,5 +1,4 @@
 import * as colors from '@radix-ui/colors';
-import { personal } from 'contentlayer/generated';
 import { Metadata } from 'next';
 import { Albert_Sans, JetBrains_Mono } from 'next/font/google';
 import { PropsWithChildren } from 'react';
@@ -10,11 +9,12 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false;
 
 // STYLES
+import { personal } from '@content';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { headers } from 'next/headers';
 import { fullName } from 'src/helpers/utils';
 import { twMerge } from 'tailwind-merge';
-import { ThemeSetting } from '../../edit-me/config/Config';
+import { ThemeSetting } from '../../edit-me/types/Config';
 import './globals.css';
 
 const albert = Albert_Sans({

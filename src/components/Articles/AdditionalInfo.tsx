@@ -1,5 +1,5 @@
+import { additionalInfo } from '@content';
 import { faPaintBrush } from '@fortawesome/free-solid-svg-icons';
-import { additionalInfo } from 'contentlayer/generated';
 import React from 'react';
 import Prose from '../Prose/Prose';
 import { SectionHeading } from '../SectionHeading/SectionHeading';
