@@ -1,8 +1,8 @@
 ---
-familyName: Hemphill
 givenName: Colin
-location: Austin, TX
+familyName: Hemphill
 title: Official Job Title
+location: Austin, TX
 twitterUsername: colin_hemphill
 ---
 

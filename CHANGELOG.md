@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [4.0.0] - 2023-04-12
 
+**Migration**
+
+[v3 to v4 Migration Guide](/docs/migration/v3-v4.md)
+
 ### Added
 
 - Contentlayer integration for typing and reading the Markdown CMS

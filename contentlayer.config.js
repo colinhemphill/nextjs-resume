@@ -5,25 +5,25 @@ export const Personal = defineDocumentType(() => ({
   filePathPattern: 'personal.md',
   isSingleton: true,
   fields: {
+    givenName: {
+      type: 'string',
+      description: 'Your first name or given name',
+      required: true,
+    },
     familyName: {
       type: 'string',
       description: 'Your last name or family name',
       required: true,
     },
-    givenName: {
+    title: {
       type: 'string',
-      description: 'Your first name or given name',
+      description: 'Your current job title or a short description of your goal',
       required: true,
     },
     location: {
       type: 'string',
       description:
         'Your general location of residence, not your personal address',
-      required: true,
-    },
-    title: {
-      type: 'string',
-      description: 'Your current job title or a short description of your goal',
       required: true,
     },
     twitterUsername: {
@@ -48,16 +48,16 @@ export const Skill = defineDocumentType(() => ({
 
 export const ProfessionalExperience = defineDocumentType(() => ({
   name: 'ProfessionalExperience',
-  filePathPattern: 'professional/*.md',
+  filePathPattern: 'professionalExperiences/*.md',
   fields: {
-    organization: {
-      type: 'string',
-      description: 'The name of the company or organization you worked with',
-      required: true,
-    },
     title: {
       type: 'string',
       description: 'Your most recent title at this organization',
+      required: true,
+    },
+    organization: {
+      type: 'string',
+      description: 'The name of the company or organization you worked with',
       required: true,
     },
     startDate: {
