@@ -15,6 +15,7 @@
   "homepage": "https://github.com/colinhemphill/nextjs-resume-generator",
   "scripts": {
     "build": "next build",
+    "build:content": "contentlayer build",
     "dev": "contentlayer dev & next dev",
     "format": "prettier --write 'src/**/*.{json,js,ts,tsx}'",
     "lint": "next lint",
