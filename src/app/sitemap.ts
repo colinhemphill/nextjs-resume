@@ -1,11 +1,13 @@
-const baseUrl = `https://${
-  process.env.NEXT_PUBLIC_VERCEL_URL ?? 'localhost:3000'
-}`;
+import { headers } from 'next/headers';
+import { protocol, vercelURL } from 'src/app/layout';
 
 export default async function sitemap() {
+  const host = headers().get('host');
+  const baseURL = `${protocol}://${host || vercelURL}`;
+
   return [
     {
-      url: baseUrl,
+      url: baseURL,
       lastModified: new Date().toISOString(),
     },
   ];

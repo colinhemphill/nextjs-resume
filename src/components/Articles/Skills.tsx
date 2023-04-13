@@ -1,31 +1,29 @@
+import { allSkills } from '@content';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
-import { CMSSkillCategory } from '../../cms-integration/markdown/skills';
 import { Heading } from '../Heading/Heading';
 import Prose from '../Prose/Prose';
 import { SectionHeading } from '../SectionHeading/SectionHeading';
 import { StarRating } from '../StarRating/StarRating';
 
-interface SkillsProps {
-  skills: CMSSkillCategory[];
-}
-
-const Skills: React.FC<SkillsProps> = ({ skills }) => {
+const Skills: React.FC = () => {
   return (
     <article>
       <SectionHeading icon={faCheck} level={3} text="Skills &amp; Expertise" />
 
       <div className="mt-2 grid grid-flow-row gap-6 lg:grid-flow-col">
-        {skills.map((skill, skillIndex) => (
-          <div key={skill.attributes.title}>
+        {allSkills.map((skill, skillIndex) => (
+          <div key={skill._id}>
             <Heading level={4}>
               <div className="flex items-center gap-2">
-                <StarRating stars={(skills.length - skillIndex) as 1 | 2 | 3} />
-                {skill.attributes.title}
+                <StarRating
+                  stars={(allSkills.length - skillIndex) as 1 | 2 | 3}
+                />
+                {skill.title}
               </div>
             </Heading>
 
-            <Prose html={skill.html} />
+            <Prose className="text-neutral-11" html={skill.body.html} />
           </div>
         ))}
       </div>

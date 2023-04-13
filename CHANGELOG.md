@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.0.0] - 2023-04-12
+
+**Migration**
+
+[v3 to v4 Migration Guide](/docs/migration/v3-v4.md)
+
+### Added
+
+- Contentlayer integration for typing and reading the Markdown CMS
+
+### Changed
+
+- Switch from Jest to Vitest
+- Renamed `cms` folder to `content`
+- Changed `hobbies` file to `additionalInfo`
+  - Added a `title` field to the `additionalInfo` content file
+- Changed `institution` to `organization` for `achievement` type
+- Switch `clsx` to `twMerge`
+- Use Class Variance Authority for some components
+- Use `opengraph-image` named route handler instead of custom API route
+
 ## [3.5.0] - 2023-04-07
 
 ### Added

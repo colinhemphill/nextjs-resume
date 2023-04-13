@@ -1,13 +1,12 @@
+import { allPrivateFields } from '@content';
 import { notFound } from 'next/navigation';
-import { getCMSIntegration } from '../../../cms-integration/getCMSIntegration';
-import { getPrivateInformation } from '../../../cms-integration/markdown/private';
-import AboutMe from '../../../components/Articles/AboutMe';
-import Achievements from '../../../components/Articles/Achievements';
-import { ContactInformation } from '../../../components/Articles/ContactInformation';
-import { HobbiesAndInterests } from '../../../components/Articles/HobbiesAndInterests';
-import Professional from '../../../components/Articles/Professional';
-import Skills from '../../../components/Articles/Skills';
-import { Footer } from '../../../components/Footer/Footer';
+import AboutMe from 'src/components/Articles/AboutMe';
+import Achievements from 'src/components/Articles/Achievements';
+import { AdditionalInfo } from 'src/components/Articles/AdditionalInfo';
+import { ContactInformation } from 'src/components/Articles/ContactInformation';
+import Professional from 'src/components/Articles/Professional';
+import Skills from 'src/components/Articles/Skills';
+import { Footer } from 'src/components/Footer/Footer';
 import { Header } from '../../../components/Header/Header';
 
 const privateKey = process.env.PRIVATE_KEY;
@@ -20,43 +19,36 @@ const Page: React.FC<PageProps> = async ({ params }) => {
     return notFound();
   }
 
-  const data = await getCMSIntegration('markdown');
-  const privateInformation = await getPrivateInformation();
+  const privateInformation = allPrivateFields;
 
   return (
     <>
-      <Header personalInformation={data.personalInformation} secret={secret} />
+      <Header secret={secret} />
 
       <div className="container">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <AboutMe personalInformation={data.personalInformation} />
-          <ContactInformation
-            personalInformation={data.personalInformation}
-            privateInformation={privateInformation}
-          />
+          <AboutMe />
+          <ContactInformation privateInformation={privateInformation} />
         </div>
 
         <div className="mt-12">
-          <Skills skills={data.skills} />
+          <Skills />
         </div>
 
         <div className="mt-12">
-          <Professional professionalExperience={data.professional} />
+          <Professional />
         </div>
 
         <div className="mt-12">
-          <Achievements achievements={data.achievements} />
+          <Achievements />
         </div>
 
         <div className="mt-12">
-          <HobbiesAndInterests hobbies={data.hobbies} />
+          <AdditionalInfo />
         </div>
       </div>
 
-      <Footer
-        links={data.links}
-        personalInformation={data.personalInformation}
-      />
+      <Footer />
     </>
   );
 };

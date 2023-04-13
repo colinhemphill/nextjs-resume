@@ -3,18 +3,18 @@ import { Metadata } from 'next';
 import { Albert_Sans, JetBrains_Mono } from 'next/font/google';
 import { PropsWithChildren } from 'react';
 import resumeConfig from '../../edit-me/config/resumeConfig';
-import { getCMSIntegration } from '../cms-integration/getCMSIntegration';
-import { getFullName } from '../helpers/utils';
 
 // ICONS CONFIG
 import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false;
 
 // STYLES
+import { personal } from '@content';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import clsx from 'clsx';
 import { headers } from 'next/headers';
-import { ThemeSetting } from '../../edit-me/config/Config';
+import { fullName } from 'src/helpers/utils';
+import { twMerge } from 'tailwind-merge';
+import { ThemeSetting } from '../../edit-me/types/Config';
 import './globals.css';
 
 const albert = Albert_Sans({
@@ -29,26 +29,19 @@ const jetBrainsMono = JetBrains_Mono({
   variable: '--font-jetbrains-mono',
 });
 
-const vercelURL = process.env.NEXT_PUBLIC_VERCEL_URL;
-const dev = process.env.NODE_ENV === 'development';
-const protocol = dev ? 'http' : 'https';
+export const vercelURL = process.env.NEXT_PUBLIC_VERCEL_URL;
+export const dev = process.env.NODE_ENV === 'development';
+export const protocol = dev ? 'http' : 'https';
 
 export const generateMetadata = async (): Promise<Metadata> => {
   const host = headers().get('host');
-  const baseURL = `${protocol}://${vercelURL || host}`;
-  const data = await getCMSIntegration('markdown');
-  const fullName = getFullName(data.personalInformation);
+  const baseURL = `${protocol}://${host || vercelURL}`;
   const siteName = `${fullName} Professional Résumé`;
-  const title = `Résumé | ${fullName} | ${data.personalInformation.attributes.location}`;
+  const title = `Résumé | ${fullName} | Somewhere`;
   const description = `Professional résumé for ${fullName}.`;
-  const ogImage = `${baseURL}/api/og?name=${encodeURIComponent(fullName)}`;
-  const images = {
-    url: ogImage,
-    height: 630,
-    width: 1200,
-  };
 
   return {
+    metadataBase: new URL(baseURL),
     applicationName: siteName,
     authors: { name: fullName },
     creator: fullName,
@@ -57,13 +50,12 @@ export const generateMetadata = async (): Promise<Metadata> => {
     keywords: ['resume', fullName, 'next.js', 'pdf'],
     openGraph: {
       type: 'profile',
-      firstName: data.personalInformation.attributes.givenName,
-      lastName: data.personalInformation.attributes.familyName,
+      firstName: personal.givenName,
+      lastName: personal.familyName,
       title,
       description,
       siteName,
       url: baseURL,
-      images,
     },
     themeColor:
       colors[resumeConfig.accentColor][`${resumeConfig.accentColor}9`],
@@ -73,7 +65,6 @@ export const generateMetadata = async (): Promise<Metadata> => {
       creator: fullName,
       description,
       title,
-      images,
     },
     viewport: 'width=device-width, initial-scale=1',
   };
@@ -84,7 +75,7 @@ const RootLayout: React.FC<PropsWithChildren> = async ({ children }) => {
   return (
     <html
       lang="en"
-      className={clsx(
+      className={twMerge(
         albert.variable,
         jetBrainsMono.variable,
         resumeConfig.appTheme === ThemeSetting.Dark && 'dark',

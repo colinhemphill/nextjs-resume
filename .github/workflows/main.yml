@@ -18,5 +18,7 @@ jobs:
 
       - name: Install
         run: npm i
+      - name: Build
+        run: npm run build:content
       - name: Unit tests
         run: npm run test

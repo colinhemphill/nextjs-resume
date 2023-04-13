@@ -1,5 +1,5 @@
 import * as colors from '@radix-ui/colors';
-import { Theme } from '../../edit-me/config/Config';
+import { Theme } from '../../edit-me/types/Config';
 import resumeConfig from '../../edit-me/config/resumeConfig';
 
 const defaultTheme = resumeConfig.imageTheme;

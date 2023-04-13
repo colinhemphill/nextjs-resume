@@ -1,4 +1,5 @@
-import { render, screen } from '../../test-utils';
+import { render, screen } from '@test-utils';
+import { describe, expect, test } from 'vitest';
 import { Heading } from './Heading';
 
 describe('<Heading />', () => {
@@ -15,6 +16,6 @@ describe('<Heading />', () => {
       name: /Level 1 Heading/i,
     });
 
-    expect(heading).toBeInTheDocument();
+    expect(heading).toBeDefined();
   });
 });

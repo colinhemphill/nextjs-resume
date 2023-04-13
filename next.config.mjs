@@ -1,8 +1,11 @@
+import { withContentlayer } from 'next-contentlayer';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: { appDir: true, typedRoutes: true },
+  experimental: {
+    appDir: true,
+  },
   reactStrictMode: true,
-  swcMinify: true,
 };
 
-export default nextConfig;
+export default withContentlayer(nextConfig);

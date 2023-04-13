@@ -1,13 +1,8 @@
-import { getCMSIntegration } from '../../cms-integration/__mocks__/getCMSIntegration';
-import { render } from '../../test-utils';
+import { render } from '@test-utils';
+import { expect, test } from 'vitest';
 import { Header } from './Header';
 
-describe('<Header />', () => {
-  test('Snapshot', async () => {
-    const data = await getCMSIntegration('markdown');
-    const { container } = render(
-      <Header personalInformation={data.personalInformation} />,
-    );
-    expect(container).toMatchSnapshot();
-  });
+test('Snapshot', async () => {
+  const { container } = render(<Header />);
+  expect(container).toMatchSnapshot();
 });

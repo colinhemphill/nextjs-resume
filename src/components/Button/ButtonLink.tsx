@@ -1,43 +1,24 @@
-import clsx from 'clsx';
-import {
-  AnchorHTMLAttributes,
-  DetailedHTMLProps,
-  PropsWithChildren,
-} from 'react';
+import { VariantProps } from 'class-variance-authority';
+import Link, { LinkProps } from 'next/link';
+import { PropsWithChildren } from 'react';
+import { twMerge } from 'tailwind-merge';
+import { buttonVariants } from './Button';
 
-type HTMLAnchorProps = DetailedHTMLProps<
-  AnchorHTMLAttributes<HTMLAnchorElement>,
-  HTMLAnchorElement
->;
+export type ButtonLinkProps = LinkProps &
+  VariantProps<typeof buttonVariants> & { className?: string };
 
-const sizeVariants = {
-  sm: 'text-sm py-1 px-4',
-  md: 'text-base py-2 px-6',
-  lg: 'text-lg py-3 px-8',
-};
-
-interface ButtonLinkProps extends HTMLAnchorProps {
-  size?: keyof typeof sizeVariants;
-}
-
-const ButtonLink: React.FC<PropsWithChildren<ButtonLinkProps>> = ({
+export default function ButtonLink({
   children,
-  size = 'md',
-  ...rest
-}) => {
-  const sizeClasses = sizeVariants[size];
-
+  className,
+  size,
+  ...linkProps
+}: PropsWithChildren<ButtonLinkProps>) {
   return (
-    <a
-      className={clsx(
-        'flex items-center justify-center gap-2 rounded-md border-2 border-accent-7 bg-accent-1 font-medium text-accent-11 no-underline outline-none transition hover:border-accent-8 focus:border-transparent focus:bg-accent-9 focus:text-accentContrast focus:ring-4 focus:ring-accent-6 hover:focus:border-transparent',
-        sizeClasses,
-      )}
-      {...rest}
+    <Link
+      className={twMerge(buttonVariants({ size }), className)}
+      {...linkProps}
     >
       {children}
-    </a>
+    </Link>
   );
-};
-
-export default ButtonLink;
+}

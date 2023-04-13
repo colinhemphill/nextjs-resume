@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "es5",
     "lib": [
       "dom",
@@ -23,7 +24,18 @@
         "name": "next"
       }
     ],
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "paths": {
+      "@content": [
+        "./.contentlayer/generated"
+      ],
+      "@test-utils": [
+        "./src/test-utils.tsx"
+      ]
+    },
+    "types": [
+      "vitest/globals"
+    ]
   },
   "exclude": [
     "node_modules"
@@ -32,6 +44,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    ".contentlayer/generated"
   ]
 }

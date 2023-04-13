@@ -1,24 +1,15 @@
-import { getCMSIntegration } from '../../cms-integration/__mocks__/getCMSIntegration';
-import { render } from '../../test-utils';
+import { render } from '@test-utils';
+import { describe, expect, test } from 'vitest';
 import { Footer } from './Footer';
 
 describe('<Footer />', () => {
   test('Snapshot without links', async () => {
-    const data = await getCMSIntegration('markdown');
-    const { container } = render(
-      <Footer personalInformation={data.personalInformation} />,
-    );
+    const { container } = render(<Footer />);
     expect(container).toMatchSnapshot();
   });
 
   test('Snapshot with links', async () => {
-    const data = await getCMSIntegration('markdown');
-    const { container } = render(
-      <Footer
-        links={data.links}
-        personalInformation={data.personalInformation}
-      />,
-    );
+    const { container } = render(<Footer />);
     expect(container).toMatchSnapshot();
   });
 });

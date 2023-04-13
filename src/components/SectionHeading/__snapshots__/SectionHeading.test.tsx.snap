@@ -1,9 +1,9 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<SectionHeading /> Snapshot 1`] = `
+exports[`<SectionHeading /> > Snapshot 1`] = `
 <div>
   <h3
-    class="font-bold text-neutral-12 text-2xl"
+    class="font-bold text-neutral-12 text-xl md:text-2xl"
   >
     <div
       class="flex items-center gap-2"

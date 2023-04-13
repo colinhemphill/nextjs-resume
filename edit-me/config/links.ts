@@ -5,7 +5,7 @@ import {
   faNpm,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
-import { CMSLink } from '../../src/cms-integration/markdown/links';
+import { CMSLink } from 'edit-me/types/CMSLink';
 
 export const links: CMSLink[] = [
   {
@@ -28,7 +28,6 @@ export const links: CMSLink[] = [
     icon: faNpm,
     title: 'NPM',
   },
-
   {
     href: 'https://twitter.com',
     icon: faTwitter,

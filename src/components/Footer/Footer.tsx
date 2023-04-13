@@ -1,45 +1,28 @@
-import { faCircle } from '@fortawesome/free-solid-svg-icons';
+import { personal } from '@content';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { links } from 'edit-me/config/links';
 import React from 'react';
-import { CMSLink } from '../../cms-integration/markdown/links';
-import { CMSPersonalInformation } from '../../cms-integration/markdown/personal';
-import { getFullName } from '../../helpers/utils';
+import { fullName } from 'src/helpers/utils';
+import ButtonLink from '../Button/ButtonLink';
 
-interface FooterProps {
-  personalInformation: CMSPersonalInformation;
-  links?: CMSLink[];
-}
-
-export const Footer: React.FC<FooterProps> = ({
-  personalInformation,
-  links,
-}) => {
-  const fullName = getFullName(personalInformation);
-
+export const Footer: React.FC = () => {
   return (
     <footer className="mt-12 bg-neutral-3 py-12 text-neutral-12">
       <div className="container text-center">
         {links && (
           <div className="flex justify-center">
-            <div className="fa-3x grid grid-flow-col gap-2">
+            <div className="grid grid-flow-col gap-2">
               {links.map((link) => (
-                <a className="no-underline" href={link.href} key={link.title}>
+                <ButtonLink
+                  className="h-12 w-12 rounded-full p-0"
+                  href={link.href}
+                  key={link.title}
+                >
                   <span className="sr-only">
-                    {personalInformation.attributes.givenName} on {link.title}
+                    {personal.givenName} on {link.title}
                   </span>
-                  <span className="fa-layers fa-fw">
-                    <FontAwesomeIcon
-                      className="text-accent-9"
-                      icon={faCircle}
-                    />
-                    <FontAwesomeIcon
-                      aria-hidden
-                      className="text-accentContrast"
-                      icon={link.icon}
-                      transform="shrink-8"
-                    />
-                  </span>
-                </a>
+                  <FontAwesomeIcon aria-hidden icon={link.icon} size="lg" />
+                </ButtonLink>
               ))}
             </div>
           </div>
