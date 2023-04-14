@@ -12,6 +12,7 @@ config.autoAddCss = false;
 import { personal } from '@content';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { headers } from 'next/headers';
+import { protocol, vercelURL } from 'src/helpers/env';
 import { fullName } from 'src/helpers/utils';
 import { twMerge } from 'tailwind-merge';
 import { ThemeSetting } from '../../edit-me/types/Config';
@@ -28,10 +29,6 @@ const jetBrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   variable: '--font-jetbrains-mono',
 });
-
-export const vercelURL = process.env.NEXT_PUBLIC_VERCEL_URL;
-export const dev = process.env.NODE_ENV === 'development';
-export const protocol = dev ? 'http' : 'https';
 
 export const generateMetadata = async (): Promise<Metadata> => {
   const host = headers().get('host');

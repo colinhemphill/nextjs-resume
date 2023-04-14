@@ -5,7 +5,27 @@ exports[`<Heading /> > Snapshot 1`] = `
   <h1
     class="font-bold text-neutral-12 text-4xl md:text-5xl"
   >
-    Heading
+    Heading 1
   </h1>
+  <h2
+    class="font-bold text-neutral-11 text-2xl md:text-3xl"
+  >
+    Heading 2
+  </h2>
+  <h3
+    class="font-bold text-primary-11 text-xl md:text-2xl"
+  >
+    Heading 3
+  </h3>
+  <h4
+    class="font-bold text-danger-11 text-lg md:text-xl"
+  >
+    Heading 4
+  </h4>
+  <h5
+    class="font-bold text-neutral-12 text-base md:text-lg"
+  >
+    Heading 5
+  </h5>
 </div>
 `;

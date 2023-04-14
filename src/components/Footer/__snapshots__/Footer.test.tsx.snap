@@ -179,7 +179,7 @@ exports[`<Footer /> > Snapshot with links 1`] = `
         >
           Vercel
         </a>
-        . Learn how to deploy your own resume with the
+        . Learn how to deploy your own résumé with the
          
         <a
           class="link"
@@ -373,7 +373,7 @@ exports[`<Footer /> > Snapshot without links 1`] = `
         >
           Vercel
         </a>
-        . Learn how to deploy your own resume with the
+        . Learn how to deploy your own résumé with the
          
         <a
           class="link"
