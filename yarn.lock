@@ -3375,9 +3375,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.284":
-  version: 1.4.361
-  resolution: "electron-to-chromium@npm:1.4.361"
-  checksum: 66b3210c9c5abec7812ce8b936a9e53fa49a2ccb8b4345e1e4d601dfff5e1e22d07ddddeaf84b0dd6bb01522e505dbb7fc91929a7028b02281e5928f36d2e4dc
+  version: 1.4.363
+  resolution: "electron-to-chromium@npm:1.4.363"
+  checksum: e3a84cf652d97b124e0d328688454d6d7b81e533e671edc7c32dc4b18e5d90369001f61ffd503edf11a9d6d35ecb17385e74060b59b4a70b2bd53a71108ff286
   languageName: node
   linkType: hard
 
@@ -3429,9 +3429,9 @@ __metadata:
   linkType: hard
 
 "entities@npm:^4.4.0":
-  version: 4.4.0
-  resolution: "entities@npm:4.4.0"
-  checksum: 84d250329f4b56b40fa93ed067b194db21e8815e4eb9b59f43a086f0ecd342814f6bc483de8a77da5d64e0f626033192b1b4f1792232a7ea6b970ebe0f3187c2
+  version: 4.5.0
+  resolution: "entities@npm:4.5.0"
+  checksum: 853f8ebd5b425d350bffa97dd6958143179a5938352ccae092c62d1267c4e392a039be1bae7d51b6e4ffad25f51f9617531fedf5237f15df302ccfb452cbf2d7
   languageName: node
   linkType: hard
 
@@ -3835,12 +3835,12 @@ __metadata:
   linkType: hard
 
 "eslint-scope@npm:^7.1.1":
-  version: 7.1.1
-  resolution: "eslint-scope@npm:7.1.1"
+  version: 7.2.0
+  resolution: "eslint-scope@npm:7.2.0"
   dependencies:
     esrecurse: ^4.3.0
     estraverse: ^5.2.0
-  checksum: 9f6e974ab2db641ca8ab13508c405b7b859e72afe9f254e8131ff154d2f40c99ad4545ce326fd9fde3212ff29707102562a4834f1c48617b35d98c71a97fbf3e
+  checksum: 64591a2d8b244ade9c690b59ef238a11d5c721a98bcee9e9f445454f442d03d3e04eda88e95a4daec558220a99fa384309d9faae3d459bd40e7a81b4063980ae
   languageName: node
   linkType: hard
 

@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Snapshot 1`] = `
+exports[`<Header /> > Snapshot 1`] = `
 <div>
   <div
     class="mb-12 border-b-2 border-neutral-4 py-12"
