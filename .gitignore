@@ -6,6 +6,10 @@
 .pnp.*
 .yarn
 .yarnrc.yml
+.npmrc
+package-lock*
+yarn.lock
+pnpm-lock*
 
 # testing
 /coverage
