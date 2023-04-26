@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "@testing-library/react": "14.0.0",
-    "@types/node": "18.16.0",
+    "@types/node": "18.16.1",
     "@types/react": "18.2.0",
     "@vitejs/plugin-react": "4.0.0",
     "@vitest/coverage-c8": "0.30.1",
