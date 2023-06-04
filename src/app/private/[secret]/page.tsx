@@ -11,7 +11,6 @@ import { Header } from '../../../components/Header/Header';
 
 const privateKey = process.env.PRIVATE_KEY;
 
-// @ts-expect-error Server Component
 const Page: React.FC<PageProps> = async ({ params }) => {
   const { secret } = params;
 

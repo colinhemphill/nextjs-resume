@@ -1,6 +1,6 @@
 {
   "name": "next-resume-generator",
-  "version": "4.0.3",
+  "version": "4.0.4",
   "author": {
     "name": "Colin Hemphill",
     "email": "colin@colinhemphill.com",
@@ -35,22 +35,22 @@
     "@radix-ui/colors": "0.1.8",
     "@react-pdf/renderer": "3.1.9",
     "class-variance-authority": "0.6.0",
-    "contentlayer": "0.3.2",
+    "contentlayer": "0.3.3",
     "next": "13.4.4",
-    "next-contentlayer": "0.3.2",
+    "next-contentlayer": "0.3.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-pdf-html": "1.1.18",
-    "tailwind-merge": "1.12.0"
+    "tailwind-merge": "1.13.0"
   },
   "devDependencies": {
     "@testing-library/react": "14.0.0",
     "@types/node": "20.2.5",
-    "@types/react": "18.2.7",
+    "@types/react": "18.2.8",
     "@vitejs/plugin-react": "4.0.0",
-    "@vitest/coverage-c8": "0.31.2",
+    "@vitest/coverage-c8": "0.31.4",
     "autoprefixer": "10.4.14",
-    "eslint": "8.41.0",
+    "eslint": "8.42.0",
     "eslint-config-next": "13.4.4",
     "eslint-config-prettier": "8.8.0",
     "husky": "8.0.3",
@@ -60,10 +60,10 @@
     "prettier": "2.8.8",
     "prettier-plugin-tailwindcss": "0.3.0",
     "tailwindcss": "3.3.2",
-    "typescript": "5.0.4",
+    "typescript": "5.1.3",
     "vite-tsconfig-paths": "4.2.0",
-    "vitest": "0.31.2",
-    "webpack": "5.84.1",
+    "vitest": "0.31.4",
+    "webpack": "5.85.0",
     "windy-radix-palette": "0.6.1"
   }
 }
