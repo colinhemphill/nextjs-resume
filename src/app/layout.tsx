@@ -67,7 +67,6 @@ export const generateMetadata = async (): Promise<Metadata> => {
   };
 };
 
-// @ts-expect-error Server Component
 const RootLayout: React.FC<PropsWithChildren> = async ({ children }) => {
   return (
     <html
