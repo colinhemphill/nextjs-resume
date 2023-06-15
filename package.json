@@ -41,7 +41,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-pdf-html": "1.1.18",
-    "tailwind-merge": "1.13.0"
+    "tailwind-merge": "1.13.2"
   },
   "devDependencies": {
     "@testing-library/react": "14.0.0",
