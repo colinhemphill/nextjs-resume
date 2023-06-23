@@ -47,7 +47,7 @@
     "@testing-library/react": "14.0.0",
     "@types/node": "20.2.5",
     "@types/react": "18.2.13",
-    "@vitejs/plugin-react": "4.0.0",
+    "@vitejs/plugin-react": "4.0.1",
     "@vitest/coverage-c8": "0.32.2",
     "autoprefixer": "10.4.14",
     "eslint": "8.43.0",
