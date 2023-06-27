@@ -34,7 +34,7 @@
     "@fortawesome/react-fontawesome": "0.2.0",
     "@radix-ui/colors": "1.0.0",
     "@react-pdf/renderer": "3.1.12",
-    "class-variance-authority": "0.6.0",
+    "class-variance-authority": "0.6.1",
     "contentlayer": "0.3.3",
     "next": "13.4.7",
     "next-contentlayer": "0.3.3",
