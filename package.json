@@ -35,7 +35,7 @@
     "@radix-ui/colors": "1.0.0",
     "@react-pdf/renderer": "3.1.12",
     "class-variance-authority": "0.6.1",
-    "contentlayer": "0.3.3",
+    "contentlayer": "0.3.4",
     "next": "13.4.7",
     "next-contentlayer": "0.3.3",
     "react": "18.2.0",
