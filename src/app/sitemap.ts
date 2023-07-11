@@ -1,10 +1,9 @@
-import { headers } from 'next/headers';
-import { protocol, vercelURL } from 'src/helpers/env';
+import { MetadataRoute } from 'next';
+import { vercelURL } from 'src/helpers/env';
 
-export default async function sitemap() {
-  const host = headers().get('host');
-  const baseURL = `${protocol}://${host || vercelURL}`;
+const baseURL = `https://${vercelURL}`;
 
+export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: baseURL,
