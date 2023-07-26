@@ -64,7 +64,7 @@
     "typescript": "5.1.6",
     "vite-tsconfig-paths": "4.2.0",
     "vitest": "0.33.0",
-    "webpack": "5.88.1",
+    "webpack": "5.88.2",
     "windy-radix-palette": "0.6.1"
   },
   "pnpm": {
