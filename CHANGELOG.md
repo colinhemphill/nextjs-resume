@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [4.1.1] - 2023-08-11
 
+### Added
+
+- Use [vite-tsconfig-paths](https://www.npmjs.com/package/vite-tsconfig-paths) to resolve paths from tests automatically
+
 ### Changed
 
 - Dependency upgrades
