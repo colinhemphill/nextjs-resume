@@ -1,12 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import {
-  PrivateField,
-  additionalInfo,
-  allAchievements,
-  allProfessionalExperiences,
-  allSkills,
-  personal,
-} from '@content';
+import { PrivateField, additionalInfo, allSkills, personal } from '@content';
 import {
   Document,
   Font,
@@ -22,7 +15,11 @@ import resumeConfig from '../../../edit-me/config/resumeConfig';
 import { Theme } from '../../../edit-me/types/Config';
 import { contrastColor } from '../../helpers/colorContrast';
 import { getAccentColor, getNeutralColor } from '../../helpers/colors';
-import { fullName } from '../../helpers/utils';
+import {
+  fullName,
+  sortedAchievements,
+  sortedProfessionalExperiences,
+} from '../../helpers/utils';
 import { BuildingColumns } from './Icons/BuildingColumns';
 import { Calendar } from './Icons/Calendar';
 import { CircleBriefcase } from './Icons/CircleBriefcase';
@@ -317,7 +314,7 @@ const PDF: React.FC<PDFProps> = ({ privateInformation }) => {
               <CircleBriefcase size={fontSizes.m} />
               <Text>Professional Experience</Text>
             </View>
-            {allProfessionalExperiences.map((professionalExperience) => (
+            {sortedProfessionalExperiences.map((professionalExperience) => (
               <View key={professionalExperience._id}>
                 <View style={styles.itemHeading}>
                   <Text style={styles.professionalTitle}>
@@ -343,7 +340,7 @@ const PDF: React.FC<PDFProps> = ({ privateInformation }) => {
               <CircleGraduationCap size={fontSizes.m} />
               <Text>Achievements</Text>
             </View>
-            {allAchievements.map((achievement) => (
+            {sortedAchievements.map((achievement) => (
               <View key={achievement._id}>
                 <View style={styles.itemHeading}>
                   <Text style={styles.bold}>{achievement.achievement}</Text>
