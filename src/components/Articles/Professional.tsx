@@ -1,6 +1,6 @@
-import { allProfessionalExperiences } from '@content';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
+import { sortedProfessionalExperiences } from 'src/helpers/utils';
 import { SectionHeading } from '../SectionHeading/SectionHeading';
 import ProfessionalItem from './ProfessionalItem';
 
@@ -16,7 +16,7 @@ const Professional: React.FC = () => {
           />
         </div>
 
-        {allProfessionalExperiences.map((professional) => (
+        {sortedProfessionalExperiences.map((professional) => (
           <ProfessionalItem key={professional._id} {...professional} />
         ))}
       </div>
