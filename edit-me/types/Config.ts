@@ -14,6 +14,9 @@ export enum AccentColorsBasic {
   Grass = 'grass',
   Orange = 'orange',
   Brown = 'brown',
+  Ruby = 'ruby',
+  Iris = 'iris',
+  Jade = 'jade',
 }
 
 export enum AccentColorsBright {
