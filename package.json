@@ -62,7 +62,7 @@
     "prettier-plugin-tailwindcss": "0.5.4",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2",
-    "vite-tsconfig-paths": "4.2.0",
+    "vite-tsconfig-paths": "4.2.1",
     "vitest": "0.34.3",
     "webpack": "5.88.2",
     "windy-radix-palette": "0.6.1"
