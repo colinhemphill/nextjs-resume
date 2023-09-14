@@ -1,10 +1,10 @@
 import { render } from '@test-utils';
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { StarRating } from './StarRating';
 
 describe('<StarRating />', () => {
   test('Snapshot', async () => {
-    const { container } = render(<StarRating stars={3} />);
-    expect(container).toMatchSnapshot();
+    const { asFragment } = render(<StarRating stars={3} />);
+    expect(asFragment).toMatchSnapshot();
   });
 });

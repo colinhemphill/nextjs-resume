@@ -74,7 +74,7 @@ Font.register({
   ],
 });
 
-const hyphenationCallback = (word) => {
+const hyphenationCallback = (word: string) => {
   // don't hyphenate
   return [word];
 };

@@ -30,7 +30,6 @@ Your résumé can also generate a secure URL that will display information not a
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Radix UI Colors](https://www.radix-ui.com/colors)
 - [Vercel Image Generation](https://beta.nextjs.org/docs/optimizing/image-generation)
-- [Vitest](https://vitest.dev/)
 - [Testing Library](https://testing-library.com/)
 - [Vercel](https://vercel.com/)
 
@@ -59,7 +58,7 @@ cd my-resume
 npm i
 ```
 
-I've tested the project with `npm`, `pnpm`, and `yarn` and haven't run into any notable issues.
+I've tested the project with `bun`, `npm`, `pnpm`, and `yarn` and haven't run into any notable issues. For development the test runner defaults to `bun`.
 
 ### Modify Custom Config
 

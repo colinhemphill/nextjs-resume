@@ -13,6 +13,7 @@ const configNeutral = resumeConfig.neutralColor;
  */
 export const getAccentColor = (shade: number, theme = defaultTheme) => {
   const accent =
+    // @ts-ignore
     colors[theme === Theme.Dark ? `${configAccent}Dark` : configAccent];
   return accent[`${configAccent}${shade}`];
 };
@@ -24,6 +25,7 @@ export const getAccentColor = (shade: number, theme = defaultTheme) => {
  */
 export const getNeutralColor = (shade: number, theme = defaultTheme) => {
   const neutral =
+    //@ts-ignore
     colors[theme === Theme.Dark ? `${configNeutral}Dark` : configNeutral];
   return neutral[`${configNeutral}${shade}`];
 };
