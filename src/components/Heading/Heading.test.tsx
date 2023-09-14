@@ -1,10 +1,19 @@
-/// <reference lib="dom" />
-
 import { render, screen } from '@test-utils';
 import { describe, expect, test } from 'bun:test';
 import { Heading } from './Heading';
 
 describe('<Heading />', () => {
+  test('Renders an accessible heading', () => {
+    render(<Heading level={1}>Level 1 Heading</Heading>);
+
+    const heading = screen.getByRole('heading', {
+      level: 1,
+      name: /Level 1 Heading/i,
+    });
+
+    expect(heading).toBeDefined();
+  });
+
   test('Snapshot', () => {
     const { asFragment } = render(
       <>
@@ -24,16 +33,5 @@ describe('<Heading />', () => {
       </>,
     );
     expect(asFragment).toMatchSnapshot();
-  });
-
-  test('Renders an accessible heading', () => {
-    render(<Heading level={1}>Level 1 Heading</Heading>);
-
-    const heading = screen.getByRole('heading', {
-      level: 1,
-      name: /Level 1 Heading/i,
-    });
-
-    expect(heading).toBeDefined();
   });
 });

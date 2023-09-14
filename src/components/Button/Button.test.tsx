@@ -3,6 +3,13 @@ import { describe, expect, test } from 'bun:test';
 import Button from './Button';
 
 describe('<Button />', () => {
+  test('Renders an accessible button element', async () => {
+    render(<Button>Action</Button>);
+
+    const button = screen.getByRole('button', { name: /action/i });
+    expect(button).toBeDefined();
+  });
+
   test('Snapshot', async () => {
     const { asFragment } = render(
       <>
@@ -13,12 +20,5 @@ describe('<Button />', () => {
       </>,
     );
     expect(asFragment).toMatchSnapshot();
-  });
-
-  test('Renders an accessible button element', async () => {
-    render(<Button>Action</Button>);
-
-    const button = screen.getByRole('button', { name: /action/i });
-    expect(button).toBeDefined();
   });
 });

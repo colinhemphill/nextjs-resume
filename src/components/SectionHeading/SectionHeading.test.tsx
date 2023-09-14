@@ -3,11 +3,6 @@ import { describe, expect, test } from 'bun:test';
 import { SectionHeading } from './SectionHeading';
 
 describe('<SectionHeading />', () => {
-  test('Snapshot', async () => {
-    const { asFragment } = render(<SectionHeading text="Section Heading" />);
-    expect(asFragment).toMatchSnapshot();
-  });
-
   test('Renders a heading', async () => {
     render(<SectionHeading text="Section Heading" />);
 
@@ -17,5 +12,10 @@ describe('<SectionHeading />', () => {
     });
 
     expect(heading).toBeDefined();
+  });
+
+  test('Snapshot', async () => {
+    const { asFragment } = render(<SectionHeading text="Section Heading" />);
+    expect(asFragment).toMatchSnapshot();
   });
 });
