@@ -18,6 +18,8 @@ import { twMerge } from 'tailwind-merge';
 import { ThemeSetting } from '../../edit-me/types/Config';
 import './globals.css';
 
+const accentColor = resumeConfig.accentColor;
+
 const albert = Albert_Sans({
   display: 'swap',
   subsets: ['latin'],
@@ -36,6 +38,8 @@ export const generateMetadata = async (): Promise<Metadata> => {
   const siteName = `${fullName} Professional Résumé`;
   const title = `Résumé | ${fullName} | Somewhere`;
   const description = `Professional résumé for ${fullName}.`;
+  // @ts-ignore
+  const themeColor = colors[accentColor][`${accentColor}9`];
 
   return {
     metadataBase: new URL(baseURL),
@@ -54,8 +58,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
       siteName,
       url: baseURL,
     },
-    themeColor:
-      colors[resumeConfig.accentColor][`${resumeConfig.accentColor}9`],
+    themeColor,
     title,
     twitter: {
       site: siteName,

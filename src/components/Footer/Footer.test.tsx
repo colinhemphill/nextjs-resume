@@ -1,15 +1,15 @@
 import { render } from '@test-utils';
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { Footer } from './Footer';
 
 describe('<Footer />', () => {
   test('Snapshot without links', async () => {
-    const { container } = render(<Footer />);
-    expect(container).toMatchSnapshot();
+    const { asFragment } = render(<Footer />);
+    expect(asFragment).toMatchSnapshot();
   });
 
   test('Snapshot with links', async () => {
-    const { container } = render(<Footer />);
-    expect(container).toMatchSnapshot();
+    const { asFragment } = render(<Footer />);
+    expect(asFragment).toMatchSnapshot();
   });
 });

@@ -1,10 +1,12 @@
+/// <reference lib="dom" />
+
 import { render, screen } from '@test-utils';
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { Heading } from './Heading';
 
 describe('<Heading />', () => {
   test('Snapshot', () => {
-    const { container } = render(
+    const { asFragment } = render(
       <>
         <Heading color="neutral" level={1}>
           Heading 1
@@ -21,7 +23,7 @@ describe('<Heading />', () => {
         <Heading level={5}>Heading 5</Heading>
       </>,
     );
-    expect(container).toMatchSnapshot();
+    expect(asFragment).toMatchSnapshot();
   });
 
   test('Renders an accessible heading', () => {

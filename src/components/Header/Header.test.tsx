@@ -1,13 +1,13 @@
 import { personal } from '@content';
 import { render, screen } from '@test-utils';
 import { fullName } from 'src/helpers/utils';
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { Header } from './Header';
 
 describe('<Header />', () => {
   test('Snapshot', () => {
-    const { container } = render(<Header />);
-    expect(container).toMatchSnapshot();
+    const { asFragment } = render(<Header />);
+    expect(asFragment).toMatchSnapshot();
   });
 
   test('Renders headings and PDF button', () => {

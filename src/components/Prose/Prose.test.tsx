@@ -1,5 +1,7 @@
+/// <reference lib="dom" />
+
 import { render, screen } from '@test-utils';
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import Prose from './Prose';
 
 describe('<Prose />', () => {

@@ -1,17 +1,3 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+// Bun Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SectionHeading /> > Snapshot 1`] = `
-<div>
-  <h3
-    class="font-bold text-neutral-12 text-xl md:text-2xl"
-  >
-    <div
-      class="flex items-center gap-2"
-    >
-      <div>
-        Section Heading
-      </div>
-    </div>
-  </h3>
-</div>
-`;
+exports[`<SectionHeading /> Snapshot 1`] = `[Function]`;

@@ -30,7 +30,6 @@ Your résumé can also generate a secure URL that will display information not a
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Radix UI Colors](https://www.radix-ui.com/colors)
 - [Vercel Image Generation](https://beta.nextjs.org/docs/optimizing/image-generation)
-- [Vitest](https://vitest.dev/)
 - [Testing Library](https://testing-library.com/)
 - [Vercel](https://vercel.com/)
 

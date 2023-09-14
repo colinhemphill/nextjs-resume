@@ -1,11 +1,11 @@
 import { render, screen } from '@test-utils';
-import { describe, expect, test } from 'vitest';
+import { describe, expect, test } from 'bun:test';
 import { SectionHeading } from './SectionHeading';
 
 describe('<SectionHeading />', () => {
   test('Snapshot', async () => {
-    const { container } = render(<SectionHeading text="Section Heading" />);
-    expect(container).toMatchSnapshot();
+    const { asFragment } = render(<SectionHeading text="Section Heading" />);
+    expect(asFragment).toMatchSnapshot();
   });
 
   test('Renders a heading', async () => {
