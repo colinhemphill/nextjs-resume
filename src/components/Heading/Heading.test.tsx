@@ -30,6 +30,7 @@ describe('<Heading />', () => {
           Heading 4
         </Heading>
         <Heading level={5}>Heading 5</Heading>
+        <Heading level={6}>Heading 6</Heading>
       </>,
     );
     expect(asFragment).toMatchSnapshot();
