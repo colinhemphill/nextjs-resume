@@ -58,7 +58,7 @@ cd my-resume
 npm i
 ```
 
-I've tested the project with `npm`, `pnpm`, and `yarn` and haven't run into any notable issues.
+I've tested the project with `bun`, `npm`, `pnpm`, and `yarn` and haven't run into any notable issues. For development the test runner defaults to `bun`.
 
 ### Modify Custom Config
 
