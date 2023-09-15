@@ -47,7 +47,7 @@
   "devDependencies": {
     "@happy-dom/global-registrator": "^11.0.6",
     "@testing-library/react": "14.0.0",
-    "@types/node": "20.5.9",
+    "@types/node": "20.6.1",
     "@types/react": "18.2.21",
     "autoprefixer": "10.4.15",
     "bun-types": "^1.0.1",
