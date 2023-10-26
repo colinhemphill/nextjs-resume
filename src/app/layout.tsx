@@ -1,5 +1,5 @@
 import * as colors from '@radix-ui/colors';
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 import { Albert_Sans, JetBrains_Mono } from 'next/font/google';
 import { PropsWithChildren } from 'react';
 import resumeConfig from '../../edit-me/config/resumeConfig';
@@ -38,8 +38,6 @@ export const generateMetadata = async (): Promise<Metadata> => {
   const siteName = `${fullName} Professional Résumé`;
   const title = `Résumé | ${fullName} | Somewhere`;
   const description = `Professional résumé for ${fullName}.`;
-  // @ts-ignore
-  const themeColor = colors[accentColor][`${accentColor}9`];
 
   return {
     metadataBase: new URL(baseURL),
@@ -58,7 +56,6 @@ export const generateMetadata = async (): Promise<Metadata> => {
       siteName,
       url: baseURL,
     },
-    themeColor,
     title,
     twitter: {
       site: siteName,
@@ -66,8 +63,14 @@ export const generateMetadata = async (): Promise<Metadata> => {
       description,
       title,
     },
-    viewport: 'width=device-width, initial-scale=1',
   };
+};
+
+export const viewport: Viewport = {
+  initialScale: 1,
+  // @ts-ignore
+  themeColor: colors[accentColor][`${accentColor}9`],
+  width: 'device-width',
 };
 
 const RootLayout: React.FC<PropsWithChildren> = async ({ children }) => {
