@@ -1,11 +1,27 @@
-import * as colors from '@radix-ui/colors';
+import * as radixColors from '@radix-ui/colors';
 import type { Config } from 'tailwindcss';
 import plugin from 'tailwindcss/plugin';
-import windyRadixPlugin from 'windy-radix-palette';
-import { toRadixVars } from 'windy-radix-palette/vars';
-import { ThemeSetting } from './edit-me/types/Config';
 import resumeConfig from './edit-me/config/resumeConfig';
+import { ThemeSetting } from './edit-me/types/Config';
 import { contrastColor } from './src/helpers/colorContrast';
+
+// @ts-ignore
+import { createPlugin } from 'windy-radix-palette';
+
+const colors = createPlugin({
+  colors: {
+    [resumeConfig.accentColor]: radixColors[resumeConfig.accentColor],
+    [`${resumeConfig.accentColor}Dark`]:
+      radixColors[`${resumeConfig.accentColor}Dark`],
+    amber: radixColors.amber,
+    amberDark: radixColors.amberDark,
+    [resumeConfig.neutralColor]: radixColors[resumeConfig.neutralColor],
+    [`${resumeConfig.neutralColor}Dark`]:
+      radixColors[`${resumeConfig.neutralColor}Dark`],
+    red: radixColors.red,
+    redDark: radixColors.redDark,
+  },
+});
 
 export default {
   content: [
@@ -14,21 +30,7 @@ export default {
   ],
   darkMode: resumeConfig.appTheme === ThemeSetting.System ? 'media' : 'class',
   plugins: [
-    windyRadixPlugin({
-      // only generate CSS vars for configured color choices
-      colors: {
-        [resumeConfig.accentColor]: colors[resumeConfig.accentColor],
-        [`${resumeConfig.accentColor}Dark`]:
-          colors[`${resumeConfig.accentColor}Dark`],
-        amber: colors.amber,
-        amberDark: colors.amberDark,
-        [resumeConfig.neutralColor]: colors[resumeConfig.neutralColor],
-        [`${resumeConfig.neutralColor}Dark`]:
-          colors[`${resumeConfig.neutralColor}Dark`],
-        red: colors.red,
-        redDark: colors.redDark,
-      },
-    }),
+    colors.plugin,
     plugin(function ({ addVariant }) {
       addVariant('hocus', ['&:hover', '&:focus']);
     }),
@@ -37,10 +39,10 @@ export default {
     extend: {
       // add semantic names for configured color choices
       colors: {
-        accent: toRadixVars(resumeConfig.accentColor),
+        accent: colors.alias(resumeConfig.accentColor),
         accentContrast: contrastColor,
-        danger: toRadixVars('red'),
-        neutral: toRadixVars(resumeConfig.neutralColor),
+        danger: colors.alias('red'),
+        neutral: colors.alias(resumeConfig.neutralColor),
       },
       container: {
         center: true,
