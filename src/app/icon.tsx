@@ -1,4 +1,4 @@
-import { ImageResponse } from 'next/server';
+import { ImageResponse } from 'next/og';
 import { contrastColor } from '../helpers/colorContrast';
 import { getAccentColor } from '../helpers/colors';
 
