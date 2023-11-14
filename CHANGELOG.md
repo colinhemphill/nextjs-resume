@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.3.1] - 2023-11-14
+
+### Changed
+
+- Updated screenshots for the documentation to reflect Radix Color changes
+
+### Fixed
+
+- Re-exported custom fonts
+  - A [copy/paste issue](https://github.com/diegomura/react-pdf/pull/2408) when using fonts hasn't been fixed upstream, but running my font files through a glyph editor and re-exporting seems to fix the issue
+  - This will at least solve the issue for new users of the résumé builder, and we'll see if the upstream issue gets fixed eventually
+
 ## [4.3.0] - 2023-10-26
 
 ### Changed

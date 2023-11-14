@@ -76,11 +76,11 @@ You'll also find `links.ts` which generates external links at the bottom of the 
 
 The résumé generator provides 19 accent color palettes and 6 neutral color palettes out-of-the-box. Below are screenshots from a few variations in both light and dark mode.
 
-| Light Mode                                                                          | Dark Mode                                                                         |
-| ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| **BLUE/MAUVE** ![Blue accent light mode](/docs/screenshots/Blue-LightMode.png)      | **BLUE/MAUVE** ![Blue accent dark mode](/docs/screenshots/Blue-DarkMode.png)      |
-| **TOMATO/GRAY** ![Tomato accent light mode](/docs/screenshots/Tomato-LightMode.png) | **TOMATO/GRAY** ![Tomato accent dark mode](/docs/screenshots/Tomato-DarkMode.png) |
-| **MINT/MAUVE** ![Mint accent light mode](/docs/screenshots/Mint-LightMode.png)      | **MINT/MAUVE** ![Mint accent dark mode](/docs/screenshots/Mint-DarkMode.png)      |
+| Light Mode                                                                     | Dark Mode                                                                    |
+| ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
+| **BLUE/MAUVE** ![Blue accent light mode](/docs/screenshots/Blue-LightMode.png) | **BLUE/MAUVE** ![Blue accent dark mode](/docs/screenshots/Blue-DarkMode.png) |
+| **RUBY/GRAY** ![Ruby accent light mode](/docs/screenshots/Ruby-LightMode.png)  | **RUBY/GRAY** ![Ruby accent dark mode](/docs/screenshots/Ruby-DarkMode.png)  |
+| **MINT/SLATE** ![Mint accent light mode](/docs/screenshots/Mint-LightMode.png) | **MINT/SLATE** ![Mint accent dark mode](/docs/screenshots/Mint-DarkMode.png) |
 
 ### OG Image Examples
 
