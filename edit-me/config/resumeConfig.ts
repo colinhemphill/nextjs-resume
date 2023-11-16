@@ -10,7 +10,7 @@ const config: ResumeConfig = {
   accentColor: AccentColors.Blue,
   neutralColor: NeutralColors.Slate,
   appTheme: ThemeSetting.System,
-  imageTheme: Theme.Dark,
+  imageTheme: Theme.Light,
   pdfTheme: Theme.Light,
 };
 
