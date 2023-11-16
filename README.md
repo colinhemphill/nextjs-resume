@@ -88,7 +88,7 @@ Your accent, neutral, and color scheme preferences also apply to the generated O
 
 | Light Mode                                                                     | Dark Mode                                                                       |
 | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
-| **BLUE/MAUVE** ![Blue accent light mode OG image](/docs/og/Blue-LightMode.png) | **BLUE/MAUVE** ![Blue accent dark mode share image](/docs/og/Blue-DarkMode.png) |
+| **BLUE/SLATE** ![Blue accent light mode OG image](/docs/og/Blue-LightMode.png) | **BLUE/SLATE** ![Blue accent dark mode share image](/docs/og/Blue-DarkMode.png) |
 
 ### Set Up Your CMS
 

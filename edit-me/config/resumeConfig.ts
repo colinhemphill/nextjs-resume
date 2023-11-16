@@ -8,7 +8,7 @@ import {
 
 const config: ResumeConfig = {
   accentColor: AccentColors.Blue,
-  neutralColor: NeutralColors.Mauve,
+  neutralColor: NeutralColors.Slate,
   appTheme: ThemeSetting.System,
   imageTheme: Theme.Light,
   pdfTheme: Theme.Light,
