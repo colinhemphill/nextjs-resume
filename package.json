@@ -1,6 +1,6 @@
 {
   "name": "next-resume-generator",
-  "version": "4.3.3",
+  "version": "4.3.4",
   "type": "module",
   "author": {
     "name": "Colin Hemphill",
@@ -42,16 +42,16 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-pdf-html": "1.1.18",
-    "tailwind-merge": "2.1.0"
+    "tailwind-merge": "2.2.0"
   },
   "devDependencies": {
     "@happy-dom/global-registrator": "12.10.3",
     "@testing-library/react": "14.1.2",
-    "@types/node": "20.10.4",
-    "@types/react": "18.2.45",
+    "@types/node": "20.10.6",
+    "@types/react": "18.2.46",
     "autoprefixer": "10.4.16",
-    "bun-types": "1.0.18",
-    "eslint": "8.55.0",
+    "bun-types": "1.0.20",
+    "eslint": "8.56.0",
     "eslint-config-next": "14.0.4",
     "eslint-config-prettier": "9.1.0",
     "husky": "8.0.3",
@@ -59,8 +59,8 @@
     "lint-staged": "15.2.0",
     "postcss": "8.4.32",
     "prettier": "3.1.1",
-    "prettier-plugin-tailwindcss": "0.5.9",
-    "tailwindcss": "3.3.6",
+    "prettier-plugin-tailwindcss": "0.5.10",
+    "tailwindcss": "3.4.0",
     "typescript": "5.3.3",
     "webpack": "5.89.0",
     "windy-radix-palette": "2.0.0-beta.7"
