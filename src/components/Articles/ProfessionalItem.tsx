@@ -14,7 +14,7 @@ const ProfessionalItem: React.FC<ProfessionalExperience> = ({
 }) => {
   return (
     <article className="border-t-2 border-neutral-6 py-6 first-of-type:border-none last-of-type:pb-0">
-      <Heading level={3}>
+      <Heading className="text-balance" level={3}>
         <span className="rounded-md bg-neutral-12 px-2 text-neutral-1">
           {title}
         </span>
