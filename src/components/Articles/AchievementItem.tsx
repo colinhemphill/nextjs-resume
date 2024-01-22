@@ -12,7 +12,9 @@ const AchievementItem: React.FC<Achievement> = ({
 }) => {
   return (
     <article className="border-t-2 border-neutral-6 py-6 first-of-type:border-none last-of-type:pb-0">
-      <Heading level={3}>{achievement}</Heading>
+      <Heading className="text-balance" level={3}>
+        {achievement}
+      </Heading>
 
       <div className="mt-1 font-medium tracking-wide">
         <FontAwesomeIcon className="mr-2" icon={faUniversity} />
