@@ -1,6 +1,6 @@
 {
   "name": "next-resume-generator",
-  "version": "4.3.7",
+  "version": "4.3.8",
   "type": "module",
   "author": {
     "name": "Colin Hemphill",
@@ -20,7 +20,7 @@
     "dev": "next dev",
     "format": "prettier --write 'src/**/*.{json,js,ts,tsx}'",
     "lint": "next lint",
-    "prepare": "husky install",
+    "prepare": "husky",
     "start": "next start",
     "test": "bun test",
     "test:coverage": "bun test --coverage",
@@ -34,7 +34,7 @@
     "@fortawesome/free-solid-svg-icons": "6.5.1",
     "@fortawesome/react-fontawesome": "0.2.0",
     "@radix-ui/colors": "3.0.0",
-    "@react-pdf/renderer": "3.3.2",
+    "@react-pdf/renderer": "3.3.4",
     "class-variance-authority": "0.7.0",
     "contentlayer": "0.3.4",
     "next": "14.1.0",
@@ -42,27 +42,27 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-pdf-html": "1.2.0",
-    "tailwind-merge": "2.2.0"
+    "tailwind-merge": "2.2.1"
   },
   "devDependencies": {
-    "@happy-dom/global-registrator": "13.2.1",
-    "@testing-library/react": "14.1.2",
-    "@types/node": "20.11.5",
-    "@types/react": "18.2.48",
+    "@happy-dom/global-registrator": "13.3.8",
+    "@testing-library/react": "14.2.1",
+    "@types/node": "20.11.16",
+    "@types/react": "18.2.52",
     "autoprefixer": "10.4.17",
     "bun-types": "1.0.25",
     "eslint": "8.56.0",
     "eslint-config-next": "14.1.0",
     "eslint-config-prettier": "9.1.0",
-    "husky": "8.0.3",
+    "husky": "9.0.10",
     "jsdom": "24.0.0",
-    "lint-staged": "15.2.0",
+    "lint-staged": "15.2.1",
     "postcss": "8.4.33",
     "prettier": "3.2.4",
     "prettier-plugin-tailwindcss": "0.5.11",
     "tailwindcss": "3.4.1",
     "typescript": "5.3.3",
-    "webpack": "5.89.0",
+    "webpack": "5.90.1",
     "windy-radix-palette": "2.0.0-beta.7"
   }
 }
