@@ -1,6 +1,6 @@
 {
   "name": "next-resume-generator",
-  "version": "4.3.8",
+  "version": "4.3.9",
   "type": "module",
   "author": {
     "name": "Colin Hemphill",
@@ -34,7 +34,7 @@
     "@fortawesome/free-solid-svg-icons": "6.5.1",
     "@fortawesome/react-fontawesome": "0.2.0",
     "@radix-ui/colors": "3.0.0",
-    "@react-pdf/renderer": "3.3.4",
+    "@react-pdf/renderer": "3.3.8",
     "class-variance-authority": "0.7.0",
     "contentlayer": "0.3.4",
     "next": "14.1.0",
@@ -47,22 +47,22 @@
   "devDependencies": {
     "@happy-dom/global-registrator": "13.3.8",
     "@testing-library/react": "14.2.1",
-    "@types/node": "20.11.16",
-    "@types/react": "18.2.52",
+    "@types/node": "20.11.19",
+    "@types/react": "18.2.56",
     "autoprefixer": "10.4.17",
-    "bun-types": "1.0.25",
+    "bun-types": "1.0.27",
     "eslint": "8.56.0",
     "eslint-config-next": "14.1.0",
     "eslint-config-prettier": "9.1.0",
-    "husky": "9.0.10",
+    "husky": "9.0.11",
     "jsdom": "24.0.0",
-    "lint-staged": "15.2.1",
-    "postcss": "8.4.33",
-    "prettier": "3.2.4",
+    "lint-staged": "15.2.2",
+    "postcss": "8.4.35",
+    "prettier": "3.2.5",
     "prettier-plugin-tailwindcss": "0.5.11",
     "tailwindcss": "3.4.1",
     "typescript": "5.3.3",
-    "webpack": "5.90.1",
+    "webpack": "5.90.3",
     "windy-radix-palette": "2.0.0-beta.7"
   }
 }
