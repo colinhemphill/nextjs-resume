@@ -62,7 +62,7 @@
     "prettier-plugin-tailwindcss": "0.5.11",
     "tailwindcss": "3.4.1",
     "typescript": "5.3.3",
-    "webpack": "5.90.1",
+    "webpack": "5.90.3",
     "windy-radix-palette": "2.0.0-beta.7"
   }
 }
