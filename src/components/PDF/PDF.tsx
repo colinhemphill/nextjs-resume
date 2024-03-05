@@ -32,10 +32,8 @@ import { Star } from './Icons/Star';
 import { htmlRenderers } from './htmlRenderers';
 
 const theme = resumeConfig.pdfTheme;
-const domain = process.env.NEXT_PUBLIC_VERCEL_URL
-  ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
-  : 'http://localhost:3000';
-const fontPath = `${domain}/fonts`;
+const albertSrc = 'https://fonts.gstatic.com/s/albertsans/v1';
+const jetbrainsSrc = 'https://fonts.gstatic.com/s/jetbrainsmono/v18';
 
 Font.register({
   family: 'Albert Sans',
@@ -43,22 +41,22 @@ Font.register({
     {
       fontStyle: 'normal',
       fontWeight: 400,
-      src: `${fontPath}/AlbertSans-Regular.ttf`,
+      src: `${albertSrc}/i7dZIFdwYjGaAMFtZd_QA3xXSKZqhr-TenSHq5P_rI32TxAj1g.ttf`,
     },
     {
       fontStyle: 'italic',
       fontWeight: 400,
-      src: `${fontPath}/AlbertSans-Italic.ttf`,
+      src: `${albertSrc}/i7dfIFdwYjGaAMFtZd_QA1Zeelmy79QJ1HOSY9AX74fybRUz1r5t.ttf`,
     },
     {
       fontStyle: 'normal',
       fontWeight: 700,
-      src: `${fontPath}/AlbertSans-Bold.ttf`,
+      src: `${albertSrc}/i7dZIFdwYjGaAMFtZd_QA3xXSKZqhr-TenSHTJT_rI32TxAj1g.ttf`,
     },
     {
       fontStyle: 'italic',
       fontWeight: 700,
-      src: `${fontPath}/AlbertSans-BoldItalic.ttf`,
+      src: `${albertSrc}/i7dfIFdwYjGaAMFtZd_QA1Zeelmy79QJ1HOSY9Dw6IfybRUz1r5t.ttf`,
     },
   ],
 });
@@ -69,7 +67,7 @@ Font.register({
     {
       fontStyle: 'normal',
       fontWeight: 500,
-      src: `${fontPath}/JetBrainsMono-Medium.ttf`,
+      src: `${jetbrainsSrc}/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxjPVmUsaaDhw.ttf`,
     },
   ],
 });
