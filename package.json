@@ -37,12 +37,12 @@
     "@react-pdf/renderer": "3.4.2",
     "class-variance-authority": "0.7.0",
     "contentlayer": "0.3.4",
-    "next": "14.2.1",
+    "next": "14.2.2",
     "next-contentlayer": "0.3.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-pdf-html": "2.0.4",
-    "tailwind-merge": "2.2.2"
+    "tailwind-merge": "2.3.0"
   },
   "devDependencies": {
     "@happy-dom/global-registrator": "14.7.1",
@@ -52,7 +52,7 @@
     "autoprefixer": "10.4.19",
     "bun-types": "1.1.4",
     "eslint": "8.57.0",
-    "eslint-config-next": "14.2.1",
+    "eslint-config-next": "14.2.2",
     "eslint-config-prettier": "9.1.0",
     "husky": "9.0.11",
     "jsdom": "24.0.0",
