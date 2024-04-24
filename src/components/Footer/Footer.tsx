@@ -43,9 +43,9 @@ export const Footer: React.FC = () => {
           . Learn how to deploy your own résumé with the{' '}
           <a
             className="link"
-            href="https://github.com/colinhemphill/nextjs-resume-generator"
+            href="https://github.com/colinhemphill/nextjs-resume"
           >
-            nextjs-resume-generator
+            nextjs-resume
           </a>
           !
         </div>

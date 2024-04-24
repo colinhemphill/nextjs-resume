@@ -1,5 +1,5 @@
 {
-  "name": "next-resume-generator",
+  "name": "nextjs-resume",
   "version": "5.0.0",
   "type": "module",
   "author": {
@@ -11,9 +11,10 @@
     "resume",
     "generator",
     "nextjs",
-    "pdf"
+    "pdf",
+    "tailwind"
   ],
-  "homepage": "https://github.com/colinhemphill/nextjs-resume-generator",
+  "homepage": "https://github.com/colinhemphill/nextjs-resume",
   "scripts": {
     "build": "next build",
     "build:content": "contentlayer build",

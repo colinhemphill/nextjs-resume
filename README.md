@@ -100,7 +100,7 @@ Although the mock files should be pretty self-explanatory, you can view the [Con
 
 Regardless of where the app is deployed, it may need access to the following environment variables:
 
-- `PRIVATE_KEY` (optional): this is a code, determined by the author, which will provide URL access to a version of the résumé that includes private information. We recommend generating this code (e.g. a UUID or using a password generator)
+- `PRIVATE_KEY` (optional): this is a code, determined by the author, which will provide URL access to a version of the résumé that includes private information. We recommend generating this code (e.g. a UUID or using a password generator).
 
 ## Private Link
 
