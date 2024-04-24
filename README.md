@@ -70,7 +70,7 @@ Open the project in favorite editor, and open up the `edit-me/config/` folder at
 - `imageTheme`: `'light' | 'dark'`. Your OG share image and app icons will be generated in either a light or a dark variant.
 - `pdfTheme`: `'light' | 'dark'`. Your PDF will be generated in either a light or a dark variant.
 
-You'll also find `links.ts` which generates external links at the bottom of the document. You can use any icon from the [Fontawesome free and brand icon](https://fontawesome.com/search?o=r&m=free&f=brands) sets alongside these links.
+You'll also find `links.ts` which generates external links at the bottom of the document. You can use any icon from [Simple Icons](https://simpleicons.org/) alongside these links.
 
 ### Color Palette Examples
 

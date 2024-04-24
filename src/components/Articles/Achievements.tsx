@@ -1,4 +1,4 @@
-import { faMortarBoard } from '@fortawesome/free-solid-svg-icons';
+import { AcademicCapIcon } from '@heroicons/react/24/solid';
 import React from 'react';
 import { sortedAchievements } from 'src/helpers/utils';
 import { SectionHeading } from '../SectionHeading/SectionHeading';
@@ -9,7 +9,11 @@ const Achievements: React.FC = () => {
     <article className="rounded-xl bg-neutral-3 py-12">
       <div className="container">
         <div className="flex justify-center text-center">
-          <SectionHeading icon={faMortarBoard} level={2} text="Achievements" />
+          <SectionHeading
+            Icon={AcademicCapIcon}
+            level={2}
+            text="Achievements"
+          />
         </div>
 
         {sortedAchievements.map((achievement) => (

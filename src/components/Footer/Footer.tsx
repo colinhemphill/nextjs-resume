@@ -1,5 +1,4 @@
 import { personal } from '@content';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { links } from 'edit-me/config/links';
 import React from 'react';
 import { fullName } from 'src/helpers/utils';
@@ -21,7 +20,7 @@ export const Footer: React.FC = () => {
                   <span className="sr-only">
                     {personal.givenName} on {link.title}
                   </span>
-                  <FontAwesomeIcon aria-hidden icon={link.icon} size="lg" />
+                  <link.icon aria-hidden size={18} />
                 </ButtonLink>
               ))}
             </div>

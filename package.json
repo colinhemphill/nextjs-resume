@@ -1,6 +1,6 @@
 {
   "name": "next-resume-generator",
-  "version": "4.3.12",
+  "version": "5.0.0",
   "type": "module",
   "author": {
     "name": "Colin Hemphill",
@@ -29,10 +29,8 @@
     "types": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "6.5.2",
-    "@fortawesome/free-brands-svg-icons": "6.5.2",
-    "@fortawesome/free-solid-svg-icons": "6.5.2",
-    "@fortawesome/react-fontawesome": "0.2.0",
+    "@heroicons/react": "2.1.3",
+    "@icons-pack/react-simple-icons": "9.4.1",
     "@radix-ui/colors": "3.0.0",
     "@react-pdf/renderer": "3.4.3",
     "class-variance-authority": "0.7.0",

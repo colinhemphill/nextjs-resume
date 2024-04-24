@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.0.0] - 2024-04-24
+
+## Changed
+
+- Using [Heroicons](https://heroicons.com/) for general use icons
+- Using [Simple Icons](https://simpleicons.org/) for branded icons
+  - This is a breaking change since you'll need to update `edit-me/config/links.ts` with the new icon imports
+
 ## [4.3.12] - 2024-04-16
 
 ### Changed

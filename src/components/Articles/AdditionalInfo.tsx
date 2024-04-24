@@ -1,5 +1,5 @@
 import { additionalInfo } from '@content';
-import { faPaintBrush } from '@fortawesome/free-solid-svg-icons';
+import { PaintBrushIcon } from '@heroicons/react/24/solid';
 import React from 'react';
 import Prose from '../Prose/Prose';
 import { SectionHeading } from '../SectionHeading/SectionHeading';
@@ -9,7 +9,7 @@ export const AdditionalInfo: React.FC = () => {
     <article className="py-12">
       <div className="mb-6 flex justify-center">
         <SectionHeading
-          icon={faPaintBrush}
+          Icon={PaintBrushIcon}
           level={2}
           text={additionalInfo.title}
         />
