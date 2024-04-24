@@ -34,7 +34,7 @@
     "@fortawesome/free-solid-svg-icons": "6.5.2",
     "@fortawesome/react-fontawesome": "0.2.0",
     "@radix-ui/colors": "3.0.0",
-    "@react-pdf/renderer": "3.4.2",
+    "@react-pdf/renderer": "3.4.3",
     "class-variance-authority": "0.7.0",
     "contentlayer": "0.3.4",
     "next": "14.2.2",
@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@happy-dom/global-registrator": "14.7.1",
-    "@testing-library/react": "15.0.2",
+    "@testing-library/react": "15.0.4",
     "@types/node": "20.12.7",
     "@types/react": "18.2.79",
     "autoprefixer": "10.4.19",
