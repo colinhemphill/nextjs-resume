@@ -1,5 +1,5 @@
 import { PrivateField, personal } from '@content';
-import { faIdCard } from '@fortawesome/free-solid-svg-icons';
+import { IdentificationIcon } from '@heroicons/react/24/solid';
 import React from 'react';
 import { SectionHeading } from '../SectionHeading/SectionHeading';
 
@@ -12,7 +12,11 @@ export const ContactInformation: React.FC<ContactInformationProps> = ({
 }) => {
   return (
     <article>
-      <SectionHeading icon={faIdCard} level={3} text="Contact Information" />
+      <SectionHeading
+        Icon={IdentificationIcon}
+        level={3}
+        text="Contact Information"
+      />
 
       <ul className="mt-2">
         <li>

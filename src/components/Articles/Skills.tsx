@@ -1,5 +1,5 @@
 import { allSkills } from '@content';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { CheckIcon } from '@heroicons/react/24/solid';
 import React from 'react';
 import { Heading } from '../Heading/Heading';
 import Prose from '../Prose/Prose';
@@ -9,7 +9,11 @@ import { StarRating } from '../StarRating/StarRating';
 const Skills: React.FC = () => {
   return (
     <article>
-      <SectionHeading icon={faCheck} level={3} text="Skills &amp; Expertise" />
+      <SectionHeading
+        Icon={CheckIcon}
+        level={3}
+        text="Skills &amp; Expertise"
+      />
 
       <div className="mt-2 grid grid-flow-row gap-6 lg:grid-flow-col">
         {allSkills.map((skill, skillIndex) => (

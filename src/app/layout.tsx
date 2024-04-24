@@ -4,13 +4,8 @@ import { Albert_Sans, JetBrains_Mono } from 'next/font/google';
 import { PropsWithChildren } from 'react';
 import resumeConfig from '../../edit-me/config/resumeConfig';
 
-// ICONS CONFIG
-import { config } from '@fortawesome/fontawesome-svg-core';
-config.autoAddCss = false;
-
 // STYLES
 import { personal } from '@content';
-import '@fortawesome/fontawesome-svg-core/styles.css';
 import { headers } from 'next/headers';
 import { protocol, vercelURL } from 'src/helpers/env';
 import { fullName } from 'src/helpers/utils';

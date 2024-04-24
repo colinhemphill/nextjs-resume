@@ -8,9 +8,10 @@ import {
   Text,
   View,
 } from '@react-pdf/renderer';
+import { HtmlProps } from 'node_modules/react-pdf-html/dist/types/Html';
 import React from 'react';
 import Html from 'react-pdf-html';
-import { HtmlProps } from 'react-pdf-html/dist/Html';
+import { htmlRenderers } from 'src/components/PDF/htmlRenderers';
 import resumeConfig from '../../../edit-me/config/resumeConfig';
 import { Theme } from '../../../edit-me/types/Config';
 import { contrastColor } from '../../helpers/colorContrast';
@@ -29,7 +30,6 @@ import { CircleIdCard } from './Icons/CircleIdCard';
 import { CirclePaintbrush } from './Icons/CirclePaintbrush';
 import { CircleUser } from './Icons/CircleUser';
 import { Star } from './Icons/Star';
-import { htmlRenderers } from './htmlRenderers';
 
 const theme = resumeConfig.pdfTheme;
 const albertSrc = 'https://fonts.gstatic.com/s/albertsans/v1';

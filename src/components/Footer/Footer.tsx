@@ -1,5 +1,4 @@
 import { personal } from '@content';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { links } from 'edit-me/config/links';
 import React from 'react';
 import { fullName } from 'src/helpers/utils';
@@ -21,7 +20,7 @@ export const Footer: React.FC = () => {
                   <span className="sr-only">
                     {personal.givenName} on {link.title}
                   </span>
-                  <FontAwesomeIcon aria-hidden icon={link.icon} size="lg" />
+                  <link.icon aria-hidden size={18} />
                 </ButtonLink>
               ))}
             </div>
@@ -44,9 +43,9 @@ export const Footer: React.FC = () => {
           . Learn how to deploy your own résumé with the{' '}
           <a
             className="link"
-            href="https://github.com/colinhemphill/nextjs-resume-generator"
+            href="https://github.com/colinhemphill/nextjs-resume"
           >
-            nextjs-resume-generator
+            nextjs-resume
           </a>
           !
         </div>

@@ -1,5 +1,4 @@
-import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { DocumentIcon } from '@heroicons/react/24/solid';
 import React from 'react';
 import ButtonLink from '../Button/ButtonLink';
 
@@ -13,7 +12,7 @@ const PDFDownloadButton: React.FC<PDFDownloadButtonProps> = ({ secret }) => {
       href={secret ? `/api/pdf?secret=${secret}` : '/api/pdf'}
       size="lg"
     >
-      <FontAwesomeIcon icon={faFilePdf} size="lg" />
+      <DocumentIcon className="h-6" />
       View or Download PDF
     </ButtonLink>
   );

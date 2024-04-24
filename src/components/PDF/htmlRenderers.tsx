@@ -1,13 +1,8 @@
 /* eslint-disable react/display-name */
 import { Image, Text, View } from '@react-pdf/renderer';
+import { HtmlElement } from 'node_modules/react-pdf-html/dist/types/parse';
+import { HtmlRenderer } from 'node_modules/react-pdf-html/dist/types/render';
 import { HtmlStyle } from 'react-pdf-html';
-import {
-  lowerAlpha,
-  orderedAlpha,
-  upperAlpha,
-} from 'react-pdf-html/dist/ordered.type';
-import { HtmlElement } from 'react-pdf-html/dist/parse';
-import { HtmlRenderer } from 'react-pdf-html/dist/render';
 
 // solves text overflow of list elements when rendered by react-pdf-html
 // thanks to [justin-hackin](https://github.com/justin-hackin) for the custom renderer
@@ -44,22 +39,13 @@ const generateCustomLi =
       bullet = false;
     } else if (listStyleType.includes('url(')) {
       bullet = (
+        // eslint-disable-next-line jsx-a11y/alt-text
         <Image
           src={listStyleType.match(/\((.*?)\)/)[1].replace(/(['"])/g, '')}
         />
       );
     } else if (ordered) {
-      if (lowerAlpha.includes(listStyleType)) {
-        bullet = (
-          <Text>{orderedAlpha[element.indexOfType].toLowerCase()}.</Text>
-        );
-      } else if (upperAlpha.includes(listStyleType)) {
-        bullet = (
-          <Text>{orderedAlpha[element.indexOfType].toUpperCase()}.</Text>
-        );
-      } else {
-        bullet = <Text>{element.indexOfType + 1}.</Text>;
-      }
+      bullet = <Text>{element.indexOfType + 1}.</Text>;
     } else {
       bullet = <Text>•</Text>;
     }

@@ -1,6 +1,5 @@
 import { ProfessionalExperience } from '@content';
-import { faCalendar } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { CalendarIcon } from '@heroicons/react/24/solid';
 import React from 'react';
 import { Heading } from '../Heading/Heading';
 import Prose from '../Prose/Prose';
@@ -21,8 +20,8 @@ const ProfessionalItem: React.FC<ProfessionalExperience> = ({
         <span> at {organization}</span>
       </Heading>
 
-      <div className="mt-1 font-medium tracking-wide">
-        <FontAwesomeIcon className="mr-2" icon={faCalendar} />
+      <div className="mt-1 flex items-center gap-2 font-medium tracking-wide">
+        <CalendarIcon className="inline h-6" />
         {startDate}–{!endDate ? 'Current' : endDate}
       </div>
 
