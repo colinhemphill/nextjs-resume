@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@heroicons/react": "2.1.3",
-    "@icons-pack/react-simple-icons": "9.4.1",
+    "@icons-pack/react-simple-icons": "9.5.0",
     "@radix-ui/colors": "3.0.0",
     "@react-pdf/renderer": "3.4.4",
     "class-variance-authority": "0.7.0",
