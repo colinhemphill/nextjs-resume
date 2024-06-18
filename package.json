@@ -30,7 +30,7 @@
     "types": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@heroicons/react": "2.1.3",
+    "@heroicons/react": "2.1.4",
     "@icons-pack/react-simple-icons": "9.5.0",
     "@radix-ui/colors": "3.0.0",
     "@react-pdf/renderer": "3.4.4",
