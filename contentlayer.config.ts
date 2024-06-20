@@ -1,4 +1,4 @@
-import { defineDocumentType, makeSource } from 'contentlayer/source-files';
+import { defineDocumentType, defineNestedType, makeSource } from 'contentlayer/source-files';
 
 export const Personal = defineDocumentType(() => ({
   name: 'Personal',
@@ -46,6 +46,27 @@ export const Skill = defineDocumentType(() => ({
   },
 }));
 
+export const PreviousTitle = defineNestedType(() => ({
+  name: 'PreviousTitle',
+  fields: {
+    title: {
+      type: 'string',
+      description: 'A previous title at this organization',
+      required: true,
+    },
+    startDate: {
+      type: 'string',
+      description: 'The year when you started the position',
+      required: true,
+    },
+    endDate: {
+      type: 'string',
+      description: 'The year when you ended the position',
+      required: true,
+    },
+  },
+}));
+
 export const ProfessionalExperience = defineDocumentType(() => ({
   name: 'ProfessionalExperience',
   filePathPattern: 'professionalExperiences/*.md',
@@ -69,6 +90,11 @@ export const ProfessionalExperience = defineDocumentType(() => ({
       type: 'string',
       description:
         'If you no longer work with this organization, provide a descriptor of when you ended the position',
+      required: false,
+    },
+    previousTitles: {
+      type: 'list',
+      of: PreviousTitle,
       required: false,
     },
   },
