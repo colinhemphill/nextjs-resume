@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import { PrivateField, additionalInfo, allSkills, personal } from '@content';
+import { PrivateField, ProfessionalExperience, additionalInfo, allSkills, personal } from '@content';
 import {
   Document,
   Font,
@@ -20,9 +20,9 @@ import {
   fullName,
   sortedAchievements,
   sortedProfessionalExperiences,
+  sortedPreviousTitles,
 } from '../../helpers/utils';
 import { BuildingColumns } from './Icons/BuildingColumns';
-import { Calendar } from './Icons/Calendar';
 import { CircleBriefcase } from './Icons/CircleBriefcase';
 import { CircleCheck } from './Icons/CircleCheck';
 import { CircleGraduationCap } from './Icons/CircleGraduationCap';
@@ -192,10 +192,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     display: 'flex',
     flexDirection: 'row',
+    flexWrap: 'wrap',
     gap: spacers[1],
     marginBottom: spacers[1],
   },
+  itemSubheadingSubRow: {
+    display: 'flex',
+    flex: '0 0 100%',
+  },
   itemSubheading: {
+    fontSize: fontSizes.xxs,
+  },
+  itemSubheadingItalic: {
     fontSize: fontSizes.xxs,
     fontStyle: 'italic',
   },
@@ -246,12 +254,42 @@ interface PDFProps {
   privateInformation?: PrivateField[];
 }
 
+interface ProfessionExperienceProps {
+  professionalExperience: ProfessionalExperience;
+}
+
+const ProfessionalExperienceDetails: React.FC<ProfessionExperienceProps> = ({
+  professionalExperience,
+}) => {
+  const previousTitlesSorted = professionalExperience.previousTitles
+    ? sortedPreviousTitles(professionalExperience.previousTitles)
+    : [];
+  return (
+    <>
+      <View style={styles.itemSubheadingRow}>
+        <Text style={styles.itemSubheading}>
+          {professionalExperience.startDate}—
+          {professionalExperience.endDate
+            ? professionalExperience.endDate
+            : 'Current'}
+        </Text>
+        <View style={styles.itemSubheadingSubRow}>
+          {previousTitlesSorted.length > 0 && previousTitlesSorted?.map((prevTitle, idx) => (
+            <Text key={idx} style={styles.itemSubheadingItalic}>{prevTitle.title} {prevTitle.startDate}—{prevTitle.endDate}</Text>
+          ))}
+
+        </View>
+      </View>
+    </>
+  );
+}
+
 const PDF: React.FC<PDFProps> = ({ privateInformation }) => {
   const year = new Date().getFullYear();
 
   return (
     // @ts-ignore
-    <Document author={fullName} title={`Résume for ${fullName}, ${year}`}>
+    <Document author={fullName} title={`Resumé for ${fullName}, ${year}`}>
       {/* @ts-ignore */}
       <Page size="LETTER" style={styles.page}>
         <View style={styles.sidebar}>
@@ -320,15 +358,7 @@ const PDF: React.FC<PDFProps> = ({ privateInformation }) => {
                   </Text>
                   <Text>&nbsp;at {professionalExperience.organization}</Text>
                 </View>
-                <View style={styles.itemSubheadingRow}>
-                  <Calendar size={fontSizes.xxs} />
-                  <Text style={styles.itemSubheading}>
-                    {professionalExperience.startDate}—
-                    {professionalExperience.endDate
-                      ? professionalExperience.endDate
-                      : 'Current'}
-                  </Text>
-                </View>
+                <ProfessionalExperienceDetails professionalExperience={professionalExperience} />
                 <Html {...htmlProps}>{professionalExperience.body.html}</Html>
               </View>
             ))}
