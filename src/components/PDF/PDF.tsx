@@ -1,5 +1,11 @@
 /* eslint-disable jsx-a11y/alt-text */
-import { PrivateField, ProfessionalExperience, additionalInfo, allSkills, personal } from '@content';
+import {
+  PrivateField,
+  ProfessionalExperience,
+  additionalInfo,
+  allSkills,
+  personal,
+} from '@content';
 import {
   Document,
   Font,
@@ -19,8 +25,8 @@ import { getAccentColor, getNeutralColor } from '../../helpers/colors';
 import {
   fullName,
   sortedAchievements,
-  sortedProfessionalExperiences,
   sortedPreviousTitles,
+  sortedProfessionalExperiences,
 } from '../../helpers/utils';
 import { BuildingColumns } from './Icons/BuildingColumns';
 import { CircleBriefcase } from './Icons/CircleBriefcase';
@@ -274,15 +280,17 @@ const ProfessionalExperienceDetails: React.FC<ProfessionExperienceProps> = ({
             : 'Current'}
         </Text>
         <View style={styles.itemSubheadingSubRow}>
-          {previousTitlesSorted.length > 0 && previousTitlesSorted?.map((prevTitle, idx) => (
-            <Text key={idx} style={styles.itemSubheadingItalic}>{prevTitle.title} {prevTitle.startDate}—{prevTitle.endDate}</Text>
-          ))}
-
+          {previousTitlesSorted.length > 0 &&
+            previousTitlesSorted?.map((prevTitle, idx) => (
+              <Text key={idx} style={styles.itemSubheadingItalic}>
+                {prevTitle.title} {prevTitle.startDate}—{prevTitle.endDate}
+              </Text>
+            ))}
         </View>
       </View>
     </>
   );
-}
+};
 
 const PDF: React.FC<PDFProps> = ({ privateInformation }) => {
   const year = new Date().getFullYear();
@@ -358,7 +366,9 @@ const PDF: React.FC<PDFProps> = ({ privateInformation }) => {
                   </Text>
                   <Text>&nbsp;at {professionalExperience.organization}</Text>
                 </View>
-                <ProfessionalExperienceDetails professionalExperience={professionalExperience} />
+                <ProfessionalExperienceDetails
+                  professionalExperience={professionalExperience}
+                />
                 <Html {...htmlProps}>{professionalExperience.body.html}</Html>
               </View>
             ))}
