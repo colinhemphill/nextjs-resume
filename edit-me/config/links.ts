@@ -3,7 +3,7 @@ import {
   SiInstagram,
   SiLinkedin,
   SiNpm,
-  SiTwitter,
+  SiX,
 } from '@icons-pack/react-simple-icons';
 import { CMSLink } from 'edit-me/types/CMSLink';
 
@@ -30,7 +30,7 @@ export const links: CMSLink[] = [
   },
   {
     href: 'https://twitter.com',
-    icon: SiTwitter,
-    title: 'Twitter',
+    icon: SiX,
+    title: 'X',
   },
 ];

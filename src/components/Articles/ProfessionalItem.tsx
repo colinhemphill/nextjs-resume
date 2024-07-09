@@ -1,8 +1,8 @@
 import { PreviousTitle, ProfessionalExperience } from '@content';
 import React from 'react';
+import { sortedPreviousTitles } from 'src/helpers/utils';
 import { Heading } from '../Heading/Heading';
 import Prose from '../Prose/Prose';
-import { sortedPreviousTitles } from 'src/helpers/utils';
 
 const ProfessionalItem: React.FC<ProfessionalExperience> = ({
   body,
@@ -15,6 +15,7 @@ const ProfessionalItem: React.FC<ProfessionalExperience> = ({
   const previousTitlesSorted = previousTitles
     ? sortedPreviousTitles(previousTitles)
     : [];
+
   return (
     <article className="border-t-2 border-neutral-6 py-6 first-of-type:border-none last-of-type:pb-0">
       <Heading className="text-balance" level={3}>
@@ -31,7 +32,9 @@ const ProfessionalItem: React.FC<ProfessionalExperience> = ({
           </>
         ) : (
           <>
-            <p>{startDate}–{!endDate ? 'Current' : endDate}</p>
+            <p>
+              {startDate}–{!endDate ? 'Current' : endDate}
+            </p>
             {previousTitlesSorted?.map((prevTitle: PreviousTitle, idx) => (
               <p key={idx}>
                 {prevTitle.title} {prevTitle.startDate}–{prevTitle.endDate}
