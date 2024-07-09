@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Allows you to include previous titles in a professional listing
-  - Added by [@rachelslurs](https://github.com/rachelslurs) in [#515](https://github.com/colinhemphill/nextjs-resume/pull/516)
+  - Added by [@rachelslurs](https://github.com/rachelslurs) in [#516](https://github.com/colinhemphill/nextjs-resume/pull/516)
 
 ### Changed
 
