@@ -42,7 +42,7 @@
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-pdf-html": "2.1.2",
-    "tailwind-merge": "2.5.1"
+    "tailwind-merge": "2.5.2"
   },
   "devDependencies": {
     "@happy-dom/global-registrator": "14.12.3",
