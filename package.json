@@ -45,7 +45,7 @@
     "tailwind-merge": "2.5.2"
   },
   "devDependencies": {
-    "@happy-dom/global-registrator": "15.7.3",
+    "@happy-dom/global-registrator": "15.7.4",
     "@testing-library/react": "16.0.1",
     "@types/node": "22.5.4",
     "@types/react": "18.3.5",
