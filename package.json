@@ -54,7 +54,7 @@
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.9",
     "eslint-config-prettier": "9.1.0",
-    "husky": "9.1.5",
+    "husky": "9.1.6",
     "jsdom": "25.0.0",
     "lint-staged": "15.2.10",
     "postcss": "8.4.45",
