@@ -34,7 +34,7 @@
     "@heroicons/react": "2.1.5",
     "@icons-pack/react-simple-icons": "10.0.0",
     "@radix-ui/colors": "3.0.0",
-    "@react-pdf/renderer": "3.4.4",
+    "@react-pdf/renderer": "4.0.0",
     "class-variance-authority": "0.7.0",
     "contentlayer": "0.3.4",
     "next": "14.2.15",
