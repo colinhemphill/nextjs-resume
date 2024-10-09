@@ -48,7 +48,7 @@
     "@happy-dom/global-registrator": "15.7.4",
     "@testing-library/react": "16.0.1",
     "@types/node": "22.5.5",
-    "@types/react": "18.3.6",
+    "@types/react": "18.3.11",
     "autoprefixer": "10.4.20",
     "bun-types": "1.1.27",
     "eslint": "8.57.1",
