@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "@heroicons/react": "2.1.5",
-    "@icons-pack/react-simple-icons": "10.0.0",
+    "@icons-pack/react-simple-icons": "10.2.0",
     "@radix-ui/colors": "3.0.0",
     "@react-pdf/renderer": "4.0.0",
     "class-variance-authority": "0.7.0",
