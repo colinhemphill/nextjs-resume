@@ -50,7 +50,7 @@
     "@types/node": "22.7.5",
     "@types/react": "18.3.11",
     "autoprefixer": "10.4.20",
-    "bun-types": "1.1.30",
+    "bun-types": "1.1.38",
     "eslint": "8.57.1",
     "eslint-config-next": "14.2.15",
     "eslint-config-prettier": "9.1.0",
