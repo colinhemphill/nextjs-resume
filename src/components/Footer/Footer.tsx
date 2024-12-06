@@ -6,7 +6,7 @@ import { fullName } from 'src/helpers/utils';
 
 export default function Footer(): ReactNode {
   return (
-    <footer className="mt-12 bg-neutral-3 py-12 text-neutral-12">
+    <footer className="mt-12 border-t border-neutral-6 bg-neutral-2 py-12 text-neutral-12">
       <div className="container text-center">
         <div className="flex justify-center">
           <div className="grid grid-flow-col gap-2">
@@ -36,10 +36,6 @@ export default function Footer(): ReactNode {
           This résumé was generated with{' '}
           <a className="text-link" href="https://nextjs.org/">
             Next.js
-          </a>{' '}
-          and deployed on{' '}
-          <a className="text-link" href="https://vercel.com/">
-            Vercel
           </a>
           . Learn how to deploy your own résumé with the{' '}
           <a

@@ -10,13 +10,13 @@ export default function AchievementItem({
   organization,
 }: Achievement): ReactNode {
   return (
-    <article className="space-y-4 border-t-2 border-neutral-6 py-6 first-of-type:border-none last-of-type:pb-0">
+    <article className="space-y-4">
       <div className="space-y-1">
         <Heading className="text-balance" level={3}>
           {achievement}
         </Heading>
 
-        <div className="flex items-center gap-2 font-semibold tracking-wide text-neutral-11">
+        <div className="flex items-center gap-2 text-lg font-semibold tracking-wide text-neutral-11">
           <AcademicCapIcon className="h-4" />
           {organization}
         </div>

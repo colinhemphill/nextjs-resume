@@ -420,7 +420,7 @@ WIP
 
 ### Added
 
-- [Vercel OG Image](https://vercel.com/docs/concepts/functions/edge-functions/og-image-generation) generator integration
+- [Image generation](https://nextjs.org/docs/app/api-reference/functions/image-response) generator integration
 
 ### Changed
 

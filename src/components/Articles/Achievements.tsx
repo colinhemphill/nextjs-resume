@@ -1,23 +1,26 @@
 import { AcademicCapIcon } from '@heroicons/react/24/solid';
-import { ReactNode } from 'react';
+import { Fragment, ReactNode } from 'react';
+import Separator from 'src/components/articles/separator';
 import SectionHeading from 'src/components/section-heading/section-heading';
 import { sortedAchievements } from 'src/helpers/utils';
 import AchievementItem from './achievement-item';
 
 export default function Achievements(): ReactNode {
   return (
-    <article className="rounded-xl border border-neutral-6 bg-neutral-2 py-12 shadow-lg">
-      <div className="container">
-        <div className="flex justify-center text-center">
-          <SectionHeading
-            Icon={AcademicCapIcon}
-            level={2}
-            text="Achievements"
-          />
-        </div>
+    <article className="rounded-xl border border-neutral-6 bg-neutral-2 py-12 shadow-md">
+      <div className="container space-y-8">
+        <SectionHeading
+          className="justify-center"
+          Icon={AcademicCapIcon}
+          level={2}
+          text="Achievements"
+        />
 
         {sortedAchievements.map((achievement) => (
-          <AchievementItem key={achievement._id} {...achievement} />
+          <Fragment key={achievement._id}>
+            <AchievementItem key={achievement._id} {...achievement} />
+            <Separator />
+          </Fragment>
         ))}
       </div>
     </article>

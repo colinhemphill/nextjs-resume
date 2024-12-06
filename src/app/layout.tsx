@@ -3,7 +3,7 @@ import { Metadata, Viewport } from 'next';
 import { Albert_Sans, JetBrains_Mono } from 'next/font/google';
 import { headers } from 'next/headers';
 import { PropsWithChildren, ReactNode } from 'react';
-import { protocol, vercelURL } from 'src/helpers/environment';
+import { deployURL, protocol } from 'src/helpers/environment';
 import { cn, fullName } from 'src/helpers/utils';
 import resumeConfig from '../../edit-me/config/resume-config';
 import { ThemeSetting } from '../../edit-me/types/config';
@@ -24,7 +24,7 @@ const jetBrainsMono = JetBrains_Mono({
 export const generateMetadata = async (): Promise<Metadata> => {
   const requestHeaders = await headers();
   const host = requestHeaders.get('host');
-  const baseURL = `${protocol}://${host ?? vercelURL ?? ''}`;
+  const baseURL = `${protocol}://${host ?? deployURL ?? ''}`;
   const siteName = `${fullName} Professional Résumé`;
   const title = `Résumé | ${fullName} | Somewhere`;
   const description = `Professional résumé for ${fullName}.`;

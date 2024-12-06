@@ -10,7 +10,7 @@ export default function ProfessionalItem({
   titles,
 }: ProfessionalExperience): ReactNode {
   return (
-    <article className="space-y-4 border-t-2 border-neutral-6 py-6 first-of-type:border-none last-of-type:pb-0">
+    <article className="space-y-4">
       <Heading className="text-balance" level={3}>
         {organization}
       </Heading>

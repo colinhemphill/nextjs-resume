@@ -9,7 +9,7 @@ interface ProseProperties {
 export default function Prose({ className, html }: ProseProperties): ReactNode {
   return (
     <div
-      className={cn('prose text-base text-neutral-12 [&>p]:mb-2', className)}
+      className={cn('prose space-y-4 text-base text-neutral-12', className)}
       dangerouslySetInnerHTML={{ __html: html }}
     />
   );
