@@ -7,7 +7,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [6.0.0] - 2024-12-06
 
-WIP
+I'm not planning to include a migration guide for this version because I think the changes are substantial enough that it won't be feasible for most people. Almost all filenames have changed due to ESLint rules, some Contentlayer schemas have changed, and most components have been overhauled. I recommend starting fresh and copying over your previously created CMS.
+
+### Added
+
+- [Syncpack](https://jamiemason.github.io/syncpack/) for dependency management
+
+### Changed
+
+- Dependency upgrades
+  - Including [React 19](https://react.dev/blog/2024/12/05/react-19)
+  - Including [Next.js 15](https://nextjs.org/blog/next-15)
+- Substantial overhaul of ESLint setup
+  - Flat config
+  - [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn) for additional strict checks
+- Contentlayer schema
+  - Replace `PreviousTitle` type with a generic `ProfessionalTitle` type
+  - `titles` is now a required field on `ProfessionalExperience`
+- Substantial style updates
+  - New structure of `titles` fields allows us to create a visual timeline of your experience at a given organization
+  - Overhauled `Button` design
+
+### Removed
+
+- Yeeted most Vercel requirements [for reasons](https://bsky.app/profile/colinhemphill.com/post/3laheutqa262m)
 
 ## [5.1.4] - 2024-10-11
 

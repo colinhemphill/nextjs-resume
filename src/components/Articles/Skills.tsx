@@ -8,7 +8,7 @@ import Prose from '../prose/prose';
 
 export default function Skills(): ReactNode {
   return (
-    <article className="space-y-4">
+    <article className="space-y-4 md:col-span-2">
       <SectionHeading
         Icon={CheckIcon}
         level={3}

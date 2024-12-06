@@ -53,6 +53,16 @@ export default {
           },
         },
       });
+      addBase({
+        code: {
+          'background-color': theme('colors.neutral.1'),
+          color: theme('colors.neutral.12'),
+          'border-radius': theme('borderRadius.DEFAULT'),
+          'padding-left': theme('spacing.1'),
+          'padding-right': theme('spacing.1'),
+          'font-weight': theme('fontWeight.medium'),
+        },
+      });
       addUtilities({
         '.text-link': {
           'text-decoration-line': 'underline',

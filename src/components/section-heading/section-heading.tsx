@@ -21,10 +21,10 @@ export default function SectionHeading({
   text,
 }: SectionHeadingProperties): ReactNode {
   return (
-    <Heading className={cn('flex items-center gap-2', className)} level={level}>
+    <Heading className={cn('flex items-center gap-3', className)} level={level}>
       {Icon && (
-        <div className="hidden h-[1.2em] w-[1.2em] items-center justify-center rounded-full bg-neutral-12 md:flex">
-          <Icon aria-hidden className="h-[0.8em] text-neutral-1" />
+        <div className="hidden h-[1em] w-[1em] items-center justify-center rounded-full bg-neutral-12 md:flex">
+          <Icon aria-hidden className="h-[0.6em] text-neutral-1" />
         </div>
       )}
       <span>{text}</span>

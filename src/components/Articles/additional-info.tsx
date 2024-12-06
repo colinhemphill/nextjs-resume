@@ -6,7 +6,7 @@ import Prose from '../prose/prose';
 
 export default function AdditionalInfo(): ReactNode {
   return (
-    <article className="space-y-6 py-12">
+    <article className="space-y-8 py-12">
       <div className="flex justify-center">
         <SectionHeading
           Icon={PaintBrushIcon}

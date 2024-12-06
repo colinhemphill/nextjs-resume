@@ -6,7 +6,7 @@ import { fullName } from 'src/helpers/utils';
 
 export default function Footer(): ReactNode {
   return (
-    <footer className="mt-12 border-t border-neutral-6 bg-neutral-2 py-12 text-neutral-12">
+    <footer className="border-t border-neutral-6 bg-neutral-2 py-12 text-neutral-12">
       <div className="container text-center">
         <div className="flex justify-center">
           <div className="grid grid-flow-col gap-2">
