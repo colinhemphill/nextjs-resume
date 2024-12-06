@@ -1,16 +1,16 @@
 import { render, screen } from '@test-utils';
 import { describe, expect, test } from 'bun:test';
-import Button from './Button';
+import Button from './button';
 
 describe('<Button />', () => {
-  test('Renders an accessible button element', async () => {
+  test('Renders an accessible button element', () => {
     render(<Button>Action</Button>);
 
     const button = screen.getByRole('button', { name: /action/i });
     expect(button).toBeDefined();
   });
 
-  test('Snapshot', async () => {
+  test('Snapshot', () => {
     const { asFragment } = render(
       <>
         <Button>Button</Button>

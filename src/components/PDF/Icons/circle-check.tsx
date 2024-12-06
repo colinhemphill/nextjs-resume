@@ -1,18 +1,18 @@
 import { Path, Svg } from '@react-pdf/renderer';
-import React from 'react';
+import { ReactNode } from 'react';
 import resumeConfig from '../../../../edit-me/config/resumeConfig';
 import { getNeutralColor } from '../../../helpers/colors';
 
 const theme = resumeConfig.pdfTheme;
 const neutralColor = getNeutralColor(12, theme);
 
-export const CircleUser: React.FC<PdfIconProps> = ({ size }) => {
+export default function CircleCheck({ size }: PdfIconProps): ReactNode {
   return (
     <Svg style={{ height: size, width: size }} viewBox="0 0 512 512">
       <Path
         fill={neutralColor}
-        d="M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z"
+        d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
       />
     </Svg>
   );
-};
+}

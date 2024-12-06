@@ -1,12 +1,12 @@
 import { Path, Svg } from '@react-pdf/renderer';
-import React from 'react';
+import { ReactNode } from 'react';
 import resumeConfig from '../../../../edit-me/config/resumeConfig';
 import { getNeutralColor } from '../../../helpers/colors';
 
 const theme = resumeConfig.pdfTheme;
 const neutralColor = getNeutralColor(12, theme);
 
-export const BuildingColumns: React.FC<PdfIconProps> = ({ size }) => {
+export default function BuildingColumns({ size }: PdfIconProps): ReactNode {
   return (
     <Svg style={{ height: size, width: size }} viewBox="0 0 512 512">
       <Path
@@ -15,4 +15,4 @@ export const BuildingColumns: React.FC<PdfIconProps> = ({ size }) => {
       />
     </Svg>
   );
-};
+}

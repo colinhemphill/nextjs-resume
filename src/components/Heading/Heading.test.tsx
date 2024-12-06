@@ -1,6 +1,6 @@
 import { render, screen } from '@test-utils';
 import { describe, expect, test } from 'bun:test';
-import { Heading } from './Heading';
+import { Heading } from './heading';
 
 describe('<Heading />', () => {
   test('Renders an accessible heading', () => {

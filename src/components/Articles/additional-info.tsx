@@ -1,10 +1,10 @@
 import { additionalInfo } from '@content';
 import { PaintBrushIcon } from '@heroicons/react/24/solid';
-import React from 'react';
-import Prose from '../Prose/Prose';
-import { SectionHeading } from '../SectionHeading/SectionHeading';
+import { ReactNode } from 'react';
+import SectionHeading from 'src/components/section-heading/section-heading';
+import Prose from '../prose/prose';
 
-export const AdditionalInfo: React.FC = () => {
+export default function AdditionalInfo(): ReactNode {
   return (
     <article className="py-12">
       <div className="mb-6 flex justify-center">
@@ -18,4 +18,4 @@ export const AdditionalInfo: React.FC = () => {
       <Prose html={additionalInfo.body.html} />
     </article>
   );
-};
+}

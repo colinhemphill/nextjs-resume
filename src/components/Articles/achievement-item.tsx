@@ -1,14 +1,14 @@
 import { Achievement } from '@content';
 import { AcademicCapIcon } from '@heroicons/react/24/solid';
-import React from 'react';
-import { Heading } from '../Heading/Heading';
-import Prose from '../Prose/Prose';
+import { ReactNode } from 'react';
+import { Heading } from '../heading/heading';
+import Prose from '../prose/prose';
 
-const AchievementItem: React.FC<Achievement> = ({
+export default function AchievementItem({
   achievement,
   body,
   organization,
-}) => {
+}: Achievement): ReactNode {
   return (
     <article className="border-t-2 border-neutral-6 py-6 first-of-type:border-none last-of-type:pb-0">
       <Heading className="text-balance" level={3}>
@@ -23,6 +23,4 @@ const AchievementItem: React.FC<Achievement> = ({
       <Prose html={body.html} />
     </article>
   );
-};
-
-export default AchievementItem;
+}

@@ -1,14 +1,14 @@
 import { personal } from '@content';
-import React from 'react';
+import { ReactNode } from 'react';
 import { fullName } from '../../helpers/utils';
-import { Heading } from '../Heading/Heading';
-import PDFDownloadButton from '../PDF/PDFDownloadButton';
+import { Heading } from '../heading/heading';
+import PDFDownloadButton from '../pdf/pdf-download-button';
 
-interface HeaderProps {
+interface HeaderProperties {
   secret?: string;
 }
 
-export const Header: React.FC<HeaderProps> = ({ secret }) => {
+export default function Header({ secret }: HeaderProperties): ReactNode {
   return (
     <div className="mb-12 border-b-2 border-neutral-4 py-12">
       <div className="container">
@@ -24,4 +24,4 @@ export const Header: React.FC<HeaderProps> = ({ secret }) => {
       </div>
     </div>
   );
-};
+}

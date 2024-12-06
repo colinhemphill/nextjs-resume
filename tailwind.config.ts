@@ -1,12 +1,9 @@
 import * as radixColors from '@radix-ui/colors';
-import type { Config } from 'tailwindcss';
 import plugin from 'tailwindcss/plugin';
+import { createPlugin } from 'windy-radix-palette';
 import resumeConfig from './edit-me/config/resumeConfig';
 import { ThemeSetting } from './edit-me/types/Config';
-import { contrastColor } from './src/helpers/colorContrast';
-
-// @ts-ignore
-import { createPlugin } from 'windy-radix-palette';
+import { contrastColor } from './src/helpers/color-contrast';
 
 const colors = createPlugin({
   colors: {
@@ -31,8 +28,47 @@ export default {
   darkMode: resumeConfig.appTheme === ThemeSetting.System ? 'media' : 'class',
   plugins: [
     colors.plugin,
-    plugin(function ({ addVariant }) {
+    // eslint-disable-next-line @typescript-eslint/unbound-method
+    plugin(function ({ addBase, addUtilities, addVariant, theme }) {
       addVariant('hocus', ['&:hover', '&:focus']);
+
+      addBase({
+        'a:focus-within, button:focus-within': {
+          'outline-color': theme('colors.accent.11'),
+        },
+      });
+      addBase({
+        'p a': {
+          'text-decoration-line': 'underline',
+          'text-decoration-color': theme('colors.accent.9'),
+          'text-decoration-thickness': '2px',
+          'text-underline-offset': '2px',
+          'transition-duration': theme('transitionDuration.300'),
+          'transition-property': theme('transitionProperty.colors'),
+          'transition-timing-function': theme(
+            'transitionTimingFunction.DEFAULT',
+          ),
+          '&:hover, &:focus': {
+            'text-decoration-color': 'currentColor',
+          },
+        },
+      });
+      addUtilities({
+        '.text-link': {
+          'text-decoration-line': 'underline',
+          'text-decoration-color': theme('colors.accent.9'),
+          'text-decoration-thickness': '2px',
+          'text-underline-offset': '2px',
+          'transition-duration': theme('transitionDuration.300'),
+          'transition-property': theme('transitionProperty.colors'),
+          'transition-timing-function': theme(
+            'transitionTimingFunction.DEFAULT',
+          ),
+          '&:hover, &:focus': {
+            'text-decoration-color': 'currentColor',
+          },
+        },
+      });
     }),
   ],
   theme: {
@@ -60,4 +96,4 @@ export default {
       },
     },
   },
-} satisfies Config;
+};

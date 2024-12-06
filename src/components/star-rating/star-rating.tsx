@@ -1,17 +1,17 @@
 import { StarIcon } from '@heroicons/react/24/solid';
-import React from 'react';
+import { ReactNode } from 'react';
 
-interface StarRatingProps {
+interface StarRatingProperties {
   stars: 1 | 2 | 3;
 }
 
-const Star: React.FC<{ className?: string }> = () => {
+function Star(): ReactNode {
   return (
     <StarIcon className="h-5 fill-accent-11 text-accent-11 dark:fill-amber-11 dark:text-amber-11" />
   );
-};
+}
 
-export const StarRating: React.FC<StarRatingProps> = ({ stars }) => {
+export default function StarRating({ stars }: StarRatingProperties): ReactNode {
   return (
     <span className="flex items-center">
       {stars >= 1 && <Star />}
@@ -19,4 +19,4 @@ export const StarRating: React.FC<StarRatingProps> = ({ stars }) => {
       {stars >= 3 && <Star />}
     </span>
   );
-};
+}

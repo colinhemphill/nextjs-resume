@@ -1,12 +1,12 @@
 import { allSkills } from '@content';
 import { CheckIcon } from '@heroicons/react/24/solid';
-import React from 'react';
-import { Heading } from '../Heading/Heading';
-import Prose from '../Prose/Prose';
-import { SectionHeading } from '../SectionHeading/SectionHeading';
-import { StarRating } from '../StarRating/StarRating';
+import { ReactNode } from 'react';
+import SectionHeading from 'src/components/section-heading/section-heading';
+import StarRating from 'src/components/star-rating/star-rating';
+import { Heading } from '../heading/heading';
+import Prose from '../prose/prose';
 
-const Skills: React.FC = () => {
+export default function Skills(): ReactNode {
   return (
     <article>
       <SectionHeading
@@ -33,6 +33,4 @@ const Skills: React.FC = () => {
       </div>
     </article>
   );
-};
-
-export default Skills;
+}

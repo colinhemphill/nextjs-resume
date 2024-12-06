@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
-import { vercelURL } from 'src/helpers/env';
+import { vercelURL } from 'src/helpers/environment';
 
-const baseURL = `https://${vercelURL}`;
+const baseURL = `https://${vercelURL ?? ''}`;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

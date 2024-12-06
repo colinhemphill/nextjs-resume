@@ -1,19 +1,14 @@
-import * as colors from '@radix-ui/colors';
+import { personal } from '@content';
 import { Metadata, Viewport } from 'next';
 import { Albert_Sans, JetBrains_Mono } from 'next/font/google';
-import { PropsWithChildren } from 'react';
-import resumeConfig from '../../edit-me/config/resumeConfig';
-
-// STYLES
-import { personal } from '@content';
 import { headers } from 'next/headers';
-import { protocol, vercelURL } from 'src/helpers/env';
+import { PropsWithChildren, ReactNode } from 'react';
+import { protocol, vercelURL } from 'src/helpers/environment';
 import { fullName } from 'src/helpers/utils';
 import { twMerge } from 'tailwind-merge';
+import resumeConfig from '../../edit-me/config/resumeConfig';
 import { ThemeSetting } from '../../edit-me/types/Config';
 import './globals.css';
-
-const accentColor = resumeConfig.accentColor;
 
 const albert = Albert_Sans({
   display: 'swap',
@@ -28,8 +23,9 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const generateMetadata = async (): Promise<Metadata> => {
-  const host = headers().get('host');
-  const baseURL = `${protocol}://${host || vercelURL}`;
+  const requestHeaders = await headers();
+  const host = requestHeaders.get('host');
+  const baseURL = `${protocol}://${host ?? vercelURL ?? ''}`;
   const siteName = `${fullName} Professional Résumé`;
   const title = `Résumé | ${fullName} | Somewhere`;
   const description = `Professional résumé for ${fullName}.`;
@@ -63,12 +59,10 @@ export const generateMetadata = async (): Promise<Metadata> => {
 
 export const viewport: Viewport = {
   initialScale: 1,
-  // @ts-ignore
-  themeColor: colors[accentColor][`${accentColor}9`],
   width: 'device-width',
 };
 
-const RootLayout: React.FC<PropsWithChildren> = async ({ children }) => {
+export default function RootLayout({ children }: PropsWithChildren): ReactNode {
   return (
     <html
       lang="en"
@@ -83,6 +77,4 @@ const RootLayout: React.FC<PropsWithChildren> = async ({ children }) => {
       </body>
     </html>
   );
-};
-
-export default RootLayout;
+}

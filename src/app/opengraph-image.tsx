@@ -13,7 +13,7 @@ export const size = {
   height: 630,
 };
 
-export default async function og() {
+export default function og(): ImageResponse {
   return new ImageResponse(
     (
       <div

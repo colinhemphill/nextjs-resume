@@ -1,10 +1,10 @@
 import { BriefcaseIcon } from '@heroicons/react/24/solid';
-import React from 'react';
+import { ReactNode } from 'react';
+import SectionHeading from 'src/components/section-heading/section-heading';
 import { sortedProfessionalExperiences } from 'src/helpers/utils';
-import { SectionHeading } from '../SectionHeading/SectionHeading';
-import ProfessionalItem from './ProfessionalItem';
+import ProfessionalItem from './professional-item';
 
-const Professional: React.FC = () => {
+export default function Professional(): ReactNode {
   return (
     <article className="rounded-xl bg-neutral-3 py-12">
       <div className="container">
@@ -22,6 +22,4 @@ const Professional: React.FC = () => {
       </div>
     </article>
   );
-};
-
-export default Professional;
+}

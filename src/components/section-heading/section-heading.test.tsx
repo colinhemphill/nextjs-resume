@@ -1,9 +1,9 @@
 import { render, screen } from '@test-utils';
 import { describe, expect, test } from 'bun:test';
-import { SectionHeading } from './SectionHeading';
+import SectionHeading from './section-heading';
 
 describe('<SectionHeading />', () => {
-  test('Renders a heading', async () => {
+  test('Renders a heading', () => {
     render(<SectionHeading text="Section Heading" />);
 
     const heading = screen.getByRole('heading', {
@@ -14,7 +14,7 @@ describe('<SectionHeading />', () => {
     expect(heading).toBeDefined();
   });
 
-  test('Snapshot', async () => {
+  test('Snapshot', () => {
     const { asFragment } = render(<SectionHeading text="Section Heading" />);
     expect(asFragment).toMatchSnapshot();
   });

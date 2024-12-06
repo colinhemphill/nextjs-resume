@@ -1,10 +1,10 @@
 import { AcademicCapIcon } from '@heroicons/react/24/solid';
-import React from 'react';
+import { ReactNode } from 'react';
+import SectionHeading from 'src/components/section-heading/section-heading';
 import { sortedAchievements } from 'src/helpers/utils';
-import { SectionHeading } from '../SectionHeading/SectionHeading';
-import AchievementItem from './AchievementItem';
+import AchievementItem from './achievement-item';
 
-const Achievements: React.FC = () => {
+export default function Achievements(): ReactNode {
   return (
     <article className="rounded-xl bg-neutral-3 py-12">
       <div className="container">
@@ -22,6 +22,4 @@ const Achievements: React.FC = () => {
       </div>
     </article>
   );
-};
-
-export default Achievements;
+}

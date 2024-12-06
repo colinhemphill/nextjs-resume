@@ -1,5 +1,5 @@
 import { ImageResponse } from 'next/og';
-import { contrastColor } from '../helpers/colorContrast';
+import { contrastColor } from '../helpers/color-contrast';
 import { getAccentColor } from '../helpers/colors';
 
 export const size = {
@@ -8,7 +8,7 @@ export const size = {
 };
 export const contentType = 'image/png';
 
-export default function icon() {
+export default function icon(): ImageResponse {
   return new ImageResponse(
     (
       <div

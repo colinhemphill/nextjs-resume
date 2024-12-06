@@ -1,10 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect } from 'react';
-import { Heading } from '../../../components/Heading/Heading';
+import { ReactNode, useEffect } from 'react';
+import { Heading } from '../../../components/heading/heading';
 
-export default function Error({ error }: { error: Error }) {
+export default function Error({ error }: { error: Error }): ReactNode {
   useEffect(() => {
     // log the error if you need to
     console.error(error);

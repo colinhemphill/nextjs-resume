@@ -1,6 +1,6 @@
 import * as colors from '@radix-ui/colors';
-import { Theme } from '../../edit-me/types/Config';
 import resumeConfig from '../../edit-me/config/resumeConfig';
+import { Theme } from '../../edit-me/types/Config';
 
 const defaultTheme = resumeConfig.imageTheme;
 const configAccent = resumeConfig.accentColor;
@@ -11,9 +11,8 @@ const configNeutral = resumeConfig.neutralColor;
  * @param shade A number from 1 to 12 representing the Radix Colors shade
  * @returns The accent color string
  */
-export const getAccentColor = (shade: number, theme = defaultTheme) => {
+export const getAccentColor = (shade: number, theme = defaultTheme): string => {
   const accent =
-    // @ts-ignore
     colors[theme === Theme.Dark ? `${configAccent}Dark` : configAccent];
   return accent[`${configAccent}${shade}`];
 };
@@ -23,9 +22,11 @@ export const getAccentColor = (shade: number, theme = defaultTheme) => {
  * @param shade A number from 1 to 12 representing the Radix Colors shade
  * @returns The neutral color string
  */
-export const getNeutralColor = (shade: number, theme = defaultTheme) => {
+export const getNeutralColor = (
+  shade: number,
+  theme = defaultTheme,
+): string => {
   const neutral =
-    //@ts-ignore
     colors[theme === Theme.Dark ? `${configNeutral}Dark` : configNeutral];
   return neutral[`${configNeutral}${shade}`];
 };

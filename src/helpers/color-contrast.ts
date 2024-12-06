@@ -1,10 +1,10 @@
-import { AccentColorsBright, ResumeConfig } from '../../edit-me/types/Config';
 import config from '../../edit-me/config/resumeConfig';
+import { AccentColorsBright, ResumeConfig } from '../../edit-me/types/Config';
 
 const isBrightColor = (
   color: ResumeConfig['accentColor'],
 ): color is AccentColorsBright => {
-  const brightColors = Object.values(AccentColorsBright) as Array<string>;
+  const brightColors = Object.values(AccentColorsBright) as string[];
   return brightColors.includes(color);
 };
 

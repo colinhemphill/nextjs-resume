@@ -1,18 +1,22 @@
 import { allPrivateFields } from '@content';
 import { notFound } from 'next/navigation';
-import AboutMe from 'src/components/Articles/AboutMe';
-import Achievements from 'src/components/Articles/Achievements';
-import { AdditionalInfo } from 'src/components/Articles/AdditionalInfo';
-import { ContactInformation } from 'src/components/Articles/ContactInformation';
-import Professional from 'src/components/Articles/Professional';
-import Skills from 'src/components/Articles/Skills';
-import { Footer } from 'src/components/Footer/Footer';
-import { Header } from '../../../components/Header/Header';
+import { ReactNode } from 'react';
+import AboutMe from 'src/components/articles/about-me';
+import Achievements from 'src/components/articles/achievements';
+import { AdditionalInfo } from 'src/components/articles/additional-info';
+import { ContactInformation } from 'src/components/articles/contact-info';
+import Professional from 'src/components/articles/professional';
+import Skills from 'src/components/articles/skills';
+import { Footer } from 'src/components/footer/footer';
+import { Header } from '../../../components/header/header';
 
 const privateKey = process.env.PRIVATE_KEY;
 
-const Page: React.FC<PageProps> = async ({ params }) => {
-  const { secret } = params;
+export default async function Page(
+  properties: PageProperties,
+): Promise<ReactNode> {
+  const parameters = await properties.params;
+  const { secret } = parameters;
 
   if (secret !== privateKey) {
     return notFound();
@@ -50,6 +54,4 @@ const Page: React.FC<PageProps> = async ({ params }) => {
       <Footer />
     </>
   );
-};
-
-export default Page;
+}

@@ -1,13 +1,14 @@
-import AboutMe from 'src/components/Articles/AboutMe';
-import Achievements from 'src/components/Articles/Achievements';
-import { AdditionalInfo } from 'src/components/Articles/AdditionalInfo';
-import { ContactInformation } from 'src/components/Articles/ContactInformation';
-import Professional from 'src/components/Articles/Professional';
-import Skills from 'src/components/Articles/Skills';
-import { Footer } from 'src/components/Footer/Footer';
-import { Header } from 'src/components/Header/Header';
+import { ReactNode } from 'react';
+import AboutMe from 'src/components/articles/about-me';
+import Achievements from 'src/components/articles/achievements';
+import AdditionalInfo from 'src/components/articles/additional-info';
+import ContactInformation from 'src/components/articles/contact-info';
+import Professional from 'src/components/articles/professional';
+import Skills from 'src/components/articles/skills';
+import Footer from 'src/components/footer/footer';
+import Header from 'src/components/header/header';
 
-const Page: React.FC<PageProps> = () => {
+export default function Page(): ReactNode {
   return (
     <>
       <Header />
@@ -38,6 +39,4 @@ const Page: React.FC<PageProps> = () => {
       <Footer />
     </>
   );
-};
-
-export default Page;
+}

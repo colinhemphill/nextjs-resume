@@ -1,22 +1,22 @@
-import React from 'react';
-import { Heading, HeadingProps } from '../Heading/Heading';
+import React, { ReactNode } from 'react';
+import { Heading, HeadingProperties } from '../heading/heading';
 
-interface SectionHeadingProps {
+interface SectionHeadingProperties {
   Icon?: React.ForwardRefExoticComponent<
     React.PropsWithoutRef<React.SVGProps<SVGSVGElement>> & {
       title?: string;
       titleId?: string;
     } & React.RefAttributes<SVGSVGElement>
   >;
-  level?: HeadingProps['level'];
+  level?: HeadingProperties['level'];
   text: string;
 }
 
-export const SectionHeading: React.FC<SectionHeadingProps> = ({
+export default function SectionHeading({
   Icon,
   level = 3,
   text,
-}) => {
+}: SectionHeadingProperties): ReactNode {
   return (
     <Heading level={level}>
       <div className="flex items-center gap-2">
@@ -29,4 +29,4 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
       </div>
     </Heading>
   );
-};
+}

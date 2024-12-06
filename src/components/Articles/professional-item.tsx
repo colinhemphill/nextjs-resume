@@ -1,17 +1,17 @@
 import { PreviousTitle, ProfessionalExperience } from '@content';
-import React from 'react';
+import { ReactNode } from 'react';
 import { sortedPreviousTitles } from 'src/helpers/utils';
-import { Heading } from '../Heading/Heading';
-import Prose from '../Prose/Prose';
+import { Heading } from '../heading/heading';
+import Prose from '../prose/prose';
 
-const ProfessionalItem: React.FC<ProfessionalExperience> = ({
+export default function ProfessionalItem({
   body,
   endDate,
   organization,
   startDate,
   title,
   previousTitles,
-}) => {
+}: ProfessionalExperience): ReactNode {
   const previousTitlesSorted = previousTitles
     ? sortedPreviousTitles(previousTitles)
     : [];
@@ -28,16 +28,17 @@ const ProfessionalItem: React.FC<ProfessionalExperience> = ({
       <div className="mt-1 font-medium tracking-wide">
         {previousTitlesSorted.length === 0 ? (
           <>
-            {startDate}–{!endDate ? 'Current' : endDate}
+            {startDate}–{endDate ?? 'Current'}
           </>
         ) : (
           <>
             <p>
-              {startDate}–{!endDate ? 'Current' : endDate}
+              {startDate}–{endDate ?? 'Current'}
             </p>
-            {previousTitlesSorted?.map((prevTitle: PreviousTitle, idx) => (
-              <p key={idx}>
-                {prevTitle.title} {prevTitle.startDate}–{prevTitle.endDate}
+            {previousTitlesSorted.map((previousTitle: PreviousTitle, index) => (
+              <p key={index}>
+                {previousTitle.title} {previousTitle.startDate}–
+                {previousTitle.endDate}
               </p>
             ))}
           </>
@@ -47,6 +48,4 @@ const ProfessionalItem: React.FC<ProfessionalExperience> = ({
       <Prose html={body.html} />
     </article>
   );
-};
-
-export default ProfessionalItem;
+}

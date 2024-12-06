@@ -1,27 +1,22 @@
 import {
+  SiBluesky,
   SiGithub,
   SiInstagram,
   SiLinkedin,
   SiNpm,
-  SiX,
 } from '@icons-pack/react-simple-icons';
 import { CMSLink } from 'edit-me/types/CMSLink';
 
 export const links: CMSLink[] = [
   {
-    href: 'https://github.com',
-    icon: SiGithub,
-    title: 'GitHub',
-  },
-  {
-    href: 'https://www.instagram.com',
-    icon: SiInstagram,
-    title: 'Instagram',
-  },
-  {
     href: 'https://www.linkedin.com',
     icon: SiLinkedin,
     title: 'LinkedIn',
+  },
+  {
+    href: 'https://github.com',
+    icon: SiGithub,
+    title: 'GitHub',
   },
   {
     href: 'https://www.npmjs.com',
@@ -29,8 +24,13 @@ export const links: CMSLink[] = [
     title: 'NPM',
   },
   {
-    href: 'https://twitter.com',
-    icon: SiX,
-    title: 'X',
+    href: 'https://bsky.app',
+    icon: SiBluesky,
+    title: 'Bluesky',
+  },
+  {
+    href: 'https://www.instagram.com',
+    icon: SiInstagram,
+    title: 'Instagram',
   },
 ];

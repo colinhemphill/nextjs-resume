@@ -1,3 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable unicorn/no-array-reduce */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable react/prop-types */
 /* eslint-disable react/display-name */
 import { Image, Text, View } from '@react-pdf/renderer';
 import { HtmlElement } from 'node_modules/react-pdf-html/dist/types/parse';
@@ -8,7 +14,10 @@ import { HtmlStyle } from 'react-pdf-html';
 // thanks to [justin-hackin](https://github.com/justin-hackin) for the custom renderer
 
 const generateCustomLi =
-  (bulletOverrides: any, contentOverrides: any): HtmlRenderer =>
+  (
+    bulletOverrides: Record<string, string | number>,
+    contentOverrides: Record<string, string | number>,
+  ): HtmlRenderer =>
   ({ element, stylesheets, style, children }) => {
     const bulletStyles = stylesheets.map((stylesheet) => stylesheet.li_bullet);
     const contentStyles = stylesheets.map((stylesheet) => ({
@@ -17,15 +26,15 @@ const generateCustomLi =
     }));
 
     const list: HtmlElement = element.closest('ol, ul') as HtmlElement;
-    const ordered = list?.tag === 'ol' || element.parentNode.tag === 'ol';
+    const ordered = list.tag === 'ol' || element.parentNode.tag === 'ol';
     const listStyle =
-      list?.style?.reduce(
+      list.style.reduce<HtmlStyle>(
         (combined, listStyle) => Object.assign(combined, listStyle),
-        {} as HtmlStyle,
+        {},
       ) || {};
-    const itemStyle = element.style.reduce(
+    const itemStyle = element.style.reduce<HtmlStyle>(
       (combined, itemStyle) => Object.assign(combined, itemStyle),
-      {} as HtmlStyle,
+      {},
     );
     const listStyleType =
       itemStyle.listStyleType ||
@@ -39,9 +48,8 @@ const generateCustomLi =
       bullet = false;
     } else if (listStyleType.includes('url(')) {
       bullet = (
-        // eslint-disable-next-line jsx-a11y/alt-text
         <Image
-          src={listStyleType.match(/\((.*?)\)/)[1].replace(/(['"])/g, '')}
+          src={listStyleType.match(/\((.*?)\)/)[1].replaceAll(/(['"])/g, '')}
         />
       );
     } else if (ordered) {

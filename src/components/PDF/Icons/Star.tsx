@@ -1,13 +1,13 @@
 import { amberDark } from '@radix-ui/colors';
 import { Path, Svg } from '@react-pdf/renderer';
-import React from 'react';
-import { Theme } from '../../../../edit-me/types/Config';
+import { ReactNode } from 'react';
 import resumeConfig from '../../../../edit-me/config/resumeConfig';
+import { Theme } from '../../../../edit-me/types/Config';
 import { getAccentColor } from '../../../helpers/colors';
 
 const theme = resumeConfig.pdfTheme;
 
-export const Star: React.FC<PdfIconProps> = ({ size }) => {
+export default function Star({ size }: PdfIconProps): ReactNode {
   return (
     <Svg style={{ height: size, width: size }} viewBox="0 0 512 512">
       <Path
@@ -18,4 +18,4 @@ export const Star: React.FC<PdfIconProps> = ({ size }) => {
       />
     </Svg>
   );
-};
+}

@@ -1,11 +1,12 @@
+import { ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-interface ProseProps {
+interface ProseProperties {
   className?: string;
   html: string;
 }
 
-const Prose: React.FC<ProseProps> = ({ className, html }) => {
+export default function Prose({ className, html }: ProseProperties): ReactNode {
   return (
     <div
       className={twMerge(
@@ -15,6 +16,4 @@ const Prose: React.FC<ProseProps> = ({ className, html }) => {
       dangerouslySetInnerHTML={{ __html: html }}
     />
   );
-};
-
-export default Prose;
+}

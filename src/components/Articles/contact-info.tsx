@@ -1,15 +1,15 @@
 import { PrivateField, personal } from '@content';
 import { IdentificationIcon } from '@heroicons/react/24/solid';
-import React from 'react';
-import { SectionHeading } from '../SectionHeading/SectionHeading';
+import { ReactNode } from 'react';
+import SectionHeading from 'src/components/section-heading/section-heading';
 
-interface ContactInformationProps {
+interface ContactInformationProperties {
   privateInformation?: PrivateField[];
 }
 
-export const ContactInformation: React.FC<ContactInformationProps> = ({
+export default function ContactInformation({
   privateInformation,
-}) => {
+}: ContactInformationProperties): ReactNode {
   return (
     <article>
       <SectionHeading
@@ -33,4 +33,4 @@ export const ContactInformation: React.FC<ContactInformationProps> = ({
       </ul>
     </article>
   );
-};
+}

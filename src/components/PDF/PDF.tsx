@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
 import {
   PrivateField,
   ProfessionalExperience,
@@ -15,12 +14,20 @@ import {
   View,
 } from '@react-pdf/renderer';
 import { HtmlProps } from 'node_modules/react-pdf-html/dist/types/Html';
-import React from 'react';
+import { ReactNode } from 'react';
 import Html from 'react-pdf-html';
-import { htmlRenderers } from 'src/components/PDF/htmlRenderers';
+import { htmlRenderers } from 'src/components/pdf/html-renderers';
+import BuildingColumns from 'src/components/pdf/icons/building-columns';
+import CircleBriefcase from 'src/components/pdf/icons/circle-briefcase';
+import CircleCheck from 'src/components/pdf/icons/circle-check';
+import CircleGraduationCap from 'src/components/pdf/icons/circle-graduation-cap';
+import CircleIdCard from 'src/components/pdf/icons/circle-id-card';
+import CirclePaintbrush from 'src/components/pdf/icons/circle-paintbrush';
+import CircleUser from 'src/components/pdf/icons/circle-user';
+import Star from 'src/components/pdf/icons/star';
 import resumeConfig from '../../../edit-me/config/resumeConfig';
 import { Theme } from '../../../edit-me/types/Config';
-import { contrastColor } from '../../helpers/colorContrast';
+import { contrastColor } from '../../helpers/color-contrast';
 import { getAccentColor, getNeutralColor } from '../../helpers/colors';
 import {
   fullName,
@@ -28,18 +35,10 @@ import {
   sortedPreviousTitles,
   sortedProfessionalExperiences,
 } from '../../helpers/utils';
-import { BuildingColumns } from './Icons/BuildingColumns';
-import { CircleBriefcase } from './Icons/CircleBriefcase';
-import { CircleCheck } from './Icons/CircleCheck';
-import { CircleGraduationCap } from './Icons/CircleGraduationCap';
-import { CircleIdCard } from './Icons/CircleIdCard';
-import { CirclePaintbrush } from './Icons/CirclePaintbrush';
-import { CircleUser } from './Icons/CircleUser';
-import { Star } from './Icons/Star';
 
 const theme = resumeConfig.pdfTheme;
-const albertSrc = 'https://fonts.gstatic.com/s/albertsans/v1';
-const jetbrainsSrc = 'https://fonts.gstatic.com/s/jetbrainsmono/v18';
+const albertSource = 'https://fonts.gstatic.com/s/albertsans/v1';
+const jetbrainsSource = 'https://fonts.gstatic.com/s/jetbrainsmono/v18';
 
 Font.register({
   family: 'Albert Sans',
@@ -47,22 +46,22 @@ Font.register({
     {
       fontStyle: 'normal',
       fontWeight: 400,
-      src: `${albertSrc}/i7dZIFdwYjGaAMFtZd_QA3xXSKZqhr-TenSHq5P_rI32TxAj1g.ttf`,
+      src: `${albertSource}/i7dZIFdwYjGaAMFtZd_QA3xXSKZqhr-TenSHq5P_rI32TxAj1g.ttf`,
     },
     {
       fontStyle: 'italic',
       fontWeight: 400,
-      src: `${albertSrc}/i7dfIFdwYjGaAMFtZd_QA1Zeelmy79QJ1HOSY9AX74fybRUz1r5t.ttf`,
+      src: `${albertSource}/i7dfIFdwYjGaAMFtZd_QA1Zeelmy79QJ1HOSY9AX74fybRUz1r5t.ttf`,
     },
     {
       fontStyle: 'normal',
       fontWeight: 700,
-      src: `${albertSrc}/i7dZIFdwYjGaAMFtZd_QA3xXSKZqhr-TenSHTJT_rI32TxAj1g.ttf`,
+      src: `${albertSource}/i7dZIFdwYjGaAMFtZd_QA3xXSKZqhr-TenSHTJT_rI32TxAj1g.ttf`,
     },
     {
       fontStyle: 'italic',
       fontWeight: 700,
-      src: `${albertSrc}/i7dfIFdwYjGaAMFtZd_QA1Zeelmy79QJ1HOSY9Dw6IfybRUz1r5t.ttf`,
+      src: `${albertSource}/i7dfIFdwYjGaAMFtZd_QA1Zeelmy79QJ1HOSY9Dw6IfybRUz1r5t.ttf`,
     },
   ],
 });
@@ -73,12 +72,12 @@ Font.register({
     {
       fontStyle: 'normal',
       fontWeight: 500,
-      src: `${jetbrainsSrc}/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxjPVmUsaaDhw.ttf`,
+      src: `${jetbrainsSource}/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxjPVmUsaaDhw.ttf`,
     },
   ],
 });
 
-const hyphenationCallback = (word: string) => {
+const hyphenationCallback = (word: string): string[] => {
   // don't hyphenate
   return [word];
 };
@@ -244,7 +243,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const htmlProps: Omit<HtmlProps, 'children'> = {
+const htmlProperties: Omit<HtmlProps, 'children'> = {
   renderers: htmlRenderers,
   style: { fontSize: fontSizes.xxs },
   stylesheet: {
@@ -256,17 +255,17 @@ const htmlProps: Omit<HtmlProps, 'children'> = {
   },
 };
 
-interface PDFProps {
+interface PDFProperties {
   privateInformation?: PrivateField[];
 }
 
-interface ProfessionExperienceProps {
+interface ProfessionExperienceProperties {
   professionalExperience: ProfessionalExperience;
 }
 
-const ProfessionalExperienceDetails: React.FC<ProfessionExperienceProps> = ({
+function ProfessionalExperienceDetails({
   professionalExperience,
-}) => {
+}: ProfessionExperienceProperties): ReactNode {
   const previousTitlesSorted = professionalExperience.previousTitles
     ? sortedPreviousTitles(professionalExperience.previousTitles)
     : [];
@@ -275,30 +274,30 @@ const ProfessionalExperienceDetails: React.FC<ProfessionExperienceProps> = ({
       <View style={styles.itemSubheadingRow}>
         <Text style={styles.itemSubheading}>
           {professionalExperience.startDate}—
-          {professionalExperience.endDate
-            ? professionalExperience.endDate
-            : 'Current'}
+          {professionalExperience.endDate ?? 'Current'}
         </Text>
         <View style={styles.itemSubheadingSubRow}>
           {previousTitlesSorted.length > 0 &&
-            previousTitlesSorted?.map((prevTitle, idx) => (
-              <Text key={idx} style={styles.itemSubheadingItalic}>
-                {prevTitle.title} {prevTitle.startDate}—{prevTitle.endDate}
+            previousTitlesSorted.map((previousTitle, index) => (
+              <Text key={index} style={styles.itemSubheadingItalic}>
+                {previousTitle.title} {previousTitle.startDate}—
+                {previousTitle.endDate}
               </Text>
             ))}
         </View>
       </View>
     </>
   );
-};
+}
 
-const PDF: React.FC<PDFProps> = ({ privateInformation }) => {
+export default function PDF({ privateInformation }: PDFProperties): ReactNode {
   const year = new Date().getFullYear();
 
   return (
-    // @ts-ignore
-    <Document author={fullName} title={`Resumé for ${fullName}, ${year}`}>
-      {/* @ts-ignore */}
+    <Document
+      author={fullName}
+      title={`Resumé for ${fullName}, ${year.toString()}`}
+    >
       <Page size="LETTER" style={styles.page}>
         <View style={styles.sidebar}>
           <View style={styles.header}>
@@ -311,7 +310,7 @@ const PDF: React.FC<PDFProps> = ({ privateInformation }) => {
                 <CircleUser size={fontSizes.m} />
                 <Text>About Me</Text>
               </View>
-              <Html {...htmlProps}>{personal.body.html}</Html>
+              <Html {...htmlProperties}>{personal.body.html}</Html>
             </View>
             <View style={styles.section}>
               <View style={styles.sectionHeadingNonHTML}>
@@ -325,7 +324,7 @@ const PDF: React.FC<PDFProps> = ({ privateInformation }) => {
               {privateInformation?.map((privateField) => (
                 <View key={privateField._id}>
                   <Text style={styles.bold}>{privateField.label}:&nbsp;</Text>
-                  <Html {...htmlProps}>{privateField.body.html}</Html>
+                  <Html {...htmlProperties}>{privateField.body.html}</Html>
                 </View>
               ))}
             </View>
@@ -338,15 +337,15 @@ const PDF: React.FC<PDFProps> = ({ privateInformation }) => {
                 <View key={skill._id}>
                   <View style={styles.itemHeading}>
                     <View style={styles.sectionHeadingStars}>
-                      {Array.from(Array(allSkills.length - skillIndex)).map(
-                        (star, starIndex) => (
-                          <Star key={starIndex} size={fontSizes.xxs} />
-                        ),
-                      )}
+                      {Array.from({
+                        length: allSkills.length - skillIndex,
+                      }).map((star, starIndex) => (
+                        <Star key={starIndex} size={fontSizes.xxs} />
+                      ))}
                     </View>
                     <Text style={styles.bold}>{skill.title}</Text>
                   </View>
-                  <Html {...htmlProps}>{skill.body.html}</Html>
+                  <Html {...htmlProperties}>{skill.body.html}</Html>
                 </View>
               ))}
             </View>
@@ -369,7 +368,9 @@ const PDF: React.FC<PDFProps> = ({ privateInformation }) => {
                 <ProfessionalExperienceDetails
                   professionalExperience={professionalExperience}
                 />
-                <Html {...htmlProps}>{professionalExperience.body.html}</Html>
+                <Html {...htmlProperties}>
+                  {professionalExperience.body.html}
+                </Html>
               </View>
             ))}
           </View>
@@ -389,7 +390,7 @@ const PDF: React.FC<PDFProps> = ({ privateInformation }) => {
                     {achievement.organization}
                   </Text>
                 </View>
-                <Html {...htmlProps}>{achievement.body.html}</Html>
+                <Html {...htmlProperties}>{achievement.body.html}</Html>
               </View>
             ))}
           </View>
@@ -399,9 +400,9 @@ const PDF: React.FC<PDFProps> = ({ privateInformation }) => {
               <Text>{additionalInfo.title}</Text>
             </View>
             <Html
-              {...htmlProps}
+              {...htmlProperties}
               stylesheet={{
-                ...htmlProps.stylesheet,
+                ...htmlProperties.stylesheet,
                 p: { marginBottom: spacers[1] },
               }}
             >
@@ -412,6 +413,4 @@ const PDF: React.FC<PDFProps> = ({ privateInformation }) => {
       </Page>
     </Document>
   );
-};
-
-export default PDF;
+}

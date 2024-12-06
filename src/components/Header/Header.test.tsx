@@ -2,7 +2,7 @@ import { personal } from '@content';
 import { render, screen } from '@test-utils';
 import { describe, expect, test } from 'bun:test';
 import { fullName } from 'src/helpers/utils';
-import { Header } from './Header';
+import Header from './header';
 
 describe('<Header />', () => {
   test('Renders headings and PDF button', () => {
