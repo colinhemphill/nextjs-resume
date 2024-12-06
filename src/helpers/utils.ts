@@ -9,6 +9,8 @@ import { twMerge } from 'tailwind-merge';
 
 export const fullName = `${personal.givenName} ${personal.familyName}`;
 
+export const initials = `${personal.givenName.slice(0, 1)}${personal.familyName.slice(0, 1)}`;
+
 export const sortedProfessionalExperiences = allProfessionalExperiences.sort(
   (a, b) => {
     const aOrderNumber = Number.parseInt(

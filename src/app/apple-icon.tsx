@@ -3,8 +3,8 @@ import { initials } from 'src/helpers/utils';
 import { getAccentColor } from '../helpers/colors';
 
 export const size = {
-  width: 32,
-  height: 32,
+  width: 512,
+  height: 512,
 };
 export const contentType = 'image/png';
 
@@ -12,11 +12,11 @@ export default function icon(): ImageResponse {
   return new ImageResponse(
     (
       <div
-        tw="flex h-full w-full items-center justify-center rounded-full font-bold"
+        tw="flex h-full w-full items-center justify-center rounded-full text-xl font-bold"
         style={{
           color: getAccentColor(1),
           backgroundColor: getAccentColor(11),
-          fontSize: 20,
+          fontSize: 320,
         }}
       >
         {initials}

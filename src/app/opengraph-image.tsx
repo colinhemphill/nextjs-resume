@@ -24,7 +24,7 @@ export default function og(): ImageResponse {
       >
         <div
           style={{
-            backgroundColor: getAccentColor(1, theme),
+            backgroundColor: getAccentColor(2, theme),
             color: getAccentColor(11, theme),
             borderColor: getAccentColor(7, theme),
           }}
