@@ -11,14 +11,14 @@ export default function ContactInformation({
   privateInformation,
 }: ContactInformationProperties): ReactNode {
   return (
-    <article>
+    <article className="space-y-4">
       <SectionHeading
         Icon={IdentificationIcon}
         level={3}
         text="Contact Information"
       />
 
-      <ul className="mt-2">
+      <ul>
         <li>
           <strong>Location:</strong> {personal.location}
         </li>

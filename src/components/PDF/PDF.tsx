@@ -25,14 +25,11 @@ import CircleIdCard from 'src/components/pdf/icons/circle-id-card';
 import CirclePaintbrush from 'src/components/pdf/icons/circle-paintbrush';
 import CircleUser from 'src/components/pdf/icons/circle-user';
 import Star from 'src/components/pdf/icons/star';
-import resumeConfig from '../../../edit-me/config/resumeConfig';
-import { Theme } from '../../../edit-me/types/Config';
-import { contrastColor } from '../../helpers/color-contrast';
+import resumeConfig from '../../../edit-me/config/resume-config';
 import { getAccentColor, getNeutralColor } from '../../helpers/colors';
 import {
   fullName,
   sortedAchievements,
-  sortedPreviousTitles,
   sortedProfessionalExperiences,
 } from '../../helpers/utils';
 
@@ -132,13 +129,13 @@ const styles = StyleSheet.create({
   },
   sidebarContent: { padding: spacers[4] },
   header: {
-    backgroundColor:
-      theme === Theme.Dark
-        ? getNeutralColor(2, theme)
-        : getAccentColor(9, theme),
-    color: contrastColor,
+    backgroundColor: getAccentColor(6, theme),
+    color: getNeutralColor(12, theme),
     padding: `${spacers[6]} ${spacers[4]}`,
     textAlign: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: spacers[4],
   },
   headerTitle: { fontSize: fontSizes.xl, fontWeight: 700 },
   headerSubtitle: { fontSize: fontSizes.m, fontWeight: 700 },
@@ -266,24 +263,15 @@ interface ProfessionExperienceProperties {
 function ProfessionalExperienceDetails({
   professionalExperience,
 }: ProfessionExperienceProperties): ReactNode {
-  const previousTitlesSorted = professionalExperience.previousTitles
-    ? sortedPreviousTitles(professionalExperience.previousTitles)
-    : [];
   return (
     <>
       <View style={styles.itemSubheadingRow}>
-        <Text style={styles.itemSubheading}>
-          {professionalExperience.startDate}—
-          {professionalExperience.endDate ?? 'Current'}
-        </Text>
         <View style={styles.itemSubheadingSubRow}>
-          {previousTitlesSorted.length > 0 &&
-            previousTitlesSorted.map((previousTitle, index) => (
-              <Text key={index} style={styles.itemSubheadingItalic}>
-                {previousTitle.title} {previousTitle.startDate}—
-                {previousTitle.endDate}
-              </Text>
-            ))}
+          {professionalExperience.titles.map((title, index) => (
+            <Text key={index} style={styles.itemSubheadingItalic}>
+              {title.title} {title.startDate}—{title.endDate ?? 'Current'}
+            </Text>
+          ))}
         </View>
       </View>
     </>
@@ -360,10 +348,7 @@ export default function PDF({ privateInformation }: PDFProperties): ReactNode {
             {sortedProfessionalExperiences.map((professionalExperience) => (
               <View key={professionalExperience._id}>
                 <View style={styles.itemHeading}>
-                  <Text style={styles.professionalTitle}>
-                    {professionalExperience.title}
-                  </Text>
-                  <Text>&nbsp;at {professionalExperience.organization}</Text>
+                  <Text>{professionalExperience.organization}</Text>
                 </View>
                 <ProfessionalExperienceDetails
                   professionalExperience={professionalExperience}

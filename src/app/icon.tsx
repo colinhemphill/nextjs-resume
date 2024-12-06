@@ -12,7 +12,7 @@ export default function icon(): ImageResponse {
   return new ImageResponse(
     (
       <div
-        tw="rounded-full text-xl w-full h-full flex items-center justify-center"
+        tw="flex h-full w-full items-center justify-center rounded-full text-xl"
         style={{
           backgroundColor: getAccentColor(9),
         }}

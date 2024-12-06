@@ -1,8 +1,8 @@
 import * as radixColors from '@radix-ui/colors';
 import plugin from 'tailwindcss/plugin';
 import { createPlugin } from 'windy-radix-palette';
-import resumeConfig from './edit-me/config/resumeConfig';
-import { ThemeSetting } from './edit-me/types/Config';
+import resumeConfig from './edit-me/config/resume-config';
+import { ThemeSetting } from './edit-me/types/config';
 import { contrastColor } from './src/helpers/color-contrast';
 
 const colors = createPlugin({

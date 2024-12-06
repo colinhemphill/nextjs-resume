@@ -4,7 +4,7 @@ import {
   ResumeConfig,
   Theme,
   ThemeSetting,
-} from '../types/Config';
+} from '../types/config';
 
 const config: ResumeConfig = {
   accentColor: AccentColors.Blue,

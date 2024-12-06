@@ -1,12 +1,13 @@
 import { Path, Svg } from '@react-pdf/renderer';
 import { ReactNode } from 'react';
-import resumeConfig from '../../../../edit-me/config/resumeConfig';
+import { PdfIconProperties } from 'src/components/pdf/icons/pdf-icon';
+import resumeConfig from '../../../../edit-me/config/resume-config';
 import { getNeutralColor } from '../../../helpers/colors';
 
 const theme = resumeConfig.pdfTheme;
 const neutralColor = getNeutralColor(12, theme);
 
-export default function Calendar({ size }: PdfIconProps): ReactNode {
+export default function Calendar({ size }: PdfIconProperties): ReactNode {
   return (
     <Svg style={{ height: size, width: size }} viewBox="0 0 512 512">
       <Path

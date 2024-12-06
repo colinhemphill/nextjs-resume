@@ -1,4 +1,4 @@
-interface PageProperties {
+export interface PageProperties {
   params: Promise<{
     secret?: string;
   }>;

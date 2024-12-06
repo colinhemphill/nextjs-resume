@@ -1,4 +1,4 @@
-import resumeConfig from 'edit-me/config/resumeConfig';
+import resumeConfig from 'edit-me/config/resume-config';
 import { ImageResponse } from 'next/og';
 import { getAccentColor, getNeutralColor } from 'src/helpers/colors';
 import { fullName } from 'src/helpers/utils';
@@ -20,7 +20,7 @@ export default function og(): ImageResponse {
         style={{
           backgroundColor: getNeutralColor(1, theme),
         }}
-        tw="flex w-full h-full items-center justify-center"
+        tw="flex h-full w-full items-center justify-center"
       >
         <div
           style={{
@@ -28,7 +28,7 @@ export default function og(): ImageResponse {
             color: getAccentColor(11, theme),
             borderColor: getAccentColor(7, theme),
           }}
-          tw="flex flex-col items-center justify-center text-center w-9/12 h-8/12 border-2 rounded-xl"
+          tw="h-8/12 flex w-9/12 flex-col items-center justify-center rounded-xl border-2 text-center"
         >
           <div
             style={{
@@ -49,7 +49,7 @@ export default function og(): ImageResponse {
           </div>
           <div
             style={{ color: getAccentColor(12, theme) }}
-            tw="mt-12 text-4xl rounded-lg"
+            tw="mt-12 rounded-lg text-4xl"
           >
             Available online or as a PDF
           </div>

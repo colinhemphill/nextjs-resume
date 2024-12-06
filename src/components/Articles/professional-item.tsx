@@ -28,7 +28,7 @@ export default function ProfessionalItem({
             </div>
 
             <div className="space-y-3 pb-4 group-last:pb-0">
-              <div className="text-xl font-bold leading-none">
+              <div className="text-lg font-bold leading-none">
                 {title.title}
               </div>
               <div className="text-sm leading-none tracking-wide text-neutral-11">

@@ -1,5 +1,5 @@
-import config from '../../edit-me/config/resumeConfig';
-import { AccentColorsBright, ResumeConfig } from '../../edit-me/types/Config';
+import config from '../../edit-me/config/resume-config';
+import { AccentColorsBright, ResumeConfig } from '../../edit-me/types/config';
 
 const isBrightColor = (
   color: ResumeConfig['accentColor'],

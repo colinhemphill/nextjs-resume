@@ -5,8 +5,8 @@ import { headers } from 'next/headers';
 import { PropsWithChildren, ReactNode } from 'react';
 import { protocol, vercelURL } from 'src/helpers/environment';
 import { cn, fullName } from 'src/helpers/utils';
-import resumeConfig from '../../edit-me/config/resumeConfig';
-import { ThemeSetting } from '../../edit-me/types/Config';
+import resumeConfig from '../../edit-me/config/resume-config';
+import { ThemeSetting } from '../../edit-me/types/config';
 import './globals.css';
 
 const albert = Albert_Sans({
