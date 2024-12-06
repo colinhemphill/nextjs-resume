@@ -1,10 +1,10 @@
 import { Slot } from '@radix-ui/react-slot';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { type ButtonHTMLAttributes, forwardRef } from 'react';
-import { twMerge } from 'tailwind-merge';
+import { cn } from 'src/helpers/utils';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md transition focus-visible:outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 font-semibold',
+  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-semibold transition focus-visible:outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0',
   {
     variants: {
       color: {
@@ -40,7 +40,7 @@ const buttonVariants = cva(
       {
         color: 'danger',
         variant: 'solid',
-        class: 'bg-error-6 text-neutral-12 ring-error-11 hocus:bg-error-7',
+        class: 'bg-error-6 ring-error-11 hocus:bg-error-7 text-neutral-12',
       },
       // OUTLINES
       {
@@ -90,7 +90,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProperties>(
 
     return (
       <Comp
-        className={twMerge(buttonVariants({ color, size, variant }), className)}
+        className={cn(buttonVariants({ color, size, variant }), className)}
         ref={reference}
         {...properties}
       >

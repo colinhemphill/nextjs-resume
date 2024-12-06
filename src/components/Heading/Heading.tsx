@@ -1,27 +1,28 @@
-import { VariantProps, cva } from 'class-variance-authority';
+import { cva, type VariantProps } from 'class-variance-authority';
 import {
-  DetailedHTMLProps,
-  HTMLAttributes,
-  PropsWithChildren,
   ReactNode,
+  type DetailedHTMLProps,
+  type HTMLAttributes,
+  type PropsWithChildren,
 } from 'react';
-import { twMerge } from 'tailwind-merge';
+import { cn } from 'src/helpers/utils';
 
-const headingVariants = cva('font-bold', {
+export const headingVariants = cva('text-balance font-sans font-extrabold', {
   variants: {
     color: {
-      danger: 'text-danger-11',
+      current: 'text-current',
       neutral: 'text-neutral-12',
-      neutralSubtle: 'text-neutral-11',
-      primary: 'text-primary-11',
+      muted: 'text-neutral-11',
+      accent: 'text-accent-11',
+      danger: 'text-danger-11',
     },
     size: {
       1: 'text-4xl md:text-5xl',
-      2: 'text-2xl md:text-3xl',
-      3: 'text-xl md:text-2xl',
-      4: 'text-lg md:text-xl',
-      5: 'text-base md:text-lg',
-      6: 'text-sm md:text-base',
+      2: 'text-3xl md:text-4xl',
+      3: 'text-2xl md:text-3xl',
+      4: 'text-xl md:text-2xl',
+      5: 'text-lg md:text-xl',
+      6: 'text-base md:text-lg',
     },
   },
   defaultVariants: {
@@ -37,14 +38,14 @@ export type HeadingProperties = DetailedHTMLProps<
     level: 1 | 2 | 3 | 4 | 5 | 6;
   };
 
-export function Heading({
+function Heading({
   children,
   className,
   color,
   level,
   size,
 }: PropsWithChildren<HeadingProperties>): ReactNode {
-  const classes = twMerge(
+  const classes = cn(
     headingVariants({ color, size: size ?? level }),
     className,
   );
@@ -70,3 +71,5 @@ export function Heading({
     }
   }
 }
+
+export { Heading };

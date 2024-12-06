@@ -50,23 +50,30 @@ export const Skill = defineDocumentType(() => ({
   },
 }));
 
-export const PreviousTitle = defineNestedType(() => ({
-  name: 'PreviousTitle',
+export const ProfessionalTitle = defineNestedType(() => ({
+  name: 'ProfessionalTitle',
   fields: {
     title: {
       type: 'string',
-      description: 'A previous title at this organization',
+      description: 'A title at this organization',
       required: true,
     },
     startDate: {
       type: 'string',
-      description: 'The year when you started the position',
+      description: 'The year when you started the role',
       required: true,
     },
     endDate: {
       type: 'string',
-      description: 'The year when you ended the position',
-      required: true,
+      description:
+        'The year when you ended the role, or empty if it is your current role',
+      required: false,
+    },
+    description: {
+      type: 'string',
+      description:
+        'A description of the work you did under this role, or your accomplishments that led to a promotion',
+      required: false,
     },
   },
 }));
@@ -75,31 +82,15 @@ export const ProfessionalExperience = defineDocumentType(() => ({
   name: 'ProfessionalExperience',
   filePathPattern: 'professionalExperiences/*.md',
   fields: {
-    title: {
-      type: 'string',
-      description: 'Your most recent title at this organization',
-      required: true,
-    },
     organization: {
       type: 'string',
       description: 'The name of the company or organization you worked with',
       required: true,
     },
-    startDate: {
-      type: 'string',
-      description: 'A descriptor of when you started the position',
-      required: true,
-    },
-    endDate: {
-      type: 'string',
-      description:
-        'If you no longer work with this organization, provide a descriptor of when you ended the position',
-      required: false,
-    },
-    previousTitles: {
+    titles: {
       type: 'list',
-      of: PreviousTitle,
-      required: false,
+      of: ProfessionalTitle,
+      required: true,
     },
   },
 }));

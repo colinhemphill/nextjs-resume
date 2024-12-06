@@ -12,7 +12,7 @@ export default function PDFDownloadButton({
   return (
     <Button asChild size="lg">
       <a href={secret ? `/api/pdf?secret=${secret}` : '/api/pdf'}>
-        <DocumentIcon className="h-6" />
+        <DocumentIcon />
         View or Download PDF
       </a>
     </Button>

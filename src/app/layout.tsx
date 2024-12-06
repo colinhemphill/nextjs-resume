@@ -4,8 +4,7 @@ import { Albert_Sans, JetBrains_Mono } from 'next/font/google';
 import { headers } from 'next/headers';
 import { PropsWithChildren, ReactNode } from 'react';
 import { protocol, vercelURL } from 'src/helpers/environment';
-import { fullName } from 'src/helpers/utils';
-import { twMerge } from 'tailwind-merge';
+import { cn, fullName } from 'src/helpers/utils';
 import resumeConfig from '../../edit-me/config/resumeConfig';
 import { ThemeSetting } from '../../edit-me/types/Config';
 import './globals.css';
@@ -66,7 +65,7 @@ export default function RootLayout({ children }: PropsWithChildren): ReactNode {
   return (
     <html
       lang="en"
-      className={twMerge(
+      className={cn(
         albert.variable,
         jetBrainsMono.variable,
         resumeConfig.appTheme === ThemeSetting.Dark && 'dark',

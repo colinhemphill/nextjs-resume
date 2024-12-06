@@ -20,10 +20,10 @@ describe('<Heading />', () => {
         <Heading color="neutral" level={1}>
           Heading 1
         </Heading>
-        <Heading color="neutralSubtle" level={2}>
+        <Heading color="muted" level={2}>
           Heading 2
         </Heading>
-        <Heading color="primary" level={3}>
+        <Heading color="accent" level={3}>
           Heading 3
         </Heading>
         <Heading color="danger" level={4}>

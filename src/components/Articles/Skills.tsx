@@ -8,16 +8,16 @@ import Prose from '../prose/prose';
 
 export default function Skills(): ReactNode {
   return (
-    <article>
+    <article className="space-y-2">
       <SectionHeading
         Icon={CheckIcon}
         level={3}
         text="Skills &amp; Expertise"
       />
 
-      <div className="mt-2 grid grid-flow-row gap-6 lg:grid-flow-col">
+      <div className="grid grid-flow-row gap-x-6 gap-y-2 lg:grid-flow-col">
         {allSkills.map((skill, skillIndex) => (
-          <div key={skill._id}>
+          <div className="space-y-2" key={skill._id}>
             <Heading level={4}>
               <div className="flex items-center gap-2">
                 <StarRating

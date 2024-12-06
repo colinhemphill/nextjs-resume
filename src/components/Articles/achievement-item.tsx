@@ -10,14 +10,16 @@ export default function AchievementItem({
   organization,
 }: Achievement): ReactNode {
   return (
-    <article className="border-t-2 border-neutral-6 py-6 first-of-type:border-none last-of-type:pb-0">
-      <Heading className="text-balance" level={3}>
-        {achievement}
-      </Heading>
+    <article className="space-y-4 border-t-2 border-neutral-6 py-6 first-of-type:border-none last-of-type:pb-0">
+      <div className="space-y-1">
+        <Heading className="text-balance" level={3}>
+          {achievement}
+        </Heading>
 
-      <div className="mt-1 flex items-center gap-2 font-medium tracking-wide">
-        <AcademicCapIcon className="h-6" />
-        {organization}
+        <div className="flex items-center gap-2 font-semibold tracking-wide text-neutral-11">
+          <AcademicCapIcon className="h-4" />
+          {organization}
+        </div>
       </div>
 
       <Prose html={body.html} />

@@ -13,8 +13,9 @@ export default function Footer(): ReactNode {
             {links.map((link) => (
               <Button
                 asChild
-                className="h-12 w-12 rounded-full p-0"
+                className="h-12 w-12 rounded-full"
                 key={link.title}
+                size="icon"
               >
                 <a href={link.href}>
                   <span className="sr-only">

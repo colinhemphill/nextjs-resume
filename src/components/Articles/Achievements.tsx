@@ -6,7 +6,7 @@ import AchievementItem from './achievement-item';
 
 export default function Achievements(): ReactNode {
   return (
-    <article className="rounded-xl bg-neutral-3 py-12">
+    <article className="rounded-xl border border-neutral-6 bg-neutral-2 py-12 shadow-lg">
       <div className="container">
         <div className="flex justify-center text-center">
           <SectionHeading

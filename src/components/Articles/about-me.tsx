@@ -6,7 +6,7 @@ import Prose from '../prose/prose';
 
 export default function AboutMe(): ReactNode {
   return (
-    <article>
+    <article className="space-y-2">
       <SectionHeading Icon={UserIcon} level={3} text="About Me" />
       <Prose html={personal.body.html} />
     </article>
