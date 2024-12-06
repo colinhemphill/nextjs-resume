@@ -4,7 +4,7 @@ import { type ButtonHTMLAttributes, forwardRef } from 'react';
 import { cn } from 'src/helpers/utils';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-semibold transition focus-visible:outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0',
+  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition focus-visible:outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0',
   {
     variants: {
       color: {
@@ -13,9 +13,9 @@ const buttonVariants = cva(
         danger: '',
       },
       size: {
-        sm: 'h-9 px-3 text-sm [&_svg]:size-4',
-        md: 'h-10 px-4 py-2 text-base [&_svg]:size-5',
-        lg: 'h-11 px-8 text-lg [&_svg]:size-6',
+        sm: 'h-9 px-3 text-sm [&_svg]:size-3',
+        md: 'h-10 px-4 py-2 text-base [&_svg]:size-4',
+        lg: 'h-11 px-8 text-lg [&_svg]:size-5',
         xl: 'h-14 px-12 text-xl [&_svg]:size-6',
         icon: 'h-10 w-10 [&_svg]:size-5',
       },
@@ -40,7 +40,7 @@ const buttonVariants = cva(
       {
         color: 'danger',
         variant: 'solid',
-        class: 'bg-error-6 ring-error-11 hocus:bg-error-7 text-neutral-12',
+        class: 'bg-danger-6 text-neutral-12 ring-danger-11 hocus:bg-danger-7',
       },
       // OUTLINES
       {
@@ -59,7 +59,7 @@ const buttonVariants = cva(
         color: 'danger',
         variant: 'outline',
         class:
-          'border-error-7 bg-error-1 text-error-11 ring-error-8 hocus:border-error-8',
+          'border-danger-7 bg-danger-1 text-danger-11 ring-danger-8 hocus:border-danger-8',
       },
     ],
     defaultVariants: {
