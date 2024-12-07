@@ -1,8 +1,14 @@
 import { personal } from '@content';
 import { render, screen } from '@test-utils';
-import { describe, expect, test } from 'bun:test';
+import { describe, expect, mock, test } from 'bun:test';
 import { fullName } from 'src/helpers/utils';
 import Header from './header';
+
+void mock.module('next/navigation', () => {
+  return {
+    useParams: mock().mockReturnValue({ secret: 'secret' }),
+  };
+});
 
 describe('<Header />', () => {
   test('Renders headings and PDF button', () => {
