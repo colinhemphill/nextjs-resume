@@ -1,12 +1,8 @@
 import * as radixColors from '@radix-ui/colors';
-import type { Config } from 'tailwindcss';
 import plugin from 'tailwindcss/plugin';
-import resumeConfig from './edit-me/config/resumeConfig';
-import { ThemeSetting } from './edit-me/types/Config';
-import { contrastColor } from './src/helpers/colorContrast';
-
-// @ts-ignore
 import { createPlugin } from 'windy-radix-palette';
+import { resumeConfig } from './edit-me/config/resume-config';
+import { ThemeSetting } from './edit-me/types/config';
 
 const colors = createPlugin({
   colors: {
@@ -31,8 +27,57 @@ export default {
   darkMode: resumeConfig.appTheme === ThemeSetting.System ? 'media' : 'class',
   plugins: [
     colors.plugin,
-    plugin(function ({ addVariant }) {
+    // eslint-disable-next-line @typescript-eslint/unbound-method
+    plugin(function ({ addBase, addUtilities, addVariant, theme }) {
       addVariant('hocus', ['&:hover', '&:focus']);
+
+      addBase({
+        'a:focus-within, button:focus-within': {
+          'outline-color': theme('colors.accent.11'),
+        },
+      });
+      addBase({
+        'p a': {
+          'text-decoration-line': 'underline',
+          'text-decoration-color': theme('colors.accent.9'),
+          'text-decoration-thickness': '2px',
+          'text-underline-offset': '2px',
+          'transition-duration': theme('transitionDuration.300'),
+          'transition-property': theme('transitionProperty.colors'),
+          'transition-timing-function': theme(
+            'transitionTimingFunction.DEFAULT',
+          ),
+          '&:hover, &:focus': {
+            'text-decoration-color': 'currentColor',
+          },
+        },
+      });
+      addBase({
+        code: {
+          'background-color': theme('colors.neutral.6'),
+          color: theme('colors.neutral.12'),
+          'border-radius': theme('borderRadius.DEFAULT'),
+          'padding-left': theme('spacing.1'),
+          'padding-right': theme('spacing.1'),
+          'font-weight': theme('fontWeight.medium'),
+        },
+      });
+      addUtilities({
+        '.text-link': {
+          'text-decoration-line': 'underline',
+          'text-decoration-color': theme('colors.accent.9'),
+          'text-decoration-thickness': '2px',
+          'text-underline-offset': '2px',
+          'transition-duration': theme('transitionDuration.300'),
+          'transition-property': theme('transitionProperty.colors'),
+          'transition-timing-function': theme(
+            'transitionTimingFunction.DEFAULT',
+          ),
+          '&:hover, &:focus': {
+            'text-decoration-color': 'currentColor',
+          },
+        },
+      });
     }),
   ],
   theme: {
@@ -40,7 +85,6 @@ export default {
       // add semantic names for configured color choices
       colors: {
         accent: colors.alias(resumeConfig.accentColor),
-        accentContrast: contrastColor,
         danger: colors.alias('red'),
         neutral: colors.alias(resumeConfig.neutralColor),
       },
@@ -60,4 +104,4 @@ export default {
       },
     },
   },
-} satisfies Config;
+};

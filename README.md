@@ -2,7 +2,7 @@
 
 A résumé built especially with software professionals in mind. Impress your potential employer with a beautiful and incredibly fast résumé website, or generate a PDF for email and print.
 
-[See an example](https://nextjs-tailwind-resume.vercel.app/)
+[See an example](https://nextjs-resume.netlify.app/)
 
 Your résumé can also generate a secure URL that will display information not accessible on the public URL. The secure version can include private information such as email, phone number, and mailing address. You can send the private link to a potential employer or use it to generate a more complete PDF for yourself.
 
@@ -25,27 +25,23 @@ Your résumé can also generate a secure URL that will display information not a
 
 - [Next.js](https://nextjs.org)
 - [TypeScript](https://www.typescriptlang.org/)
-- [React-pdf](https://react-pdf.org/)
-- [Contentlayer](https://www.contentlayer.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Contentlayer](https://www.contentlayer.dev/)
+- [React-pdf](https://react-pdf.org/)
 - [Radix UI Colors](https://www.radix-ui.com/colors)
-- [Vercel Image Generation](https://beta.nextjs.org/docs/optimizing/image-generation)
 - [Testing Library](https://testing-library.com/)
-- [Vercel](https://vercel.com/)
-
-### It's FAST
-
-Your résumé will use the latest Vercel technology including Next.js 13 server components and edge functions, and will load fast even on older devices and poor network conditions.
 
 ## How To Use This Project
 
-The project requires only a few steps to set up your custom config, add content to the internal CMS, and deploy to Vercel!
+The project requires only a few steps to set up your custom config, add content to the internal CMS, and deploy to Vercel or Netlify!
 
 ### Clone and Deploy
 
-It may seem counter-intuitive, but the simplest way to get started is to clone and deploy in one step. Afterwards, you can edit the CMS and template to match your needs.
+The simplest way to get started is to clone and deploy in one step. Afterwards, you can edit the CMS and template to match your needs.
 
-The project is designed to be deployed with [Vercel](https://vercel.com). By clicking the "Deploy" button below, you will clone the project to your own repository and deploy to a free HTTPS domain with Vercel's high-performance edge network. The default project will include mock data that you can edit in the next step!
+The project is designed to be deployed on [Netlify](https://netlify.com) or [Vercel](https://vercel.com). You can click one of the following buttons to clone the repo, set environment variables, and deploy.
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/colinhemphill/nextjs-resume)
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcolinhemphill%2Fnextjs-resume&env=PRIVATE_KEY&envDescription=Environment%20variables%20needed%20to%20run%20the%20application%20and%20provide%20private%20information%20links&envLink=https%3A%2F%2Fgithub.com%2Fcolinhemphill%2Fnextjs-resume%23environment-variables&project-name=nextjs-resume&repo-name=nextjs-resume&demo-title=Next.js%20R%C3%A9sum%C3%A9&demo-description=An%20example%20Next.js%20static%20r%C3%A9sum%C3%A9)
 
@@ -135,7 +131,7 @@ The template is built to be responsive, beautiful, and accessible right out of t
 
 If you really want to go deep on customization, you have full control of the Tailwind configuration in the root folder `tailwind.config.ts` file.
 
-We use [Vercel Image Generation](https://beta.nextjs.org/docs/optimizing/image-generation) to generate dynamic Open Graph (Facebook/Twitter) share images and app icons. You can edit the layout, styles, and text of OG Image using Tailwind classes in `src/app/api/og/route.tsx` and the icon in `src/app/icon.tsx`.
+We use [Next.js Image Generation](https://nextjs.org/docs/app/api-reference/functions/image-response) to generate dynamic Open Graph (Facebook/Twitter) share images and app icons. You can edit the layout, styles, and text of OG Image using Tailwind classes in `src/app/api/og/route.tsx` and the icon in `src/app/icon.tsx`.
 
 This dynamic share image will use your custom `accentColor` setting, as well as data from the CMS.
 

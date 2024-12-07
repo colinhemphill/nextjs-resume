@@ -1,18 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer components {
-  a {
-    @apply underline decoration-accent-9 decoration-solid decoration-2 underline-offset-2 transition-colors duration-300 hocus:decoration-inherit;
-  }
-  .prose code {
-    @apply rounded-md bg-neutral-1 px-2 font-mono font-medium;
-  }
-  .prose ul {
-    @apply mt-4 list-disc pl-4 marker:text-neutral-9;
-  }
-  .prose li {
-    @apply my-2 pl-2;
-  }
-}

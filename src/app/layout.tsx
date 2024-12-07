@@ -1,19 +1,15 @@
-import * as colors from '@radix-ui/colors';
+import { ThemeSetting } from '@config-types/config';
+import { resumeConfig } from '@config/resume-config';
+import { personal } from '@content';
 import { Metadata, Viewport } from 'next';
 import { Albert_Sans, JetBrains_Mono } from 'next/font/google';
-import { PropsWithChildren } from 'react';
-import resumeConfig from '../../edit-me/config/resumeConfig';
-
-// STYLES
-import { personal } from '@content';
 import { headers } from 'next/headers';
-import { protocol, vercelURL } from 'src/helpers/env';
-import { fullName } from 'src/helpers/utils';
-import { twMerge } from 'tailwind-merge';
-import { ThemeSetting } from '../../edit-me/types/Config';
+import { PropsWithChildren, ReactNode } from 'react';
+import Footer from 'src/components/footer/footer';
+import Header from 'src/components/header/header';
+import { deployURL, protocol } from 'src/helpers/environment';
+import { cn, fullName } from 'src/helpers/utils';
 import './globals.css';
-
-const accentColor = resumeConfig.accentColor;
 
 const albert = Albert_Sans({
   display: 'swap',
@@ -28,20 +24,21 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const generateMetadata = async (): Promise<Metadata> => {
-  const host = headers().get('host');
-  const baseURL = `${protocol}://${host || vercelURL}`;
+  const requestHeaders = await headers();
+  const host = requestHeaders.get('host');
+  const baseURL = `${protocol}://${host ?? deployURL ?? ''}`;
   const siteName = `${fullName} Professional Résumé`;
-  const title = `Résumé | ${fullName} | Somewhere`;
+  const title = `Résumé | ${fullName}`;
   const description = `Professional résumé for ${fullName}.`;
 
   return {
-    metadataBase: new URL(baseURL),
     applicationName: siteName,
     authors: { name: fullName },
     creator: fullName,
     description,
     generator: 'Next.js',
     keywords: ['resume', fullName, 'next.js', 'pdf'],
+    metadataBase: new URL(baseURL),
     openGraph: {
       type: 'profile',
       firstName: personal.givenName,
@@ -63,26 +60,24 @@ export const generateMetadata = async (): Promise<Metadata> => {
 
 export const viewport: Viewport = {
   initialScale: 1,
-  // @ts-ignore
-  themeColor: colors[accentColor][`${accentColor}9`],
   width: 'device-width',
 };
 
-const RootLayout: React.FC<PropsWithChildren> = async ({ children }) => {
+export default function RootLayout({ children }: PropsWithChildren): ReactNode {
   return (
     <html
       lang="en"
-      className={twMerge(
+      className={cn(
         albert.variable,
         jetBrainsMono.variable,
         resumeConfig.appTheme === ThemeSetting.Dark && 'dark',
       )}
     >
-      <body className="bg-neutral-1 text-neutral-12 selection:bg-accent-11 selection:text-neutral-1">
-        {children}
+      <body className="space-y-12 bg-neutral-1 text-neutral-12 selection:bg-accent-11 selection:text-neutral-1">
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
-};
-
-export default RootLayout;
+}

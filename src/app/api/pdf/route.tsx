@@ -1,11 +1,11 @@
 import { allPrivateFields } from '@content';
 import { renderToBuffer } from '@react-pdf/renderer';
 import { NextResponse } from 'next/server';
-import PDF from 'src/components/PDF/PDF';
+import PDF from 'src/components/pdf/pdf';
 
 const privateKey = process.env.PRIVATE_KEY;
 
-export async function GET(request: Request) {
+export async function GET(request: Request): Promise<NextResponse> {
   const { searchParams } = new URL(request.url);
   const secret = searchParams.get('secret');
 
