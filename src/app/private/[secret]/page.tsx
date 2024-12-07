@@ -7,8 +7,6 @@ import AdditionalInfo from 'src/components/articles/additional-info';
 import ContactInformation from 'src/components/articles/contact-info';
 import Professional from 'src/components/articles/professional';
 import Skills from 'src/components/articles/skills';
-import Footer from 'src/components/footer/footer';
-import Header from 'src/components/header/header';
 import { PageProperties } from 'src/types/page-properties';
 
 const privateKey = process.env.PRIVATE_KEY;
@@ -26,33 +24,16 @@ export default async function Page(
   const privateInformation = allPrivateFields;
 
   return (
-    <>
-      <Header secret={secret} />
-
-      <div className="container">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <AboutMe />
-          <ContactInformation privateInformation={privateInformation} />
-        </div>
-
-        <div className="mt-12">
-          <Skills />
-        </div>
-
-        <div className="mt-12">
-          <Professional />
-        </div>
-
-        <div className="mt-12">
-          <Achievements />
-        </div>
-
-        <div className="mt-12">
-          <AdditionalInfo />
-        </div>
+    <div className="container space-y-12">
+      <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+        <AboutMe />
+        <ContactInformation privateInformation={privateInformation} />
+        <Skills />
       </div>
 
-      <Footer />
-    </>
+      <Professional />
+      <Achievements />
+      <AdditionalInfo />
+    </div>
   );
 }

@@ -4,11 +4,7 @@ import { Heading } from 'src/components/heading/heading';
 import PDFDownloadButton from 'src/components/pdf/pdf-download-button';
 import { fullName } from 'src/helpers/utils';
 
-interface HeaderProperties {
-  secret?: string;
-}
-
-export default function Header({ secret }: HeaderProperties): ReactNode {
+export default function Header(): ReactNode {
   return (
     <header className="border-b border-neutral-6 bg-neutral-1 py-12">
       <div className="container">
@@ -19,7 +15,7 @@ export default function Header({ secret }: HeaderProperties): ReactNode {
               {personal.title}
             </Heading>
           </div>
-          <PDFDownloadButton secret={secret} />
+          <PDFDownloadButton />
         </div>
       </div>
     </header>
