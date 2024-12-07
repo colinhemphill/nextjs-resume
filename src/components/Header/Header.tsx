@@ -1,8 +1,8 @@
 import { personal } from '@content';
 import { ReactNode } from 'react';
-import { fullName } from '../../helpers/utils';
-import { Heading } from '../heading/heading';
-import PDFDownloadButton from '../pdf/pdf-download-button';
+import { Heading } from 'src/components/heading/heading';
+import PDFDownloadButton from 'src/components/pdf/pdf-download-button';
+import { fullName } from 'src/helpers/utils';
 
 interface HeaderProperties {
   secret?: string;

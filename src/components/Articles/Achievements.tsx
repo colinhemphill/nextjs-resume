@@ -1,9 +1,9 @@
 import { AcademicCapIcon } from '@heroicons/react/24/solid';
 import { Fragment, ReactNode } from 'react';
+import AchievementItem from 'src/components/articles/achievement-item';
 import Separator from 'src/components/articles/separator';
 import SectionHeading from 'src/components/section-heading/section-heading';
 import { sortedAchievements } from 'src/helpers/utils';
-import AchievementItem from './achievement-item';
 
 export default function Achievements(): ReactNode {
   return (

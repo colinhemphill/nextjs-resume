@@ -1,5 +1,5 @@
+import { links } from '@config/links';
 import { personal } from '@content';
-import { links } from 'edit-me/config/links';
 import { ReactNode } from 'react';
 import { Button } from 'src/components/button/button';
 import { fullName } from 'src/helpers/utils';

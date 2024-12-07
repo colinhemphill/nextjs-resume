@@ -1,8 +1,8 @@
 import { Achievement } from '@content';
 import { AcademicCapIcon } from '@heroicons/react/24/solid';
 import { ReactNode } from 'react';
-import { Heading } from '../heading/heading';
-import Prose from '../prose/prose';
+import { Heading } from 'src/components/heading/heading';
+import Prose from 'src/components/prose/prose';
 
 export default function AchievementItem({
   achievement,

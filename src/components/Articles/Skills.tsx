@@ -1,10 +1,10 @@
 import { allSkills } from '@content';
 import { CheckIcon } from '@heroicons/react/24/solid';
 import { ReactNode } from 'react';
+import { Heading } from 'src/components/heading/heading';
+import Prose from 'src/components/prose/prose';
 import SectionHeading from 'src/components/section-heading/section-heading';
 import StarRating from 'src/components/star-rating/star-rating';
-import { Heading } from '../heading/heading';
-import Prose from '../prose/prose';
 
 export default function Skills(): ReactNode {
   return (

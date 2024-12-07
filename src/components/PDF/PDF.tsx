@@ -1,3 +1,4 @@
+import { resumeConfig } from '@config/resume-config';
 import {
   PrivateField,
   ProfessionalExperience,
@@ -25,13 +26,12 @@ import CircleIdCard from 'src/components/pdf/icons/circle-id-card';
 import CirclePaintbrush from 'src/components/pdf/icons/circle-paintbrush';
 import CircleUser from 'src/components/pdf/icons/circle-user';
 import Star from 'src/components/pdf/icons/star';
-import resumeConfig from '../../../edit-me/config/resume-config';
-import { getAccentColor, getNeutralColor } from '../../helpers/colors';
+import { getAccentColor, getNeutralColor } from 'src/helpers/colors';
 import {
   fullName,
   sortedAchievements,
   sortedProfessionalExperiences,
-} from '../../helpers/utils';
+} from 'src/helpers/utils';
 
 const theme = resumeConfig.pdfTheme;
 const albertSource = 'https://fonts.gstatic.com/s/albertsans/v1';

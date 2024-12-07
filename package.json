@@ -73,7 +73,8 @@
     "test:update": "bun test --update-snapshots",
     "test:watch": "bun test --watch",
     "types": "tsc -p tsconfig.json --noEmit",
-    "update": "syncpack update"
+    "update": "syncpack update",
+    "yeet": "bunx rimraf bun.lockb && bunx rimraf **/{dist,node_modules,.turbo,.next,.vercel,.netlify}/ --glob && bunx rimraf **/tsconfig.tsbuildinfo --glob"
   },
   "type": "module"
 }

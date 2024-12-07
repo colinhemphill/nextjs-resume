@@ -1,3 +1,5 @@
+import { ThemeSetting } from '@config-types/config';
+import { resumeConfig } from '@config/resume-config';
 import { personal } from '@content';
 import { Metadata, Viewport } from 'next';
 import { Albert_Sans, JetBrains_Mono } from 'next/font/google';
@@ -7,8 +9,6 @@ import Footer from 'src/components/footer/footer';
 import Header from 'src/components/header/header';
 import { deployURL, protocol } from 'src/helpers/environment';
 import { cn, fullName } from 'src/helpers/utils';
-import resumeConfig from '../../edit-me/config/resume-config';
-import { ThemeSetting } from '../../edit-me/types/config';
 import './globals.css';
 
 const albert = Albert_Sans({

@@ -1,3 +1,4 @@
+import { CMSLink } from '@config-types/cms-link';
 import {
   SiBluesky,
   SiGithub,
@@ -5,7 +6,6 @@ import {
   SiLinkedin,
   SiNpm,
 } from '@icons-pack/react-simple-icons';
-import { CMSLink } from 'edit-me/types/cms-link';
 
 export const links: CMSLink[] = [
   {

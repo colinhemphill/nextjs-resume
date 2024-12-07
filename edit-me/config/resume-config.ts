@@ -6,7 +6,7 @@ import {
   ThemeSetting,
 } from '../types/config';
 
-const config: ResumeConfig = {
+export const resumeConfig: ResumeConfig = {
   accentColor: AccentColors.Blue,
   neutralColor: NeutralColors.Slate,
   appTheme: ThemeSetting.System,
@@ -14,4 +14,3 @@ const config: ResumeConfig = {
   pdfTheme: Theme.Light,
 };
 
-export default config;

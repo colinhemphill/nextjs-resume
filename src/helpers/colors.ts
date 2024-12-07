@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 /* eslint-disable @typescript-eslint/no-unsafe-return */
+import { AccentColorsBasic, Theme } from '@config-types/config';
+import { resumeConfig } from '@config/resume-config';
 import * as colors from '@radix-ui/colors';
-import resumeConfig from '../../edit-me/config/resume-config';
-import { AccentColorsBasic, Theme } from '../../edit-me/types/config';
 
 type Shade = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 

@@ -1,9 +1,8 @@
 import * as radixColors from '@radix-ui/colors';
 import plugin from 'tailwindcss/plugin';
 import { createPlugin } from 'windy-radix-palette';
-import resumeConfig from './edit-me/config/resume-config';
+import { resumeConfig } from './edit-me/config/resume-config';
 import { ThemeSetting } from './edit-me/types/config';
-import { contrastColor } from './src/helpers/color-contrast';
 
 const colors = createPlugin({
   colors: {
@@ -86,7 +85,6 @@ export default {
       // add semantic names for configured color choices
       colors: {
         accent: colors.alias(resumeConfig.accentColor),
-        accentContrast: contrastColor,
         danger: colors.alias('red'),
         neutral: colors.alias(resumeConfig.neutralColor),
       },

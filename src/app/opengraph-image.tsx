@@ -1,4 +1,4 @@
-import resumeConfig from 'edit-me/config/resume-config';
+import { resumeConfig } from '@config/resume-config';
 import { ImageResponse } from 'next/og';
 import { getAccentColor, getNeutralColor } from 'src/helpers/colors';
 import { fullName } from 'src/helpers/utils';
