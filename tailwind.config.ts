@@ -54,7 +54,7 @@ export default {
       });
       addBase({
         code: {
-          'background-color': theme('colors.neutral.1'),
+          'background-color': theme('colors.neutral.6'),
           color: theme('colors.neutral.12'),
           'border-radius': theme('borderRadius.DEFAULT'),
           'padding-left': theme('spacing.1'),
