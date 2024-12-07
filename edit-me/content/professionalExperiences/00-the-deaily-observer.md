@@ -1,15 +1,15 @@
 ---
-organization: Some Company
+organization: The Daily Observer
 titles:
-  - title: Current Title
-    startDate: '2023'
-  - title: A Previous Title
-    startDate: '2022'
-    endDate: '2023'
+  - title: Senior Editor
+    startDate: '2021'
+  - title: Editor
+    startDate: '2018'
+    endDate: '2021'
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices in iaculis nunc sed augue lacus viverra vitae congue.
-  - title: Another Previous Title
-    startDate: '2019'
-    endDate: '2022'
+  - title: Assistant Editor
+    startDate: '2016'
+    endDate: '2018'
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices in iaculis nunc sed augue lacus viverra vitae congue.
 ---
 

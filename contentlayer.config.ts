@@ -30,11 +30,6 @@ export const Personal = defineDocumentType(() => ({
         'Your general location of residence, not your personal address',
       required: true,
     },
-    twitterUsername: {
-      type: 'string',
-      description: 'Your Twitter username without the "@" symbol',
-      required: false,
-    },
   },
 }));
 

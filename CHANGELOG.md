@@ -30,7 +30,7 @@ I'm not planning to include a migration guide for this version because I think t
 
 ### Removed
 
-- Yeeted most Vercel requirements [for reasons](https://bsky.app/profile/colinhemphill.com/post/3laheutqa262m)
+- Yeeted most Vercel (and Twitter) requirements [for reasons](https://bsky.app/profile/colinhemphill.com/post/3laheutqa262m)
 
 ## [5.1.4] - 2024-10-11
 
