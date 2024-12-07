@@ -7,7 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [6.0.0] - 2024-12-06
 
-I'm not planning to include a migration guide for this version because I think the changes are substantial enough that it won't be feasible for most people. Almost all filenames have changed due to ESLint rules, some Contentlayer schemas have changed, and most components have been overhauled. I recommend starting fresh and copying over your previously created CMS.
+**Migration**
+
+[v5 to v6 Migration Guide](/docs/migration/v5-v6.md)
 
 ### Added
 
