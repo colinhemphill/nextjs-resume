@@ -10,7 +10,7 @@ export default function Prose({ className, html }: ProseProperties): ReactNode {
   return (
     <div
       className={cn(
-        'prose space-y-4 text-base text-neutral-12 [&>li]:space-y-2 [&>li]:marker:text-neutral-11 [&>ul]:list-inside [&>ul]:list-disc',
+        'prose space-y-4 text-base text-neutral-12 [&>li]:marker:text-neutral-11 [&>ul]:list-outside [&>ul]:list-disc [&>ul]:space-y-1 [&>ul]:pl-4',
         className,
       )}
       dangerouslySetInnerHTML={{ __html: html }}
