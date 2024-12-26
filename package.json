@@ -11,7 +11,7 @@
     "@icons-pack/react-simple-icons": "10.2.0",
     "@radix-ui/colors": "3.0.0",
     "@radix-ui/react-slot": "1.1.0",
-    "@react-pdf/renderer": "4.1.5",
+    "@react-pdf/renderer": "4.1.6",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
     "contentlayer2": "0.5.3",
