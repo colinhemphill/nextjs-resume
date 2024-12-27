@@ -14,7 +14,7 @@ export default function Error({ error }: { error: Error }): ReactNode {
 
   return (
     <div className="container text-center">
-      <div className="space-y-4 rounded-xl border border-danger-6 bg-danger-1 p-12">
+      <div className="border-danger-6 bg-danger-1 space-y-4 rounded-xl border p-12">
         <Heading color="danger" level={2}>
           {error.message}
         </Heading>

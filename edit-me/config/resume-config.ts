@@ -13,4 +13,3 @@ export const resumeConfig: ResumeConfig = {
   imageTheme: Theme.Light,
   pdfTheme: Theme.Light,
 };
-

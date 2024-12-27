@@ -1,0 +1,2 @@
+@variant dark (&:where(.dark, .dark *));
+@variant hocus (&:hover, &:focus);

@@ -1,4 +1,4 @@
-export enum AccentColorsBasic {
+export enum AccentColors {
   Tomato = 'tomato',
   Red = 'red',
   Crimson = 'crimson',
@@ -17,17 +17,12 @@ export enum AccentColorsBasic {
   Ruby = 'ruby',
   Iris = 'iris',
   Jade = 'jade',
-}
-
-export enum AccentColorsBright {
   Sky = 'sky',
   Mint = 'mint',
   Lime = 'lime',
   Yellow = 'yellow',
   Amber = 'amber',
 }
-
-export const AccentColors = { ...AccentColorsBasic, ...AccentColorsBright };
 
 export enum NeutralColors {
   Gray = 'gray',
@@ -50,7 +45,7 @@ export enum ThemeSetting {
 }
 
 export interface ResumeConfig {
-  accentColor: AccentColorsBasic | AccentColorsBright;
+  accentColor: AccentColors;
   neutralColor: NeutralColors;
   imageTheme: Theme;
   pdfTheme: Theme;

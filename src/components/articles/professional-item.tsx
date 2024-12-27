@@ -23,15 +23,15 @@ export default function ProfessionalItem({
                 hidden: titles.length === 1,
               })}
             >
-              <span className="mt-[6px] block h-2 w-2 flex-none rounded-full bg-accent-11" />
-              <div className="h-full w-[2px] rounded-full bg-accent-6 group-last:hidden" />
+              <span className="bg-accent-11 mt-[6px] block h-2 w-2 flex-none rounded-full" />
+              <div className="bg-accent-6 h-full w-[2px] rounded-full group-last:hidden" />
             </div>
 
             <div className="space-y-3 pb-4 group-last:pb-0">
-              <div className="text-lg font-bold leading-none">
+              <div className="text-lg leading-none font-bold">
                 {title.title}
               </div>
-              <div className="text-sm leading-none tracking-wide text-neutral-11">
+              <div className="text-neutral-11 text-sm leading-none tracking-wide">
                 {title.startDate}–{title.endDate ?? 'Current'}
               </div>
               {title.description && (

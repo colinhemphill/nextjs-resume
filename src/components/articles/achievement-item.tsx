@@ -16,7 +16,7 @@ export default function AchievementItem({
           {achievement}
         </Heading>
 
-        <div className="flex items-center gap-2 text-lg font-semibold tracking-wide text-neutral-11">
+        <div className="text-neutral-11 flex items-center gap-2 text-lg font-semibold tracking-wide">
           <AcademicCapIcon className="h-4" />
           {organization}
         </div>

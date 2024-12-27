@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 /* eslint-disable @typescript-eslint/no-unsafe-return */
-import { AccentColorsBasic, Theme } from '@config-types/config';
+import { AccentColors, Theme } from '@config-types/config';
 import { resumeConfig } from '@config/resume-config';
 import * as colors from '@radix-ui/colors';
 
@@ -19,7 +19,7 @@ export const getAccentColor = (shade: Shade, theme = defaultTheme): string => {
   const accent =
     colors[
       theme === Theme.Dark
-        ? (`${configAccent}Dark` as AccentColorsBasic)
+        ? (`${configAccent}Dark` as AccentColors)
         : configAccent
     ];
   // @ts-expect-error -- typing is a bit of a stretch here, but this does work
@@ -35,7 +35,7 @@ export const getNeutralColor = (shade: Shade, theme = defaultTheme): string => {
   const neutral =
     colors[
       theme === Theme.Dark
-        ? (`${configNeutral}Dark` as AccentColorsBasic)
+        ? (`${configNeutral}Dark` as AccentColors)
         : configNeutral
     ];
   // @ts-expect-error -- typing is a bit of a stretch here, but this does work

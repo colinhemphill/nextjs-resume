@@ -4,7 +4,7 @@ import { type ButtonHTMLAttributes, forwardRef } from 'react';
 import { cn } from 'src/helpers/utils';
 
 const buttonVariants = cva(
-  'inline-flex max-w-full items-center justify-center gap-2 whitespace-nowrap text-wrap rounded-md font-medium transition focus-visible:outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0',
+  'inline-flex max-w-full items-center justify-center gap-2 rounded-md font-medium text-wrap whitespace-nowrap transition focus-visible:ring-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0',
   {
     variants: {
       color: {
@@ -70,7 +70,7 @@ const buttonVariants = cva(
   },
 );
 
-type ButtonProperties = ButtonHTMLAttributes<HTMLButtonElement> &
+export type ButtonProperties = ButtonHTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof buttonVariants> & { asChild?: boolean };
 
 const Button = forwardRef<HTMLButtonElement, ButtonProperties>(

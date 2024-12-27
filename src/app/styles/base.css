@@ -1,0 +1,30 @@
+@layer base {
+  a:focus-within,
+  button:focus-within {
+    outline-color: theme(--color-accent-11);
+  }
+
+  p a {
+    text-decoration-line: underline;
+    text-decoration-color: theme(--color-accent-9);
+    text-decoration-thickness: 2px;
+
+    transition-property: text-decoration-color;
+    transition-duration: var(--default-transition-duration);
+    transition-timing-function: theme(--ease-in);
+
+    &:hover,
+    &:focus {
+      text-decoration-color: currentColor;
+    }
+  }
+
+  code {
+    background-color: theme(--color-neutral-6);
+    color: theme(--color-neutral-12);
+    border-radius: theme(--radius);
+    font-weight: theme(--font-weight-medium);
+    padding-left: theme(--spacing);
+    padding-right: theme(--spacing);
+  }
+}
