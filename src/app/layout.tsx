@@ -1,7 +1,6 @@
-import { ThemeSetting } from '@config-types/config';
-import { resumeConfig } from '@config/resume-config';
 import { personal } from '@content';
 import { Metadata, Viewport } from 'next';
+import { ThemeProvider } from 'next-themes';
 import { Albert_Sans, JetBrains_Mono } from 'next/font/google';
 import { headers } from 'next/headers';
 import { PropsWithChildren, ReactNode } from 'react';
@@ -9,7 +8,7 @@ import Footer from 'src/components/footer/footer';
 import Header from 'src/components/header/header';
 import { deployURL, protocol } from 'src/helpers/environment';
 import { cn, fullName } from 'src/helpers/utils';
-import './globals.css';
+import './styles/globals.css';
 
 const albert = Albert_Sans({
   display: 'swap',
@@ -67,16 +66,17 @@ export default function RootLayout({ children }: PropsWithChildren): ReactNode {
   return (
     <html
       lang="en"
-      className={cn(
-        albert.variable,
-        jetBrainsMono.variable,
-        resumeConfig.appTheme === ThemeSetting.Dark && 'dark',
-      )}
+      className={cn(albert.variable, jetBrainsMono.variable)}
+      suppressHydrationWarning
     >
-      <body className="space-y-12 bg-neutral-1 text-neutral-12 selection:bg-accent-11 selection:text-neutral-1">
-        <Header />
-        <main>{children}</main>
-        <Footer />
+      <body className="bg-neutral-1 text-neutral-12 selection:bg-accent-11 selection:text-neutral-1">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="space-y-12">
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

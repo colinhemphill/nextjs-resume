@@ -7,7 +7,7 @@ import ProfessionalItem from './professional-item';
 
 export default function Professional(): ReactNode {
   return (
-    <article className="rounded-xl border border-neutral-6 bg-neutral-2 py-12 shadow-md">
+    <article className="border-neutral-6 bg-neutral-2 rounded-xl border py-12 shadow-md">
       <div className="container space-y-8">
         <SectionHeading
           className="justify-center"

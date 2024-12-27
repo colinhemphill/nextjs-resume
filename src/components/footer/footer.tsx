@@ -6,7 +6,7 @@ import { fullName } from 'src/helpers/utils';
 
 export default function Footer(): ReactNode {
   return (
-    <footer className="border-t border-neutral-6 bg-neutral-2 py-12 text-neutral-12">
+    <footer className="border-neutral-6 bg-neutral-2 text-neutral-12 border-t py-12">
       <div className="container space-y-8 text-center">
         <div className="flex flex-wrap justify-center gap-3">
           {links.map((link) => (

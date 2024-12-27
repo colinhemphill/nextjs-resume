@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.1.0] - 2024-12-27
+
+### Added
+
+- Added [next-themes](https://github.com/pacocoursey/next-themes) for user control of color mode
+
+### Changed
+
+- Upgrade to [Tailwind 4.0 Beta](https://tailwindcss.com/docs/v4-beta)
+  - Most Tailwind config has moved from `tailwind.config.ts` to CSS files
+  - This change is 100% compatible with existing résumé config, but if you have modified Tailwind config for the project you will need to migrate your custom configurations to v4
+- Other dependency updates
+- Stars display in accent color in both color modes
+
 ## [6.0.1] - 2024-12-11
 
 ### Fixed

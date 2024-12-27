@@ -7,7 +7,7 @@ import {
 } from 'react';
 import { cn } from 'src/helpers/utils';
 
-export const headingVariants = cva('text-balance font-sans font-bold', {
+export const headingVariants = cva('font-sans font-bold text-balance', {
   variants: {
     color: {
       current: 'text-current',

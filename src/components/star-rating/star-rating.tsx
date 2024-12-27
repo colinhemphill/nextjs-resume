@@ -6,9 +6,7 @@ interface StarRatingProperties {
 }
 
 function Star(): ReactNode {
-  return (
-    <StarIcon className="h-5 fill-accent-11 text-accent-11 dark:fill-amber-11 dark:text-amber-11" />
-  );
+  return <StarIcon className="fill-accent-11 text-accent-11 h-5" />;
 }
 
 export default function StarRating({ stars }: StarRatingProperties): ReactNode {

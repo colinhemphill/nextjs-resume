@@ -9,7 +9,7 @@ import { Heading } from 'src/components/heading/heading';
 export default function NotFound(): ReactNode {
   return (
     <div className="container text-center">
-      <div className="space-y-4 rounded-xl border border-danger-6 bg-danger-1 p-12">
+      <div className="border-danger-6 bg-danger-1 space-y-4 rounded-xl border p-12">
         <Heading color="danger" level={2}>
           This page was not found
         </Heading>

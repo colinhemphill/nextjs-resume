@@ -1,0 +1,33 @@
+@utility text-link {
+  text-decoration-line: underline;
+  text-decoration-color: theme(--color-accent-9);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+
+  transition-property: text-decoration-color;
+  transition-duration: var(--default-transition-duration);
+  transition-timing-function: theme(--ease-in);
+
+  &:hover,
+  &:focus {
+    text-decoration-color: currentColor;
+  }
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+
+  @media (min-width: theme(--breakpoint-sm)) {
+    padding-inline: 2rem;
+  }
+  @media (min-width: theme(--breakpoint-lg)) {
+    padding-inline: 4rem;
+  }
+  @media (min-width: theme(--breakpoint-xl)) {
+    padding-inline: 5rem;
+  }
+  @media (min-width: theme(--breakpoint-2xl)) {
+    padding-inline: 6rem;
+  }
+}

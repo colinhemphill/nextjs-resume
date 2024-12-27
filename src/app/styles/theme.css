@@ -1,0 +1,5 @@
+@theme {
+  --font-*: initial;
+  --font-mono: var(--font-jetbrains-mono);
+  --font-sans: var(--font-albert);
+}

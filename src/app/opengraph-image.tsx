@@ -28,7 +28,7 @@ export default function og(): ImageResponse {
             color: getAccentColor(11, theme),
             borderColor: getAccentColor(7, theme),
           }}
-          tw="h-8/12 flex w-9/12 flex-col items-center justify-center rounded-xl border-2 text-center"
+          tw="flex h-8/12 w-9/12 flex-col items-center justify-center rounded-xl border-2 text-center"
         >
           <div
             style={{
