@@ -43,7 +43,7 @@
     "jsdom": "25.0.1",
     "postcss": "8.4.49",
     "prettier": "3.4.2",
-    "prettier-plugin-sort-json": "4.0.0",
+    "prettier-plugin-sort-json": "4.1.1",
     "prettier-plugin-tailwindcss": "0.6.9",
     "syncpack": "13.0.0",
     "tailwindcss": "4.0.0-beta.6",
