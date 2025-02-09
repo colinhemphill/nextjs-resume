@@ -1,42 +1,9 @@
-export enum AccentColors {
-  Tomato = 'tomato',
-  Red = 'red',
-  Crimson = 'crimson',
-  Pink = 'pink',
-  Plum = 'plum',
-  Purple = 'purple',
-  Violet = 'violet',
-  Indigo = 'indigo',
-  Blue = 'blue',
-  Cyan = 'cyan',
-  Teal = 'teal',
-  Green = 'green',
-  Grass = 'grass',
-  Orange = 'orange',
-  Brown = 'brown',
-  Ruby = 'ruby',
-  Iris = 'iris',
-  Jade = 'jade',
-  Sky = 'sky',
-  Mint = 'mint',
-  Lime = 'lime',
-  Yellow = 'yellow',
-  Amber = 'amber',
-}
-
-export enum NeutralColors {
-  Gray = 'gray',
-  Mauve = 'mauve',
-  Slate = 'slate',
-  Sage = 'sage',
-  Olive = 'olive',
-  Sand = 'sand',
-}
-
-export enum Theme {
-  Dark = 'dark',
-  Light = 'light',
-}
+import {
+  AccentBrightColor,
+  AccentColor,
+  ColorMode,
+  NeutralColor,
+} from '@strum/colors';
 
 export enum ThemeSetting {
   Dark = 'dark',
@@ -45,9 +12,9 @@ export enum ThemeSetting {
 }
 
 export interface ResumeConfig {
-  accentColor: AccentColors;
-  neutralColor: NeutralColors;
-  imageTheme: Theme;
-  pdfTheme: Theme;
+  accentColor: AccentColor | AccentBrightColor;
+  neutralColor: NeutralColor;
+  imageTheme: ColorMode;
+  pdfTheme: ColorMode;
   appTheme: ThemeSetting;
 }

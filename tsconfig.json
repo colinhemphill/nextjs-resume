@@ -31,9 +31,6 @@
       "@config/*": [
         "./edit-me/config/*"
       ],
-      "@config-types/*": [
-        "./edit-me/types/*"
-      ],
       "@content": [
         "./.contentlayer/generated"
       ],

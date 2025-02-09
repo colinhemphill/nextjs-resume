@@ -1,6 +1,6 @@
 @import 'tailwindcss';
-@import './radix';
-@config "./radix-config.ts";
+@import '@strum/colors/tailwind.css';
+@config './radix-config.ts';
 @import './theme';
 @import './base';
 @import './variants';

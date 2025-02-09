@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.0.0] - 2025-02-09
+
+### Changed
+
+- Replaced [Radix UI Colors](https://www.radix-ui.com/colors) with [Strum Colors](https://strum-colors.netlify.app/colors)
+  - These color systems are a 1-to-1 match in terms of how they're used and what colors are available, but the résumé config file does need to change slightly
+  - The colors of your chosen scale will be different with the new system
+- Use TS file for Next.js config
+- Dependency updates
+
+### Removed
+
+- LinkedIn and other Microsoft icons have been removed from Simple Icons, so this is no longer included as an example footer link
+
 ## [6.1.0] - 2024-12-27
 
 ### Added
@@ -383,7 +397,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Adds an `accentContrast` color name to determine the appropriate contrasting color for configured accent color (Radix "bright" colors like "sky" and "mint" require black foreground text)
 - `resumeConfig` is now a TypeScript file
 - `resumeConfig` now uses enums for the `accentColor` and `neutralColor` properties
-  - e.g. `accentColor: AccentColors.Blue`
+  - e.g. `accentColor: AccentColor.Blue`
 - Swap "Roboto Mono" for "JetBrains Mono" as the default monospace font
 
 ### Removed

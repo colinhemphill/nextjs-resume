@@ -17,7 +17,6 @@ import {
 import { HtmlProps } from 'node_modules/react-pdf-html/dist/types/Html';
 import { ReactNode } from 'react';
 import Html from 'react-pdf-html';
-import { htmlRenderers } from 'src/components/pdf/html-renderers';
 import BuildingColumns from 'src/components/pdf/icons/building-columns';
 import CircleBriefcase from 'src/components/pdf/icons/circle-briefcase';
 import CircleCheck from 'src/components/pdf/icons/circle-check';
@@ -241,7 +240,6 @@ const styles = StyleSheet.create({
 });
 
 const htmlProperties: Omit<HtmlProps, 'children'> = {
-  renderers: htmlRenderers,
   style: { fontSize: fontSizes.xxs },
   stylesheet: {
     a: styles.a,
@@ -387,6 +385,7 @@ export default function PDF({ privateInformation }: PDFProperties): ReactNode {
             <Html
               {...htmlProperties}
               stylesheet={{
+                // eslint-disable-next-line @typescript-eslint/no-misused-spread
                 ...htmlProperties.stylesheet,
                 p: { marginBottom: spacers[1] },
               }}
