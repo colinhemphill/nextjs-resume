@@ -75,7 +75,7 @@ export const ProfessionalTitle = defineNestedType(() => ({
 
 export const ProfessionalExperience = defineDocumentType(() => ({
   name: 'ProfessionalExperience',
-  filePathPattern: 'professionalExperiences/*.md',
+  filePathPattern: 'professional-experiences/*.md',
   fields: {
     organization: {
       type: 'string',
@@ -116,7 +116,7 @@ export const Achievement = defineDocumentType(() => ({
 
 export const AdditionalInfo = defineDocumentType(() => ({
   name: 'AdditionalInfo',
-  filePathPattern: 'additionalInfo.md',
+  filePathPattern: 'additional-info.md',
   isSingleton: true,
   fields: {
     title: {
@@ -129,7 +129,7 @@ export const AdditionalInfo = defineDocumentType(() => ({
 
 export const PrivateField = defineDocumentType(() => ({
   name: 'PrivateField',
-  filePathPattern: 'privateFields/*.md',
+  filePathPattern: 'private-fields/*.md',
   fields: {
     label: {
       type: 'string',
