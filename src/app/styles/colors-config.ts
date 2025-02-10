@@ -2,7 +2,7 @@ import { aliasColors } from '@strum/colors';
 import type { Config } from 'tailwindcss';
 import { resumeConfig } from '../../../edit-me/config/resume-config';
 
-const radixConfig: Pick<Config, 'theme'> = {
+const colorsConfig: Pick<Config, 'theme'> = {
   theme: {
     extend: {
       colors: aliasColors({
@@ -13,4 +13,4 @@ const radixConfig: Pick<Config, 'theme'> = {
   },
 };
 
-export default radixConfig;
+export default colorsConfig;

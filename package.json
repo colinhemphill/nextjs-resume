@@ -9,7 +9,6 @@
   "dependencies": {
     "@heroicons/react": "2.2.0",
     "@icons-pack/react-simple-icons": "11.2.0",
-    "@radix-ui/colors": "3.0.0",
     "@radix-ui/react-dropdown-menu": "2.1.6",
     "@radix-ui/react-slot": "1.1.2",
     "@react-pdf/renderer": "4.2.1",

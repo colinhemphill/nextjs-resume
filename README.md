@@ -28,7 +28,7 @@ Your résumé can also generate a secure URL that will display information not a
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Contentlayer](https://www.contentlayer.dev/)
 - [React-pdf](https://react-pdf.org/)
-- [Radix UI Colors](https://www.radix-ui.com/colors)
+- [Strum Colors](https://www.strum.design/colors)
 - [Testing Library](https://testing-library.com/)
 
 ## How To Use This Project
@@ -60,8 +60,8 @@ I've tested the project with `bun`, `npm`, `pnpm`, and `yarn` and haven't run in
 
 Open the project in favorite editor, and open up the `edit-me/config/` folder at the root where you can edit the `resumeConfig.ts` file to meet your needs. The config file contains the following constants that will be used throughout the project (these are typed to provide appropriate autocomplete and error checking):
 
-- `accentColor`: `AccentColor`. The name of an accent palette from [Radix UI Colors](https://www.radix-ui.com/docs/colors/palette-composition/the-scales#colors). If using a standard color, the contrasting text color will be white, and if using a bright color, the contrasting text color will be black.
-- `neutralColor`: `NeutralColor`. The name of a neutral palette from [Radix UI Grays](https://www.radix-ui.com/docs/colors/palette-composition/the-scales#grays).
+- `accentColor`: `AccentColor`. The name of an accent palette from [Strum Colors](https://www.strum.design/colors/documentation/colors#accents). If using a standard color, the contrasting text color will be white, and if using a bright color, the contrasting text color will be black.
+- `neutralColor`: `NeutralColor`. The name of a neutral palette from [Strum Colors](https://www.strum.design/colors/documentation/colors#neutrals).
 - `appTheme`: `'system' | 'light' | 'dark'`. If `appTheme` is set to `system`, the résumé site will default to the user's system preference. If set to `light` or `dark` the user's preference will be overriden.
 - `imageTheme`: `'light' | 'dark'`. Your OG share image and app icons will be generated in either a light or a dark variant.
 - `pdfTheme`: `'light' | 'dark'`. Your PDF will be generated in either a light or a dark variant.
