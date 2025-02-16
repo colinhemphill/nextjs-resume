@@ -14,6 +14,7 @@ import {
   Text,
   View,
 } from '@react-pdf/renderer';
+import path from 'node:path';
 import { HtmlProps } from 'node_modules/react-pdf-html/dist/types/Html';
 import { ReactNode } from 'react';
 import Html from 'react-pdf-html';
@@ -33,8 +34,6 @@ import {
 } from 'src/helpers/utils';
 
 const theme = resumeConfig.pdfTheme;
-const albertSource = 'https://fonts.gstatic.com/s/albertsans/v1';
-const jetbrainsSource = 'https://fonts.gstatic.com/s/jetbrainsmono/v18';
 
 Font.register({
   family: 'Albert Sans',
@@ -42,22 +41,22 @@ Font.register({
     {
       fontStyle: 'normal',
       fontWeight: 400,
-      src: `${albertSource}/i7dZIFdwYjGaAMFtZd_QA3xXSKZqhr-TenSHq5P_rI32TxAj1g.ttf`,
+      src: path.join(process.cwd(), 'src/fonts/AlbertSans-Regular.ttf'),
     },
     {
       fontStyle: 'italic',
       fontWeight: 400,
-      src: `${albertSource}/i7dfIFdwYjGaAMFtZd_QA1Zeelmy79QJ1HOSY9AX74fybRUz1r5t.ttf`,
+      src: path.join(process.cwd(), 'src/fonts/AlbertSans-Italic.ttf'),
     },
     {
       fontStyle: 'normal',
       fontWeight: 700,
-      src: `${albertSource}/i7dZIFdwYjGaAMFtZd_QA3xXSKZqhr-TenSHTJT_rI32TxAj1g.ttf`,
+      src: path.join(process.cwd(), 'src/fonts/AlbertSans-Bold.ttf'),
     },
     {
       fontStyle: 'italic',
       fontWeight: 700,
-      src: `${albertSource}/i7dfIFdwYjGaAMFtZd_QA1Zeelmy79QJ1HOSY9Dw6IfybRUz1r5t.ttf`,
+      src: path.join(process.cwd(), 'src/fonts/AlbertSans-BoldIatalic.ttf'),
     },
   ],
 });
@@ -68,7 +67,7 @@ Font.register({
     {
       fontStyle: 'normal',
       fontWeight: 500,
-      src: `${jetbrainsSource}/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxjPVmUsaaDhw.ttf`,
+      src: path.join(process.cwd(), 'src/fonts/JetBrainsMono-Medium.ttf'),
     },
   ],
 });

@@ -25,7 +25,7 @@ Your résumé can also generate a secure URL that will display information not a
 
 - [Next.js](https://nextjs.org)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
+- [Tailwind CSS v4](https://tailwindcss.com/)
 - [Contentlayer](https://www.contentlayer.dev/)
 - [React-pdf](https://react-pdf.org/)
 - [Strum Colors](https://www.strum.design/colors)
@@ -58,7 +58,7 @@ I've tested the project with `bun`, `npm`, `pnpm`, and `yarn` and haven't run in
 
 ### Modify Custom Config
 
-Open the project in favorite editor, and open up the `edit-me/config/` folder at the root where you can edit the `resumeConfig.ts` file to meet your needs. The config file contains the following constants that will be used throughout the project (these are typed to provide appropriate autocomplete and error checking):
+Open the project in your favorite editor, and go to the `edit-me/config/` folder at the root where you can edit the `resume-config.ts` file to meet your needs. The config file contains the following constants that will be used throughout the project (these are typed to provide appropriate autocomplete and error checking):
 
 - `accentColor`: `AccentColor`. The name of an accent palette from [Strum Colors](https://www.strum.design/colors/documentation/colors#accents). If using a standard color, the contrasting text color will be white, and if using a bright color, the contrasting text color will be black.
 - `neutralColor`: `NeutralColor`. The name of a neutral palette from [Strum Colors](https://www.strum.design/colors/documentation/colors#neutrals).
@@ -74,9 +74,8 @@ The résumé generator provides 19 accent color palettes and 6 neutral color pal
 
 | Light Mode                                                                     | Dark Mode                                                                    |
 | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
-| **BLUE/MAUVE** ![Blue accent light mode](/docs/screenshots/Blue-LightMode.png) | **BLUE/MAUVE** ![Blue accent dark mode](/docs/screenshots/Blue-DarkMode.png) |
-| **RUBY/GRAY** ![Ruby accent light mode](/docs/screenshots/Ruby-LightMode.png)  | **RUBY/GRAY** ![Ruby accent dark mode](/docs/screenshots/Ruby-DarkMode.png)  |
-| **MINT/SLATE** ![Mint accent light mode](/docs/screenshots/Mint-LightMode.png) | **MINT/SLATE** ![Mint accent dark mode](/docs/screenshots/Mint-DarkMode.png) |
+| **BLUE/SLATE** ![Blue accent light mode](/docs/screenshots/Blue-LightMode.png) | **BLUE/SLATE** ![Blue accent dark mode](/docs/screenshots/Blue-DarkMode.png) |
+| **RUBY/MAUVE** ![Ruby accent light mode](/docs/screenshots/Ruby-LightMode.png) | **RUBY/MAUVE** ![Ruby accent dark mode](/docs/screenshots/Ruby-DarkMode.png) |
 
 ### OG Image Examples
 
@@ -90,7 +89,7 @@ Your accent, neutral, and color scheme preferences also apply to the generated O
 
 Next, modify the mock CMS data that is included in `edit-me/content/`. Each Markdown file uses Front Matter fields that are used to add attributes to the item. These attributes are type safe, so the project won't run if required fields are missing or invalid. The rest of the Markdown file will be rendered as HTML to provide a description of the item.
 
-Although the mock files should be pretty self-explanatory, you can view the [Contentlayer config](contentlayer.config.js) for detailed descriptions of required and optional fields.
+Although the mock files should be pretty self-explanatory, you can view the [Contentlayer config](contentlayer.config.ts) for detailed descriptions of required and optional fields.
 
 ### Environment Variables
 
@@ -129,11 +128,11 @@ This private URL is _only as secure as the people you send it to_. To invalidate
 
 The template is built to be responsive, beautiful, and accessible right out of the box. It supports automatic dark/light mode themeing in the web version, and a great single-page print layout in the PDF version. The project supports a minimal set of configurations such as accent colors, but if you're a front end developer or designer, you can easily open up the source code and customize it however you see fit.
 
-If you really want to go deep on customization, you have full control of the Tailwind configuration in the root folder `tailwind.config.ts` file.
+If you really want to go deep on customization, you have full control of the Tailwind configuration in the [styles](/src/app/styles) folder.
 
-We use [Next.js Image Generation](https://nextjs.org/docs/app/api-reference/functions/image-response) to generate dynamic Open Graph (Facebook/Twitter) share images and app icons. You can edit the layout, styles, and text of OG Image using Tailwind classes in `src/app/api/og/route.tsx` and the icon in `src/app/icon.tsx`.
+We use [ImageResponse API](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image) to generate dynamic Open Graph share images and app icons. You can edit the layout, styles, and text of OG Image using Tailwind classes in `src/app/opengraph-image.tsx` and the icon in `src/app/icon.tsx`.
 
-This dynamic share image will use your custom `accentColor` setting, as well as data from the CMS.
+This dynamic share image will use your custom color settings, as well as data from the CMS.
 
 ## Getting the Latest Updates
 
