@@ -1,6 +1,6 @@
 {
   "name": "nextjs-resume",
-  "version": "7.0.1",
+  "version": "7.1.0",
   "author": {
     "name": "Colin Hemphill",
     "email": "colin@colinhemphill.com",
@@ -26,13 +26,13 @@
   },
   "devDependencies": {
     "@eslint/js": "9.20.0",
-    "@happy-dom/global-registrator": "17.0.2",
+    "@happy-dom/global-registrator": "17.1.0",
     "@next/eslint-plugin-next": "15.1.7",
     "@tailwindcss/postcss": "4.0.6",
     "@testing-library/react": "16.2.0",
     "@testing-library/user-event": "14.6.1",
-    "@types/node": "22.13.1",
-    "@types/react": "19.0.8",
+    "@types/node": "22.13.4",
+    "@types/react": "19.0.9",
     "bun-types": "1.2.2",
     "eslint": "9.20.1",
     "eslint-config-next": "15.1.7",
@@ -41,14 +41,14 @@
     "eslint-plugin-react-hooks": "5.1.0",
     "eslint-plugin-unicorn": "56.0.1",
     "jsdom": "26.0.0",
-    "postcss": "8.5.1",
-    "prettier": "3.5.0",
+    "postcss": "8.5.2",
+    "prettier": "3.5.1",
     "prettier-plugin-sort-json": "4.1.1",
     "prettier-plugin-tailwindcss": "0.6.11",
     "syncpack": "13.0.2",
     "tailwindcss": "4.0.6",
     "typescript": "5.7.3",
-    "typescript-eslint": "8.23.0"
+    "typescript-eslint": "8.24.0"
   },
   "homepage": "https://github.com/colinhemphill/nextjs-resume",
   "keywords": [
