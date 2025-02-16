@@ -60,7 +60,7 @@
   ],
   "license": "MIT",
   "overrides": {
-    "@types/react": "19.0.8"
+    "@types/react": "19.0.9"
   },
   "scripts": {
     "build": "next build",
