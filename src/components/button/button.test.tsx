@@ -1,6 +1,6 @@
-import { render, screen } from '@test-utils';
 import { describe, expect, test } from 'bun:test';
 import { Button } from 'src/components/button/button';
+import { render, screen } from 'src/test-utilities';
 
 describe('<Button />', () => {
   test('Renders an accessible button element', () => {

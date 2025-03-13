@@ -5,7 +5,7 @@ import {
   type HTMLAttributes,
   type PropsWithChildren,
 } from 'react';
-import { cn } from 'src/helpers/utils';
+import { cn } from 'src/helpers/utilities';
 
 export const headingVariants = cva('font-sans font-bold text-balance', {
   variants: {

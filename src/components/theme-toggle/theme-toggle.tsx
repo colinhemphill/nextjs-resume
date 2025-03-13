@@ -15,7 +15,7 @@ import {
   DropdownMenuRadioItem,
 } from 'src/components/dropdown/dropdown-menu-radio';
 import { DropdownMenuSeparator } from 'src/components/dropdown/dropdown-menu-separator';
-import { cn } from 'src/helpers/utils';
+import { cn } from 'src/helpers/utilities';
 
 export type ThemeToggleProperties = Pick<
   ButtonProperties,

@@ -2,7 +2,7 @@ import { BriefcaseIcon } from '@heroicons/react/24/solid';
 import { Fragment, ReactNode } from 'react';
 import Separator from 'src/components/articles/separator';
 import SectionHeading from 'src/components/section-heading/section-heading';
-import { sortedProfessionalExperiences } from 'src/helpers/utils';
+import { sortedProfessionalExperiences } from 'src/helpers/utilities';
 import ProfessionalItem from './professional-item';
 
 export default function Professional(): ReactNode {

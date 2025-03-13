@@ -1,5 +1,5 @@
-import { render, screen } from '@test-utils';
 import { describe, expect, test } from 'bun:test';
+import { render, screen } from 'src/test-utilities';
 import Prose from './prose';
 
 describe('<Prose />', () => {

@@ -1,7 +1,7 @@
 import { personal } from '@content';
-import { render, screen } from '@test-utils';
 import { describe, expect, mock, test } from 'bun:test';
-import { fullName } from 'src/helpers/utils';
+import { fullName } from 'src/helpers/utilities';
+import { render, screen } from 'src/test-utilities';
 import Header from './header';
 
 void mock.module('next/navigation', () => {

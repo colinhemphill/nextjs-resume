@@ -31,7 +31,7 @@ import {
   fullName,
   sortedAchievements,
   sortedProfessionalExperiences,
-} from 'src/helpers/utils';
+} from 'src/helpers/utilities';
 
 const theme = resumeConfig.pdfTheme;
 

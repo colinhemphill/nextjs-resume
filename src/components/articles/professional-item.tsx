@@ -2,7 +2,7 @@ import { ProfessionalExperience } from '@content';
 import { ReactNode } from 'react';
 import { Heading } from 'src/components/heading/heading';
 import Prose from 'src/components/prose/prose';
-import { cn } from 'src/helpers/utils';
+import { cn } from 'src/helpers/utilities';
 
 export default function ProfessionalItem({
   body,

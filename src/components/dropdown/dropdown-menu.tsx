@@ -2,7 +2,7 @@
 
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
 import { type ComponentPropsWithoutRef, ComponentRef, forwardRef } from 'react';
-import { cn } from 'src/helpers/utils';
+import { cn } from 'src/helpers/utilities';
 
 const DropdownMenu = DropdownMenuPrimitive.Root;
 const DropdownMenuGroup = DropdownMenuPrimitive.Group;
