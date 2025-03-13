@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 import { getAccentColor } from 'src/helpers/colors';
-import { initials } from 'src/helpers/utils';
+import { initials } from 'src/helpers/utilities';
 
 export const size = {
   width: 32,

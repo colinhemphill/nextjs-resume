@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { cn } from 'src/helpers/utils';
+import { cn } from 'src/helpers/utilities';
 
 interface ProseProperties {
   className?: string;

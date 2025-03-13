@@ -1,5 +1,5 @@
-import { render } from '@test-utils';
 import { describe, expect, test } from 'bun:test';
+import { render } from 'src/test-utilities';
 import Footer from './footer';
 
 describe('<Footer />', () => {

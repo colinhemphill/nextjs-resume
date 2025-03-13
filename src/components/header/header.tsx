@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import { Heading } from 'src/components/heading/heading';
 import PDFDownloadButton from 'src/components/pdf/pdf-download-button';
 import { ThemeToggle } from 'src/components/theme-toggle/theme-toggle';
-import { fullName } from 'src/helpers/utils';
+import { fullName } from 'src/helpers/utilities';
 
 export default function Header(): ReactNode {
   return (

@@ -35,7 +35,7 @@
         "./.contentlayer/generated"
       ],
       "@test-utils": [
-        "./src/test-utils.tsx"
+        "src/test-utilities.tsx"
       ]
     },
     "types": [
