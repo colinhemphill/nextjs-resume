@@ -48,7 +48,7 @@
     "syncpack": "13.0.3",
     "tailwindcss": "4.0.14",
     "typescript": "5.8.2",
-    "typescript-eslint": "8.26.1"
+    "typescript-eslint": "8.27.0"
   },
   "homepage": "https://github.com/colinhemphill/nextjs-resume",
   "keywords": [
