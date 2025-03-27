@@ -31,7 +31,7 @@
     "@tailwindcss/postcss": "4.0.15",
     "@testing-library/react": "16.2.0",
     "@testing-library/user-event": "14.6.1",
-    "@types/node": "22.13.11",
+    "@types/node": "22.13.14",
     "@types/react": "19.0.12",
     "bun-types": "1.2.5",
     "eslint": "9.23.0",
