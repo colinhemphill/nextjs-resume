@@ -1,9 +1,9 @@
-import { beforeAll, describe, expect, test } from 'bun:test';
+import { beforeEach, describe, expect, test } from 'bun:test';
 import { ThemeToggle } from 'src/components/theme-toggle/theme-toggle';
 import { render, screen, userEvent } from 'src/test-utilities';
 
 describe('<Dropdown />', () => {
-  beforeAll(() => {
+  beforeEach(() => {
     render(
       <ThemeToggle
         buttonTextVisible
