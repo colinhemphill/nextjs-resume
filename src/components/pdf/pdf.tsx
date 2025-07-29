@@ -336,7 +336,7 @@ export default function PDF({ privateInformation }: PDFProperties): ReactNode {
             </View>
           </View>
         </View>
-        <View style={styles.main}>
+        <View fixed style={styles.main}>
           <View style={styles.section}>
             <View style={styles.sectionHeading}>
               <CircleBriefcase size={fontSizes.m} />
