@@ -2,7 +2,7 @@
 
 A résumé built especially with software professionals in mind. Impress your potential employer with a beautiful and incredibly fast résumé website, or generate a PDF for email and print.
 
-[See an example](https://nextjs-resume.netlify.app/)
+[See an example](https://nextjs-tailwind-resume.vercel.app/)
 
 Your résumé can also generate a secure URL that will display information not accessible on the public URL. The secure version can include private information such as email, phone number, and mailing address. You can send the private link to a potential employer or use it to generate a more complete PDF for yourself.
 
