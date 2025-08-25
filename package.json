@@ -34,7 +34,7 @@
     "@testing-library/user-event": "14.6.1",
     "@types/node": "24.0.3",
     "@types/react": "19.1.8",
-    "bun-types": "1.2.16",
+    "bun-types": "1.2.21",
     "eslint": "9.29.0",
     "eslint-config-next": "15.3.4",
     "eslint-config-prettier": "10.1.5",
