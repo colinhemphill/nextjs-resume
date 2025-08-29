@@ -25,6 +25,7 @@
     "tailwind-merge": "3.3.1"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "3.3.1",
     "@eslint/js": "9.34.0",
     "@happy-dom/global-registrator": "18.0.1",
     "@next/eslint-plugin-next": "15.5.2",
@@ -65,7 +66,7 @@
     "build:content": "contentlayer2 build",
     "dev": "next dev",
     "format": "prettier --write 'src/**/*.{json,js,ts,tsx}' && syncpack format",
-    "lint": "next lint --fix && syncpack format && syncpack lint",
+    "lint": "eslint --fix . && syncpack format && syncpack lint",
     "start": "next start",
     "sync": "syncpack fix-mismatches",
     "test": "bun test",

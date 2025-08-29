@@ -7,14 +7,14 @@ import unicorn from 'eslint-plugin-unicorn';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
-const reactRecommended = reactPlugin.configs.flat?.recommended;
-const jsxRuntime = reactPlugin.configs.flat?.['jsx-runtime'];
+const reactRecommended = reactPlugin.configs.flat.recommended;
+const jsxRuntime = reactPlugin.configs.flat['jsx-runtime'];
 
 export default tseslint.config(
   eslint.configs.recommended,
   tseslint.configs.strictTypeChecked,
   tseslint.configs.stylisticTypeChecked,
-  unicorn.configs['flat/recommended'],
+  unicorn.configs.recommended,
   {
     languageOptions: {
       parserOptions: {
@@ -34,7 +34,7 @@ export default tseslint.config(
   jsxRuntime,
   {
     languageOptions: {
-      ...reactRecommended?.languageOptions,
+      ...reactRecommended.languageOptions,
       globals: {
         ...globals.serviceworker,
         ...globals.browser,
@@ -44,8 +44,8 @@ export default tseslint.config(
       'react-hooks': reactHooksPlugin,
     },
     rules: {
-      ...reactRecommended?.rules,
-      ...jsxRuntime?.rules,
+      ...reactRecommended.rules,
+      ...jsxRuntime.rules,
       ...reactHooksPlugin.configs.recommended.rules,
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'error',
@@ -53,7 +53,7 @@ export default tseslint.config(
       'react/no-unknown-property': ['error', { ignore: ['tw'] }],
     },
     settings: {
-      ...reactRecommended?.rules,
+      ...reactRecommended.rules,
       react: {
         version: 'detect',
       },
@@ -69,6 +69,11 @@ export default tseslint.config(
     },
   },
   {
-    ignores: ['.next/*'],
+    ignores: [
+      '.next/*',
+      '.contentlayer/*',
+      'next-env.d.ts',
+      'postcss.config.cjs',
+    ],
   },
 );
