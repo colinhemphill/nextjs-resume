@@ -21,7 +21,7 @@ export async function GET(request: Request): Promise<NextResponse> {
     <PDF privateInformation={privateInformation} />,
   );
 
-  return new NextResponse(pdfStream, {
+  return new NextResponse(pdfStream as BodyInit, {
     headers: {
       'Content-Type': 'application/pdf',
     },
