@@ -31,7 +31,7 @@
         "@testing-library/react": "16.3.0",
         "@testing-library/user-event": "14.6.1",
         "@types/node": "24.5.0",
-        "@types/react": "19.1.13",
+        "@types/react": "19.1.16",
         "bun-types": "1.2.22",
         "eslint": "9.35.0",
         "eslint-config-next": "15.5.3",
@@ -513,7 +513,7 @@
 
     "@types/node": ["@types/node@24.5.0", "", { "dependencies": { "undici-types": "~7.12.0" } }, "sha512-y1dMvuvJspJiPSDZUQ+WMBvF7dpnEqN4x9DDC9ie5Fs/HUZJA3wFp7EhHoVaKX/iI0cRoECV8X2jL8zi0xrHCg=="],
 
-    "@types/react": ["@types/react@19.1.13", "", { "dependencies": { "csstype": "^3.0.2" } }, "sha512-hHkbU/eoO3EG5/MZkuFSKmYqPbSVk5byPFa3e7y/8TybHiLMACgI8seVYlicwk7H5K/rI2px9xrQp/C+AUDTiQ=="],
+    "@types/react": ["@types/react@19.1.16", "", { "dependencies": { "csstype": "^3.0.2" } }, "sha512-WBM/nDbEZmDUORKnh5i1bTnAz6vTohUf9b8esSMu+b24+srbaxa04UbJgWx78CVfNXA20sNu0odEIluZDFdCog=="],
 
     "@types/resolve": ["@types/resolve@1.20.6", "", {}, "sha512-A4STmOXPhMUtHH+S6ymgE2GiBSMqf4oTvcQZMcHzokuTLVYzXTB8ttjcgxOVaAp2lGwEdzZ0J+cRbbeevQj1UQ=="],
 
