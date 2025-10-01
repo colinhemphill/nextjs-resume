@@ -27,7 +27,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "3.3.1",
     "@eslint/js": "9.36.0",
-    "@happy-dom/global-registrator": "18.0.1",
+    "@happy-dom/global-registrator": "19.0.2",
     "@next/eslint-plugin-next": "15.5.4",
     "@tailwindcss/postcss": "4.1.13",
     "@testing-library/jest-dom": "6.9.0",
