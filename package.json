@@ -33,7 +33,7 @@
     "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "16.3.0",
     "@testing-library/user-event": "14.6.1",
-    "@types/node": "24.6.1",
+    "@types/node": "24.7.0",
     "@types/react": "19.2.2",
     "bun-types": "1.2.23",
     "eslint": "9.37.0",
