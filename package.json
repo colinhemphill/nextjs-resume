@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "3.3.1",
-    "@eslint/js": "9.36.0",
+    "@eslint/js": "9.37.0",
     "@happy-dom/global-registrator": "19.0.2",
     "@next/eslint-plugin-next": "15.5.4",
     "@tailwindcss/postcss": "4.1.13",
@@ -36,7 +36,7 @@
     "@types/node": "24.6.1",
     "@types/react": "19.2.2",
     "bun-types": "1.2.23",
-    "eslint": "9.36.0",
+    "eslint": "9.37.0",
     "eslint-config-next": "15.5.4",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-react": "7.37.5",
