@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [8.0.0] - 2025-10-08
+
+### Changed
+
+- **Breaking change:** Titles now use a `date` type for `startDate` and `endDate` instead of a freeform string. The entry is parsed as an ISO date so that we can sort entries automatically. Names of the files no longer determine sort order.
+- Achievements are now sorted by `completionYear`. Names of the files no longer determine sort order.
+- Dependency upgrades
+
+### Fixed
+
+- Display `completionYear` of achievements
+
 ## [7.1.8] - 2025-09-16
 
 ### Changed

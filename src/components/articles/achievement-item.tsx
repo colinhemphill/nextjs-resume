@@ -7,6 +7,7 @@ import Prose from 'src/components/prose/prose';
 export default function AchievementItem({
   achievement,
   body,
+  completionYear,
   organization,
 }: Achievement): ReactNode {
   return (
@@ -18,7 +19,7 @@ export default function AchievementItem({
 
         <div className="text-neutral-11 flex items-center gap-2 text-lg font-semibold tracking-wide">
           <AcademicCapIcon className="h-4" />
-          {organization}
+          {organization}, {completionYear}
         </div>
       </div>
 

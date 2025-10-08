@@ -2,7 +2,7 @@ import { ProfessionalExperience } from '@content';
 import { ReactNode } from 'react';
 import { Heading } from 'src/components/heading/heading';
 import Prose from 'src/components/prose/prose';
-import { cn } from 'src/helpers/utilities';
+import { cn, getFormattedDate } from 'src/helpers/utilities';
 
 export default function ProfessionalItem({
   body,
@@ -32,7 +32,8 @@ export default function ProfessionalItem({
                 {title.title}
               </div>
               <div className="text-neutral-11 text-sm leading-none tracking-wide">
-                {title.startDate}–{title.endDate ?? 'Current'}
+                {getFormattedDate(title.startDate)}–
+                {title.endDate ? getFormattedDate(title.endDate) : 'Current'}
               </div>
               {title.description && (
                 <p className="text-sm">{title.description}</p>
