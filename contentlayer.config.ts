@@ -54,14 +54,14 @@ export const ProfessionalTitle = defineNestedType(() => ({
       required: true,
     },
     startDate: {
-      type: 'string',
-      description: 'The year when you started the role',
+      type: 'date',
+      description: 'A parsable date for when you started the role',
       required: true,
     },
     endDate: {
-      type: 'string',
+      type: 'date',
       description:
-        'The year when you ended the role, or empty if it is your current role',
+        'A parsable date for when you ended the role, or empty if it is your current role',
       required: false,
     },
     description: {

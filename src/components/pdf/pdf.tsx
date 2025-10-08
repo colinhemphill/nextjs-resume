@@ -29,6 +29,7 @@ import Star from 'src/components/pdf/icons/star';
 import { getAccentColor, getNeutralColor } from 'src/helpers/colors';
 import {
   fullName,
+  getFormattedDate,
   sortedAchievements,
   sortedProfessionalExperiences,
 } from 'src/helpers/utilities';
@@ -266,7 +267,8 @@ function ProfessionalExperienceDetails({
         <View style={styles.itemSubheadingSubRow}>
           {professionalExperience.titles.map((title, index) => (
             <Text key={index} style={styles.itemSubheadingItalic}>
-              {title.title} {title.startDate}—{title.endDate ?? 'Current'}
+              {title.title}, {getFormattedDate(title.startDate)}—
+              {title.endDate ? getFormattedDate(title.endDate) : 'Current'}
             </Text>
           ))}
         </View>
@@ -281,7 +283,7 @@ export default function PDF({ privateInformation }: PDFProperties): ReactNode {
   return (
     <Document
       author={fullName}
-      title={`Resumé for ${fullName}, ${year.toString()}`}
+      title={`Résumé for ${fullName}, ${year.toString()}`}
     >
       <Page size="LETTER" style={styles.page}>
         <View style={styles.sidebar}>
@@ -369,7 +371,7 @@ export default function PDF({ privateInformation }: PDFProperties): ReactNode {
                 <View style={styles.itemSubheadingRow}>
                   <BuildingColumns size={fontSizes.xxs} />
                   <Text style={styles.itemSubheading}>
-                    {achievement.organization}
+                    {achievement.organization}, {achievement.completionYear}
                   </Text>
                 </View>
                 <Html {...htmlProperties}>{achievement.body.html}</Html>

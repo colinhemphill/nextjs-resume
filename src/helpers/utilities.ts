@@ -1,6 +1,7 @@
 import {
   allAchievements,
   allProfessionalExperiences,
+  IsoDateTimeString,
   personal,
 } from '@content';
 import { ClassValue } from 'class-variance-authority/types';
@@ -13,24 +14,27 @@ export const initials = `${personal.givenName.slice(0, 1)}${personal.familyName.
 
 export const sortedProfessionalExperiences =
   allProfessionalExperiences.toSorted((a, b) => {
-    const aOrderNumber = Number.parseInt(
-      a._raw.sourceFileName.replaceAll(/^\D+/g, ''),
+    const earliestStartDateA = Math.min(
+      ...a.titles.map((title) => new Date(title.startDate).getTime()),
     );
-    const bOrderNumber = Number.parseInt(
-      b._raw.sourceFileName.replaceAll(/^\D+/g, ''),
+    const earliestStartDateB = Math.min(
+      ...b.titles.map((title) => new Date(title.startDate).getTime()),
     );
-    return aOrderNumber - bOrderNumber;
+
+    return earliestStartDateB - earliestStartDateA;
   });
 
 export const sortedAchievements = allAchievements.toSorted((a, b) => {
-  const aOrderNumber = Number.parseInt(
-    a._raw.sourceFileName.replaceAll(/^\D+/g, ''),
-  );
-  const bOrderNumber = Number.parseInt(
-    b._raw.sourceFileName.replaceAll(/^\D+/g, ''),
-  );
-  return aOrderNumber - bOrderNumber;
+  return b.completionYear - a.completionYear;
 });
+
+export function getFormattedDate(dateTimeString: IsoDateTimeString) {
+  const date = new Date(dateTimeString);
+  return date.toLocaleDateString(undefined, {
+    month: 'short',
+    year: 'numeric',
+  });
+}
 
 export function cn(...inputs: ClassValue[]): string {
   return twMerge(clsx(inputs));
