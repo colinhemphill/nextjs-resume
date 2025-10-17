@@ -47,7 +47,7 @@
     "postcss": "8.5.6",
     "prettier": "3.6.2",
     "prettier-plugin-sort-json": "4.1.1",
-    "prettier-plugin-tailwindcss": "0.6.14",
+    "prettier-plugin-tailwindcss": "0.7.1",
     "syncpack": "13.0.4",
     "tailwindcss": "4.1.14",
     "typescript": "5.9.3",
