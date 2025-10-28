@@ -1,12 +1,12 @@
-import {
-  SiBluesky,
-  SiGithub,
-  SiInstagram,
-  SiNpm,
-} from '@icons-pack/react-simple-icons';
+import { SiBluesky, SiGithub, SiInstagram, SiLinkedIn, SiNpm } from '@icons';
 import { CMSLink } from 'edit-me/types/cms-link';
 
 export const links: CMSLink[] = [
+  {
+    href: 'https://linkedin.com',
+    icon: SiLinkedIn,
+    title: 'LinkedIn',
+  },
   {
     href: 'https://github.com',
     icon: SiGithub,

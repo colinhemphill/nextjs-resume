@@ -30,6 +30,14 @@ export const Personal = defineDocumentType(() => ({
         'Your general location of residence, not your personal address',
       required: true,
     },
+    githubUrl: {
+      type: 'string',
+      description: 'URL for your GitHub profile',
+    },
+    linkedInUrl: {
+      type: 'string',
+      description: 'URL for your LinkedIn profile',
+    },
   },
 }));
 
@@ -139,6 +147,22 @@ export const PrivateField = defineDocumentType(() => ({
   },
 }));
 
+export const Salary = defineDocumentType(() => ({
+  name: 'Salary',
+  filePathPattern: 'salary.md',
+  isSingleton: true,
+  fields: {
+    currentSalary: {
+      type: 'string',
+      description: 'Your current salary (only visible in private mode)',
+    },
+    desiredSalary: {
+      type: 'string',
+      description: 'Your desired salary (only visible in private mode)',
+    },
+  },
+}));
+
 export default makeSource({
   contentDirPath: 'edit-me/content',
   documentTypes: [
@@ -148,5 +172,6 @@ export default makeSource({
     Achievement,
     AdditionalInfo,
     PrivateField,
+    Salary,
   ],
 });

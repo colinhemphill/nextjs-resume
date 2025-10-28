@@ -1,4 +1,4 @@
-import { allPrivateFields } from '@content';
+import { allPrivateFields, salary } from '@content';
 import { notFound } from 'next/navigation';
 import { ReactNode } from 'react';
 import AboutMe from 'src/components/articles/about-me';
@@ -22,11 +22,12 @@ export default async function Page(
   }
 
   const privateInformation = allPrivateFields;
+  const privateSalary = salary;
 
   return (
     <div className="container space-y-12">
       <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
-        <AboutMe />
+        <AboutMe salary={privateSalary} />
         <ContactInformation privateInformation={privateInformation} />
         <Skills />
       </div>

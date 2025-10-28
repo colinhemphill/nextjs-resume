@@ -4,7 +4,6 @@ const config = {
   plugins: ['prettier-plugin-tailwindcss', 'prettier-plugin-sort-json'],
   singleQuote: true,
   tailwindAttributes: ['errorClassName', 'containerClassName', 'tw'],
-  tailwindConfig: './tailwind.config.ts',
   tailwindFunctions: ['twMerge', 'cva', 'cn'],
   trailingComma: 'all',
 };
