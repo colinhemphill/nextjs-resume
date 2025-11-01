@@ -8,7 +8,7 @@ describe('<SectionHeading />', () => {
 
     const heading = screen.getByRole('heading', {
       level: 3,
-      name: /Section Heading/i,
+      name: /section heading/i,
     });
 
     expect(heading).toBeDefined();

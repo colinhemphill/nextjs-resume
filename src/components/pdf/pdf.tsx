@@ -424,7 +424,7 @@ export default function PDF({ privateInformation }: PDFProperties): ReactNode {
             <Html
               {...htmlProperties}
               stylesheet={{
-                // eslint-disable-next-line @typescript-eslint/no-misused-spread
+                 
                 ...htmlProperties.stylesheet,
                 p: { marginBottom: spacers[1] },
               }}

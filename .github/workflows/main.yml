@@ -16,5 +16,13 @@ jobs:
         run: bun install
       - name: Build
         run: bun run build:content
+      - name: Lint
+        run: bun run lint
       - name: Unit tests
-        run: bun test
+        run: bun test --coverage --coverage-reporter=lcov
+      - name: Coverage report
+        uses: romeovs/lcov-reporter-action@v0.3.1
+        if: github.event_name == 'pull_request'
+        with:
+          lcov-file: ./coverage/lcov.info
+          github-token: ${{ secrets.GITHUB_TOKEN }}
