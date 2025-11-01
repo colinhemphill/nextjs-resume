@@ -20,16 +20,9 @@ jobs:
         run: bun run lint
       - name: Unit tests
         run: bun test --coverage --coverage-reporter=lcov
-      - name: Code coverage summary
-        uses: irongut/CodeCoverageSummary@v1.3.0
-        with:
-          filename: coverage/lcov.info
-          badge: true
-          format: markdown
-          output: both
-      - name: Add coverage PR comment
-        uses: marocchino/sticky-pull-request-comment@v2
+      - name: Coverage report
+        uses: romeovs/lcov-reporter-action@v0.3.1
         if: github.event_name == 'pull_request'
         with:
-          recreate: true
-          path: code-coverage-results.md
+          lcov-file: ./coverage/lcov.info
+          github-token: ${{ secrets.GITHUB_TOKEN }}
