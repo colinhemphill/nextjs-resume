@@ -1,0 +1,5 @@
+// Bun Snapshot v1, https://bun.sh/docs/test/snapshots
+
+exports[`<ProfessionalItem /> Snapshot with single title 1`] = `[Function]`;
+
+exports[`<ProfessionalItem /> Snapshot with multiple titles 1`] = `[Function]`;

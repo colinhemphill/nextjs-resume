@@ -4,11 +4,9 @@ import { fullName } from 'src/helpers/utilities';
 import { render, screen } from 'src/test-utilities';
 import Header from './header';
 
-void mock.module('next/navigation', () => {
-  return {
-    useParams: mock().mockReturnValue({ secret: 'secret' }),
-  };
-});
+mock.module('next/navigation', () => ({
+  useParams: mock(() => ({ secret: 'secret' })),
+}));
 
 describe('<Header />', () => {
   test('Renders headings and PDF button', () => {

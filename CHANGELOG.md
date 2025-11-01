@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [8.1.1] - 2025-11-01
 
+### Added
+
+- Lots of additional unit tests
+- CI step to collect coverage
+
 ### Changed
 
 - Update ESLint

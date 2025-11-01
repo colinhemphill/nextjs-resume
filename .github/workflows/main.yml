@@ -16,5 +16,11 @@ jobs:
         run: bun install
       - name: Build
         run: bun run build:content
+      - name: Lint
+        run: bun run lint
       - name: Unit tests
-        run: bun test
+        run: bun test --coverage --coverage-reporter=lcov
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          file: ./coverage/lcov.info
