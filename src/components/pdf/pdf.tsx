@@ -332,7 +332,7 @@ export default function PDF({ privateInformation }: PDFProperties): ReactNode {
                   <Html {...htmlProperties}>{privateField.body.html}</Html>
                 </View>
               ))}
-              {(personal.linkedInUrl || personal.githubUrl) && (
+              {(personal.linkedInUrl ?? personal.githubUrl) && (
                 <View style={styles.icons}>
                   {personal.linkedInUrl && (
                     <View style={styles.iconRow}>

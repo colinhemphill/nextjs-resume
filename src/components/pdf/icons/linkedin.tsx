@@ -2,7 +2,7 @@ import { resumeConfig } from '@config/resume-config';
 import { Path, Svg } from '@react-pdf/renderer';
 import { ReactNode } from 'react';
 import { PdfIconProperties } from 'src/components/pdf/icons/pdf-icon';
-import { getAccentColor, getNeutralColor } from 'src/helpers/colors';
+import { getAccentColor } from 'src/helpers/colors';
 
 const theme = resumeConfig.pdfTheme;
 const neutralColor = getAccentColor(12, theme);
