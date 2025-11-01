@@ -68,7 +68,7 @@
     "@types/react": "19.2.2"
   },
   "scripts": {
-    "build": "next build",
+    "build": "contentlayer2 build && next build",
     "build:content": "contentlayer2 build",
     "dev": "run-p dev:*",
     "dev:contentlayer": "contentlayer2 dev",
