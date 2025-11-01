@@ -1,80 +1,21 @@
-import eslint from '@eslint/js';
-import nextPlugin from '@next/eslint-plugin-next';
-import eslintConfigPrettier from 'eslint-config-prettier';
-import reactPlugin from 'eslint-plugin-react';
-import reactHooksPlugin from 'eslint-plugin-react-hooks';
-import unicorn from 'eslint-plugin-unicorn';
-import { defineConfig } from 'eslint/config';
-import globals from 'globals';
-import tseslint from 'typescript-eslint';
+import nextVitals from 'eslint-config-next/core-web-vitals';
+import nextTs from 'eslint-config-next/typescript';
+import prettier from 'eslint-config-prettier/flat';
+import eslintPluginUnicorn from 'eslint-plugin-unicorn';
+import { defineConfig, globalIgnores } from 'eslint/config';
 
-const reactRecommended = reactPlugin.configs.flat.recommended;
-const jsxRuntime = reactPlugin.configs.flat['jsx-runtime'];
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...nextTs,
+  prettier,
+  eslintPluginUnicorn.configs.recommended,
+  globalIgnores([
+    '.next/**',
+    'out/**',
+    'build/**',
+    'next-env.d.ts',
+    '.contentlayer/**',
+  ]),
+]);
 
-export default defineConfig(
-  eslint.configs.recommended,
-  tseslint.configs.strictTypeChecked,
-  tseslint.configs.stylisticTypeChecked,
-  unicorn.configs.recommended,
-  {
-    languageOptions: {
-      parserOptions: {
-        projectService: {
-          allowDefaultProject: ['*.js'],
-        },
-        tsconfigRootDir: import.meta.dirname,
-      },
-    },
-    rules: {
-      '@typescript-eslint/explicit-function-return-type': 'warn',
-      '@typescript-eslint/no-non-null-assertion': 'warn',
-    },
-  },
-  eslintConfigPrettier,
-  reactRecommended,
-  jsxRuntime,
-  {
-    languageOptions: {
-      ...reactRecommended.languageOptions,
-      globals: {
-        ...globals.serviceworker,
-        ...globals.browser,
-      },
-    },
-    plugins: {
-      'react-hooks': reactHooksPlugin,
-    },
-    rules: {
-      ...reactRecommended.rules,
-      ...jsxRuntime.rules,
-      ...reactHooksPlugin.configs.recommended.rules,
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'error',
-      'react/jsx-no-literals': 'off',
-      'react/no-unknown-property': ['error', { ignore: ['tw'] }],
-    },
-    settings: {
-      ...reactRecommended.rules,
-      react: {
-        version: 'detect',
-      },
-    },
-  },
-  {
-    plugins: {
-      '@next/next': nextPlugin,
-    },
-    rules: {
-      ...nextPlugin.configs.recommended.rules,
-      ...nextPlugin.configs['core-web-vitals'].rules,
-    },
-  },
-  {
-    ignores: [
-      '.next/*',
-      '.contentlayer/*',
-      'next-env.d.ts',
-      'postcss.config.cjs',
-    ],
-  },
-);
+export default eslintConfig;
