@@ -28,7 +28,7 @@ export const sortedAchievements = allAchievements.toSorted((a, b) => {
   return b.completionYear - a.completionYear;
 });
 
-export function getFormattedDate(dateTimeString: IsoDateTimeString) {
+export function getFormattedDate(dateTimeString: IsoDateTimeString): string {
   const date = new Date(dateTimeString);
   return date.toLocaleDateString(undefined, {
     month: 'short',

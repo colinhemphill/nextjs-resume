@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [8.1.0] - 2025-10-28
+
+### Added
+
+- Custom component to add a LinkedIn icon
+- Barrel file to re-export all icons from a single location
+  - Path alias at `@icons` can be used like `import { SiGithub, SiLinkedIn } from '@icons';`
+- Add `linkedInUrl` and `gitHubUrl` fields to personal information that are always displayed in a priority position
+- Add `Salary` content type at `content/salary.md`
+  - These are optional fields that only display in private mode when present
+
+### Changed
+
+- Updated dependencies
+- Upgrade to Next.js 16
+
 ## [8.0.0] - 2025-10-08
 
 ### Changed

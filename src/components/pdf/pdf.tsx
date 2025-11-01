@@ -9,6 +9,7 @@ import {
 import {
   Document,
   Font,
+  Link,
   Page,
   StyleSheet,
   Text,
@@ -25,6 +26,8 @@ import CircleGraduationCap from 'src/components/pdf/icons/circle-graduation-cap'
 import CircleIdCard from 'src/components/pdf/icons/circle-id-card';
 import CirclePaintbrush from 'src/components/pdf/icons/circle-paintbrush';
 import CircleUser from 'src/components/pdf/icons/circle-user';
+import GitHub from 'src/components/pdf/icons/github';
+import LinkedIn from 'src/components/pdf/icons/linkedin';
 import Star from 'src/components/pdf/icons/star';
 import { getAccentColor, getNeutralColor } from 'src/helpers/colors';
 import {
@@ -95,6 +98,7 @@ const fontSizes = {
 };
 
 const spacers = {
+  0: '4px',
   1: '6px',
   2: '8px',
   3: '10px',
@@ -237,6 +241,20 @@ const styles = StyleSheet.create({
     fontWeight: 500,
     paddingHorizontal: spacers[2],
   },
+  icons: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: spacers[0],
+    marginTop: spacers[0],
+  },
+  iconRow: {
+    alignItems: 'center',
+    display: 'flex',
+    flexDirection: 'row',
+    fontSize: fontSizes.xxs,
+    fontWeight: 500,
+    gap: spacers[1],
+  },
 });
 
 const htmlProperties: Omit<HtmlProps, 'children'> = {
@@ -314,6 +332,26 @@ export default function PDF({ privateInformation }: PDFProperties): ReactNode {
                   <Html {...htmlProperties}>{privateField.body.html}</Html>
                 </View>
               ))}
+              {(personal.linkedInUrl ?? personal.githubUrl) && (
+                <View style={styles.icons}>
+                  {personal.linkedInUrl && (
+                    <View style={styles.iconRow}>
+                      <LinkedIn size={fontSizes.s} />
+                      <Link href={personal.linkedInUrl} style={styles.a}>
+                        LinkedIn
+                      </Link>
+                    </View>
+                  )}
+                  {personal.githubUrl && (
+                    <View style={styles.iconRow}>
+                      <GitHub size={fontSizes.s} />
+                      <Link href={personal.githubUrl} style={styles.a}>
+                        GitHub
+                      </Link>
+                    </View>
+                  )}
+                </View>
+              )}
             </View>
             <View style={styles.section}>
               <View style={styles.sectionHeading}>

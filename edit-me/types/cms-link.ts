@@ -1,4 +1,4 @@
-import { IconType } from '@icons-pack/react-simple-icons';
+import { IconType } from '@icons';
 
 export interface CMSLink {
   href: string;
