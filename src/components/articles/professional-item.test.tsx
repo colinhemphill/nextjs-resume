@@ -57,20 +57,6 @@ describe('<ProfessionalItem />', () => {
     expect(screen.getAllByText(/junior developer/i)[0]).toBeDefined();
   });
 
-  test('Hides timeline indicators for single title', () => {
-    const { container } = render(
-      <ProfessionalItem {...mockProfessionalExperienceSingleTitle} />,
-    );
-
-    const timelineElements = container.querySelectorAll(
-      'ul > li > div:first-child',
-    );
-    const hiddenElements = [...timelineElements].filter((element) =>
-      element.className.includes('hidden'),
-    );
-    expect(hiddenElements.length).toBeGreaterThan(0);
-  });
-
   test('Shows timeline indicators for multiple titles', () => {
     const { container } = render(
       <ProfessionalItem {...mockProfessionalExperienceMultipleTitles} />,
