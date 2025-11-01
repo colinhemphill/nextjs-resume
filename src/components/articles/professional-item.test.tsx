@@ -63,7 +63,7 @@ describe('<ProfessionalItem />', () => {
     );
 
     const timelineElements = container.querySelectorAll(
-      '.flex-col.items-center',
+      'ul > li > div:first-child',
     );
     const hiddenElements = [...timelineElements].filter((element) =>
       element.className.includes('hidden'),
@@ -77,7 +77,7 @@ describe('<ProfessionalItem />', () => {
     );
 
     const timelineElements = container.querySelectorAll(
-      '.flex-col.items-center',
+      'ul > li > div:first-child',
     );
     const visibleTimelines = [...timelineElements].filter(
       (element) => !element.className.includes('hidden'),
