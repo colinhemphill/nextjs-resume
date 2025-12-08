@@ -26,9 +26,9 @@ describe('<Skills />', () => {
   test('Renders skill titles', () => {
     render(<Skills />);
 
-    allSkills.forEach((skill) => {
+    for (const skill of allSkills) {
       expect(screen.getByText(skill.title)).toBeDefined();
-    });
+    }
   });
 
   test('Renders star ratings for each skill', () => {
@@ -79,9 +79,9 @@ describe('<Skills />', () => {
     const { container } = render(<Skills />);
 
     const proseDivs = container.querySelectorAll('[data-component="prose"]');
-    proseDivs.forEach((div) => {
+    for (const div of proseDivs) {
       expect(div.className).toContain('text-neutral-11');
-    });
+    }
   });
 
   test('Snapshot', () => {
@@ -89,4 +89,3 @@ describe('<Skills />', () => {
     expect(asFragment).toMatchSnapshot();
   });
 });
-

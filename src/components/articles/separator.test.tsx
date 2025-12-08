@@ -44,4 +44,3 @@ describe('<Separator />', () => {
     expect(separators.length).toBe(3);
   });
 });
-

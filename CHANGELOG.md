@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [8.1.2] - 2025-12-08
+
+### Changed
+
+- Dependency updates
+  - Vulnerability in [React Server Components](https://github.com/vercel/next.js/security/advisories/GHSA-9qr9-h5gf-34mp) was already patched with a Renovate PR, so these followup updates are unrelated to the security issue
+
 ## [8.1.1] - 2025-11-01
 
 ### Added

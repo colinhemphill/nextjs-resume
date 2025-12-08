@@ -424,7 +424,6 @@ export default function PDF({ privateInformation }: PDFProperties): ReactNode {
             <Html
               {...htmlProperties}
               stylesheet={{
-                 
                 ...htmlProperties.stylesheet,
                 p: { marginBottom: spacers[1] },
               }}

@@ -25,42 +25,40 @@ export default async function og(): Promise<ImageResponse> {
   );
 
   return new ImageResponse(
-    (
-      <div
-        style={{
-          fontFamily: 'AlbertSans',
-          background: `linear-gradient(to right bottom, ${getNeutralColor(1, theme)} 0%, ${getAccentColor(4, theme)} 50%, ${getAccentColor(6, theme)} 100%)`,
-        }}
-        tw="flex h-full w-full flex-col justify-between p-20"
-      >
-        <div tw="flex flex-col">
-          <div
-            style={{
-              color: getAccentColor(12, theme),
-              fontWeight: 700,
-            }}
-            tw="text-8xl"
-          >
-            {fullName}
-          </div>
-          <div
-            style={{
-              color: getAccentColor(11, theme),
-              fontWeight: 700,
-            }}
-            tw="mt-4 text-6xl"
-          >
-            {personal.title}
-          </div>
+    <div
+      style={{
+        fontFamily: 'AlbertSans',
+        background: `linear-gradient(to right bottom, ${getNeutralColor(1, theme)} 0%, ${getAccentColor(4, theme)} 50%, ${getAccentColor(6, theme)} 100%)`,
+      }}
+      tw="flex h-full w-full flex-col justify-between p-20"
+    >
+      <div tw="flex flex-col">
+        <div
+          style={{
+            color: getAccentColor(12, theme),
+            fontWeight: 700,
+          }}
+          tw="text-8xl"
+        >
+          {fullName}
         </div>
         <div
-          style={{ color: getAccentColor(12, theme) }}
-          tw="rounded-lg text-4xl"
+          style={{
+            color: getAccentColor(11, theme),
+            fontWeight: 700,
+          }}
+          tw="mt-4 text-6xl"
         >
-          Professional résumé available online or as a PDF
+          {personal.title}
         </div>
       </div>
-    ),
+      <div
+        style={{ color: getAccentColor(12, theme) }}
+        tw="rounded-lg text-4xl"
+      >
+        Professional résumé available online or as a PDF
+      </div>
+    </div>,
     {
       ...size,
       fonts: [
