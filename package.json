@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@happy-dom/global-registrator": "20.0.11",
-    "@tailwindcss/postcss": "4.1.17",
+    "@tailwindcss/postcss": "4.1.18",
     "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "16.3.0",
     "@testing-library/user-event": "14.6.1",
@@ -46,7 +46,7 @@
     "prettier-plugin-sort-json": "4.1.1",
     "prettier-plugin-tailwindcss": "0.7.2",
     "syncpack": "13.0.4",
-    "tailwindcss": "4.1.17",
+    "tailwindcss": "4.1.18",
     "typescript": "5.9.3"
   },
   "homepage": "https://github.com/colinhemphill/nextjs-resume",
