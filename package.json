@@ -27,7 +27,7 @@
     "npm-run-all2": "8.0.4",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "react-pdf-html": "2.1.4",
+    "react-pdf-html": "2.1.5",
     "tailwind-merge": "3.4.0"
   },
   "devDependencies": {
