@@ -43,7 +43,7 @@
     "minimatch": "10.1.1",
     "postcss": "8.5.6",
     "prettier": "3.7.4",
-    "prettier-plugin-sort-json": "4.1.1",
+    "prettier-plugin-sort-json": "4.2.0",
     "prettier-plugin-tailwindcss": "0.7.2",
     "syncpack": "13.0.4",
     "tailwindcss": "4.1.18",
