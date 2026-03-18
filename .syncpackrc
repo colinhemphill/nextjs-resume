@@ -1,8 +1,4 @@
 {
-  "dependencyTypes": [
-    "prod",
-    "dev"
-  ],
   "semverGroups": [
     {
       "label": "use exact version numbers in production",
