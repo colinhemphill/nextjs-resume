@@ -7,8 +7,8 @@ import { defineConfig, globalIgnores } from 'eslint/config';
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
-  prettier,
   eslintPluginUnicorn.configs.recommended,
+  prettier,
   globalIgnores([
     '.next/**',
     'out/**',
@@ -16,6 +16,12 @@ const eslintConfig = defineConfig([
     'next-env.d.ts',
     '.contentlayer/**',
   ]),
+  {
+    settings: {
+      // https://gist.github.com/OscarGauss/1f305edf5b7c103bb2ee32ba479f4261
+      react: { version: '19' },
+    },
+  },
 ]);
 
 export default eslintConfig;
