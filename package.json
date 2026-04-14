@@ -31,7 +31,7 @@
     "tailwind-merge": "3.5.0"
   },
   "devDependencies": {
-    "@happy-dom/global-registrator": "20.8.4",
+    "@happy-dom/global-registrator": "20.9.0",
     "@tailwindcss/postcss": "4.2.2",
     "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "16.3.2",
