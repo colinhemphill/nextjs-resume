@@ -36,4 +36,4 @@ const LinkedIn: IconType = forwardRef<SVGSVGElement, LinkedinProperties>(
 );
 
 export default LinkedIn;
-export { defaultColor };
+;

@@ -33,7 +33,7 @@ DropdownMenuContent.displayName = DropdownMenuPrimitive.Content.displayName;
 export {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuPortal,
+  
+  
   DropdownMenuTrigger,
 };

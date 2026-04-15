@@ -102,4 +102,4 @@ const Button = forwardRef<HTMLButtonElement, ButtonProperties>(
 
 Button.displayName = 'Button';
 
-export { Button, buttonVariants, type ButtonProperties as ButtonProps };
+export { Button };
