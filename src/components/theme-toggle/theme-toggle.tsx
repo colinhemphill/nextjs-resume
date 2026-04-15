@@ -17,10 +17,7 @@ import {
 import { DropdownMenuSeparator } from 'src/components/dropdown/dropdown-menu-separator';
 import { cn } from 'src/helpers/utilities';
 
-export type ThemeToggleProperties = Pick<
-  ButtonProperties,
-  'color' | 'variant'
-> & {
+type ThemeToggleProperties = Pick<ButtonProperties, 'color' | 'variant'> & {
   buttonTextVisible: boolean;
   labelButton: string;
   labelMenu: string;
@@ -31,7 +28,7 @@ export type ThemeToggleProperties = Pick<
 
 function ThemeToggle({
   buttonTextVisible,
-  color,
+  color = 'accent',
   labelButton,
   labelMenu,
   themeNameDark,

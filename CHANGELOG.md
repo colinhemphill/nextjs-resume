@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [8.1.5] - 2026-04-15
+
+### Added
+
+- Use [knip](https://knip.dev/) to clean up unused dependencies and exports
+
+### Changed
+
+- Dependency updates
+  - Tracking [an issue](https://github.com/diegomura/react-pdf/issues/3382) with `@react-pdf/renderer` where a dependency was not published properly, added temporary override to solve installation failure
+
 ## [8.1.4] - 2026-03-18
 
 ### Changed

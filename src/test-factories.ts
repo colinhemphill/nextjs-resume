@@ -111,7 +111,7 @@ export function createMockSalary(overrides: Partial<Salary> = {}): Salary {
 /**
  * Factory function to create mock PrivateField objects for testing
  */
-export function createMockPrivateField(
+function createMockPrivateField(
   overrides: Partial<PrivateField> = {},
 ): PrivateField {
   return {
@@ -136,7 +136,7 @@ export function createMockPrivateField(
 /**
  * Factory function to create mock Personal objects for testing
  */
-export function createMockPersonal(
+function createMockPersonal(
   overrides: Partial<Personal> = {},
 ): Personal {
   return {
