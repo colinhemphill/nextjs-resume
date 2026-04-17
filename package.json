@@ -43,7 +43,7 @@
     "prettier-plugin-tailwindcss": "0.7.2",
     "syncpack": "14.3.0",
     "tailwindcss": "4.2.2",
-    "typescript": "6.0.2"
+    "typescript": "6.0.3"
   },
   "homepage": "https://github.com/colinhemphill/nextjs-resume",
   "keywords": [
