@@ -36,7 +36,7 @@
     "@types/node": "25.6.0",
     "@types/react": "19.2.14",
     "bun-types": "1.3.12",
-    "knip": "6.4.1",
+    "knip": "6.9.0",
     "postcss": "8.5.9",
     "prettier": "3.8.3",
     "prettier-plugin-sort-json": "4.2.0",
