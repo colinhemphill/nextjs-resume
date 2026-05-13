@@ -1,0 +1,5 @@
+// Bun Snapshot v1, https://bun.sh/docs/test/snapshots
+
+exports[`<Footer /> Snapshot without links 1`] = `[Function]`;
+
+exports[`<Footer /> Snapshot with links 1`] = `[Function]`;

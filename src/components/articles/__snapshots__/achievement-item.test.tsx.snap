@@ -1,0 +1,5 @@
+// Bun Snapshot v1, https://bun.sh/docs/test/snapshots
+
+exports[`<AchievementItem /> Snapshot 1`] = `[Function]`;
+
+exports[`<AchievementItem /> Snapshot with different achievement data 1`] = `[Function]`;
