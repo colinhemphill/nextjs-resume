@@ -1,8 +1,8 @@
 import { personal, Salary } from '@content';
 import { UserIcon } from '@heroicons/react/24/solid';
 import { ReactNode } from 'react';
-import Prose from 'src/components/prose/prose';
-import SectionHeading from 'src/components/section-heading/section-heading';
+import Prose from '@src/components/prose/prose';
+import SectionHeading from '@src/components/section-heading/section-heading';
 
 interface AboutMeProperties {
   salary?: Salary;

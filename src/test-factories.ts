@@ -136,9 +136,7 @@ function createMockPrivateField(
 /**
  * Factory function to create mock Personal objects for testing
  */
-function createMockPersonal(
-  overrides: Partial<Personal> = {},
-): Personal {
+function createMockPersonal(overrides: Partial<Personal> = {}): Personal {
   return {
     _id: 'personal.md',
     _raw: {

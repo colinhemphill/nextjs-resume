@@ -1,8 +1,8 @@
 import { resumeConfig } from '@config/resume-config';
 import { Path, Svg } from '@react-pdf/renderer';
 import { ReactNode } from 'react';
-import { PdfIconProperties } from 'src/components/pdf/icons/pdf-icon';
-import { getAccentColor } from 'src/helpers/colors';
+import { PdfIconProperties } from '@src/components/pdf/icons/pdf-icon';
+import { getAccentColor } from '@src/helpers/colors';
 
 const theme = resumeConfig.pdfTheme;
 

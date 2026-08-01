@@ -4,11 +4,11 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuTrigger,
-} from 'src/components/dropdown/dropdown-menu';
-import { DropdownMenuLabel } from 'src/components/dropdown/dropdown-menu-label';
-import { DropdownMenuRadioGroup } from 'src/components/dropdown/dropdown-menu-radio';
-import { DropdownMenuSeparator } from 'src/components/dropdown/dropdown-menu-separator';
-import { render } from 'src/test-utilities';
+} from '@src/components/dropdown/dropdown-menu';
+import { DropdownMenuLabel } from '@src/components/dropdown/dropdown-menu-label';
+import { DropdownMenuRadioGroup } from '@src/components/dropdown/dropdown-menu-radio';
+import { DropdownMenuSeparator } from '@src/components/dropdown/dropdown-menu-separator';
+import { render } from '@src/test-utilities';
 
 describe('<Dropdown />', () => {
   test('Snapshot', () => {

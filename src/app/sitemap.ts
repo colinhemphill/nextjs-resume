@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { deployURL } from 'src/helpers/environment';
+import { deployURL } from '@src/helpers/environment';
 
 const baseURL = `https://${deployURL ?? ''}`;
 

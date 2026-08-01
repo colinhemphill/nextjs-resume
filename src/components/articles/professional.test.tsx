@@ -3,11 +3,11 @@ import {
   createMockProfessionalExperience,
   createMockProfessionalTitle,
   mockHelpers,
-} from 'src/test-factories';
-import { render, screen } from 'src/test-utilities';
+} from '@src/test-factories';
+import { render, screen } from '@src/test-utilities';
 import Professional from './professional';
 
-mock.module('src/helpers/utilities', () => ({
+mock.module('@src/helpers/utilities', () => ({
   sortedProfessionalExperiences: [
     createMockProfessionalExperience({
       organization: 'Tech Company A',

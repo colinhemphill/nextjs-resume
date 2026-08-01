@@ -3,8 +3,8 @@
 import { HomeIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';
 import { ReactNode } from 'react';
-import { Button } from 'src/components/button/button';
-import { Heading } from 'src/components/heading/heading';
+import { Button } from '@src/components/button/button';
+import { Heading } from '@src/components/heading/heading';
 
 export default function NotFound(): ReactNode {
   return (

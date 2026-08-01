@@ -3,8 +3,8 @@ import { personal } from '@content';
 import { ImageResponse } from 'next/og';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
-import { getAccentColor, getNeutralColor } from 'src/helpers/colors';
-import { fullName } from 'src/helpers/utilities';
+import { getAccentColor, getNeutralColor } from '@src/helpers/colors';
+import { fullName } from '@src/helpers/utilities';
 
 const theme = resumeConfig.imageTheme;
 

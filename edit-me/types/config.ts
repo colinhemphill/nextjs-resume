@@ -6,8 +6,6 @@ import {
 } from '@strum/colors';
 
 export enum ThemeSetting {
-  Dark = 'dark',
-  Light = 'light',
   System = 'system',
 }
 
