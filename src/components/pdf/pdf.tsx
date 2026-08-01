@@ -44,22 +44,22 @@ Font.register({
     {
       fontStyle: 'normal',
       fontWeight: 400,
-      src: path.join(process.cwd(), '@src/fonts/AlbertSans-Regular.ttf'),
+      src: path.join(process.cwd(), 'src/fonts/AlbertSans-Regular.ttf'),
     },
     {
       fontStyle: 'italic',
       fontWeight: 400,
-      src: path.join(process.cwd(), '@src/fonts/AlbertSans-Italic.ttf'),
+      src: path.join(process.cwd(), 'src/fonts/AlbertSans-Italic.ttf'),
     },
     {
       fontStyle: 'normal',
       fontWeight: 700,
-      src: path.join(process.cwd(), '@src/fonts/AlbertSans-Bold.ttf'),
+      src: path.join(process.cwd(), 'src/fonts/AlbertSans-Bold.ttf'),
     },
     {
       fontStyle: 'italic',
       fontWeight: 700,
-      src: path.join(process.cwd(), '@src/fonts/AlbertSans-BoldIatalic.ttf'),
+      src: path.join(process.cwd(), 'src/fonts/AlbertSans-BoldIatalic.ttf'),
     },
   ],
 });
@@ -70,7 +70,7 @@ Font.register({
     {
       fontStyle: 'normal',
       fontWeight: 500,
-      src: path.join(process.cwd(), '@src/fonts/JetBrainsMono-Medium.ttf'),
+      src: path.join(process.cwd(), 'src/fonts/JetBrainsMono-Medium.ttf'),
     },
   ],
 });
