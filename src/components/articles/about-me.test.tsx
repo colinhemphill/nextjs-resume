@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'bun:test';
-import { createMockSalary } from 'src/test-factories';
-import { render, screen } from 'src/test-utilities';
+import { createMockSalary } from '@src/test-factories';
+import { render, screen } from '@src/test-utilities';
 import AboutMe from './about-me';
 
 describe('<AboutMe />', () => {

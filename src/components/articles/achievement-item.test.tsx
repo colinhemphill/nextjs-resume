@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'bun:test';
-import { createMockAchievement, mockData } from 'src/test-factories';
-import { render, screen } from 'src/test-utilities';
+import { createMockAchievement, mockData } from '@src/test-factories';
+import { render, screen } from '@src/test-utilities';
 import AchievementItem from './achievement-item';
 
 const mockAchievement = createMockAchievement();

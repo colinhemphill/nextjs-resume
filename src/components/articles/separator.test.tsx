@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'bun:test';
-import { render } from 'src/test-utilities';
+import { render } from '@src/test-utilities';
 import Separator from './separator';
 
 describe('<Separator />', () => {

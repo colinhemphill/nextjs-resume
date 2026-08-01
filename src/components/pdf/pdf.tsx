@@ -16,26 +16,25 @@ import {
   View,
 } from '@react-pdf/renderer';
 import path from 'node:path';
-import { HtmlProps } from 'node_modules/react-pdf-html/dist/types/Html';
 import { ReactNode } from 'react';
 import Html from 'react-pdf-html';
-import BuildingColumns from 'src/components/pdf/icons/building-columns';
-import CircleBriefcase from 'src/components/pdf/icons/circle-briefcase';
-import CircleCheck from 'src/components/pdf/icons/circle-check';
-import CircleGraduationCap from 'src/components/pdf/icons/circle-graduation-cap';
-import CircleIdCard from 'src/components/pdf/icons/circle-id-card';
-import CirclePaintbrush from 'src/components/pdf/icons/circle-paintbrush';
-import CircleUser from 'src/components/pdf/icons/circle-user';
-import GitHub from 'src/components/pdf/icons/github';
-import LinkedIn from 'src/components/pdf/icons/linkedin';
-import Star from 'src/components/pdf/icons/star';
-import { getAccentColor, getNeutralColor } from 'src/helpers/colors';
+import BuildingColumns from '@src/components/pdf/icons/building-columns';
+import CircleBriefcase from '@src/components/pdf/icons/circle-briefcase';
+import CircleCheck from '@src/components/pdf/icons/circle-check';
+import CircleGraduationCap from '@src/components/pdf/icons/circle-graduation-cap';
+import CircleIdCard from '@src/components/pdf/icons/circle-id-card';
+import CirclePaintbrush from '@src/components/pdf/icons/circle-paintbrush';
+import CircleUser from '@src/components/pdf/icons/circle-user';
+import GitHub from '@src/components/pdf/icons/github';
+import LinkedIn from '@src/components/pdf/icons/linkedin';
+import Star from '@src/components/pdf/icons/star';
+import { getAccentColor, getNeutralColor } from '@src/helpers/colors';
 import {
   fullName,
   getFormattedDate,
   sortedAchievements,
   sortedProfessionalExperiences,
-} from 'src/helpers/utilities';
+} from '@src/helpers/utilities';
 
 const theme = resumeConfig.pdfTheme;
 
@@ -45,22 +44,22 @@ Font.register({
     {
       fontStyle: 'normal',
       fontWeight: 400,
-      src: path.join(process.cwd(), 'src/fonts/AlbertSans-Regular.ttf'),
+      src: path.join(process.cwd(), '@src/fonts/AlbertSans-Regular.ttf'),
     },
     {
       fontStyle: 'italic',
       fontWeight: 400,
-      src: path.join(process.cwd(), 'src/fonts/AlbertSans-Italic.ttf'),
+      src: path.join(process.cwd(), '@src/fonts/AlbertSans-Italic.ttf'),
     },
     {
       fontStyle: 'normal',
       fontWeight: 700,
-      src: path.join(process.cwd(), 'src/fonts/AlbertSans-Bold.ttf'),
+      src: path.join(process.cwd(), '@src/fonts/AlbertSans-Bold.ttf'),
     },
     {
       fontStyle: 'italic',
       fontWeight: 700,
-      src: path.join(process.cwd(), 'src/fonts/AlbertSans-BoldIatalic.ttf'),
+      src: path.join(process.cwd(), '@src/fonts/AlbertSans-BoldIatalic.ttf'),
     },
   ],
 });
@@ -71,7 +70,7 @@ Font.register({
     {
       fontStyle: 'normal',
       fontWeight: 500,
-      src: path.join(process.cwd(), 'src/fonts/JetBrainsMono-Medium.ttf'),
+      src: path.join(process.cwd(), '@src/fonts/JetBrainsMono-Medium.ttf'),
     },
   ],
 });
@@ -257,7 +256,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const htmlProperties: Omit<HtmlProps, 'children'> = {
+const htmlProperties = {
   style: { fontSize: fontSizes.xxs },
   stylesheet: {
     a: styles.a,

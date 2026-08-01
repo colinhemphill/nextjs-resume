@@ -1,6 +1,6 @@
 import { allSkills } from '@content';
 import { describe, expect, test } from 'bun:test';
-import { render, screen } from 'src/test-utilities';
+import { render, screen } from '@src/test-utilities';
 import Skills from './skills';
 
 describe('<Skills />', () => {

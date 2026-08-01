@@ -4,10 +4,10 @@ import { ThemeProvider } from 'next-themes';
 import { Albert_Sans, JetBrains_Mono } from 'next/font/google';
 import { headers } from 'next/headers';
 import { PropsWithChildren, ReactNode } from 'react';
-import Footer from 'src/components/footer/footer';
-import Header from 'src/components/header/header';
-import { deployURL, protocol } from 'src/helpers/environment';
-import { cn, fullName } from 'src/helpers/utilities';
+import Footer from '@src/components/footer/footer';
+import Header from '@src/components/header/header';
+import { deployURL, protocol } from '@src/helpers/environment';
+import { cn, fullName } from '@src/helpers/utilities';
 import './styles/globals.css';
 
 const albert = Albert_Sans({

@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'bun:test';
-import { mockData } from 'src/test-factories';
-import { render, screen } from 'src/test-utilities';
+import { mockData } from '@src/test-factories';
+import { render, screen } from '@src/test-utilities';
 import ProfessionalItem from './professional-item';
 
 const mockProfessionalExperienceSingleTitle =

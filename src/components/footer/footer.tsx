@@ -1,8 +1,8 @@
 import { links } from '@config/links';
 import { personal } from '@content';
 import { ReactNode } from 'react';
-import { Button } from 'src/components/button/button';
-import { fullName } from 'src/helpers/utilities';
+import { Button } from '@src/components/button/button';
+import { fullName } from '@src/helpers/utilities';
 
 export default function Footer(): ReactNode {
   return (

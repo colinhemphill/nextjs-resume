@@ -13,12 +13,7 @@
     },
     {
       "pattern": "edit-me/*/"
-    },
+    }
   ],
-  "tailwindCSS.classAttributes": [
-    "class",
-    "className",
-    ".*ClassName",
-    "tw"
-  ]
+  "tailwindCSS.classAttributes": ["class", "className", ".*ClassName", "tw"]
 }

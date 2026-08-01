@@ -1,8 +1,39 @@
 {
+  "name": "nextjs-resume",
+  "version": "8.1.6",
+  "keywords": [
+    "generator",
+    "nextjs",
+    "pdf",
+    "resume",
+    "tailwind"
+  ],
+  "homepage": "https://github.com/colinhemphill/nextjs-resume",
+  "license": "MIT",
   "author": {
-    "email": "colin@colinhemphill.com",
     "name": "Colin Hemphill",
+    "email": "colin@colinhemphill.com",
     "url": "https://colinhemphill.com"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "contentlayer2 build && next build",
+    "build:content": "contentlayer2 build",
+    "dev": "run-p dev:*",
+    "dev:contentlayer": "contentlayer2 dev",
+    "dev:next": "next dev --turbopack",
+    "format": "oxfmt",
+    "knip": "knip-bun --fix --allow-remove-files",
+    "lint": "oxlint --fix",
+    "start": "next start",
+    "sync": "syncpack fix-mismatches",
+    "test": "bun test",
+    "test:coverage": "bun test --coverage",
+    "test:update": "bun test --update-snapshots",
+    "test:watch": "bun test --watch",
+    "types": "tsc -p tsconfig.json --noEmit",
+    "update": "syncpack update --interactive",
+    "yeet": "bunx rimraf bun.lockb && bunx rimraf **/{dist,node_modules,.turbo,.next,.vercel,.netlify,__snapshots__}/ --glob && bunx rimraf **/tsconfig.tsbuildinfo --glob"
   },
   "dependencies": {
     "@heroicons/react": "2.2.0",
@@ -15,9 +46,7 @@
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
     "contentlayer2": "0.5.8",
-    "eslint": "10.3.0",
     "eslint-config-next": "16.2.6",
-    "eslint-config-prettier": "10.1.8",
     "eslint-plugin-unicorn": "64.0.0",
     "next": "16.2.6",
     "next-contentlayer2": "0.5.8",
@@ -37,43 +66,11 @@
     "@types/react": "19.2.14",
     "bun-types": "1.3.14",
     "knip": "6.13.1",
+    "oxfmt": "0.61.0",
+    "oxlint": "1.76.0",
     "postcss": "8.5.14",
-    "prettier": "3.8.3",
-    "prettier-plugin-sort-json": "4.2.0",
-    "prettier-plugin-tailwindcss": "0.8.0",
     "syncpack": "15.1.2",
     "tailwindcss": "4.3.0",
     "typescript": "6.0.3"
-  },
-  "homepage": "https://github.com/colinhemphill/nextjs-resume",
-  "keywords": [
-    "generator",
-    "nextjs",
-    "pdf",
-    "resume",
-    "tailwind"
-  ],
-  "license": "MIT",
-  "name": "nextjs-resume",
-  "scripts": {
-    "build": "contentlayer2 build && next build",
-    "build:content": "contentlayer2 build",
-    "dev": "run-p dev:*",
-    "dev:contentlayer": "contentlayer2 dev",
-    "dev:next": "next dev --turbopack",
-    "format": "prettier --write 'src/**/*.{json,js,ts,tsx}' && syncpack format",
-    "knip": "knip-bun --fix --allow-remove-files",
-    "lint": "eslint --fix . && syncpack format && syncpack lint",
-    "start": "next start",
-    "sync": "syncpack fix-mismatches",
-    "test": "bun test",
-    "test:coverage": "bun test --coverage",
-    "test:update": "bun test --update-snapshots",
-    "test:watch": "bun test --watch",
-    "types": "tsc -p tsconfig.json --noEmit",
-    "update": "syncpack update",
-    "yeet": "bunx rimraf bun.lockb && bunx rimraf **/{dist,node_modules,.turbo,.next,.vercel,.netlify,__snapshots__}/ --glob && bunx rimraf **/tsconfig.tsbuildinfo --glob"
-  },
-  "type": "module",
-  "version": "8.1.6"
+  }
 }
