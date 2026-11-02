@@ -1,6 +1,6 @@
-import { describe, expect, test } from 'bun:test';
-import { render, screen } from '@src/test-utilities';
 import SectionHeading from './section-heading';
+import { render, screen } from '@src/test-utilities';
+import { describe, expect, test } from 'bun:test';
 
 describe('<SectionHeading />', () => {
   test('Renders a heading', () => {

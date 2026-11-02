@@ -1,6 +1,6 @@
-import { describe, expect, test } from 'bun:test';
-import { render } from '@src/test-utilities';
 import Separator from './separator';
+import { render } from '@src/test-utilities';
+import { describe, expect, test } from 'bun:test';
 
 describe('<Separator />', () => {
   test('Renders as horizontal rule', () => {

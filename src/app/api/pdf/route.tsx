@@ -1,7 +1,7 @@
 import { allPrivateFields } from '@content';
 import { renderToBuffer } from '@react-pdf/renderer';
-import { NextResponse } from 'next/server';
 import PDF from '@src/components/pdf/pdf';
+import { NextResponse } from 'next/server';
 
 const privateKey = process.env.PRIVATE_KEY;
 

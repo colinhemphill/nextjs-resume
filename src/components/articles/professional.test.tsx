@@ -1,11 +1,11 @@
-import { describe, expect, mock, test } from 'bun:test';
+import Professional from './professional';
 import {
   createMockProfessionalExperience,
   createMockProfessionalTitle,
   mockHelpers,
 } from '@src/test-factories';
 import { render, screen } from '@src/test-utilities';
-import Professional from './professional';
+import { describe, expect, mock, test } from 'bun:test';
 
 mock.module('@src/helpers/utilities', () => ({
   sortedProfessionalExperiences: [

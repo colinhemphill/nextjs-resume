@@ -1,8 +1,8 @@
+import ContactInformation from './contact-info';
 import { personal } from '@content';
-import { describe, expect, test } from 'bun:test';
 import { mockData } from '@src/test-factories';
 import { render, screen } from '@src/test-utilities';
-import ContactInformation from './contact-info';
+import { describe, expect, test } from 'bun:test';
 
 const mockPrivateFields = [
   mockData.privateFields.email,

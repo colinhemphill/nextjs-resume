@@ -15,9 +15,6 @@ import {
   Text,
   View,
 } from '@react-pdf/renderer';
-import path from 'node:path';
-import { ReactNode } from 'react';
-import Html from 'react-pdf-html';
 import BuildingColumns from '@src/components/pdf/icons/building-columns';
 import CircleBriefcase from '@src/components/pdf/icons/circle-briefcase';
 import CircleCheck from '@src/components/pdf/icons/circle-check';
@@ -35,6 +32,9 @@ import {
   sortedAchievements,
   sortedProfessionalExperiences,
 } from '@src/helpers/utilities';
+import path from 'node:path';
+import { ReactNode } from 'react';
+import Html from 'react-pdf-html';
 
 const theme = resumeConfig.pdfTheme;
 

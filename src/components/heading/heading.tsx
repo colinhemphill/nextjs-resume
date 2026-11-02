@@ -1,3 +1,4 @@
+import { cn } from '@src/helpers/utilities';
 import { cva, type VariantProps } from 'class-variance-authority';
 import {
   ReactNode,
@@ -5,7 +6,6 @@ import {
   type HTMLAttributes,
   type PropsWithChildren,
 } from 'react';
-import { cn } from '@src/helpers/utilities';
 
 const headingVariants = cva('font-sans font-bold text-balance', {
   variants: {

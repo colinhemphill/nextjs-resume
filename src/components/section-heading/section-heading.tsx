@@ -1,6 +1,6 @@
-import React, { ReactNode } from 'react';
 import { Heading, HeadingProperties } from '@src/components/heading/heading';
 import { cn } from '@src/helpers/utilities';
+import React, { ReactNode } from 'react';
 
 interface SectionHeadingProperties {
   className?: string;

@@ -1,8 +1,6 @@
 'use client';
 
 import { MoonIcon, SunIcon } from '@heroicons/react/24/solid';
-import { useTheme } from 'next-themes';
-import { ReactNode } from 'react';
 import { Button, ButtonProperties } from '@src/components/button/button';
 import {
   DropdownMenu,
@@ -16,6 +14,8 @@ import {
 } from '@src/components/dropdown/dropdown-menu-radio';
 import { DropdownMenuSeparator } from '@src/components/dropdown/dropdown-menu-separator';
 import { cn } from '@src/helpers/utilities';
+import { useTheme } from 'next-themes';
+import { ReactNode } from 'react';
 
 type ThemeToggleProperties = Pick<ButtonProperties, 'color' | 'variant'> & {
   buttonTextVisible: boolean;

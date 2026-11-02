@@ -1,5 +1,4 @@
 import { DropdownMenuRadioItem } from '@radix-ui/react-dropdown-menu';
-import { describe, expect, test } from 'bun:test';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,6 +8,7 @@ import { DropdownMenuLabel } from '@src/components/dropdown/dropdown-menu-label'
 import { DropdownMenuRadioGroup } from '@src/components/dropdown/dropdown-menu-radio';
 import { DropdownMenuSeparator } from '@src/components/dropdown/dropdown-menu-separator';
 import { render } from '@src/test-utilities';
+import { describe, expect, test } from 'bun:test';
 
 describe('<Dropdown />', () => {
   test('Snapshot', () => {

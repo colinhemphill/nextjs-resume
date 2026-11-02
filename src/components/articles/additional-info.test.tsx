@@ -1,7 +1,7 @@
-import { additionalInfo } from '@content';
-import { describe, expect, test } from 'bun:test';
-import { render, screen } from '@src/test-utilities';
 import AdditionalInfo from './additional-info';
+import { additionalInfo } from '@content';
+import { render, screen } from '@src/test-utilities';
+import { describe, expect, test } from 'bun:test';
 
 describe('<AdditionalInfo />', () => {
   test('Renders additional info section heading', () => {
