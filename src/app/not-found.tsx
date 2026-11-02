@@ -1,10 +1,10 @@
 'use client';
 
 import { HomeIcon } from '@heroicons/react/24/solid';
-import Link from 'next/link';
-import { ReactNode } from 'react';
 import { Button } from '@src/components/button/button';
 import { Heading } from '@src/components/heading/heading';
+import Link from 'next/link';
+import { ReactNode } from 'react';
 
 export default function NotFound(): ReactNode {
   return (

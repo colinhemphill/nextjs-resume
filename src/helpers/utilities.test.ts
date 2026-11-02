@@ -1,5 +1,5 @@
-import { describe, expect, test } from 'bun:test';
 import { cn, fullName, getFormattedDate, initials } from './utilities';
+import { describe, expect, test } from 'bun:test';
 
 describe('utilities helpers', () => {
   describe('fullName', () => {
@@ -52,7 +52,8 @@ describe('utilities helpers', () => {
     });
 
     test('handles conditional classes', () => {
-      const result = cn('base', false && 'conditional', 'always');
+      const someCondition = false;
+      const result = cn('base', someCondition && 'conditional', 'always');
       expect(result).toContain('base');
       expect(result).toContain('always');
       expect(result).not.toContain('conditional');

@@ -1,6 +1,6 @@
-import { describe, expect, test } from 'bun:test';
-import { render } from '@src/test-utilities';
 import Footer from './footer';
+import { render } from '@src/test-utilities';
+import { describe, expect, test } from 'bun:test';
 
 describe('<Footer />', () => {
   test('Snapshot without links', () => {

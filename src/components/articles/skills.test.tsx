@@ -1,7 +1,7 @@
-import { allSkills } from '@content';
-import { describe, expect, test } from 'bun:test';
-import { render, screen } from '@src/test-utilities';
 import Skills from './skills';
+import { allSkills } from '@content';
+import { render, screen } from '@src/test-utilities';
+import { describe, expect, test } from 'bun:test';
 
 describe('<Skills />', () => {
   test('Renders skills section heading', () => {

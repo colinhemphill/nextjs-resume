@@ -1,8 +1,8 @@
 import { PrivateField, personal } from '@content';
 import { IdentificationIcon } from '@heroicons/react/24/solid';
 import { SiGithub, SiLinkedIn } from '@icons';
-import { ReactNode } from 'react';
 import SectionHeading from '@src/components/section-heading/section-heading';
+import { ReactNode } from 'react';
 
 interface ContactInformationProperties {
   privateInformation?: PrivateField[];

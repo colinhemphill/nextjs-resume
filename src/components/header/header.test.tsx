@@ -1,8 +1,8 @@
+import Header from './header';
 import { personal } from '@content';
-import { describe, expect, mock, test } from 'bun:test';
 import { fullName } from '@src/helpers/utilities';
 import { render, screen } from '@src/test-utilities';
-import Header from './header';
+import { describe, expect, mock, test } from 'bun:test';
 
 mock.module('next/navigation', () => ({
   useParams: mock(() => ({ secret: 'secret' })),

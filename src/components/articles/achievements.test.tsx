@@ -1,7 +1,7 @@
-import { describe, expect, mock, test } from 'bun:test';
+import Achievements from './achievements';
 import { mockData, mockHelpers } from '@src/test-factories';
 import { render, screen } from '@src/test-utilities';
-import Achievements from './achievements';
+import { describe, expect, mock, test } from 'bun:test';
 
 mock.module('@src/helpers/utilities', () => ({
   sortedAchievements: [

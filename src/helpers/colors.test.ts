@@ -1,6 +1,6 @@
+import { getAccentColor, getNeutralColor } from './colors';
 import { ColorMode } from '@strum/colors';
 import { describe, expect, test } from 'bun:test';
-import { getAccentColor, getNeutralColor } from './colors';
 
 describe('colors helpers', () => {
   describe('getAccentColor', () => {

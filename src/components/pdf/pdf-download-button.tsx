@@ -1,9 +1,9 @@
 'use client';
 
 import { DocumentIcon } from '@heroicons/react/24/solid';
+import { Button } from '@src/components/button/button';
 import { useParams } from 'next/navigation';
 import { ReactNode } from 'react';
-import { Button } from '@src/components/button/button';
 
 export default function PDFDownloadButton(): ReactNode {
   const { secret } = useParams<{ secret: string }>();

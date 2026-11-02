@@ -1,5 +1,5 @@
-import { AccentColor, ColorMode, NeutralColor } from '@strum/colors';
 import { ResumeConfig, ThemeSetting } from '../types/config';
+import { AccentColor, ColorMode, NeutralColor } from '@strum/colors';
 
 export const resumeConfig: ResumeConfig = {
   accentColor: AccentColor.Blue,

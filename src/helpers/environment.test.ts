@@ -1,5 +1,5 @@
-import { describe, expect, test } from 'bun:test';
 import { deployURL, development, protocol } from './environment';
+import { describe, expect, test } from 'bun:test';
 
 describe('environment helpers', () => {
   test('deployURL is a string or undefined', () => {

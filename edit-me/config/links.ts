@@ -1,5 +1,5 @@
-import { SiBluesky, SiGithub, SiInstagram, SiLinkedIn, SiNpm } from '@icons';
 import { CMSLink } from '@edit-me/types/cms-link';
+import { SiBluesky, SiGithub, SiInstagram, SiLinkedIn, SiNpm } from '@icons';
 
 export const links: CMSLink[] = [
   {
