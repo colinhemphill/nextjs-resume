@@ -1,6 +1,5 @@
 import type {
   Achievement,
-  Personal,
   PrivateField,
   ProfessionalExperience,
   ProfessionalTitle,
@@ -128,34 +127,6 @@ function createMockPrivateField(
     body: {
       raw: 'test@example.com',
       html: '<p>test@example.com</p>',
-    },
-    ...overrides,
-  };
-}
-
-/**
- * Factory function to create mock Personal objects for testing
- */
-function createMockPersonal(overrides: Partial<Personal> = {}): Personal {
-  return {
-    _id: 'personal.md',
-    _raw: {
-      sourceFilePath: 'personal.md',
-      sourceFileName: 'personal.md',
-      sourceFileDir: '.',
-      contentType: 'markdown',
-      flattenedPath: 'personal',
-    },
-    type: 'Personal',
-    givenName: 'Test',
-    familyName: 'User',
-    title: 'Software Engineer',
-    location: 'San Francisco, CA',
-    linkedInUrl: 'https://linkedin.com/in/testuser',
-    githubUrl: 'https://github.com/testuser',
-    body: {
-      raw: 'This is test personal information.',
-      html: '<p>This is test personal information.</p>',
     },
     ...overrides,
   };

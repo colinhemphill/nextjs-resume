@@ -5,10 +5,7 @@ const config = {
     'src/app/**/{layout,page,route,template}.{js,jsx,ts,tsx}',
     'contentlayer.config.ts',
   ],
-  ignoreDependencies: [
-    'eslint-config-next',
-    'eslint-plugin-unicorn',
-  ],
+  ignoreDependencies: ['eslint-config-next', 'eslint-plugin-unicorn'],
 };
 
 export default config;
