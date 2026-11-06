@@ -64,7 +64,7 @@
     "bun-types": "1.4.4",
     "knip": "6.44.1",
     "oxfmt": "0.75.0",
-    "oxlint": "1.90.0",
+    "oxlint": "1.92.0",
     "postcss": "8.5.32",
     "syncpack": "15.3.3",
     "tailwindcss": "4.3.3",
