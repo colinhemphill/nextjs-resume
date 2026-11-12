@@ -58,7 +58,7 @@
     "@happy-dom/global-registrator": "21.0.4",
     "@tailwindcss/postcss": "4.3.3",
     "@testing-library/react": "16.3.3",
-    "@testing-library/user-event": "14.6.8",
+    "@testing-library/user-event": "14.6.10",
     "@types/node": "26.6.6",
     "@types/react": "19.3.0",
     "bun-types": "1.4.4",
