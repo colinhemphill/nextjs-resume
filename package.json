@@ -65,7 +65,7 @@
     "knip": "6.44.1",
     "oxfmt": "0.75.0",
     "oxlint": "1.90.0",
-    "postcss": "8.5.32",
+    "postcss": "8.5.33",
     "syncpack": "15.3.3",
     "tailwindcss": "4.3.3",
     "typescript": "7.0.2"
